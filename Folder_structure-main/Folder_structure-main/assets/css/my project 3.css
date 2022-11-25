@@ -1,0 +1,95 @@
+*{
+    margin-top:10px;
+    margin-right:10px;
+    padding:0;
+    font-family:"kumbh sans";
+}
+body{
+    background-image:linear-gradient(#EDD3FD,white,#EDD3FD);
+    font-family:"source sans pro";
+}
+header{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    border-bottom: 2px solid #AE38F4;
+}
+header div img{
+    width:20%;
+}
+div ul li{
+    text-decoration:none;
+    display:inline;
+}
+div ul li a{
+    text-decoration:none;
+    color:black;
+    font-weight:600;
+    font-size:120%;
+}
+div ul li a:hover{
+    color:#811CC7;
+    transition:0.2s;
+}
+#home{
+    padding:10px 15px;
+    border-radius:5%;
+    background-color:#AE38F4;
+    border-color:#AE38F4;
+}
+#home:hover{
+    background-color:white;
+    border-color:white;
+    transition:0.2s;
+}
+#btn{
+    color:white;
+}
+#btn:hover{
+    color:#811CC7;
+    transition:0.2s;
+}
+form div{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+}
+form img{
+    width:5%;
+    display:block;
+}
+.details{
+    font-size:25px;
+    font-weight:300;
+    font-family:"abril";
+}
+button{
+    background-color:white;
+    border-color:white;
+    border-radius:5%;
+    padding:10px 15px;
+    color:#811CC7;
+    font-weight:bold;
+    font-family:"roboto mono";
+}
+button:hover{
+    background-color:#AE38F4;
+    border-color:#AE38F4;
+    transition:0.2s;
+    color:white;
+}
+[type="button"] a{
+    text-decoration:none;
+    color:#811CC7;
+    font-family:"roboto mono";
+    font-weight:bold;
+}
+[type="reset"]{
+    width:-10%;
+    height:-10%;
+}
+[type="button"] a:hover{
+    color:white;
+    transition:0.2s;
+}

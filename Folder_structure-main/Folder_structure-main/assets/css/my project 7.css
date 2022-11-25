@@ -1,0 +1,82 @@
+*{
+    margin-top:10px;
+    margin-right:10px;
+    padding:0;
+    font-family:"kumbh sans";
+}
+body{
+    background-image:linear-gradient(#EDD3FD,white,#EDD3FD);
+    font-family:"source sans pro";
+}
+header{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-content:center;
+    border-bottom: 2px solid #AE38F4;
+}
+header div img{
+    width:20%;
+}
+div ul li{
+    text-decoration:none;
+    display:inline;
+}
+div ul li a{
+    text-decoration:none;
+    color:black;
+    font-weight:600;
+    font-size:120%;
+}
+div ul li a:hover{
+    color:#811CC7;
+    transition:0.2s;
+}
+#home{
+    padding:10px 15px;
+    border-radius:5%;
+    background-color:#AE38F4;
+    border-color:#AE38F4;
+}
+#home:hover{
+    background-color:white;
+    border-color:white;
+    transition:0.2s;
+}
+#btn{
+    color:white;
+}
+#btn:hover{
+    color:#811CC7;
+    transition:0.2s;
+}
+section{
+    background-color: white;
+    border-color:#811CC7;
+    box-shadow: 10px 10px 10px grey;
+    width:30%;
+    height:60%;
+    position:relative;
+    top:20%;
+    left:30%;
+}
+.section{
+    display:flex;
+}
+section div img{
+    width:40%;
+    margin-left:40%;
+}
+.details{
+    margin-right:40%;
+}
+[type="submit"]{
+    padding:5px 10px;
+    background-color:#AE38F4;
+    border-color:#AE38F4;
+    border-radius:10px;
+    color:white;
+    font-weight:bold;
+    font-family:"abril fat face";
+}

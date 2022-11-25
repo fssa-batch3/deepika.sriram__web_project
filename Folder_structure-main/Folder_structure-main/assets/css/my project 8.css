@@ -1,0 +1,99 @@
+*{
+    margin-left:10px;
+    margin-right:10px;
+    padding:0;
+    font-family:"kumbh sans";
+}
+body{
+    background-image:linear-gradient(#EDD3FD,white,#EDD3FD);
+    font-family:"source sans pro";
+}
+header{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-content:center;
+    border-bottom: 2px solid #AE38F4;
+}
+header div img{
+    width:20%;
+}
+div ul li{
+    text-decoration:none;
+    display:inline;
+}
+div ul li a{
+    text-decoration:none;
+    color:black;
+    font-weight:600;
+    font-size:120%;
+}
+div ul li a:hover{
+    color:#811CC7;
+    transition:0.2s;
+}
+#home{
+    padding:10px 15px;
+    border-radius:5%;
+    background-color:#AE38F4;
+    border-color:#AE38F4;
+}
+#home:hover{
+    background-color:white;
+    border-color:white;
+    transition:0.2s;
+}
+#btn{
+    color:white;
+}
+#btn:hover{
+    color:#811CC7;
+    transition:0.2s;
+}
+main{
+    background-color:white;
+    width:50%;
+    height:90%;
+    position:relative;
+    top:5%;
+    left:25%;
+    border:3px solid #AE38F4;
+    border-style:double;
+}
+main img{
+    width:10%;
+}
+main h1{
+    color:#561375;
+}
+section{
+    text-align: center;
+}
+form{
+    margin-left:20%;
+    font-weight:300;
+}
+main div a{
+    text-decoration: none;
+}
+ul li p{
+    font-family:"abril fat face";
+    font-style:italic;
+    font-weight:300;
+    font-size:20px;
+}
+[type="button"]{
+    padding:10px 15px;
+    background-color:#AE38F4;
+    border-color:#AE38F4;
+    color:white;
+    font-family:"kumbh sans";
+    font-weight:bold;
+}
+[type="button"]:hover{
+    background-color:white;
+    border-color:white;
+    color:#AE38F4;
+    transition:0.2s;
+}
