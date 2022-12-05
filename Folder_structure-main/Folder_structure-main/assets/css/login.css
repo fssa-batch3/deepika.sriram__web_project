@@ -1,10 +1,11 @@
 *{
-    margin-left:10px;
-    margin-right:10px;
     padding:0;
 }
 body{
-    background-image:linear-gradient(#EDD3FD,white,#EDD3FD);
+    background-image:url("../images/GettyImages-899023540.jpg");
+    background-attachment:scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family:"source sans pro";
 }
 header{
@@ -12,7 +13,6 @@ header{
     flex-direction:row;
     flex-wrap:wrap;
     justify-content:space-between;
-    border-bottom: 2px solid #AE38F4;
 }
 header div img{
     width:15%;
@@ -26,6 +26,8 @@ div ul li a{
     color:black;
     font-weight:600;
     font-size:120%;
+    margin-left:10px;
+    margin-right:10px;
 }
 main{
     display:flex;
@@ -66,14 +68,14 @@ form{
     position:absolute;
     top:40%;
     left:40%;
-    border:1px solid #AE38F4;
+    border:1px solid darkcyan;
     box-shadow:5px 5px 5px black;
 }
 .login{
     padding:10px 15px;
     border-radius:2px;
-    border-color:#AE38F4;
-    background-color:#AE38F4;
+    border-color:darkcyan;
+    background-color:darkcyan;
     color:white;
 }
 form div a{

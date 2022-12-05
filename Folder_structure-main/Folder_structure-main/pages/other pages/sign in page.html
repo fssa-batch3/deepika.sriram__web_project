@@ -1,7 +1,9 @@
 <html>
     <head>
-        <title>sign in pages</title>
-        <link rel="stylesheet" href="C:Users\DeepikaSriram\Downloads\Folder_structure-main\Folder_structure-main\assets\css\my project 2.css">
+        <title>sign in pop up</title>
+        <link rel="stylesheet" href="../../assets/css/my project 2.css">
+        <link rel="icon" href="../../assets/images/hospital logo 3.JPG">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Hammersmith+One&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
@@ -9,51 +11,102 @@
     <body>
         <header>
             <div>
-                <img src="C:Users\DeepikaSriram\Downloads\Folder_structure-main\Folder_structure-main\assets\images\hospital_logo_3-removebg-preview.png" alt="logo of get well soon website">
+                <img src="../../assets/images/gws.png" alt="logo of get well soon website">
             </div>
             <div>
                 <ul>
                     <li>
-                        <a href="#">Contact us</a>
+                        <a href="#contact_us">Contact us</a>
                     </li>
                     <li>
-                        <a href="#">About us</a>
+                        <a href="#about_us">About us</a>
                     </li>
                 </ul>
             </div>
         </header>
         <main>
-            <section>
-                <div>
-                  <img src="C:Users\DeepikaSriram\Downloads\Folder_structure-main\Folder_structure-main\assets\images\doctor examining patient.png">
-                </div>
-            </section>
-            <section>
+            <section id="GWS">
+              <div>
                 <div>
                     <h1> Welcome To Get well Soon!!</h1>
                 </div>
+                <br>
+                <br>
                 <div>
-                    <button type="button"> Let's get started  </button>
-                    <button type="submit">  Login  </button>
+                    <a href="C:\Users\DeepikaSriram\Downloads\Folder_structure-main\Folder_structure-main\pages\other pages\sign in page.html">
+                        <button type="button"> Let's get started  </button>
+                    </a>
+                    <a href="C:\Users\DeepikaSriram\Downloads\Folder_structure-main\Folder_structure-main\pages\other pages\login.html">
+                        <button type="submit">  Login  </button>
+                    </a>
+                </div>
+              </div>
+              <div>
+                <img src="../../assets/images/doctor examining patient.png">
+              </div>
+            </section>
+            <section id="about_us">
+                <div>
+                    <h2 style="color:#03045e"><center>About Us</center></h2>
+                </div>
+                <br>
+                <div>
+                    <p>Our Website is on a mission to make <b>quality healthcare affordable and accessible</b> for over a billion+ Indians. We believe in empowering our users with the most accurate, comprehensive, and curated information and care, enabling them to make better healthcare decisions.</p>
+                </div>
+                <br>
+                <div class="box">
+                    <div style="width:20%; padding: 15px;">
+                        <h3>Data Privacy and security is our first priority</h3>
+                        <p>Data privacy and security has always served as one of the founding philosophies of GWS, and we go to great lengths to safeguard the confidentiality and integrity of our users.</p>
+                    </div>
+                    <br>
+                    <div style="width:20%; padding:15px">
+                        <h3>Online appointment booking</h3>
+                        <p>It is done at over 9,000 leading hospitals and clinics with doctors who use our website.</p>
+                    </div>
+                    <br>
+                    <div style="width:20%; padding:15px">
+                        <h3>Prescription</h3>
+                        <p>Downloading of prescription is useful for future appointments.</p>
+                    </div>
+                </div>
+            </section>
+            <section id="contact_us">
+                <div>
+                    <h2 style="color:#03045e"><center>Contact us</center></h2>
+                </div>
+                <br>
+                <div>
+                    <p>Have questions about our website or anything else? Let us know and we’ll get back to you.</p>
+                    <br>
+                    <p>Contact us : +91 89097 87645</p>
                 </div>
             </section>
         </main>
         <form>
             <h1> <center> You Are </center></h1>
             <div>
-                <input type="radio" id="yes" /> 
-                <label>Doctor</a></label>
+                <a href="../other pages/doctor profile page.html" target="__blank">
+                <label>Doctor</label>
+                </a>
             </div>
+           
             <div>
-                <input type="radio" id="yes" />
-                <label> Hospital owner </label>
-            </div>
-            <div>
-                <a href="C:Users\DeepikaSriram\Downloads\Folder_structure-main\Folder_structure-main\pages\other pages\patient profile page.html" target="__blank">
-                <input type="radio" id="yes" />
-                <label> patient </label>
+                <a href="../other pages/patient profile page.html" target="__blank">
+                <label> Patient </label>
                 </a>
             </div>
         </form>
+        <footer>
+            <div style="margin-left:20px">
+              <h3>Follow Us on:</h3>
+            
+              <i class="fa fa-whatsapp"></i>
+          
+              <i class="fa fa-github"></i>
+            
+              <i class="fa fa-youtube"></i>
+            </div>
+        </footer>
     </body>
 </html>

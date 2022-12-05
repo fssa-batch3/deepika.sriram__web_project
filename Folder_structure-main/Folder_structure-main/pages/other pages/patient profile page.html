@@ -1,86 +1,160 @@
 <html>
     <head>
-        <title>hospital profile page</title>
-        <link rel="stylesheet" href="C:Users\DeepikaSriram\Downloads\Folder_structure-main\Folder_structure-main\assets\css\my project 3.css">
+        <title>patient profile page</title>
+        <link rel="stylesheet" href="../../assets/css/my project 3.css">
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <script src="https://kit.fontawesome.com/a88e57b17d.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="icon" href="../../assets/images/hospital logo 3.JPG">
         <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Hammersmith+One&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
             <div>
-                <img src="C:Users\DeepikaSriram\Downloads\Folder_structure-main\Folder_structure-main\assets\images\hospital_logo_3-removebg-preview.png" alt="logo of get well soon website">
+                <img src="../../assets/images/gws.png" alt="logo of get well soon website">
             </div>
             <div>
                 <ul>
+                    <li>
+                        <a id="btn" href="C:Users\DeepikaSriram\Downloads\Folder_structure-main\Folder_structure-main\pages\homepage\index.html"> HOME </a>
+                    </li>
                     <li>
                         <a href="#">Contact us</a>
                     </li>
                     <li>
                         <a href="#">About us</a>
                     </li>
-                    <li>
-                        <button type="button" id="home">
-                            <a id="btn" href="C:Users\DeepikaSriram\Downloads\Folder_structure-main\Folder_structure-main\pages\homepage\index.html"> HOME </a>
-                        </button>
-                    </li>
+                    
                 </ul>
             </div>
         </header>
         <main>
             <form>
-                <div>
-                   <h1>Create Profile</h1>
-                   <img src="C:Users\DeepikaSriram\Downloads\Folder_structure-main\Folder_structure-main\assets\images\profile avatar.png">
+                <h1 style="margin-left:20px"><center>Profile <i class="fas fa-user" ></i></center></h1>
+                <div style="margin-left:20px">
+                    <label>Name*</label>
                 </div>
-                <div class="details">
-                    <label>Name:</label>
-                    <label>firstname</label>
-                    <input type="text" placeholder="firstname" required="true" />
-                    <label>lastname</label>
-                    <input type="text" placeholder="lastname" required="true" />
+                <br>
+                <div style="margin-left:20px">
+                    <input type="text" placeholder="firstname and lastname" required="true" style="width:500px;height:40px" />
                 </div>
-                <div class="details">
-                    <label>Age:</label>
-                    <input type="number" required="true" />
-                    <label>Date of birth:</label>
-                    <input type="date" required="true" />
+                <br>
+                <div class="frm">
+                    <div style="margin-left:20px">
+                        <div>
+                            <label>Age*</label>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="number" required="true" style="width:70px;height:40px" />
+                        </div>
+                    </div>
+                    <div style="margin-left:60px">
+                        <div>
+                            <label>D.O.B*</label>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="date" required="true" style="height:40px" />
+                        </div>
+                    </div>
+                    <div style="margin-left:60px">
+                        <div>
+                            <label>Gender*</label>
+                        </div>
+                        <br>
+                        <br>
+                        <div>
+                            <input type="radio" required="true" name="M_F_O" />
+                            <label>Male</label>
+                            <input type="radio" required="true" name="M_F_O" />
+                            <label>Female</label>
+                            <input type="radio" required="true" name="M_F_O" />
+                            <label>Others</label>
+                        </div>
+                    </div>
                 </div>
-                <div class="details">
-                    <label>Gender:</label>
-                    <input type="text" required="true" />
+                <br>
+                <div style="margin-left:20px">
+                    <label>Mobile Number</label>
                 </div>
-                <div class="details">
-                    <label>Number of family members:</label>
-                    <input type="number" required="true" />
+                <br>
+                <div style="margin-left:20px">
+                    <input type="tel" style="width:500px;height:40px" />
                 </div>
-                <div class="details">
-                    <label>Members:</label>
-                    <input type="text" required="true" />
+                <br>
+                <div class="frm">
+                    <div style="margin-left:20px">
+                        <div>
+                            <label>Email Id*</label>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="email" required="true" style="width:280px;height:40px" />
+                        </div>
+                    </div>
+                    <div style="margin-left:20px">
+                        <div>
+                            <label>Password*</label>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="password" required="true" style="width:200px;height:40px" />
+                        </div>
+                    </div>
                 </div>
-                <div class="details">
-                    <label>Health issues:</label>
-                    <input type="text" required="true" />
+                <br>
+                <div class="frm">
+                    <div style="margin-left:20px">
+                        <div>
+                            <label>No. of family members*</label>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="number" required="true" style="width:70px;height:40px" />
+                        </div>
+                    </div>
+                    <br>
+                    <div style="margin-left:20px">
+                        <div>
+                            <label>Health issues</label>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="text" style="width:150px;height:40px" />
+                        </div>
+                    </div>
+                    <br>
+                    <div style="margin-left:20px">
+                        <div>
+                            <label>Upload files of health issues</label>
+                        </div>
+                        <br>
+                        <br>
+                        <div>
+                            <input type="file" style="text-decoration:none" />
+                        </div>
+                    </div>
                 </div>
-                <div class="details">
-                    <label>mobile number:</label>
-                    <input type="number" required="true"/>
-                </div>
-                <div class="details">
-                    <label>Email id:</label>
-                    <input type="email" placeholder="example@gmail.com" required="true" />
-                </div>
-                <div class="details">
-                    <label> Password:</label>
-                    <input type="password" required="true" />
-                </div>
-                <div>
-                    <button type="reset">Clear form</button>
-                    <a href="C:Users\DeepikaSriram\Downloads\Folder_structure-main\Folder_structure-main\pages\other pages\patient home page.html" >
-                         <button type="button">
-                         Submit
-                         </button>
-                    </a>
+                <br>
+                <br>
+                <div class="frm">
+                    <div style="margin-left:20px">
+                        <a href="../other pages/sign in page.html">
+                            <button type="button"><i class="fa fa-angle-double-left"></i> BACK</button>
+                        </a>
+                    </div>
+                    <br>
+                    <div style="margin-left:20px">
+                            <button type="reset">CLEAR FORM</button>
+                    </div>
+                    <br>
+                    <div style="margin-left:20px">
+                        <a href="../other pages/patient home page.html">
+                         <button type="button">SIGN IN <i class="fa fa-angle-double-right"></i></button>
+                        </a>
+                    </div>
                 </div>
             </form>
         </main>

@@ -1,0 +1,91 @@
+*{
+    padding:0;
+}
+body{
+    background-image:url("../images/GettyImages-899023540.jpg");
+    background-attachment:scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+header{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    background-image: linear-gradient(darkturquoise,cyan,darkturquoise);
+}
+header div img{
+    width:20%;
+}
+div ul li{
+    text-decoration:none;
+    display:inline;
+}
+div ul li a{
+    text-decoration:none;
+    color:black;
+    font-weight:600;
+    font-size:120%;
+    font-family:"source sans pro";
+    margin-left:10px;
+    margin-right:10px;
+}
+div ul li a:hover{
+    transition:0.2s;
+    border-bottom: 2px solid #811CC7;
+    padding-bottom:5px;
+}
+#home{
+    padding:10px 15px;
+    border-radius:5%;
+    background-color:#AE38F4;
+    border-color:#AE38F4;
+}
+#home:hover{
+    background-color:white;
+    border-color:white;
+    transition:0.2s;
+}
+#btn{
+    color:white;
+}
+#btn:hover{
+    color:#811CC7;
+    transition:0.2s;
+}
+main{
+    width:30%;
+    height:95%;
+    background-color:white;
+    box-shadow: 10px 10px 10px grey;
+    position:absolute;
+    top:10px;
+    
+}
+main h1{
+    font-size: 35px;
+    font-family:"kumbh sans";
+    border-bottom:1.5px solid black;
+    padding-top:25px;
+    padding-bottom:25px;
+}
+div{
+    margin-top:25px;
+    margin-left:30px;
+}
+.stng{
+    text-decoration: none;
+    color:black;
+    font-size:25px;
+    font-family:"kumbh sans";
+    display:block;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.stng:hover{
+    background-color:#C8C8C8;
+    border:1px solid black;
+    color:darkred;
+    transition:0.2s;
+}
