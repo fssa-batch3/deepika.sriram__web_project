@@ -1,0 +1,101 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-image: url("../images/hospital\ background\ 2.jpg");
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    background-size: cover;
+}
+header{
+    background-color: #03045E;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-family: "kumbh sans";
+}
+header div img{
+    width:15%;
+}
+header div a{
+    color:white;
+    text-decoration: none;
+    font-weight:600;
+    font-family:"kumbh sans";
+    font-size:120%;
+}
+header div a:hover{
+    color:yellow;
+    transition:0.2s;
+}
+div ul li{
+    text-decoration:none;
+    display:inline;
+}
+div ul li a{
+    text-decoration:none;
+    color: white;
+    font-weight:600;
+    font-size:120%;
+    margin-left: 10px;
+    margin-right:10px;
+}
+div ul li a:hover{
+    color:yellow;
+    transition:0.2s;
+}
+main{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    gap:1rem;
+}
+main .card{
+    border:1.5px solid #03045E;
+    border-radius:10px;
+    width:40%;
+    height:80%;
+    padding:5% 20%;
+    box-shadow:5px 5px 5px #57588e;
+    margin:5% 0;
+    background-color: white;
+}
+main .card:hover{
+    transform:scale(1.1);
+    transition:0.5s;
+}
+main .card a{
+    text-decoration: none;
+}
+main div div img{
+    width:200px;
+    height:200px;
+    border:1.5px solid #03045E;
+    border-radius:10px;
+    background-color: white;
+}
+main div div h3,p{
+    color:#03045E;
+    font-family: "source sans pro";
+}
+footer{
+    margin-top:5px;
+    background-color: #CAF0F8;
+    color:#03045E;
+}
+footer div.ftr{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-bottom: 1px solid white;
+}
+footer div img{
+    width:10%;
+    position:relative;
+    left:45%;
+}
