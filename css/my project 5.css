@@ -47,7 +47,7 @@ main div{
     box-shadow:10px 10px 10px grey;
     width:15%;
     padding:20px;
-    margin-top:5%;
+    margin-top:10%;
     background-color:white;
 }
 main div i{
@@ -89,8 +89,7 @@ form{
     border-radius: 1px;
     width:20%;
     height:25%;
-    position:absolute;
-    top:40%;
+    position:relative;
     left:40%;
     border:1px solid black;
     box-shadow:10px 10px 10px grey;
@@ -106,7 +105,7 @@ form{
     background-color:white;
 }
 
-[type="submit"]{
+[type="button"]{
     padding:5px 10px;
     background-color:#03045E;
     border-color:#03045E;
