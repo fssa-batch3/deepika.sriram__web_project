@@ -4,7 +4,7 @@
 }
 body{
    
-    font-family:"source sans pro";
+    font-family:'source sans pro',sans-serif;
 }
 header{
     background-color: #03045E;
@@ -15,7 +15,7 @@ header{
     align-items: center;
     padding-top: 15px;
     padding-bottom: 15px;
-    font-family: "kumbh sans";
+    font-family: 'kumbh sans',sans-serif;
 }
 header div img{
     width:15%;
@@ -24,7 +24,7 @@ header div a{
     color:white;
     text-decoration: none;
     font-weight:600;
-    font-family:"kumbh sans";
+    font-family:'kumbh sans',sans-serif;
     font-size:120%;
 }
 header div a:hover{
@@ -64,7 +64,7 @@ button{
     font-size:30px;
     border-radius: 5px;
     margin-top:10%;
-    font-family: "courgette";
+    font-family: 'courgette','cursive';
 }
 button:hover{
     background-color:white;

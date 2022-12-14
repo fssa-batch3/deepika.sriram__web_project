@@ -53,7 +53,7 @@ form h1 i{
 form label{
     color:#03045E;
     font-weight: bold;
-    font-family: "source sans pro";
+    font-family: 'source sans pro',sans-serif;
 }
 .pro i{
     font-size:150px;

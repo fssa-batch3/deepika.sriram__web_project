@@ -12,7 +12,7 @@ header{
     align-items: center;
     padding-top: 15px;
     padding-bottom: 15px;
-    font-family: "kumbh sans";
+    font-family:'kumbh sans',sans-serif;
     opacity:0.1;
 }
 header div img{
@@ -22,7 +22,7 @@ header div a{
     color:white;
     text-decoration: none;
     font-weight:600;
-    font-family:"kumbh sans";
+    font-family:'kumbh sans',sans-serif;
     font-size:120%;
 }
 header div a:hover{
@@ -68,7 +68,7 @@ form div p{
     background-color:#03045E;
     border-color:#03045E;
     color:white;
-    font-family:"kumbh sans";
+    font-family:'kumbh sans',sans-serif;
     font-weight:bold;
     margin-top:15px;
     margin-left:20px;

@@ -12,7 +12,7 @@ header{
     align-items: center;
     padding-top: 15px;
     padding-bottom: 15px;
-    font-family: "kumbh sans";
+    font-family: 'kumbh sans',sans-serif;
 }
 header div img{
     width:15%;
@@ -21,7 +21,7 @@ header div a{
     color:white;
     text-decoration: none;
     font-weight:600;
-    font-family:"kumbh sans";
+    font-family:'kumbh sans',sans-serif;
     font-size:120%;
 }
 header div a:hover{
@@ -88,7 +88,7 @@ h2{
     border: none;
     color:white;
     font-weight:bold;
-    font-family:"abril fat face";
+    font-family:'abril fat face','cursive';
     margin-right:20px;
 }
 [type="button"]:hover{

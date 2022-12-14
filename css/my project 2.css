@@ -12,7 +12,7 @@ header{
     align-items: center;
     padding-top: 15px;
     padding-bottom: 15px;
-    font-family: "kumbh sans";
+    font-family: 'kumbh sans',sans-serif;
 }
 header div img{
     width:15%;
@@ -47,7 +47,7 @@ main section div a{
     border-radius:20px;
     display:flex;
     justify-content: space-around;
-    font-family: "source sans pro";
+    font-family: 'source sans pro',sans-serif;
 }
 #GWS img{
     width:100%;
@@ -66,7 +66,7 @@ button{
     background-color:#03045E;
     border-color:#03045E;
     color:white;
-    font-family:"source sans pro";
+    font-family:'source sans pro',sans-serif;
     font-weight:bold;
     font-size:22px;
 }
@@ -87,7 +87,7 @@ button:hover{
     margin-bottom:5px;
     padding:30px 0;
     font-size:16px;
-    font-family:"kumbh sans";
+    font-family:'kumbh sans',sans-serif;
 }
 
 .box{
@@ -105,7 +105,7 @@ button:hover{
     border-radius: 10px;
     padding:30px 0;
     color:black;
-    font-family:"abril fat face";
+    font-family:'abril fat face','cursive';
     font-size: 20px;
 }
 footer{
@@ -148,7 +148,7 @@ form div a:hover{
     position:absolute;
     top:25%;
     border:1px solid black;
-    font-family: "kumbh sans";
+    font-family: 'kumbh sans',sans-serif;
 }
 .btn{
     display:flex;
@@ -176,32 +176,4 @@ form div a:hover{
     color: white;
     padding:10px;
     border-radius: 150px;
-}
-input[type="radio"]:after{
-    width: 10px;
-    height: 10px;
-    border-radius: 15px;
-    top: -2px;
-    left: -1px;
-    position: relative;
-    background-color: #d1d3d1;
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 2px solid #d1d3d1;
-    
-}
-input[type="radio"]:checked:after{
-    width: 10px;
-    height: 10px;
-    border-radius: 15px;
-    top: -2px;
-    left: -1px;
-    position: relative;
-    background-color: darkcyan;
-    content: '';
-    display: inline-block;
-    visibility: visible;
-    border: 2px solid darkcyan;
-    
 }

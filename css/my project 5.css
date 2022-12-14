@@ -12,7 +12,7 @@ header{
     align-items: center;
     padding-top: 15px;
     padding-bottom: 15px;
-    font-family: "kumbh sans";
+    font-family: 'kumbh sans',sans-serif;
 }
 header div img{
     width:15%;
@@ -83,7 +83,7 @@ header,main,footer{
 }
 form{
     background-color:white;
-    font-family: "source sans pro";
+    font-family: 'source sans pro',sans-serif;
     border:5px solid transparent;
     display:block;
     border-radius: 1px;
@@ -111,7 +111,7 @@ form{
     border-color:#03045E;
     border-radius:5%;
     color:white;
-    font-family:"source sans pro";
+    font-family:'source sans pro',sans-serif;
     font-weight:bold;
     margin-left: 10px;
 }
