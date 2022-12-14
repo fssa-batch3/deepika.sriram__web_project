@@ -78,7 +78,7 @@ main{
 
 h1{
     font-size:40px;
-    font-family:'abril fat face','cursive';
+    font-family:'abril fat face',cursive;
 }
 div.update{
     width:50%;
