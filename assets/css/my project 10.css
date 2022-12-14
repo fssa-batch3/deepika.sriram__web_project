@@ -64,7 +64,7 @@ button{
     font-size:30px;
     border-radius: 5px;
     margin-top:10%;
-    font-family: 'courgette','cursive';
+    font-family: 'courgette',cursive;
 }
 button:hover{
     background-color:white;

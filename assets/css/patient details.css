@@ -54,7 +54,7 @@ ul li a:hover, .dropdown:hover .dropbtn{
     min-width: 150px;
     border-radius:0 0 10px 10px;
     box-shadow:5px 5px 5px grey;
-    font-family: 'courgette','cursive';
+    font-family: 'courgette',cursive;
     z-index:1;
 }
 .dropdown-content a{

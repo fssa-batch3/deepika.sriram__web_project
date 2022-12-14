@@ -12,7 +12,7 @@ header{
     align-items: center;
     padding-top: 15px;
     padding-bottom: 15px;
-    font-family: "kumbh sans";
+    font-family: 'kumbh sans',sans-serif;
 }
 header div img{
     width:15%;

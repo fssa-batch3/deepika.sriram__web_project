@@ -84,7 +84,6 @@ header,main,footer{
 form{
     background-color:white;
     font-family: 'source sans pro',sans-serif;
-    border:5px solid transparent;
     display:block;
     border-radius: 1px;
     width:20%;
