@@ -64,10 +64,7 @@ main div:hover{
     transform:scale(1.1);
     transition:0.3s;
 }
-main div i{
-    font-size:90px;
-    margin-left: 50px;
-}
+
 main div h2{
     margin-left:50px;
 }
