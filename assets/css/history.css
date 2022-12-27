@@ -51,10 +51,10 @@ main{
     border:1px solid black;
     box-shadow:3px 3px 3px grey;
     width:50%;
-    height:60%;
+    height:65%;
     margin-left:25%;
     position:relative;
-    top:30%;
+    top:60%;
 }
 section{
     display:flex;

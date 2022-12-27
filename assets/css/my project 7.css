@@ -2,7 +2,9 @@
     margin:0;
     padding:0;
 }
-
+body{
+    font-family:'kumbh sans',sans-serif;
+}
 header{
     background-color: #03045E;
     display:flex;
@@ -51,40 +53,32 @@ main{
     justify-content: space-around;
 }
 .lst{
-    border: 1px solid black;
-    width:40%;
+    border: 5px solid black;
+    width:75%;
     margin-top: 5%;
+    border-style: double;
 }
-.section{
+section{
     display:flex;
-    margin-left:10%;
     flex-direction: row;
     flex-wrap:wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+    padding:2%;
+    border:bottom 1px solid black;
+    border-style: double;
+}
+section div.details{
+    display:flex;
+}
+.details img{
     border:1px solid black;
-    padding:10px 0;
-    margin-top:5%;
-    width:80%;
 }
-.section:hover{
-    transform:scale(1.1);
-    transition:0.4s;
-}
-div i{
-    font-size:150%;
-    padding:0 20px;
-}
-h2{
-    padding: 25px;
-    border-bottom:1px solid darkcyan;
-}
-
 [type="button"]{
-    padding:5px 10px;
-    background-color:#03045E;
-    border-color:#03045E;
-    border-radius:2px;
+    padding:10px 15px;
+    background-image: linear-gradient(to right,#03045e,#1618b3,#4143b7,#4143b7,#1618b3,#03045e);
+    border-color:transparent;
+    border-radius:20px;
     border: none;
     color:white;
     font-weight:bold;
@@ -92,12 +86,38 @@ h2{
     margin-right:20px;
 }
 [type="button"]:hover{
-    transform:scale(1.1);
-    transition:0.3s;
+    background-image: linear-gradient(to right,rgb(2, 54, 2),rgb(7, 85, 7),green,green,rgb(7,85,7),rgb(2,54,2));
+    transition:1s;
+}
+.dropdown{
+    display:inline;
+}
+.dropbtn{
+    display:inline-block;
+    color:white;
+    font-size:20px;
+    font-weight: 500;
+    padding:20px;
+    text-decoration: none;
+}
+.dropdown-content{
+    display:none;
+    position:absolute;
+    width:30%;
+    border:1px solid black;
+    background-color:white;
+    padding:1%;
+    min-width: 150px;
+    box-shadow:5px 5px 5px grey;
+    font-family:'courgette',cursive;
+    z-index:1;
+}
+.dropdown:hover .dropdown-content{
+    display:block;
 }
 footer{
     margin-top:5px;
-    background-color: #CAF0F8;
+    background-image:linear-gradient(white,#caf0f8);
     color:#03045E;
 }
 footer div.ftr{

@@ -30,15 +30,15 @@
             </div>
         </header>
         <main>
-            <form style="display:flex;width:80%;position:absolute;left:10%">
+            <form class="edit">
                 <div>
-                   <h1 style="margin-left:70%;text-align: center;">Edit Profile</h1>
+                   <h1 style="margin-left:20px">Edit Profile</h1>
                    <div style="margin-left:20px">
                        <label>Name*</label>
                    </div>
                    <br>
                    <div style="margin-left:20px">
-                       <input type="text" placeholder="firstname and lastname" required="true" style="width:500px;height:40px" />
+                       <input type="text" placeholder="firstname and lastname" required="true" style="width:80%;height:40px" />
                     </div>
                     <br>
                     <div class="frm">
@@ -50,15 +50,6 @@
                            <div>
                               <input type="number" required="true" style="width:70px;height:40px" />
                            </div>
-                       </div>
-                       <div style="margin-left:60px">
-                           <div>
-                              <label>D.O.B*</label>
-                           </div>
-                           <br>
-                           <div>
-                              <input type="date" required="true" style="height:40px" />
-                            </div>
                        </div>
                        <div style="margin-left:60px">
                             <div>
@@ -82,79 +73,69 @@
                     </div>
                     <br>
                     <div style="margin-left:20px">
-                       <input type="tel" style="width:500px;height:40px" />
+                       <input type="tel" style="width:80%;height:40px" />
                     </div>
                     <br>
-                    <div class="frm">
+                    <div>
                        <div style="margin-left:20px">
                            <div>
                               <label>Email Id*</label>
                            </div>
                            <br>
                            <div>
-                              <input type="email" required="true" style="width:280px;height:40px" />
+                              <input type="email" required="true" style="width:80%;height:40px" />
                             </div>
                         </div>
+                    </div>
+                    <br>
+                    <div>
                         <div style="margin-left:20px">
                            <div>
-                              <label>Password*</label>
+                              <label>Health issues*</label>
                            </div>
                            <br>
                            <div>
-                              <input type="password" required="true" style="width:200px;height:40px" />
+                              <input type="text" required="true" style="width:80%;height:40px" />
                            </div>
                         </div>
+                        <br>
                     </div>
+                    <div style="margin-left:20px">
+                        <div>
+                            <label>Occupation*</label>
+                            <select required="true">
+                                <option>Government</option>
+                                <option>Private</option>
+                                <option>Own business</option>
+                                <option>Housewife</option>
+                                <option>Others</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div style="margin-left:20px">
+                        <div>
+                            <label>Insurance policies</label>
+                            <select>
+                                <option>Central govt health scheme</option>
+                                <option>Employement state insurance (ESI) </option>
+                                <option>Private insurance</option>
+                                <option>N/A</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
                     <br>
                     <div class="frm">
-                        <div style="margin-left:20px">
-                            <div>
-                                <label>No. of family members*</label>
-                            </div>
-                            <br>
-                            <div>
-                                <input type="number" required="true" style="width:70px;height:40px" />
-                            </div>
-                        </div>
-                        <br>
-                        <div style="margin-left:20px">
-                           <div>
-                              <label>Health issues</label>
-                           </div>
-                           <br>
-                           <div>
-                              <input type="text" style="width:150px;height:40px" />
-                           </div>
-                        </div>
-                        <br>
-                        <div style="margin-left:20px">
-                           <div>
-                              <label>Upload files of health issues</label>
-                            </div>
-                            <br>
-                            <br>
-                            <div>
-                               <input type="file" style="text-decoration:none" />
-                            </div>
-                       </div>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="frm" style="margin-left:40%">
                         <div style="margin-left:20px">
                             <button type="reset">CLEAR FORM</button>
                        </div>
                        <br>
                        <div style="margin-left:20px">
-                          <a href="../patient/patient home page.html">
+                          <a href="../../homepage/home page.html">
                            <button type="button">UPDATE PROFILE </button>
                           </a>
                         </div>
-                    </div>
-                </div>
-                <div class="pro">
-                    <div>
-                      <i class="fas fa-user" style="font-size:150px;color:white;background-color:#A2A7A4;padding:100px;border-radius:50px;margin-top:100px;margin-left:100px;" alt="avatar to add profile pic"></i>
                     </div>
                 </div>
             </form>

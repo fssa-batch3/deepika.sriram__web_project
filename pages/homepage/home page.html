@@ -1,30 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>index</title>
-        <link rel="stylesheet" href="./assets/css/my project 1.css">
-        <link rel="icon" href="./assets/images/hospital logo 3.JPG">
+        <title>hospital home page</title>
+        <link rel="stylesheet" href="../../assets/css/my project 1.css">
+        <link rel="icon" href="../../assets/images/hospital logo 3.JPG">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Hammersmith+One&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header style="display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-between;align-items: center;">
+        <header style="display:flex;justify-content:flex-start">
             <div>
-                <img src="./assets/images/gws.png" alt="logo of get well soon website">
+                <img src="../../assets/images/gws.png" alt="logo of get well soon website">
             </div>
             <div>
                 <ul>
                     <li>
+                        <i class="fas fa-search" style="color:black;position:absolute;top:5%;left:41%;font-size:20px"></i>
+                        <input type="text" style="width:60%;height:50%;margin-left:-45%;border-radius: 20px;border:none;background-color:aliceblue" placeholder="enter location, hospital">
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Hospitals</a>
+                        <div class="dropdown-content" style="right:35%">
+                            <a href="../../pages/other pages/patient/list of hospital page.html">All</a>
+                            <a href="../../pages/other pages/patient/list of CGHS hospitals.html">Central govt health scheme entitiled</a>
+                            <a href="../../pages/other pages/patient/list of hospital page.html">Private insurance entitled</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Specialists</a>
+                        <div class="dropdown-content" style="right:25%;">
+                            <div>
+                                <a href="#">Allergy and immunology</a>
+                                <a href="#">Cancer</a>
+                                <a href="#">Cardiology</a>
+                                <a href="#">Dermatology (skin)</a>
+                                <a href="#">Diabetes (blood sugar)</a>
+                                <a href="#">Gastroenterology (digestive)</a>
+                                <a href="#">Ear, Nose and Throat (ENT)</a>
+                                <a href="#">General physician</a>
+                                <a href="#">Liver diseases</a>
+                            </div>
+                            <div>
+                                <a href="#">Nephrology (kidney)</a>
+                                <a href="#">Neurology (nerves and brain)</a>
+                                <a href="#">Opthomology (eyes)</a>
+                                <a href="#">Orthology (bones and joints)</a>
+                                <a href="#">Paediatrics (children)</a>
+                                <a href="#">Pulmonogy (Lungs)</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
                         <a href="#">Contact us</a>
                     </li>
                     <li>
-                        <a href="./pages/other pages/other pages/about us.html">About us</a>
+                        <a href="../../pages/other pages/other pages/about us.html">About us</a>
                     </li>
-                    <li>
-                        <a href="./pages/other pages/other pages/login.html">Login</a>
-                        </a>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn"><i class="far fa-user" style="color:white;font-size:150%"></i> </a>
+                        <div class="dropdown-content" style="right:5%">
+                            <a href="../../index.html">Sign out <i class="fa fa-sign-out"></i> </a>
+                            <a href="../other pages/patient/history.html">History <i class="fa fa-history"></i> </a>
+                            <a href="../other pages/patient/patient profile page.html">Profile <i class="fas fa-user"></i> </a>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -33,19 +73,11 @@
             <section id="GWS">
               <div>
                 <div>
-                    <h1> Welcome To Get Well Soon!!</h1>
-                </div>
-                <br>
-                <br>
-                <div>
-                    <a href="./pages/other pages/other pages/register.html">
-                        <button type="button"> Let's get started  </button>
-                    </a>
-                    
+                    <h1 style="margin-top:5%;font-size:70px"> Welcome To Get Well Soon!!</h1>
                 </div>
               </div>
               <div>
-                <img src="./assets/images/doctor examining patient.png" alt="doctor examining patient">
+                <img src="../../assets/images/doctor examining patient.png" alt="doctor examining patient">
               </div>
             </section>
             <section id="about_us">
@@ -78,7 +110,7 @@
         <footer>
             <div>
                 <div>
-                    <img src="./assets/images/hospital_logo_3-removebg-preview.png" alt="gws logo">
+                    <img src="../../assets/images/hospital_logo_3-removebg-preview.png" alt="gws logo">
                 </div>
                 <div class="ftr">
                     <div>

@@ -55,15 +55,6 @@ form label{
     font-weight: bold;
     font-family: 'source sans pro',sans-serif;
 }
-.pro i{
-    font-size:150px;
-    color:white;
-    background-color:#A2A7A4;
-    padding:100px;
-    border-radius:50px;
-    margin-top:100px;
-    margin-left:100px;
-}
 .frm{
     display:flex;
 }
@@ -95,4 +86,12 @@ form label{
     border-color:red;
     transition:0.3s;
     
+}
+form.edit{
+    width:30%;
+    height:76%;
+    position:absolute;
+    top:15%;
+    left:30%;
+    padding:2%;
 }

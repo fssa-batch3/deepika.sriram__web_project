@@ -59,9 +59,10 @@ main .card{
     border-radius:10px;
     width:40%;
     height:80%;
-    padding:5% 20%;
+    padding:0 15%;
+    padding-top:5%;
     box-shadow:5px 5px 5px #57588e;
-    margin:5% 0;
+    margin:10% 0;
     background-color: white;
 }
 main .card:hover{
@@ -82,10 +83,10 @@ main div div h3,p{
     color:#03045E;
     font-family: 'source sans pro',sans-serif;
 }
-footer{
-    margin-top:5px;
-    background-color: #CAF0F8;
+.foot{
+    background-color:#caf0f8;
     color:#03045E;
+    position:relative;
 }
 footer div.ftr{
     display:flex;

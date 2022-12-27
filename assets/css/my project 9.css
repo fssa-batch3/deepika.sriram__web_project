@@ -49,12 +49,15 @@ div ul li a:hover{
 }
 main{
     display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
     justify-content: space-around;
 }
 form{
     padding:30px;
     margin-top:10px;
     margin-bottom:10px;
+    border:1px solid black;
 }
 div.frm{
     display:flex;
