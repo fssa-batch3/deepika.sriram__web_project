@@ -121,9 +121,9 @@ form.edit{
         margin-right:5px;
     }
     form{
-        top:10%;
+        top:15%;
         left:7%;
-        height:50%;
+        height:55%;
         width:80%;
     }
     i{
@@ -139,7 +139,7 @@ form.edit{
     }
     form.edit{
         width:80%;
-        height:47%;
+        height:50%;
         position:absolute;
         top:10%;
         left:8%;
