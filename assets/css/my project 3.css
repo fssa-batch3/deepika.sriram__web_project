@@ -122,27 +122,25 @@ form.edit{
     }
     form{
         top:15%;
-        left:7%;
-        height:55%;
-        width:80%;
-    }
-    i{
-        content-visibility: hidden;
+        left:25%;
+        height:fit-content;
+        width:fit-content;
+        font-size: 70%;
     }
     #frm{
         margin-left:unset;
     }
     #frm button{
-        padding:10px 15px;
+        padding:5px 15px;
         border-radius: 20px;
         font-size: 80%;
     }
     form.edit{
-        width:80%;
-        height:50%;
+        width:fit-content;
+        height:fit-content;
         position:absolute;
         top:10%;
-        left:8%;
+        left:2%;
         padding:2%;
         font-size: 70%;
     }

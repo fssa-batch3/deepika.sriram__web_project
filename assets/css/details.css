@@ -95,8 +95,8 @@ form{
         top:10%;
         left:10%;
         padding:2%;
-        width:70%;
-        height:35%;
+        width:fit-content;
+        height:fit-content;
     }
     form button{
         font-size: 70%;
