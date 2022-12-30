@@ -15,25 +15,14 @@ header{
     font-family:'kumbh sans',sans-serif;
     opacity:0.1;
 }
-header div img{
-    width:15%;
+header img{
+    width:5%;
 }
-header div a{
-    color:white;
-    text-decoration: none;
-    font-weight:600;
-    font-family:'kumbh sans',sans-serif;
-    font-size:120%;
-}
-header div a:hover{
-    color:yellow;
-    transition:0.2s;
-}
-div ul li{
+header ul li{
     text-decoration:none;
     display:inline;
 }
-div ul li a{
+header ul li a{
     text-decoration:none;
     color: white;
     font-weight:600;
@@ -41,7 +30,7 @@ div ul li a{
     margin-left: 10px;
     margin-right:10px;
 }
-div ul li a:hover{
+header ul li a:hover{
     color:yellow;
     transition:0.2s;
 }
@@ -56,9 +45,6 @@ form{
     height:55%;
     background-color: white;
     box-shadow: 10px 10px 10px grey;
-}
-form div p{
-    border-radius: 2px;  
 }
 .frm{
     display:flex;
@@ -78,4 +64,44 @@ form div p{
     border-color:white;
     color:#03045E;
     transition:0.2s;
+}
+
+
+@media screen and (max-width:800px) {
+    header{
+        justify-content:space-between;
+        flex-wrap: nowrap;
+        align-items: center;
+        opacity:unset;
+        width:auto;
+    }
+    header img{
+        width: 10%;
+    }
+    #hide{
+        font-weight:400;
+        font-family:'kumbh sans',sans-serif;
+        font-size:70%;
+        margin-left:0;
+    }
+    header ul li a{
+        margin-left: 5px;
+        margin-right:0px;
+    }
+    form{
+        font-size:75%;
+        box-shadow: none;
+        position:absolute;
+        top:10%;
+        left:10%;
+        padding:2%;
+        width:70%;
+        height:35%;
+    }
+    form button{
+        font-size: 70%;
+    }
+    div p{
+        width:unset;
+    }
 }

@@ -56,3 +56,24 @@ form div a:hover{
     border-color: green;
     transition:0.3s;
 }
+
+@media  screen and (max-width:800px) {
+    body{
+        background-image: url(../images/imageedit_2_3101151645.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: sans-serif;
+    }
+    form{
+        top:20%;
+        left:13%;
+        border-radius:20px;
+        font-size: 80%;
+        width:70%;
+    }
+    .sgn{
+        width:75%;
+        left:10%;
+    }
+}

@@ -90,3 +90,50 @@ div.frm{
     border-color:red;
     transition:0.3s;
 }
+
+
+@media screen and (max-width:800px) {
+    header{
+        justify-content:unset;
+        flex-wrap: nowrap;
+        align-items: center;
+        width:100%;
+    }
+    #hide{
+        font-weight:400;
+        font-family:'kumbh sans',sans-serif;
+        font-size:70%;
+        margin-left:-250px;
+    }
+    header div ul li a{
+        margin-left:5px;
+        margin-right:5px;
+    }
+    main{
+        background-image: url(../images/imageedit_1_2739336866.png);
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+    }
+    main img{
+        display:none;
+    }
+    form{
+        background-color: white;
+    }
+     div br{
+        display:none;
+    }
+    form{
+        width:65%;
+    }
+    input,textarea{
+        border: 1px solid grey;
+        border-radius: 5px;
+    }
+    [type="button"],[type="reset"]{
+        padding:5px 10px;
+        font-size: 50%;
+        border-radius: 20px;
+    }
+}

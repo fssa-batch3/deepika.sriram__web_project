@@ -3,11 +3,21 @@
     padding:0;
 }
 
+header#hp{
+    background-color: #03045E;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display:flex;
+    justify-content: space-between;
+}
+
 header{
     background-color: #03045E;
     padding-top: 15px;
     padding-bottom: 15px;
-    font-family: 'kumbh sans',sans-serif;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
 }
 header div img{
     width:15%;
@@ -27,7 +37,7 @@ ul li a,.dropbtn{
     color:white;
     font-size:20px;
     font-weight: 500;
-    padding:20px;
+    padding:10px;
     text-decoration: none;
 }
 ul li a:hover, .dropdown:hover .dropbtn{
@@ -47,6 +57,7 @@ ul li a:hover, .dropdown:hover .dropbtn{
 .dropdown-content a{
     color:#03045E;
     padding:20px 0;
+    padding-left: 10px;
     text-decoration:none;
     display:block;
 }
@@ -58,31 +69,18 @@ ul li a:hover, .dropdown:hover .dropbtn{
 .dropdown:hover .dropdown-content{
     display:block;
 }
-div ul li{
-    text-decoration:none;
-    display:inline;
-}
-div ul li a{
-    text-decoration:none;
-    color: white;
-    font-weight:600;
-    font-size:120%;
-    margin-left: 10px;
-    margin-right:10px;
-}
-div ul li a:hover{
-    color:yellow;
-    transition:0.2s;
-}
+
 main section div a{
     text-decoration:none;
 }
+#vision,#vision-2{
+    display:none;
+}
+
 #GWS{
     background-image:linear-gradient(#90E0EF,#aee8f2,#bcebf3,#aee8f2,#90e0ef);
-    background-repeat:no-repeat;
-    background-size: cover;
     padding:40px 0;
-    margin-top: 20px;
+    margin-top:20px;
     margin-left:20px;
     margin-right:20px;
     border-radius:20px;
@@ -99,9 +97,12 @@ main section div a{
 }
 #GWS div h1{
     font-size: 65px;
-    width:50%;
+    width:70%;
 }
-button{
+#GWS div a{
+    color:grey;
+}
+#start{
     padding:10px 15px;
     border-radius:10px;
     background-color:#03045E;
@@ -111,35 +112,61 @@ button{
     font-weight:bold;
     border:none;
     font-size:22px;
+    margin-top:10%;
 }
-button:hover{
+#start:hover{
     background-color:white;
     border-color:white;
     transition:0.2s;
     color:#03045E;
+}
+#text{
+    width:50%;
+    height:36.5px;
+    background-color: aliceblue;
+    padding-left:2%;
+    border:2px solid black;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+#search{
+    width:10%;
+    height:40px;
+    color:white;
+    background-image: linear-gradient(to right,#03045e,#1618b3,#4143b7,#4143b7,#1618b3,#03045e);
+    border:none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-left:-4px;
+}
+#location{
+    content-visibility:hidden;
 }
 #about_us{
     background-color:transparent;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     color:black;
-    margin-top: 5px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom:5px;
+    margin:5px 20px;
     padding:30px 0;
     font-size:16px;
     font-family:'kumbh sans',sans-serif;
 }
 
 .box{
-    display:flex;
-    justify-content: space-around;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(2rem,1fr));
+    flex-wrap: wrap;
+    width:auto;
+    margin:0 5%;
 }
 .box div{
     border:1px solid black;
     box-shadow:4px 4px 4px grey;
     border-radius:10px;
+    width:70%;
+    height:85%;
+    padding: 15px;
 }
 .box div:hover{
     transform:scale(1.1);
@@ -161,4 +188,126 @@ footer div img{
     width:10%;
     position:relative;
     left:45%;
+}
+
+
+
+@media  screen and (max-width:800px) {
+    header,#hp{
+        width:auto;
+        display:flex;
+        justify-content:flex-start;
+        
+    }
+    header div img{
+        width:20%;
+    }
+    #hide{
+        content-visibility: hidden;
+    }
+    ul li a,.dropbtn{
+        display:ruby-base;
+        font-size:1rem;
+        padding:0%;
+    }
+    #vision,#vision-2{
+        display:unset;
+
+    }
+    #vision-2 a{
+        text-decoration: none;
+        color:white;
+        margin-right:20px;
+    }
+    #GWS{
+        margin-top:2%;
+        margin-left:2%;
+        margin-right:2%;
+        display:flex;
+        justify-content: space-around;
+        font-family: 'source sans pro',sans-serif;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: unset;
+        border-bottom-right-radius: unset;
+    }
+    #GWS div{
+        margin-left:9%;
+    }
+    #GWS div h1{
+        font-size:140%;
+        width:auto;
+        margin-top:15%;
+    }
+    #text,#search{
+        display:none;
+    }
+    #location{
+        content-visibility: visible;
+        background-color: #90E0EF;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        margin:0 2%;
+        padding:2% 0;
+        align-items: center;
+    }
+    #text-2{
+        width:70%;
+        margin-left:10%;
+        background-color: aliceblue;
+        border:1px solid black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius:20px;
+        height:25px;
+    }
+    #search-2{
+        color:white;
+        background-image: linear-gradient(to right,#03045e,#1618b3,#4143b7,#4143b7,#1618b3,#03045e);
+        border:none;
+        border-top-right-radius:20px;
+        border-bottom-right-radius: 20px;
+        margin-left:-4px;
+        margin-top:-10px;
+        font-size:50%;
+       width:10%;
+        height:28px;
+    }
+    #start{
+        padding:10% 15%;
+        border-radius:10px;
+        font-size:50%;
+    }
+    #about_us{
+        padding:5% 0;
+        font-size:90%;
+        margin:20px;
+    }
+    .box{
+        display:flex;
+        width:auto;
+        margin:0 5%;
+    }
+    .box div{
+        border-radius:10px;
+        width:85%;
+        height:30%;
+        margin-bottom:20px;
+        padding: 15px;
+    }
+    footer{
+        font-size: 90%;
+    }
+    footer div.ftr{
+        flex-direction:column;
+        row-gap:5%;
+        margin-left:25%;
+        justify-content: space-between;
+    }
+    footer div.ftr div{
+        margin:2% 0;
+    }
+    footer div img{
+        width:20%;
+        left:40%;
+    }
 }

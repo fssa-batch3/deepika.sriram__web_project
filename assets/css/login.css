@@ -38,3 +38,23 @@ form div button:hover{
     border-color:green;
     transition:0.4s;
 }
+
+@media  screen and (max-width:800px) {
+    body{
+        background-image: url(../images/imageedit_2_3101151645.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: sans-serif;
+    }
+    form{
+        width:70%;
+        top:20%;
+        left:15%;
+        border:1px solid black;
+        border-radius: 5%;
+        box-shadow:5px 5px 5px grey;
+        padding:2%;
+        font-size:80%;
+    }
+}
