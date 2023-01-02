@@ -120,13 +120,11 @@ div.frm{
     }
     form{
         background-color: white;
-        font-size:60%
+        font-size:60%;
+        width:65%;
     }
      div br{
         display:none;
-    }
-    form{
-        width:65%;
     }
     input,textarea{
         border: 1px solid grey;
