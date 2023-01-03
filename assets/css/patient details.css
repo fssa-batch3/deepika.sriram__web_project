@@ -19,7 +19,7 @@ header{
     padding-bottom: 15px;
     font-family: 'kumbh sans',sans-serif;
 }
-header div img{
+header  img{
     width:15%;
 }
 
@@ -105,4 +105,30 @@ main div p{
     border-color:white;
     color:#03045E;
     transition:0.2s;
+}
+
+
+@media screen and (max-width:800px) {
+    header{
+        justify-content:space-between;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    ul li a,.dropbtn{
+        font-size:90%;
+        padding:0 2px;
+    }
+    main{
+        font-size:60%;
+        position: absolute;
+        top:10%;
+        left:15%;
+        border:1px solid black;
+        padding:20px;
+        width:fit-content;
+        height:fit-content;
+        background-color: white;
+        box-shadow: 10px 10px 10px grey;
+    }
+    
 }
