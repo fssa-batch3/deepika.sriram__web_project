@@ -22,7 +22,7 @@
                 </div>
                 <br>
                 <div>
-                    <input type="text" required="true" style="width:90%;height:30px" />
+                    <input type="text" id="name" required="true" style="width:90%;height:30px" />
                 </div>
             </div>
             <br>
@@ -32,7 +32,7 @@
                 </div>
                 <br>
                 <div>
-                    <input type="tel" required="true" style="width:90%;height:30px" />
+                    <input type="tel" id="mobile_number" required="true" style="width:90%;height:30px"  />
                 </div>
             </div>
             <br>
@@ -42,22 +42,34 @@
                 </div>
                 <br>
                 <div>
-                    <input type="email" required="true" style="width:90%;height:30px" />
+                    <input type="email" id="email" required="true" style="width:90%;height:30px" />
                 </div>
             </div>
             <br>
             <div style="display:flex;justify-content:space-between">
                 <div>
-                    <a href="../other pages/sign up page.html">
-                        <button type="button">submit</button>
-                    </a>
+                    <button type="button" onclick="login()">submit</button>
                 </div>
                 <div>
-                    <a href="../other pages/login.html" style="color:blue;">
-                        Existing member?
-                    </a>
+                    Existing member?
                 </div>
             </div>
         </form>
+        <script>
+            function login(){
+            const name = document.getElementById("name").value
+            const mobile_number = document.getElementById("mobile_number").value
+            const email = document.getElementById("email").value
+            console.log(name)
+            console.log(mobile_number)
+            console.log(email)
+
+            localStorage.setItem("name", name)
+            localStorage.setItem("mobile_number", mobile_number)
+            localStorage.setItem("email", email)
+
+            window.location.href= "../other pages/sign up page.html"
+            }
+        </script>
     </body>
 </html>

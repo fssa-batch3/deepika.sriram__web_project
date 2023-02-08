@@ -39,7 +39,7 @@
                 </div>
                 <br>
                 <div>
-                    <p style="width:95%;height:30px;border:0.5px solid black;padding-left: 10px;padding-top: 10px;">Deepika Sriram</p>
+                    <input type="text" id="name" style="width:95%;height:30px;border:0.5px solid black;padding-left: 10px;padding-top: 10px;" />
                 </div>
                 <br>
                 <div class="frm">
@@ -49,16 +49,22 @@
                         </div>
                         <br>
                         <div>
-                            <p style="width:100%;height:30px;border:0.5px solid black;padding-left: 10px;padding-top: 10px">17</p>
+                            <input type="number" id="age" style="width:100%;height:30px;border:0.5px solid black;padding-left: 10px;padding-top: 10px" />
                         </div>
                     </div>
-                    <div style="margin-left:80px">
+                    <div style="margin-left:40px">
                         <div>
                             <label>Gender</label>
                         </div>
                         <br>
+                        <br>
                         <div>
-                            <p style="width:100%;height:30px;border:0.5px solid black;padding-left: 10px;padding-top: 10px">Female</p>
+                            <input type="radio" id="male" name="M_F_O" />
+                            <label>male</label>
+                            <input type="radio" id="female" name="M_F_O">
+                            <label>female</label>
+                            <input type="radio" id="others" name="M_F_O" />
+                            <label>others</label>
                         </div>
                     </div>
                 </div>
@@ -68,7 +74,7 @@
                 </div>
                 <br>
                 <div>
-                    <p style="width:90%;height:30px;border:0.5px solid black;padding-left: 10px;padding-top: 10px">+91 7678908945</p>
+                    <input type="tel" id="mobile_number" style="width:90%;height:30px;border:0.5px solid black;padding-left: 10px;padding-top: 10px" />
                 </div>
                 <br>
                 <div>
@@ -78,16 +84,14 @@
                         </div>
                         <br>
                         <div>
-                            <p style="width:99%;height:30px;border:0.5px solid black;padding-left: 2px;padding-top: 10px">deepika.sriram@fssa.freshworks.com</p>
+                            <input type="email" id="email" style="width:99%;height:30px;border:0.5px solid black;padding-left: 2px;padding-top: 10px" />
                         </div>
                     </div>
                 </div>
                 <br>
                 <div id="frm">
                     <div style="margin-top:5%">
-                        <a href="../patient/patient edit profile page.html">
-                         <button type="button">Edit profile</button>
-                        </a>
+                         <button type="button" onclick="edit()">Edit profile</button>
                     </div>
                     <div style="margin-top:5%;">
                         <a href="../../homepage/home page.html">
@@ -97,6 +101,12 @@
                 </div>
             </form>
         </main>
+        <script>
+            const name = localStorage.getItem("name");
+
+            document.getElementById("")
+
+        </script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </body>

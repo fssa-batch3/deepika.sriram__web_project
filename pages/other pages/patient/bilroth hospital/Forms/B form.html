@@ -42,7 +42,7 @@
                 </div>
                 <br>
                 <div style="margin-left:20px">
-                    <input type="text" placeholder="firstname" required="true" style="width:80%;height:2rem" />
+                    <input type="text" id="name" placeholder="firstname" required="true" style="width:80%;height:2rem" value="venkatesh" />
                 </div>
                 <br>
                 <div class="frm">
@@ -184,5 +184,20 @@
         </footer>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+        const name= document.getelementById("name").value
+        const age= document.getElementById("age").value
+        const health_issues= document.getElementById("health_issues").value
+        const date_consult= document.getElementById("date_consult").value
+        const mobile_number= document.getElementById("mobile_number").value
+        const email= document.getElementById("email").value
+        console.log(name)
+        console.log(age)
+        console.log(health_issues)
+        console.log(date_consult)
+        console.log(mobile_number)
+        console.log(email)
+        </script>
+        
     </body>
 </html>
