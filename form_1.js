@@ -44,7 +44,7 @@ const signIn = e => {
     }
     else{
         alert("Your login in successful");
-        location.href = "/index.html";
+        location.href = "./index.html";
     }
     e.preventDefault();
 }
