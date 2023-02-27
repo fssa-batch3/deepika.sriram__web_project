@@ -16,12 +16,14 @@ problem statement : https://drive.google.com/file/d/1EKy_ycvJJjS5QxdueMZUpxC11XH
 
 2.Hospital CRUD features:
     Uploading of hospital details
-    Read details
+    Read hospital list
+    read hospital details
     Update/Edit details 
     Delete  details. 
 
 3.Doctor CRUD features:
     Creating doctor's details.
+    read doctor's list
     Read details
     Update/edit details
     Delete details.
