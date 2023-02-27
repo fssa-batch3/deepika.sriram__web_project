@@ -40,7 +40,7 @@
     <h1 style="text-align:center">Doctor's list of Bilroth hospital</h1>
     <main>
         <div class="lst">
-            <section>
+            <!-- <section>
                 <div class="details">
                     <img src="../../../assets/images/dr-lakshmi-devarajan-general-physician-chennai-e16ae616-38f0-4f72-a250-8a4179383585-transformed.jpeg"
                         alt="image of Dr.Lakshmi devarajan" style="width:20%">
@@ -162,8 +162,8 @@
                         <button type="button">Book appointment</button>
                     </a>
                 </div>
-            </section>
-            <section>
+            </section> -->
+            <!-- <section>
                 <div class="details">
                     <img src="../../../assets/images/dr-abi-c-obstetrician-chennai-0132a2aa-21d3-439c-8db7-f6e5d53d262e-transformed.jpeg"
                         alt="image of Dr.Abi" style="width:20%">
@@ -200,7 +200,7 @@
                         <button type="button">Book appointment</button>
                     </a>
                 </div>
-            </section>
+            </section> -->
         </div>
         <img src="../../../assets/images/Billroth_Hospitals__Shenoy_Nagar_logo.jpg" alt="logo of bilroth hospitals">
     </main>
@@ -295,7 +295,11 @@
                         starts_at: "18:00:00",
                         ends_at: "20:00:00"
                     }
-                ]
+                ],
+                reviews:{
+                    one:"Not money minded. Prescribes only which is needed.Now I am well and healthy no issues.Thank you",
+                    two:"She is good decision maker when patient in critical.She is caring about the patient."
+                }
 
             },
             {
@@ -345,13 +349,17 @@
                         starts_at: "15:00:00",
                         ends_at: "17:00:00"
                     }
-                ]
+                ],
+                reviews:{
+                    one:"Doctor and patient friendly hospital with an excellent health care system. Well organized team of doctors and staffs working round the clock. I had my delivery under the expert hands of Dr Rajini mam, whom I would say very straightforward  and takes the right decision at the right time ",
+                    two:"She is good decision maker when patient in critical.She is caring about the patient."
+                }
 
             },
             {
                 image: {
-                    source: "",
-                    alt: ""
+                    source: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
+                    alt: "image of Dr.Yuvakesavan"
                 },
                 name: "Dr.Divya yuvakesavan",
                 qualification: ["MD-Obstetrics and gynecology", "MBBS"],
@@ -395,69 +403,156 @@
                         starts_at: "10:00:00",
                         ends_at: "18:00:00"
                     }
-                ]
-
-            },
-            {
-                image: {
-                    source: "../../../assets/images/dr-abi-c-obstetrician-chennai-0132a2aa-21d3-439c-8db7-f6e5d53d262e-transformed.jpeg",
-                    alt: "image of Dr.Abi"
-                },
-                name: "Dr.Abi",
-                qualification: ["MD-Obstetrics and gynecology", "MBBS"],
-                experience: {
-                    duration: "13",
-                    type: "years"
-                },
-                department: ["Obstetrician", "Gynecologist"],
-                working_days: [
-                    {
-                        day: "Monday",
-                        status: true
-                    },
-                    {
-                        day: "Tuesday",
-                        status: true
-                    },
-                    {
-                        day: "Wednesday",
-                        status: true
-                    },
-                    {
-                        day: "Thursday",
-                        status: true
-                    },
-                    {
-                        day: "Friday",
-                        status: true
-                    },
-                    {
-                        day: "Saturday",
-                        status: true
-                    },
-                    {
-                        day: "Sunday",
-                        status: false
-                    }
                 ],
-                availability: [
-                    {
-                        starts_at: "10:00:00",
-                        ends_at: "18:00:00"
-                    }
-                ]
-
+                reviews:{
+                    one:"Doctor and patient friendly hospital with an excellent health care system. Well organized team of doctors and staffs working round the clock. I had my delivery under the expert hands of Dr Divya mam, whom I would say very straightforward and takes the right decision at the right time ",
+                    two:" She is good decision maker when patient in critical.She is caring about the patient."
+                }
             }
         ]
 
-        if (obj["image"]["source"] === "") {
-            img.setAttribute("src", "https://www.meme-arsenal.com/memes/b6a18f0ffd345b22cd219ef0e73ea5fe.jpg")
-            img.setAttribute("alt", "profile avatar")
-        } else {
-            img.setAttribute("src", obj["image"]["source"])
-            img.setAttribute("alt", obj["image"]["alt"])
+        // if (obj["image"]["source"] === "") {
+        //     img.setAttribute("src", "https://www.meme-arsenal.com/memes/b6a18f0ffd345b22cd219ef0e73ea5fe.jpg")
+        //     img.setAttribute("alt", "profile avatar")
+        // } else {
+        //     img.setAttribute("src", obj["image"]["source"])
+        //     img.setAttribute("alt", obj["image"]["alt"])
+        // }
+
+        for (i = 0; i < 3; i++) {
+
+           const doctor = doctors[i]
+
+            // const doctor =  // doctor = {}
+            const doctorCard = render(doctor)
+            document.querySelector("div.lst").insertAdjacentHTML('beforeend', doctorCard);
+
         }
 
+
+        function renderWorkingDay(day) {
+            return `
+            <span>  ${day['day']},  </span>
+            `;
+        }
+        function renderTimeAvailability(time){
+            for(let i=0;i<2;i++){
+                return`
+               <span> ${time['starts_at']+"  "+"to"+"  "+time['ends_at']},
+                `;
+            }
+        }
+        function renderQualification(qualification) {
+            return `
+             ${qualification},
+            `;
+
+        }
+
+        function renderDepartment(department){
+            return`
+             ${department},
+            `
+        }
+
+
+
+
+
+        function render(doctor) {
+
+            let workingDaysString = "";
+            const workingDaysArray = doctor["working_days"]
+
+            const noOfworkingDays = workingDaysArray.length
+
+            for (let i = 0; i < noOfworkingDays; i++) {
+                if (workingDaysArray[i]["status"]==true) {
+                    workingDaysString += renderWorkingDay(workingDaysArray[i]);
+                }
+            }
+
+            let timeString = "";
+            const timeAvailabilityArray = doctor["availability"]
+            const timeCount = timeAvailabilityArray.length
+
+            for(let i=0;i<timeCount;i++){
+                timeString+=renderTimeAvailability(timeAvailabilityArray[i])
+            }
+            
+
+            let qualificationString = "";
+            const qualificationArray = doctor["qualification"];
+            const qualificationCount = qualificationArray.length;
+
+            for (let i = 0; i < qualificationCount; i++) {
+
+                const qualification = qualificationArray[i];
+
+                qualificationString += renderQualification(qualification)
+            }
+            
+            let departmentString = "";
+            const departmentArray = doctor["department"];
+            const departmentCount = departmentArray.length;
+
+            for(let i=0;i<departmentCount;i++){
+                const department = departmentArray[i];
+                departmentString+= renderDepartment(department)
+            }
+
+            const section = `
+            <section>
+                <div class="details">
+                            <img src="${doctor["image"]["source"]}" alt="${doctor["image"]["alt"]}" style="width:20%">
+                        <div>
+                            <h3>${doctor["name"]}</h3>
+                            <br>
+                            <p>${qualificationString+" "+doctor["experience"]["duration"] + " - " + doctor["experience"]["type"]+" "+"overall"+departmentString}</p>
+                            <p id="${doctor["name"]}">Working days:
+                                <span>  ${"  "+workingDaysString} </span>
+                                </p>
+                            <p id="${doctor["alt"]}">Time availability:<span> ${"   "+timeString}</span></p>
+                        </div>
+                    </div>
+                <div>
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">
+                            <button type="button">Reviews</button>
+                        </a>
+                        <div class="dropdown-content">
+                            <ul>
+                                <li>
+                                    <p>${doctor["reviews"]["one"]}</p>
+                                </li>
+                                <br>
+                                <li>
+                                    <p>
+                                        ${doctor["reviews"]["two"]}
+                                    </p>
+                                </li>
+                                <br>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="../patient/apollo hospital/Forms/A form.html">
+                        <button type="button">Book appointment</button>
+                    </a>
+                </div>
+            </section>
+            `
+
+            return section
+
+            }
+
+
+
+function renderWorkingDays() {
+
+
+
+}
 
 
     </script>

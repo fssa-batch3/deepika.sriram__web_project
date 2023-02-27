@@ -69,7 +69,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        for (i=0;i<6;i++){
+        const hospitals = JSON.parse(localStorage.getItem('hospital_detail'));
+        for (i=0;i<hospitals.length;i++){
     let div_card;
     let anchor;
     let div_img;
@@ -77,50 +78,50 @@
     let div_desc;
     let heading_3;
     let para;
-    const hospitals=[
-        {
-           name:"Bilroth hospitals",
-           image:"../../../assets/images/Billroth_Hospitals__Shenoy_Nagar_logo.jpg",
-           alt:"logo of bilroth hospital",
-           address:"No.43, Lakshmi talkies road, Shenoy nagar, Chennai-600030",
-           link:"../doctor's list/doctor's list of bilroth hospital.html"
-        },
-        {
-           name:"Apollo hospitals",
-           image:"../../../assets/images/apollo-gleneagles-hospitals-kolkata-squarelogo-1464594605205.png",
-           alt:"logo of apollo hospital",
-           address:"21/22,Greams lane,Greams road, chennai-600006.(opposite to thousand lights police station",
-           link:"../doctor's list/doctor's list of apollo hospital.html"
-        },
-        {
-           name:"Fortis malar hospital",
-           image:"../../../assets/images/fortis logo.png",
-           alt:"logo of fortis malar hospital",
-           address:" No. 52, 1st Main Rd, Gandhi Nagar, Adyar, Chennai,600020",
-           link:"../doctor's list/doctor's list of fortis malar hospital.html"
-        },
-        {
-           name:"Gem hospital",
-           image:"../../../assets/images/gem hospital.png",
-           alt:"logo of gem hospital",
-           address:"227/2, C2, MGR main road, Perungudi, chennai-600096",
-           link:"../doctor's list/doctor's list of gem hospital.html"
-        },
-        {
-           name:"Ramachandra Hospital",
-           image:"../../../assets/images/srm.png",
-           alt:"logo of porur ramachandra hospital",
-           address:" No.1, Ramachandra Nagar, Sri Ramachandra Nagar, Chennai,600116",
-           link:"../doctor's list/doctor's list of ramachandra hospital.html"
-        },
-        {
-           name:"Vijaya hospital",
-           image:"../../../assets/images/vijaya.png",
-           alt:"logo of vijaya hospital",
-           address:"No.434, N.S.K.Salai,Vadapalani,Chennai - 600026.",
-           link:"../doctor's list/doctor's list of vijaya hospital.html"
-        }
-    ]
+    // const hospitals=[
+    //     {
+    //        name:"Bilroth hospitals",
+    //        image:"../../../assets/images/Billroth_Hospitals__Shenoy_Nagar_logo.jpg",
+    //        alt:"logo of bilroth hospital",
+    //        address:"No.43, Lakshmi talkies road, Shenoy nagar, Chennai-600030",
+    //        link:"../doctor's list/doctor's list of bilroth hospital.html"
+    //     },
+    //     {
+    //        name:"Apollo hospitals",
+    //        image:"../../../assets/images/apollo-gleneagles-hospitals-kolkata-squarelogo-1464594605205.png",
+    //        alt:"logo of apollo hospital",
+    //        address:"21/22,Greams lane,Greams road, chennai-600006.(opposite to thousand lights police station",
+    //        link:"../doctor's list/doctor's list of apollo hospital.html"
+    //     },
+    //     {
+    //        name:"Fortis malar hospital",
+    //        image:"../../../assets/images/fortis logo.png",
+    //        alt:"logo of fortis malar hospital",
+    //        address:" No. 52, 1st Main Rd, Gandhi Nagar, Adyar, Chennai,600020",
+    //        link:"../doctor's list/doctor's list of fortis malar hospital.html"
+    //     },
+    //     {
+    //        name:"Gem hospital",
+    //        image:"../../../assets/images/gem hospital.png",
+    //        alt:"logo of gem hospital",
+    //        address:"227/2, C2, MGR main road, Perungudi, chennai-600096",
+    //        link:"../doctor's list/doctor's list of gem hospital.html"
+    //     },
+    //     {
+    //        name:"Ramachandra Hospital",
+    //        image:"../../../assets/images/srm.png",
+    //        alt:"logo of porur ramachandra hospital",
+    //        address:" No.1, Ramachandra Nagar, Sri Ramachandra Nagar, Chennai,600116",
+    //        link:"../doctor's list/doctor's list of ramachandra hospital.html"
+    //     },
+    //     {
+    //        name:"Vijaya hospital",
+    //        image:"../../../assets/images/vijaya.png",
+    //        alt:"logo of vijaya hospital",
+    //        address:"No.434, N.S.K.Salai,Vadapalani,Chennai - 600026.",
+    //        link:"../doctor's list/doctor's list of vijaya hospital.html"
+    //     }
+    // ]
 
     //<div class="card"></div>
     div_card=document.createElement("div");
@@ -129,7 +130,7 @@
 
     //<a></a>
     anchor=document.createElement("a");
-    anchor.setAttribute("href",hospitals[i]["link"]);
+    anchor.setAttribute("href",hospitals[i]["link_file"]);
     console.log(anchor);
     div_card.append(anchor);
 
@@ -140,8 +141,8 @@
 
     //<img>
     img=document.createElement("img");
-    img.setAttribute("src",hospitals[i]["image"]);
-    img.setAttribute("alt",hospitals[i]["alt"]);
+    img.setAttribute("src",hospitals[i]["image_link"]);
+    img.setAttribute("alt",hospitals[i]["alternate"]);
     console.log(img);
     div_img.append(img);
 
@@ -152,7 +153,7 @@
 
     //<h3></h3>
     heading_3=document.createElement("h3");
-    heading_3.innerText=hospitals[i]["name"];
+    heading_3.innerText=hospitals[i]["hospital_name"];
     div_desc.append(heading_3);
 
     //<p></p>
@@ -161,8 +162,22 @@
     para.innerText=hospitals[i]["address"];
     div_desc.append(para);
 
+    //<p></p>
+    para=document.createElement("p");
+    para.setAttribute("style","width:200px");
+    para.innerText=hospitals[i]["contact_number"]+".";
+    div_desc.append(para);
+
+    //<p></p>
+    para=document.createElement("p");
+    para.setAttribute("style","width:200px");
+    para.innerText=hospitals[i]["email_address"]+".";
+    div_desc.append(para);
+
+
     document.querySelector("main").append(div_card);
 }
     </script>
+    <script src="../../../CRUD forms/javascript files/forms.js"></script>
     </body>
 </html>

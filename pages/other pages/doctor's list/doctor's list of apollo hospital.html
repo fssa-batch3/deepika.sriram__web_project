@@ -180,8 +180,11 @@
                         status: false
                     }
                 ],
-
-
+                reviews:
+                {
+                    one: "Samyuktha is a minor child aged 15 years. Dr Kalaivani made my daughter feel very comfortable with her and was very patient and attentive. We had sought the appointment at very short notice very early in the morning since it was a sudden emergency. Dr Kalaivani was able to accommodate us in the morning in spite of her existing busy schedule and the immediate attention to the pain and bleeding that my daughter was having were crucial and we feel indebted to Dr Kalaivani for the prompt and accurate care.",
+                    two: "Dr behavior is well . Explain about the deases properly.so I satisfied with her treatment"
+                }
             },
             {
                 image: {
@@ -230,7 +233,11 @@
                         starts_at: "11:00:00",
                         ends_at: "14:30:00"
                     }
-                ]
+                ],
+                reviews: {
+                    one: "My wife had visited the hospital and it was health problem.I can surely recommend doctor to others. I am satisfied with the explanation and treatment given by the doctor. Tablets were prescribed by the doctor. Tests was done. There was no waiting time in the hospital when we went.",
+                    two: "I had visited for gynaecology related. Consultation was fine by the doctor. I would like to recommend the doctor to many people. There was waiting time when we went. It was for 20 minutes. Medicines was prescribed by doctor during consultation. Doctor was friendly. Hospitality was good."
+                }
 
             },
             {
@@ -280,7 +287,11 @@
                         starts_at: "12:00:00",
                         ends_at: "14:00:00"
                     }
-                ]
+                ],
+                reviews: {
+                    one: " came here in Womens hospital ,Apollo for my wife's treatment and I consulted Dr. Alpa Khakhar ma'am. She is a very kind and a Generous dr I must say.She exclaimed ous each & every thing in a very smoothly about the treatment.. ",
+                    two: "We r highly satisfied and thankful to the Dr. Alpa ma'am..Ee will highly recommend to our family and friends for her consultation"
+                }
 
             }
         ]
@@ -294,26 +305,79 @@
             const doctorCard = render(doctor)
             document.querySelector("div.lst").insertAdjacentHTML('beforeend', doctorCard);
 
-            const workingDays = doctor["working_days"]
-            const noOfWorkingDays = workingDays.length;
+        }
 
 
+        function renderWorkingDay(day) {
+            return `
+            <span>  ${day['day']},  </span>
+            `;
+        }
+        function renderTimeAvailability(time) {
+            return `
+            <span> ${time['starts_at'] + "  " + "to" + "  " + time['ends_at']},
+            `;
+        }
 
-            for (j = 0; j < noOfWorkingDays; j++) {
 
-                if (doctor["working_days"][j]["status"] == true) {
-                    //<span></span>
-                    span = document.createElement("span");
-                    span.innerText = doctor["working_days"][j]["day"]
-                }
-
-            }
+        function renderQualification(qualification) {
+            return `
+                 ${qualification},
+                `;
 
         }
+
+        function renderDepartment(department){
+            return`
+             ${department}
+            `
+        }
+
+
+
+
 
 
         function render(doctor) {
 
+            let workingDaysString = "";
+            const workingDaysArray = doctor["working_days"]
+
+            const noOfworkingDays = workingDaysArray.length
+
+            for (let i = 0; i < noOfworkingDays; i++) {
+                if (workingDaysArray[i]["status"] == true) {
+                    workingDaysString += renderWorkingDay(workingDaysArray[i]);
+                }
+            }
+
+            let timeString = "";
+            const timeAvailabilityArray = doctor["availability"]
+            const timeCount = timeAvailabilityArray.length
+
+            for (let i = 0; i < timeCount; i++) {
+                timeString += renderTimeAvailability(timeAvailabilityArray[i])
+            }
+
+            let qualificationString = "";
+            const qualificationArray = doctor["qualification"];
+            const qualificationCount = qualificationArray.length;
+
+            for (let i = 0; i < qualificationCount; i++) {
+
+                const qualification = qualificationArray[i];
+
+                qualificationString += renderQualification(qualification)
+            }
+            
+            let departmentString = "";
+            const departmentArray = doctor["department"];
+            const departmentCount = departmentArray.length;
+
+            for(let i=0;i<departmentCount;i++){
+                const department = departmentArray[i];
+                departmentString+= renderDepartment(department)
+            }
             const section = `
             <section>
                 <div class="details">
@@ -321,9 +385,11 @@
                         <div>
                             <h3>${doctor["name"]}</h3>
                             <br>
-                            <p>${doctor["qualification"][0] + ",  " + doctor["experience"]["duration"] + " - " + doctor["experience"]["type"]}</p>
-                            <p>Working days:</p>
-                            <p>Time availability</p>
+                            <p>${qualificationString + " " + doctor["experience"]["duration"] + " - " + doctor["experience"]["type"] + " " + "overall"+" "+departmentString}</p>
+                            <p id="${doctor["name"]}">Working days:
+                                 <span>  ${"  " + workingDaysString} </span>
+                                </p>
+                            <p id="${doctor["alt"]}">Time availability:<span> ${"   " + timeString}</span></p>
                         </div>
                     </div>
                 <div>
@@ -334,19 +400,12 @@
                         <div class="dropdown-content">
                             <ul>
                                 <li>
-                                    <p>Samyuktha is a minor child aged 15 years. Dr Kalaivani made my daughter feel very
-                                        comfortable with her and was very patient and attentive. We had sought the
-                                        appointment at very short notice very early in the morning since it was a sudden
-                                        emergency. Dr Kalaivani was able to accommodate us in the morning in spite of
-                                        her existing busy schedule and the immediate attention to the pain and bleeding
-                                        that my daughter was having were crucial and we feel indebted to Dr Kalaivani
-                                        for the prompt and accurate care.</p>
+                                    <p>${doctor["reviews"]["one"]}</p>
                                 </li>
                                 <br>
                                 <li>
                                     <p>
-                                        Dr behavior is well . Explain about the deases properly.so I satisfied with her
-                                        treatment
+                                        ${doctor["reviews"]["two"]}
                                     </p>
                                 </li>
                                 <br>

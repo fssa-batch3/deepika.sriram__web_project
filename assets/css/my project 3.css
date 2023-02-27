@@ -65,7 +65,7 @@ form label{
     align-items: center;
     margin-left:20px;
 }
-[type="button"]{
+[type="submit"]{
     padding:10px 15px;
     border:none;
     background-color:#03045E;
@@ -74,7 +74,7 @@ form label{
     border-radius: 200px;
 
 }
-[type="button"]:hover{
+[type="submit"]:hover{
     background-color:green;
     border-color:green;
     transition:0.3s;

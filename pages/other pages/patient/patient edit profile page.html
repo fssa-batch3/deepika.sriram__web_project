@@ -32,7 +32,7 @@
             </div>
         </header>
         <main>
-            <form class="edit">
+            <form class="edit" onsubmit="update(event)">
                 <div>
                    <h1 style="margin-left:20px">Edit Profile</h1>
                    <div style="margin-left:20px">
@@ -75,7 +75,7 @@
                     </div>
                     <br>
                     <div style="margin-left:20px">
-                       <input type="tel" style="width:80%;" />
+                       <input type="tel" style="width:80%;" id="mobile_number" />
                     </div>
                     <br>
                     <div>
@@ -85,7 +85,7 @@
                            </div>
                            <br>
                            <div>
-                              <input type="email" required="true" id="email" style="width:80%" />
+                              <input type="email" required="true" id="email" style="width:80%" disabled/>
                             </div>
                         </div>
                     </div>
@@ -97,7 +97,7 @@
                            </div>
                            <br>
                            <div>
-                              <input type="text" required="true" style="width:80%;" />
+                              <input type="text"  style="width:80%;" />
                            </div>
                         </div>
                         <br>
@@ -105,7 +105,7 @@
                     <div style="margin-left:20px">
                         <div>
                             <label>Occupation*</label>
-                            <select required="true">
+                            <select>
                                 <option>Government</option>
                                 <option>Private</option>
                                 <option>Own business</option>
@@ -134,25 +134,46 @@
                        </div>
                        <br>
                        <div style="margin-left:20px">
-                          <button type="button" onclick="update()">Update Profile</button>
+                            <button type="submit">Update Profile</button>
+                        </a>
                         </div>
                     </div>
                 </div>
             </form>
         </main>
         <script>
-            function update(){
-            const name= localStorage.getItem("name");
-            const age= localStorage.getItem("age");
-            const email= localStorage.getItem("email");
-            console.log(name);
-            console.log(age);
-            console.log(email);
-            document.getElementById("name").value
-            document.getElementById("age").value
-            document.getElementById("email").value
-            window.location.href="../../homepage/home page.html"
+            let unique_id = JSON.parse(localStorage.getItem("unique_id"));
+            let user_detail = JSON.parse(localStorage.getItem("user_detail"));
+            console.log(user_detail);
+            console.log(unique_id);
+
+
+            function profile_data(e){
+                return e.email_id == unique_id;
             }
+            person_data = user_detail.find(profile_data);
+            console.log(person_data)
+
+            document.getElementById("name").value = person_data["f_name"]+person_data["l_name"];
+            document.getElementById("age").value = person_data["age"];
+            document.getElementById("mobile_number").value = person_data["mobile"];
+            document.getElementById("email").value = person_data["email_id"];
+
+
+            function update(e){
+                e.preventDefault();
+            let up_name = document.getElementById("name").value
+            let up_age = document.getElementById("age").value
+            let up_mobile_number = document.getElementById("mobile_number").value
+            let up_email = document.getElementById("email").value
+            person_data["f_name"]= up_name
+            person_data["age"]= up_age
+            person_data["mobile"]=up_mobile_number
+            person_data["email_id"]=up_email
+            localStorage.setItem("user_detail", JSON.stringify(user_detail))
+
+            location.href="../../other pages/patient/patient profile page.html"
+         }
         </script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

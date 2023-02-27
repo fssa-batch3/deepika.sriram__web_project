@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Hospital form</title>
+        <link rel="stylesheet" href="../../../assets/css/register.css">
+        <link rel="icon" href="../../../assets/images/hospital logo 3.JPG">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Hammersmith+One&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <form role="form" onsubmit="upload(event)">
+            <img src="../../../assets/images/hospital_logo_3-removebg-preview.png" style="width:30%;margin-left:35%" alt="logo of get well soon">
+            <br>
+            <h1 style="text-align: center;color:#03045e">FORM</h1>
+            <br>
+            <input type="text" id="hosp_name" style="width:100%;height:30px" placeholder="hospital name" />
+            <br>
+            <br>
+            <input type="text" id="address" style="width:100%;height:30px" placeholder="address" />
+            <br>
+            <br>
+            <input type="text" id="alt" style="width:100%;height:30px" placeholder="alternate text for image" />
+            <br><br>
+            <input type="text" id="link_file" style="width:100%;height:30px" placeholder="link file" />
+            <br><br>
+            <input type="tel" id="con_no" style="width:100%;height:30px" placeholder="contact number" />
+            <br>
+            <br>
+            <input type="email" id="hosp_email" style="width:100%;height:30px" placeholder="email address" />
+            <br><br>
+            <input type="text" id="img_file" placeholder="upload url of image of a hospital" style="width:100%;height:30px">
+            <br><br>
+            <button type="submit">SUBMIT</button>
+        </form>
+        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+        <script src="../javascript files/forms.js"></script>
+    </body>
+</html>
