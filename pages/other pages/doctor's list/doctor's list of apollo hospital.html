@@ -298,7 +298,7 @@
         // ]
 
 
-        for (i = 0; i <doctors.length; i++) {
+        for (i = 0; i < doctors.length; i++) {
 
             const doctor = doctors[i]
 
@@ -309,30 +309,32 @@
         }
 
 
-        function renderWorkingDay(day) {
-            return `
-            <span> "from"+" "+${day['Working_days']},  </span>
-            `;
-        }
-        function renderTimeAvailability(time) {
-            return `
-            <span> ${time['Starting_time'] + "  " + "to" + "  " + time['Ending_time']},</span>
-            `;
-        }
+        // function renderWorkingDay(day) {
+        //     return `
+        //     <span> "from"+" "+${day['Working_days']},  </span>
+        //     `;
+        // }
+        // function renderTimeAvailability(time) {
+        //     for (let i = 0; i < 2; i++) {
+        //         return `
+        //         <span> "from"+" "+${time["starting_time"]}+" "+"to"+${time["ending_time"]},</span>
+        //         `;
+        //     }
+        // }
 
 
-        function renderQualification(qualification) {
-            return `
-                 ${qualification},
-                `;
+        // function renderQualification(qualification) {
+        //     return `
+        //          ${qualification},
+        //         `;
 
-        }
+        // }
 
-        function renderDepartment(department){
-            return`
-             ${department}
-            `
-        }
+        // function renderDepartment(department) {
+        //     return `
+        //      ${department}
+        //     `
+        // }
 
 
 
@@ -341,42 +343,42 @@
 
         function render(doctor) {
 
-            let workingDaysString = "";
-            const workingDaysArray = doctor["Working_days"]
+            // let workingDaysString = "";
+            // const workingDaysArray = doctors[i]["Working_days"];
 
-            const noOfworkingDays = workingDaysArray.length
+            // const noOfworkingDays = workingDaysArray.length
 
-            for (let i = 0; i < noOfworkingDays; i++) {
-                workingDaysString += renderWorkingDay(workingDaysArray[i]);
-            }
+            // for (let i = 0; i < noOfworkingDays; i++) {
+            //     workingDaysString += renderWorkingDay(workingDaysArray[i]);
+            // }
 
-            let timeString = "";
-            const timeAvailabilityArray = doctor["availability"]
-            const timeCount = timeAvailabilityArray.length
+            // let timeString = "";
+            // const timeAvailabilityArray = doctor["Availability"]
+            // const timeCount = timeAvailabilityArray.length
 
-            for (let i = 0; i < timeCount; i++) {
-                timeString += renderTimeAvailability(timeAvailabilityArray[i])
-            }
+            // for (let i = 0; i < timeCount; i++) {
+            //     timeString += renderTimeAvailability(timeAvailabilityArray[i])
+            // }
 
-            let qualificationString = "";
-            const qualificationArray = doctor["qualification"];
-            const qualificationCount = qualificationArray.length;
+            // let qualificationString = "";
+            // const qualificationArray = JSON.parse(doctors[i]["Qualification"]);
+            // const qualificationCount = qualificationArray.length;
 
-            for (let i = 0; i < qualificationCount; i++) {
+            // for (let i = 0; i < qualificationCount; i++) {
 
-                const qualification = qualificationArray[i];
+            //     const qualification = qualificationArray[i];
 
-                qualificationString += renderQualification(qualification)
-            }
-            
-            let departmentString = "";
-            const departmentArray = doctor["department"];
-            const departmentCount = departmentArray.length;
+            //     qualificationString += renderQualification(qualification)
+            // }
 
-            for(let i=0;i<departmentCount;i++){
-                const department = departmentArray[i];
-                departmentString+= renderDepartment(department)
-            }
+            // let departmentString = "";
+            // const departmentArray = doctor["Department"];
+            // const departmentCount = departmentArray.length;
+
+            // for (let i = 0; i < departmentCount; i++) {
+            //     const department = departmentArray[i];
+            //     departmentString += renderDepartment(department)
+            // }
             const section = `
             <section>
                 <div class="details">
@@ -384,11 +386,11 @@
                         <div>
                             <h3>${doctor["Doctor_name"]}</h3>
                             <br>
-                            <p>${qualificationString + " " + doctor["experience"]["duration"] + " - " + doctor["experience"]["type"] + " " + "overall"+" "+departmentString}</p>
-                            <p id="${doctor["name"]}">Working days:
-                                 <span>  ${"  " + workingDaysString} </span>
+                            <p>${doctor["Qualifications"] + " " + doctor["Experience"]["duration"] + " - " + doctor["Experience"]["type"] + " " + "overall" + " " + doctor["Department"]}</p>
+                            <p id=${doctor["Doctor_name"]}>Working days:
+                                 <span>  ${"  " + doctor["Working_days"]} </span>
                                 </p>
-                            <p id="${doctor["alt"]}">Time availability:<span> ${"   " + timeString}</span></p>
+                            <p id=${doctor["Hospital_name"]}>Time availability:<span> ${"   " + doctor["Availability"]["starting_time"]+"  "+"to"+"  "+doctor["Availability"]["ending_time"]}</span></p>
                         </div>
                     </div>
                 <div>
@@ -399,12 +401,11 @@
                         <div class="dropdown-content">
                             <ul>
                                 <li>
-                                    <p>${doctor["reviews"]["one"]}</p>
+                                    <p></p>
                                 </li>
                                 <br>
                                 <li>
                                     <p>
-                                        ${doctor["reviews"]["two"]}
                                     </p>
                                 </li>
                                 <br>

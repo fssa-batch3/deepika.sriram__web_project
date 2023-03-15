@@ -15,35 +15,37 @@ function uploadDoctor(e) {
         workingDaysArray.push(working_days[i].value)
     }
     Working_days = JSON.stringify(workingDaysArray);
-    experienceObj = { "duration": experience_duration, "type": experience_type };
+    experienceObj = {experience_duration,experience_type };
     Experience = JSON.stringify(experienceObj);
 
     starting_time = document.getElementById("from").value;
     ending_time = document.getElementById("to").value;
     button = document.querySelector("button#time");
-    timeAvailabilityArray = [];
+    timeAvailabilityObj = {starting_time,ending_time};
 
-    button.addEventListener('click', function addTime(){
-        for (i = 0; i < timeAvailabilityArray.length; i++) {
-            if (timeAvailabilityArray.length = 0) {
-                timeAvailabilityArray.push({ starting_time, ending_time });
-                document.getElementById("from").reset();
-                document.getElementById("to").reset();
-            }
-            else if (timeAvailabilityArray[i]["starting_time"] != starting_time.value || timeAvailabilityArray[i]["ending_time"] != ending_time.value) {
-                timeAvailabilityArray.push({ starting_time, ending_time });
-                document.getElementById("from").reset();
-                document.getElementById("to").reset();
+    // timeAvailabilityArray = [];
 
-            }
-            else {
-                alert("timing already exists!!");
-                document.getElementById("from").reset();
-                document.getElementById("to").reset();
-            }
-        }
-    });
-    Availability = JSON.stringify(timeAvailabilityArray);
+    // button.addEventListener('click', function addTime(){
+    //     for (i = 0; i < timeAvailabilityArray.length; i++) {
+    //         if (timeAvailabilityArray.length = 0) {
+    //             timeAvailabilityArray.push({ starting_time, ending_time });
+    //             document.getElementById("from").reset();
+    //             document.getElementById("to").reset();
+    //         }
+    //         else if (timeAvailabilityArray[i]["starting_time"] != starting_time.value || timeAvailabilityArray[i]["ending_time"] != ending_time.value) {
+    //             timeAvailabilityArray.push({ starting_time, ending_time });
+    //             document.getElementById("from").reset();
+    //             document.getElementById("to").reset();
+
+    //         }
+    //         else {
+    //             alert("timing already exists!!");
+    //             document.getElementById("from").reset();
+    //             document.getElementById("to").reset();
+    //         }
+    //     }
+    // });
+    Availability = JSON.stringify(timeAvailabilityObj);
     uuid = uuidv4();
 
 
