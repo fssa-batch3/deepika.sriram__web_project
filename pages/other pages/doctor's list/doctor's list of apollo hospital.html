@@ -309,32 +309,32 @@
         }
 
 
-        // function renderWorkingDay(day) {
-        //     return `
-        //     <span> "from"+" "+${day['Working_days']},  </span>
-        //     `;
-        // }
-        // function renderTimeAvailability(time) {
-        //     for (let i = 0; i < 2; i++) {
-        //         return `
-        //         <span> "from"+" "+${time["starting_time"]}+" "+"to"+${time["ending_time"]},</span>
-        //         `;
-        //     }
-        // }
+        function renderWorkingDay(day) {
+            return `
+            <span> "from"+" "+${day['Working_days']},  </span>
+            `;
+        }
+        function renderTimeAvailability(time) {
+            for (let i = 0; i < timeCount; i++) {
+                return `
+                <span> "from"+" "+${time["Availability"]["starting_time"]}+" "+"to"+${time["Availability"]["ending_time"]},</span>
+                `;
+            }
+        }
 
 
-        // function renderQualification(qualification) {
-        //     return `
-        //          ${qualification},
-        //         `;
+        function renderQualification(qualification) {
+            return `
+                 ${qualification},
+                `;
 
-        // }
+        }
 
-        // function renderDepartment(department) {
-        //     return `
-        //      ${department}
-        //     `
-        // }
+        function renderDepartment(department) {
+            return `
+             ${department}
+            `
+        }
 
 
 
@@ -343,42 +343,42 @@
 
         function render(doctor) {
 
-            // let workingDaysString = "";
-            // const workingDaysArray = doctors[i]["Working_days"];
+            let workingDaysString = "";
+            const workingDaysArray = doctors[i]["Working_days"];
 
-            // const noOfworkingDays = workingDaysArray.length
+            const noOfworkingDays = workingDaysArray.length
 
-            // for (let i = 0; i < noOfworkingDays; i++) {
-            //     workingDaysString += renderWorkingDay(workingDaysArray[i]);
-            // }
+            for (let i = 0; i < noOfworkingDays; i++) {
+                workingDaysString += renderWorkingDay(workingDaysArray[i]);
+            }
 
-            // let timeString = "";
-            // const timeAvailabilityArray = doctor["Availability"]
-            // const timeCount = timeAvailabilityArray.length
+            let timeString = "";
+            const timeAvailabilityArray = doctor["Availability"]
+            const timeCount = timeAvailabilityArray.length
 
-            // for (let i = 0; i < timeCount; i++) {
-            //     timeString += renderTimeAvailability(timeAvailabilityArray[i])
-            // }
+            for (let i = 0; i < timeCount; i++) {
+                timeString += renderTimeAvailability(timeAvailabilityArray[i])
+            }
 
-            // let qualificationString = "";
-            // const qualificationArray = JSON.parse(doctors[i]["Qualification"]);
-            // const qualificationCount = qualificationArray.length;
+            let qualificationString = "";
+            const qualificationArray = doctors[i]["Qualifications"];
+            const qualificationCount = qualificationArray.length;
 
-            // for (let i = 0; i < qualificationCount; i++) {
+            for (let i = 0; i < qualificationCount; i++) {
 
-            //     const qualification = qualificationArray[i];
+                const qualification = qualificationArray[i];
 
-            //     qualificationString += renderQualification(qualification)
-            // }
+                qualificationString += renderQualification(qualification)
+            }
 
-            // let departmentString = "";
-            // const departmentArray = doctor["Department"];
-            // const departmentCount = departmentArray.length;
+            let departmentString = "";
+            const departmentArray = doctor["Department"];
+            const departmentCount = departmentArray.length;
 
-            // for (let i = 0; i < departmentCount; i++) {
-            //     const department = departmentArray[i];
-            //     departmentString += renderDepartment(department)
-            // }
+            for (let i = 0; i < departmentCount; i++) {
+                const department = departmentArray[i];
+                departmentString += renderDepartment(department)
+            }
             const section = `
             <section>
                 <div class="details">

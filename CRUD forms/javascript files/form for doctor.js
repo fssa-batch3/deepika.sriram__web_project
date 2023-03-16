@@ -9,19 +9,19 @@ function uploadDoctor(e) {
     experience_type = document.getElementById("experience_type").value;
     experience_duration = document.getElementById("experience_duration").value;
     // time_availability = document.getElementById("time_availability").value;
-    workingDaysArray = [];
+    Working_days = [];
     working_days = document.querySelectorAll("input[type='checkbox']:checked");
     for (i = 0; i < working_days.length; i++) {
-        workingDaysArray.push(working_days[i].value)
+        Working_days.push(working_days[i].value)
     }
-    Working_days = JSON.stringify(workingDaysArray);
-    experienceObj = {experience_duration,experience_type };
-    Experience = JSON.stringify(experienceObj);
+    // Working_days = JSON.stringify(workingDaysArray);
+    Experience = {experience_duration,experience_type };
+    // Experience = JSON.stringify(experienceObj);
 
     starting_time = document.getElementById("from").value;
     ending_time = document.getElementById("to").value;
     button = document.querySelector("button#time");
-    timeAvailabilityObj = {starting_time,ending_time};
+    Availability = {starting_time,ending_time};
 
     // timeAvailabilityArray = [];
 
@@ -45,7 +45,7 @@ function uploadDoctor(e) {
     //         }
     //     }
     // });
-    Availability = JSON.stringify(timeAvailabilityObj);
+    // Availability = JSON.stringify(timeAvailabilityObj);
     uuid = uuidv4();
 
 
@@ -65,7 +65,7 @@ function uploadDoctor(e) {
     // if condition fail
     if (!exist) {
 
-        Experience = JSON.stringify(experienceObj);
+        // Experience = JSON.stringify(experienceObj);
         doctor_detail.push({ Doctor_name, Doctor_image, Qualifications, Experience, Department, Hospital_name, Working_days, Availability, uuid });
 
         localStorage.setItem("unique_id", uuid);
