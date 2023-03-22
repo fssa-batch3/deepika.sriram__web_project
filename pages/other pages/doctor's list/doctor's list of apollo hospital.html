@@ -86,8 +86,8 @@
 
 
         </div>
-        <img src="../../../assets/images/apollo-gleneagles-hospitals-kolkata-squarelogo-1464594605205.png"
-            alt="logo of apollo hospital">
+        <!-- <img src="../../../assets/images/apollo-gleneagles-hospitals-kolkata-squarelogo-1464594605205.png"
+            alt="logo of apollo hospital"> -->
     </main>
     <footer style="margin-top:5%">
         <div>
@@ -315,9 +315,9 @@
             `;
         }
         function renderTimeAvailability(time) {
-            for (let i = 0; i < timeCount; i++) {
+            for (let i = 0; i < 2; i++) {
                 return `
-                <span> "from"+" "+${time["Availability"]["starting_time"]}+" "+"to"+${time["Availability"]["ending_time"]},</span>
+                <span>${time}</span>
                 `;
             }
         }
@@ -336,11 +336,13 @@
             `
         }
 
-
-
-
-
-
+        function renderExperience(experience){
+            for(let i = 0; i<experienceCount; i++){
+                return `
+                ${experience}
+                `;
+            }
+        }
         function render(doctor) {
 
             let workingDaysString = "";
@@ -353,11 +355,19 @@
             }
 
             let timeString = "";
-            const timeAvailabilityArray = doctor["Availability"]
-            const timeCount = timeAvailabilityArray.length
+            const timeAvailabilityArray = doctor["Availabilities"];
+            const timeCount = timeAvailabilityArray.length;
 
             for (let i = 0; i < timeCount; i++) {
                 timeString += renderTimeAvailability(timeAvailabilityArray[i])
+            }
+
+            let experienceString ="";
+            const experienceObject = doctor["Experience"];
+            const experienceCount = experienceObject.length
+
+            for(let i = 0;i<experienceCount;i++){
+                experienceString+= renderExperience(experienceObject[i])
             }
 
             let qualificationString = "";
@@ -386,11 +396,11 @@
                         <div>
                             <h3>${doctor["Doctor_name"]}</h3>
                             <br>
-                            <p>${doctor["Qualifications"] + " " + doctor["Experience"]["duration"] + " - " + doctor["Experience"]["type"] + " " + "overall" + " " + doctor["Department"]}</p>
+                            <p style="width:50%">${doctor["Qualifications"]+"," + " " + doctor["Experience"]["experience_duration"] +" "+ doctor["Experience"]["experience_type"]+" " +"experience"+" "+ "overall" + " " + doctor["Department"]}</p>
                             <p id=${doctor["Doctor_name"]}>Working days:
                                  <span>  ${"  " + doctor["Working_days"]} </span>
                                 </p>
-                            <p id=${doctor["Hospital_name"]}>Time availability:<span> ${"   " + doctor["Availability"]["starting_time"]+"  "+"to"+"  "+doctor["Availability"]["ending_time"]}</span></p>
+                            <p id=${doctor["Hospital_name"]}>Time availability:<span> ${"   " +timeString}</span></p>
                         </div>
                     </div>
                 <div>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Edit doctor form</title>
+    <link rel="stylesheet" href="../../../assets/css/register.css">
+    <link rel="icon" href="../../../assets/images/hospital logo 3.JPG">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Hammersmith+One&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        .addTimingModal {
+            background-color: #fefefe;
+            margin: 20% auto;
+            padding: 2%;
+            border: 2px solid black;
+            width: fit-content;
+            border-radius: 20px;
+
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form role="form" style="width:fit-content;top:10%;left:25%">
+        <img src="../../../assets/images/hospital_logo_3-removebg-preview.png" style="width:30%;margin-left:35%"
+            alt="logo of get well soon">
+        <br>
+        <h1 style="text-align: center;color:#03045e">EDIT FORM</h1>
+        <label>Enter Doctor's name</label>
+        <input type="text" id="unique_doctor" style="height:30px;width:50%" />
+        <button type="submit" id="find_details" style="height:30px">find details</button>
+        <br>
+        <br>
+        <div style="display: flex">
+            <div>
+                <label>Doctor name</label>
+                <input type="text" id="doctor_name" style="width:100%;height:30px" />
+            </div>
+            <div>
+                <label style="margin-left: 20px">Doctor image</label>
+                <input type="text" id="doctorImage" style="margin-left: 20px;width:100%;height:30px" />
+            </div>
+        </div>
+        <br>
+        <div id="Qualifications">
+            <label>Qualification</label>
+            <input type="text" id="qualification" style="width:100%;height:30px" />
+        </div>
+        <br>
+        <div style="display:flex">
+            <div>
+                <label>Experience</label>
+                <input type="number" id="experience_duration" style="width:100%;height:30px" />
+            </div>
+            <div>
+                <label>Type</label>
+                <br>
+                <select id="experience_type" style="height:30px;margin-left:20px">
+                    <option value="months">Months</option>
+                    <option value="years">Years</option>
+                </select>
+            </div>
+        </div>
+        <br>
+        <div>
+            <label>Department</label>
+            <input type="text" id="department" style="width:100%;height:30px" />
+        </div>
+        <br>
+        <div>
+            <label>Hospital name</label>
+            <input type="text" id="hospital_name" style="width:100%;height:30px" />
+        </div>
+        <br>
+        <div>
+            <label>working days:</label>
+            <br><br>
+            <!-- <input type="text" id="working_days" style="width:100%;height:30px" /> -->
+            <input type="checkbox" id="Monday" />Monday
+            <input type="checkbox" id="Tuesday" />Tuesday
+            <input type="checkbox" id="Wednesday" />Wednesday
+            <input type="checkbox" id="Thursday" />Thursday
+            <input type="checkbox" id="Friday" />Friday
+            <input type="checkbox" id="Saturday" />Saturday
+            <input type="checkbox" id="Sunday" />Sunday
+        </div>
+        <br>
+        <div>
+            <!-- <input type="text" id="time_availability" placeholder="enter time availability of doctor" style="width:100%;height:30px"/> -->
+            <label>Time availability:</label>
+            <label>From</label>
+            <input type="time" id="from" />
+            <label>To </label>
+            <input type="time" id="to" />
+            <!-- <button type="submit" id="time">enter timezone</button> -->
+            <button type="button" id="add_time">Add time</button>
+            <br> <br>
+            <div style="display:flex;justify-content:space-between;">
+                <button type="submit" id="update_details">submit</button>
+                <button type="submit" id="delete_details">Delete details</button>
+            </div>
+
+            <div id="modal_bg" class="modal">
+                <div class="addTimingModal">
+                    <span class="close">&times;</span>
+                    <form role="form">
+                        <label>Add time availability of doctor:</label>
+                        <br><br>
+                        <label>From</label>
+                        <input type="time" id="2nd_from" />
+                        <label>To</label>
+                        <input type="time" id="2nd_to" />
+
+                        <!-- <button type="submit" id="update_doctor_details">Add time and submit</button> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+        <br>
+
+
+    </form>
+    <!-- <button type="submit" id="update_details">submit</button>
+                <button type="submit" id="delete_details">Delete details</button> -->
+    <script>
+        // monday = document.getElementById("Monday").checked = data["availability"]["monday"]
+        // tuesday = document.getElementById("Tuesday").checked;
+        // wednesday = document.getElementById("Wednesday").checked;
+        // thursday = document.getElementById("Thursday").checked;
+        // friday = document.getElementById("Friday").checked;
+        // saturday = document.getElementById("Saturday").checked;
+        // sunday = document.getElementById("Sunday").checked;
+
+        // Get the modal
+        var modal = document.getElementById("modal_bg");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("add_time");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        //get value from local storage
+        const form = document.querySelector('.form');
+        const unique_id = document.getElementById("unique_doctor");
+
+        // const findDetails = document.getElementById("find_details");
+        const doc_name = document.getElementById("doctor_name")
+        const doc_image = document.getElementById("doctorImage")
+        const doc_qualification = document.getElementById("qualification")
+        const docExpDuration = document.getElementById("experience_duration")
+        const docExpType = document.getElementById("experience_type")
+        const doc_department = document.getElementById("department")
+        const docHospName = document.getElementById("hospital_name")
+        // const docWorkingDays = document.querySelectorAll("input[type='checkbox']:checked");
+        // const docWorkingDays = document.getElementById("working_days");
+        const mon = document.getElementById("Monday")
+        const tues = document.getElementById("Tuesday")
+        const wed = document.getElementById("Wednesday")
+        const thurs = document.getElementById("Thursday")
+        const fri = document.getElementById("Friday")
+        const sat = document.getElementById("Saturday")
+        const sun = document.getElementById("Sunday")
+
+
+        const docTimingFrom = document.getElementById("from");
+        const docTimingTo = document.getElementById("to");
+
+        document.getElementById("find_details").addEventListener("click", (event) => {
+            event.preventDefault()
+            const uniqueId = unique_id.value;
+            const doctor_details = JSON.parse(localStorage.getItem('doctor_detail'));
+            const doctor = doctor_details.find(detail =>
+                detail.Doctor_name === uniqueId
+            );
+
+            if (doctor) {
+                doc_name.value = doctor.Doctor_name;
+                doc_image.value = doctor.Doctor_image;
+                doc_qualification.value = doctor.Qualifications;
+                docExpDuration.value = doctor.Experience.experience_duration;
+                docExpType.value = doctor.Experience.experience_type;
+                doc_department.value = doctor.Department;
+                docHospName.value = doctor.Hospital_name;
+                // docWorkingDays.checked = doctor.Working_days;
+                docTimingFrom.value = doctor.Availabilities.starting_time;
+                docTimingTo.value = doctor.Availabilities.ending_time;
+
+                mon.checked = doctor.Working_days.monday;
+                tues.checked = doctor.Working_days.tuesday;
+                wed.checked = doctor.Working_days.wednesday;
+                thurs.checked = doctor.Working_days.thursday;
+                fri.checked = doctor.Working_days.friday;
+                sat.checked = doctor.Working_days.saturday;
+                sun.checked = doctor.Working_days.sunday;
+                
+
+                document.getElementById("update_details").onclick = function (event){
+                    updateDoctor();
+                }
+
+                // document.getElementById("update_doctor_details").onclick = function(event){
+                //     updateDoctor();
+                // }
+
+
+                // let availability = doctor.Availabilities;
+                // for (i = 0; i < availability.length; i++) {
+                //     if (availability["status"] == true) {
+                //         const docWorkingDays = document.getElementsByClassName("days").checked;
+                //     }
+                // }
+
+
+                function updateDoctor(e) {
+                    // e.preventDefault();
+
+                    let doctorName = doc_name.value;
+                    doctorImage = doc_image.value;
+                    doctorQualification = doc_qualification.value;
+                    doctorExperienceDuration = docExpDuration.value;
+                    doctorExperienceType = docExpType.value;
+                    doctorDepartment = doc_department.value;
+                    // doctorWorkingDays = docWorkingDays.checked;
+                    doctorHospitalName = docHospName.value;
+                    doctorTimeFrom = docTimingFrom.value;
+                    doctorTimeTo = docTimingTo.value;
+
+                    //working days
+                    let m_day = mon.checked
+                    tue_day = tues.checked
+                    wed_day = wed.checked
+                    thur_day = thurs.checked
+                    fri_day = fri.checked
+                    sat_day = sat.checked
+                    sun_day = sun.checked
+
+                    // Update doctor deatils in localstorage
+                    doctor.Doctor_name = doctorName;
+                    doctor.Doctor_image = doctorImage;
+                    doctor.Qualifications = doctorQualification;
+                    doctor.Experience.experience_duration = doctorExperienceDuration;
+                    doctor.Experience.experience_type = doctorExperienceType;
+                    doctor.Department = doctorDepartment;
+                    doctor.Hospital_name = doctorHospitalName;
+                    // doctor.Working_days = doctorWorkingDays;
+                    doctor.Availabilities.starting_time = doctorTimeFrom;
+                    doctor.Availabilities.ending_time = doctorTimeTo;
+
+                    //working days
+                    doctor.Working_days.monday = m_day;
+                    doctor.Working_days.tuesday = tue_day;
+                    doctor.Working_days.wednesday = wed_day;
+                    doctor.Working_days.thursday = thur_day;
+                    doctor.Working_days.friday = fri_day;
+                    doctor.Working_days.saturday = sat_day;
+                    doctor.Working_days.sunday = sun_day;
+
+                    let starting_time = document.getElementById("2nd_from").value;
+                    ending_time = document.getElementById("2nd_to").value;
+                    doctor.Availabilities.push({ starting_time, ending_time });
+                    localStorage.setItem('doctor_detail', JSON.stringify(doctor_details));
+
+                    alert("Updated successfully!!")
+
+                    document.querySelector("form").reset();
+                    document.getElementById("update_details").setAttribute("disabled", true);
+                }
+            }
+
+
+
+        });
+        //  delete page
+        document.getElementById("delete_details").addEventListener("click", (event) => {
+            event.preventDefault();
+
+            const uniqueId = unique_id.value;
+            const doctor_details = JSON.parse(localStorage.getItem('doctor_detail'));
+            const doctorIndex = doctor_details.findIndex(detail =>
+                detail.Doctor_name === uniqueId
+            );
+
+            if (doctorIndex > -1) {
+                doctor_details.splice(doctorIndex, 1);
+                localStorage.setItem('doctor_detail', JSON.stringify(doctor_details));
+                alert("Doctor details deleted successfully");
+                document.querySelector('form').reset();
+
+
+            }
+
+        })
+
+
+    </script>
+</body>
+
+</html>

@@ -18,6 +18,7 @@ form{
     box-shadow: 5px 5px 5px grey;
     border-radius:20px;
     width:20%;
+    height:fit-content;
     padding:2%;
 }
 form div img{
