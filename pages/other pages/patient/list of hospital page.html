@@ -34,6 +34,7 @@
         <main>
             
         </main>
+        
         <footer style="margin-top:10%">
             <div class="foot">
                 <div>
@@ -123,6 +124,7 @@
     //     }
     // ]
 
+
     //<div class="card"></div>
     div_card=document.createElement("div");
     div_card.setAttribute("class","card");
@@ -130,7 +132,7 @@
 
     //<a></a>
     anchor=document.createElement("a");
-    anchor.setAttribute("href",hospitals[i]["link_file"]);
+    anchor.setAttribute("href",hospitals[i]["link_file"]+"?hospital-name="+hospitals[i]["hospital_name"]);
     console.log(anchor);
     div_card.append(anchor);
 

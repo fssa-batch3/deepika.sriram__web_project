@@ -19,8 +19,8 @@
         <img src="../../../assets/images/hospital_logo_3-removebg-preview.png" style="width:30%;margin-left:35%"
             alt="logo of get well soon">
         <br>
-        <label>enter uuid</label>
-        <input type="text" id="uuid" />
+        <label>enter hospital name</label>
+        <input type="text" id="unique_hospital" />
         <button type="submit" id="find_details">find details</button>
         <h1 style="text-align: center;color:#03045e">FORM</h1>
         <br>
@@ -60,7 +60,7 @@
     <script>
         //get value from local storage
         const form = document.querySelector('.form');
-        const unique_id = document.getElementById("uuid");
+        const unique_id = document.getElementById("unique_hospital");
 
         // let hospital_detail = JSON.parse(localStorage.getItem("hospital_detail"));
 
@@ -78,7 +78,7 @@
             const uniqueId = unique_id.value;
             const hospital_details = JSON.parse(localStorage.getItem('hospital_detail'));
             const hospital = hospital_details.find(detail=>
-            detail.uuid === uniqueId
+            detail.hospital_name === uniqueId
             );
 
             if(hospital){

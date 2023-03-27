@@ -12,7 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Hammersmith+One&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
         rel="stylesheet">
-    <style>
+    <!-- <style>
         .modal {
             display: none;
             /* Hidden by default */
@@ -58,7 +58,7 @@
             text-decoration: none;
             cursor: pointer;
         }
-    </style>
+    </style> -->
 
 </head>
 
@@ -104,9 +104,11 @@
             </div>
         </div>
         <br>
-        <div>
+        <div class = "dept">
             <label>Department</label>
-            <input type="text" id="department" style="width:100%;height:30px" />
+            <br>
+            <input type="text" id="department" style="width:70%;height:30px" />
+            <!-- <button type = "button" id="add_dept">Add department</button> -->
         </div>
         <br>
         <div>
@@ -127,7 +129,7 @@
             <input type="checkbox" id="Sunday" />Sunday
         </div>
         <br>
-        <div>
+        <div class="time">
             <!-- <input type="text" id="time_availability" placeholder="enter time availability of doctor" style="width:100%;height:30px"/> -->
             <label>Time availability:</label>
             <label>From</label>
@@ -135,14 +137,16 @@
             <label>To </label>
             <input type="time" id="to" />
             <!-- <button type="submit" id="time">enter timezone</button> -->
-            <button type="button" id="add_time">Add time</button>
+            <!-- <button type="button" id="add_time">Add time</button> -->
             <br> <br>
-            <div style="display:flex;justify-content:space-between;">
-                <button type="submit" id="update_details">submit</button>
-                <button type="submit" id="delete_details">Delete details</button>
-            </div>
+        </div>
+        <div style="display:flex;justify-content:space-between;">
+            <button type="button" id="add">Add</button>
+            <button type="submit" id="update_details">submit</button>
+            <button type="submit" id="delete_details">Delete details</button>
+        </div>
 
-            <div id="modal_bg" class="modal">
+            <!-- <div id="modal_bg" class="modal">
                 <div class="addTimingModal">
                     <span class="close">&times;</span>
                     <form role="form">
@@ -153,205 +157,19 @@
                         <label>To</label>
                         <input type="time" id="2nd_to" />
 
-                        <!-- <button type="submit" id="update_doctor_details">Add time and submit</button> -->
+                        <button type="submit" id="update_doctor_details">Add time and submit</button>
                     </form>
                 </div>
-            </div>
-        </div>
+            </div> -->
+        
         <br>
 
 
     </form>
     <!-- <button type="submit" id="update_details">submit</button>
-                <button type="submit" id="delete_details">Delete details</button> -->
-    <script>
-        // monday = document.getElementById("Monday").checked = data["availability"]["monday"]
-        // tuesday = document.getElementById("Tuesday").checked;
-        // wednesday = document.getElementById("Wednesday").checked;
-        // thursday = document.getElementById("Thursday").checked;
-        // friday = document.getElementById("Friday").checked;
-        // saturday = document.getElementById("Saturday").checked;
-        // sunday = document.getElementById("Sunday").checked;
+    <button type="submit" id="delete_details">Delete details</button> -->
+    <script src="../javascript files/edit form for doctor.js"></script>
 
-        // Get the modal
-        var modal = document.getElementById("modal_bg");
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("add_time");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks the button, open the modal 
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-        //get value from local storage
-        const form = document.querySelector('.form');
-        const unique_id = document.getElementById("unique_doctor");
-
-        // const findDetails = document.getElementById("find_details");
-        const doc_name = document.getElementById("doctor_name")
-        const doc_image = document.getElementById("doctorImage")
-        const doc_qualification = document.getElementById("qualification")
-        const docExpDuration = document.getElementById("experience_duration")
-        const docExpType = document.getElementById("experience_type")
-        const doc_department = document.getElementById("department")
-        const docHospName = document.getElementById("hospital_name")
-        // const docWorkingDays = document.querySelectorAll("input[type='checkbox']:checked");
-        // const docWorkingDays = document.getElementById("working_days");
-        const mon = document.getElementById("Monday")
-        const tues = document.getElementById("Tuesday")
-        const wed = document.getElementById("Wednesday")
-        const thurs = document.getElementById("Thursday")
-        const fri = document.getElementById("Friday")
-        const sat = document.getElementById("Saturday")
-        const sun = document.getElementById("Sunday")
-
-
-        const docTimingFrom = document.getElementById("from");
-        const docTimingTo = document.getElementById("to");
-
-        document.getElementById("find_details").addEventListener("click", (event) => {
-            event.preventDefault()
-            const uniqueId = unique_id.value;
-            const doctor_details = JSON.parse(localStorage.getItem('doctor_detail'));
-            const doctor = doctor_details.find(detail =>
-                detail.Doctor_name === uniqueId
-            );
-
-            if (doctor) {
-                doc_name.value = doctor.Doctor_name;
-                doc_image.value = doctor.Doctor_image;
-                doc_qualification.value = doctor.Qualifications;
-                docExpDuration.value = doctor.Experience.experience_duration;
-                docExpType.value = doctor.Experience.experience_type;
-                doc_department.value = doctor.Department;
-                docHospName.value = doctor.Hospital_name;
-                // docWorkingDays.checked = doctor.Working_days;
-                docTimingFrom.value = doctor.Availabilities.starting_time;
-                docTimingTo.value = doctor.Availabilities.ending_time;
-
-                mon.checked = doctor.Working_days.monday;
-                tues.checked = doctor.Working_days.tuesday;
-                wed.checked = doctor.Working_days.wednesday;
-                thurs.checked = doctor.Working_days.thursday;
-                fri.checked = doctor.Working_days.friday;
-                sat.checked = doctor.Working_days.saturday;
-                sun.checked = doctor.Working_days.sunday;
-                
-
-                document.getElementById("update_details").onclick = function (event){
-                    updateDoctor();
-                }
-
-                // document.getElementById("update_doctor_details").onclick = function(event){
-                //     updateDoctor();
-                // }
-
-
-                // let availability = doctor.Availabilities;
-                // for (i = 0; i < availability.length; i++) {
-                //     if (availability["status"] == true) {
-                //         const docWorkingDays = document.getElementsByClassName("days").checked;
-                //     }
-                // }
-
-
-                function updateDoctor(e) {
-                    // e.preventDefault();
-
-                    let doctorName = doc_name.value;
-                    doctorImage = doc_image.value;
-                    doctorQualification = doc_qualification.value;
-                    doctorExperienceDuration = docExpDuration.value;
-                    doctorExperienceType = docExpType.value;
-                    doctorDepartment = doc_department.value;
-                    // doctorWorkingDays = docWorkingDays.checked;
-                    doctorHospitalName = docHospName.value;
-                    doctorTimeFrom = docTimingFrom.value;
-                    doctorTimeTo = docTimingTo.value;
-
-                    //working days
-                    let m_day = mon.checked
-                    tue_day = tues.checked
-                    wed_day = wed.checked
-                    thur_day = thurs.checked
-                    fri_day = fri.checked
-                    sat_day = sat.checked
-                    sun_day = sun.checked
-
-                    // Update doctor deatils in localstorage
-                    doctor.Doctor_name = doctorName;
-                    doctor.Doctor_image = doctorImage;
-                    doctor.Qualifications = doctorQualification;
-                    doctor.Experience.experience_duration = doctorExperienceDuration;
-                    doctor.Experience.experience_type = doctorExperienceType;
-                    doctor.Department = doctorDepartment;
-                    doctor.Hospital_name = doctorHospitalName;
-                    // doctor.Working_days = doctorWorkingDays;
-                    doctor.Availabilities.starting_time = doctorTimeFrom;
-                    doctor.Availabilities.ending_time = doctorTimeTo;
-
-                    //working days
-                    doctor.Working_days.monday = m_day;
-                    doctor.Working_days.tuesday = tue_day;
-                    doctor.Working_days.wednesday = wed_day;
-                    doctor.Working_days.thursday = thur_day;
-                    doctor.Working_days.friday = fri_day;
-                    doctor.Working_days.saturday = sat_day;
-                    doctor.Working_days.sunday = sun_day;
-
-                    let starting_time = document.getElementById("2nd_from").value;
-                    ending_time = document.getElementById("2nd_to").value;
-                    doctor.Availabilities.push({ starting_time, ending_time });
-                    localStorage.setItem('doctor_detail', JSON.stringify(doctor_details));
-
-                    alert("Updated successfully!!")
-
-                    document.querySelector("form").reset();
-                    document.getElementById("update_details").setAttribute("disabled", true);
-                }
-            }
-
-
-
-        });
-        //  delete page
-        document.getElementById("delete_details").addEventListener("click", (event) => {
-            event.preventDefault();
-
-            const uniqueId = unique_id.value;
-            const doctor_details = JSON.parse(localStorage.getItem('doctor_detail'));
-            const doctorIndex = doctor_details.findIndex(detail =>
-                detail.Doctor_name === uniqueId
-            );
-
-            if (doctorIndex > -1) {
-                doctor_details.splice(doctorIndex, 1);
-                localStorage.setItem('doctor_detail', JSON.stringify(doctor_details));
-                alert("Doctor details deleted successfully");
-                document.querySelector('form').reset();
-
-
-            }
-
-        })
-
-
-    </script>
 </body>
 
 </html>

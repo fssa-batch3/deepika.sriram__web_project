@@ -3,8 +3,8 @@ function uploadDoctor(e) {
     // hear i collect value from details form
     let Doctor_name = document.getElementById("doctor_name").value.trim();
     Doctor_image = document.getElementById("doctorImage").value.trim();
-    Qualifications = document.getElementById("qualification").value;
-    Department = document.getElementById("department").value.trim();
+    Qualifications = document.getElementById("qualification").value.split(",");
+    Departments = document.getElementById("department").value.split(",");
     Hospital_name = document.getElementById("hospital_name").value.trim();
     experience_type = document.getElementById("experience_type").value;
     experience_duration = document.getElementById("experience_duration").value;
@@ -72,8 +72,11 @@ function uploadDoctor(e) {
         Availabilities =[];
         Availabilities.push({starting_time,ending_time});
 
+        // Departments = [];
+        // Departments.push(department);
+
         // Experience = JSON.stringify(experienceObj);
-        doctor_detail.push({ Doctor_name, Doctor_image, Qualifications, Experience, Department, Hospital_name, Working_days, Availabilities, uuid });
+        doctor_detail.push({ Doctor_name, Doctor_image, Qualifications, Experience, Departments, Hospital_name, Working_days, Availabilities, uuid });
 
         localStorage.setItem("unique_id", Doctor_name);
         localStorage.setItem('doctor_detail', JSON.stringify(doctor_detail));

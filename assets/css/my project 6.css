@@ -3,10 +3,7 @@
     padding:0;
 }
 body{
-    background-image: url("../images/hospital\ background\ 2.jpg");
-    background-repeat: no-repeat;
-    background-attachment:scroll;
-    background-size: cover;
+    background-color:aliceblue;
 }
 header{
     background-color: #03045E;
@@ -51,23 +48,25 @@ div ul li a:hover{
 }
 main{
     display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
     gap:1rem;
 }
-main .card{
-    border:1.5px solid #03045E;
-    border-radius:10px;
-    width:40%;
-    height:80%;
-    padding:0 15%;
-    padding-top:5%;
-    box-shadow:5px 5px 5px #57588e;
-    margin:10% 0;
+.card{
+    border:1.5px solid transparent;
+    border-radius:0px;
+    width:200px;
+    height:fit-content;
+    padding-top:2%;
+    padding-bottom:10%;
+    padding-left:15%;
+    padding-right:15%;
+    box-shadow:3px 3px 10px 2px grey;
+    margin:10% 15%;
     background-color: white;
 }
 main .card:hover{
     transform:scale(1.1);
-    transition:0.5s;
+    transition:0.1s;
 }
 main .card a{
     text-decoration: none;
@@ -76,7 +75,7 @@ main div div img{
     width:200px;
     height:200px;
     border:1.5px solid #03045E;
-    border-radius:10px;
+    border-radius:0px;
     background-color: white;
 }
 main div div h3,p{
@@ -84,7 +83,7 @@ main div div h3,p{
     font-family: 'source sans pro',sans-serif;
 }
 .card div p{
-    width:200px;
+    width:auto;
 }
 .foot{
     background-image: linear-gradient(transparent,#caf0f8,#caf0f8);

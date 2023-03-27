@@ -29,7 +29,7 @@ function upload(e) {
         
         hospital_detail.push({hospital_name,address,contact_number,alternate,link_file,email_address,image_link,uuid});
         
-        localStorage.setItem("unique_id",uuid);
+        localStorage.setItem("unique_id",hospital_name);
         localStorage.setItem('hospital_detail', JSON.stringify(hospital_detail));
        
         document.querySelector('form').reset();
