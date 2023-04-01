@@ -3,7 +3,7 @@
     padding:0;
 }
 
-header#hp{
+#header{
     background-color: #03045E;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -11,7 +11,7 @@ header#hp{
     justify-content: space-between;
 }
 
-header{
+#header{
     background-color: #03045E;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -19,17 +19,17 @@ header{
     justify-content:space-between;
     align-items: center;
 }
-header div img{
+#header div img{
     width:15%;
 }
-header ul{
+#header ul{
     list-style-type:none;
     margin:0;
     padding:0;
     overflow:hidden; 
     display:inline;
 }
-header ul li, .dropdown{
+#header ul li, .dropdown{
     display:inline;
 }
 ul li a,.dropbtn{
@@ -97,7 +97,8 @@ main section div a{
 }
 #GWS div h1{
     font-size: 65px;
-    width:70%;
+    width:65%;
+    margin-top:5%;
 }
 #GWS div a{
     color:grey;

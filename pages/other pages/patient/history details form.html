@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>History details</title>
+    <link rel="stylesheet" href="../../../assets/css/history details.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="../../../assets/images/hospital logo 3.JPG">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Hammersmith+One&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header id="header"></header>
+    <main>
+        <form>
+            <h1 style="text-align: center;">FORM</h1>
+            <div class="field">
+                <label>Patient name:</label>
+                <input type="text" id="patient_name" />
+            </div>
+            <br><br>
+            <div class="field">
+                <label>Patient age:</label>
+                <input type="number" id="Patient_age" />
+            </div>
+            <br><br>
+            <div class="field">
+                <label>Gender:</label>
+                <input type="radio" name="M_F_O" id="male" /> male
+                <input type="radio" name="M_F_O" id="female" /> female
+                <input type="radio" name="M_F_O" id="others" /> others
+            </div>
+            <br><br>
+            <div class="field">
+                <label>Method of consultation:</label>
+                <input type="radio" name="I_D_V" id="inPerson" /> in- perosn
+                <input type="radio" name="I_D_V" id="direct2home" /> direct to home
+                <input type="radio" name="I_D_V" id="videoConsultation" /> video consultation
+            </div>
+            <br><br>
+            <div class="field">
+                <label>Residential Address:</label>
+                <input type="text" id="address" />
+            </div>
+            <br><br>
+            <div class="field">
+                <label>Health issues:</label>
+                <input type="text" id="health_issues" />
+            </div>
+            <br><br>
+            <div class="field">
+                <label>Doctor name:</label>
+                <input type="text" id="doctorName" />
+            </div>
+            <br><br>
+            <div class="field">
+                <label>Date and time of booking:</label>
+                <input type="date" id="dateOfBooking" />
+                <input type="time" id="timeOfBooking" />
+            </div>
+            <br><br>
+            <div class="field">
+                <label>Date you want to consult:</label>
+                <input type="date"  id="dateOfConsultation" />
+            </div>
+            <br><br>
+            <div class="field">
+                <label>Patient mobile number:</label>
+                <input type="tel" id="mobile_number" />
+            </div>
+            <br><br>
+            <div class="field">
+                <label>Patient email address:</label>
+                <input type="email" id="email_address" />
+            </div>
+            <br><br>
+            <div class="field">
+                <label>Add description</label>
+                <input type="text" id="addDescription" />
+            </div>
+            <br><br>
+            <button type="submit" id="update_appointment">update and resend form</button>
+            <button type="submit" id="delete_appointmentHistory">delete history</button>
+
+        </form>
+    </main>
+    <footer style="margin-top:5%">
+        <div>
+            <div>
+                <img src="../../../assets/images/hospital_logo_3-removebg-preview.png" alt="logo of gws">
+            </div>
+            <div class="ftr">
+                <div>
+                    <h3>Contact Us</h3>
+
+                    <p><i class="fa fa-phone"></i> +91 89097 87645</p>
+
+                    <p><i class="fa fa-envelope"></i> deepika.sriram@fssa.freshworks.com</p>
+                </div>
+                <div>
+                    <h3>Follow Us</h3>
+
+                    <p><i class="fa-brands fa-facebook"></i> Facebook</p>
+
+                    <p><i class="fa-brands fa-square-twitter"></i> Twitter</p>
+
+                    <p><i class="fa-brands fa-github"></i> Github</p>
+
+                    <p><i class="fa-brands fa-linkedin"></i> Linkedin</p>
+                </div>
+            </div>
+        </div>
+        <div style="padding:10px 0;background-color:#03045e;color:white">
+            <p style="text-align:center">Website Created By<b> Deepika Sriram</b></p>
+            <br>
+            <p style="text-align:center">copyrights &copy; reserved</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
+        integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../../../Javascript files/header.js"></script>
+    <script>indexPage()</script>
+    <script src="../../../CRUD forms/javascript files/history details form.js"></script>
+</body>
+
+</html>

@@ -1,11 +1,3 @@
-*{
-    margin:0;
-    padding:0;
-}
-body{
-   
-    font-family:'source sans pro',sans-serif;
-}
 #header{
     background-color: #03045E;
     padding-top: 15px;
@@ -75,39 +67,33 @@ ul li a:hover, .dropdown:hover .dropbtn{
 #vision,#vision-2{
     display:none;
 }
-main{
+form{
+    margin-top:2%;
+    margin-left:5%;
+    font-size: 20px;
+}
+div .field{
     display:flex;
-    flex-direction: row;
-    flex-wrap:nowrap;
-    justify-content:flex-start;
-    margin-top:5%;
+    justify-content: flex-start;
 }
-main div h1{
-    width:80%;
-    margin-top: 10%;
+[type="text"],[type="tel"],[type="email"],[type="email"],[type="number"]{
+    width:20%;
+    height:20px;
 }
-button{
-    padding: 10px;
-    background-color: #03045E;
-    border-color: #03045E;
+ [type="submit"]{
+    background-color: #caf0f8;
+    border: none;
+    color:#03045E;
+    font-weight: bold;
+    padding:10px;
+}
+[type="submit"]:hover{
+    background-color: green;
     color:white;
-    font-size:30px;
-    border-radius: 5px;
-    margin-top:10%;
-    font-family: 'courgette',cursive;
-}
-button:hover{
-    background-color:white;
-    border-color:white;
-    color:#03045E;
-    transition:0.3s;
-}
-footer{
-    margin-top:5px;
-    background-color: #CAF0F8;
-    color:#03045E;
+    transition: 0.2s;
 }
 footer div.ftr{
+    background-image: linear-gradient(transparent, #caf0f8ab, #caf0f8);
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -118,51 +104,4 @@ footer div img{
     width:10%;
     position:relative;
     left:45%;
-}
-
-@media screen and (max-width:800px) {
-    header{
-        justify-content:unset;
-        flex-wrap: nowrap;
-        align-items: center;
-        width:100%;
-    }
-    #hide{
-        font-weight:400;
-        font-family:'kumbh sans',sans-serif;
-        font-size:70%;
-        margin-left:-250px;
-    }
-    header div ul li a{
-        margin-left:5px;
-        margin-right:5px;
-    }
-    main{
-        display:flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    main div img{
-        width:80%;
-    }
-    main div h1,button{
-        margin-left:10%;
-    }
-    main div button{
-        padding:5px 10px;
-        font-family:serif;
-    }
-    footer div.ftr{
-        flex-direction:column;
-        row-gap:5%;
-        margin-left:25%;
-        justify-content: space-between;
-    }
-    footer div.ftr div{
-        margin:2% 0;
-    }
-    footer div img{
-        width:20%;
-        left:40%;
-    }
 }

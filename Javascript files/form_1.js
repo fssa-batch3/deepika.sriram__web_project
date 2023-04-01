@@ -59,9 +59,9 @@ function signIn(e) {
         // location.href = "../pages/homepage/home page.html"
     }
     else{
-        localStorage.setItem("unique_id", JSON.stringify(email));
+        localStorage.setItem("uniqueUser", JSON.stringify(email));
         alert("Your login in is successful ✅");
-        location.href = "../../other pages/patient/patient profile page.html"
+        location.href = "../../homepage/home page.html"
     }
     
 }

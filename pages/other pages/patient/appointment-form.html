@@ -10,8 +10,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Hammersmith+One&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <div>
+        <header id="header">
+            <!-- <div>
                 <img src="../../../assets/images/gws.png" alt="logo of get well soon website">
             </div>
             <div>
@@ -29,20 +29,20 @@
                         <a href="../../../patient/patient profile page.html"><i class="fas fa-user" alt="profile"></i></a>
                     </li>
                 </ul>
-            </div>
+            </div> -->
         </header>
         <main>
-            <form>
+            <form onsubmit="bookAppointment(event)">
                 <div style="margin-left:20px">
                    <h1>Appointment Form</h1>
                  </div>
                  <br>
                 <div style="margin-left:20px">
-                   <label>Name*</label>
+                   <label>Patient name*</label>
                 </div>
                 <br>
                 <div style="margin-left:20px">
-                    <input type="text" placeholder="firstname" required="true" style="width:80%;height:2rem" />
+                    <input type="text" placeholder="firstname" required="true" style="width:80%;height:2rem" id="patient_name" />
                 </div>
                 <br>
                 <div class="frm">
@@ -52,7 +52,7 @@
                         </div>
                         <br>
                         <div>
-                           <input type="number" required="true" style="width:70px;height:2rem" />
+                           <input type="number" required="true" style="width:70px;height:2rem"  id="patient_age"/>
                         </div>
                     </div>
                     <br>
@@ -64,11 +64,11 @@
                         <br>
                         <br>
                         <div>
-                           <input type="radio" required="true" name="M_F_O" />
+                           <input type="radio" required="true" name="M_F_O"  id="male"/>
                            <label>Male</label>
-                           <input type="radio" required="true" name="M_F_O" />
+                           <input type="radio" required="true" name="M_F_O" id="female" />
                            <label>Female</label>
-                           <input type="radio" required="true" name="M_F_O" />
+                           <input type="radio" required="true" name="M_F_O" id="others" />
                            <label>Others</label>
                         </div>
                     </div>
@@ -80,11 +80,11 @@
                      </div>
                      <br>
                      <div>
-                        <input type="radio" required="true" name="I_D_V" />
+                        <input type="radio" required="true" name="I_D_V" id="in_person"/>
                         <label>In-person</label>
-                        <input type="radio" required="true" name="I_D_V" />
+                        <input type="radio" required="true" name="I_D_V" id="direct_to_home"/>
                         <label>Home consultation</label>
-                        <input type="radio" required="true" name="I_D_V" />
+                        <input type="radio" required="true" name="I_D_V" id="video_consultation"/>
                         <label>Video consultation</label>
                      </div>
                  </div>
@@ -95,7 +95,7 @@
                      </div>
                      <br>
                      <div>
-                         <textarea></textarea>
+                         <input type="text" id="address" style="width:80%;height:2rem" />
                      </div>
                 </div>
                 <br>
@@ -105,8 +105,18 @@
                      </div>
                      <br>
                      <div>
-                         <input type="text" style="width:55%;height:2rem" />
+                         <input type="text" style="width:80%;height:2rem" id="health_issues"/>
                      </div>
+                </div>
+                <br>
+                <div style="margin-left:20px">
+                    <div>
+                        <label>Doctor's name:</label>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="text"  id="doctor_name" style="width:80%;height:2rem" />
+                    </div>
                 </div>
                 <br>
                 <div class="frm">
@@ -116,8 +126,8 @@
                          </div>
                          <br>
                          <div>
-                             <input type="date" required="true" style="height:2rem" />
-                             <input type="time" required="true"  style="height:2rem" />
+                             <input type="date" required="true" style="height:2rem" id="bookDate"/>
+                             <input type="time" required="true"  style="height:2rem" id="bookTime"/>
                          </div>
                     </div>
                     <br>
@@ -127,7 +137,7 @@
                          </div>
                          <br>
                          <div>
-                             <input type="date" required="true"  style="height:2rem" />
+                             <input type="date" required="true"  style="height:2rem" id="consultDate"/>
                          </div>
                     </div>
                 </div>
@@ -139,7 +149,7 @@
                      </div>
                      <br>
                      <div>
-                         <input type="tel" style="width:80%;height:2rem" />
+                         <input type="tel" style="width:80%;height:2rem" id="mobile_number"/>
                      </div>
                  </div>
                  <br>
@@ -149,12 +159,12 @@
                      </div>
                      <br>
                      <div>
-                         <input type="email" style="width:80%;height:2rem" />
+                         <input type="email" style="width:80%;height:2rem" id="email_address"/>
                      </div>
                  </div>
                 <br>
                 <div style="margin-left:20px">
-                    <textarea placeholder="add description" style="width:80%;height:5rem"></textarea>
+                    <input type="text" placeholder="add description" style="width:80%;height:5rem" id="add_description" />
                 </div>
                 <br>
                 <div class="frm" id="button">
@@ -188,7 +198,7 @@
             const docList = new URLSearchParams(window.location.search).get('hospital-name');
             const tags = `
                     <div style="margin-left:20px">
-                        <a href="./doctor's list.html?hospital-name=${docList}" >
+                        <a href="../other pages/doctor's list.html?hospital-name=${docList}" >
                           <button type="button" > <i class="fa fa-angle-double-left"></i> back</button>
                         </a>
                     </div>
@@ -196,12 +206,14 @@
                         <button type="reset">clear form</button>
                     </div>
                     <div style="margin-left:20px">
-                        <a href="../patient/appointment confirmation.html">
-                           <button type="button">book appointment <i class="fa fa-angle-double-right"></i></button>
-                        </a>
+                        <button type="submit">book appointment <i class="fa fa-angle-double-right"></i></button>
                     </div>
                 `
             document.querySelector("div#button").insertAdjacentHTML("beforeend" , tags);
         </script>
+        <script src="../../../Javascript files/header.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+        <script>indexPage()</script>
+        <script src="../../../CRUD forms/javascript files/appointment form.js"></script>
     </body>
 </html>
