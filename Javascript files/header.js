@@ -92,6 +92,9 @@ var heading_2 = `
                     <li>
                         <a href="${about}">About us</a>
                     </li>
+                    <li>
+                        <a href="${login}">Login</a>
+                    </li>
                     <li class="dropdown">
                         <a href="javascript:void(0)" class="dropbtn"><i class="far fa-user" style="color:white;font-size:150%"></i> </a>
                         <div class="dropdown-content" style="right:0%">

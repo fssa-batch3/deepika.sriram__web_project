@@ -1,3 +1,87 @@
+const User = localStorage.getItem('user_detail');
+if (!User) {
+    localStorage.setItem('user_detail', JSON.stringify(
+        [
+            {
+                confirm_password
+                    :
+                    "1234567890",
+                create_password
+                    :
+                    "1234567890",
+                email_id
+                    :
+                    "vignesh.ramachandran@fssa.freshworks.com",
+                f_name
+                    :
+                    "Vignesh",
+                l_name
+                    :
+                    "Ramachandran",
+                mobile
+                    :
+                    "6379370482",
+                uuid
+                    :
+                    "73ac9ed1-0474-46d7-82e2-cafe3920d30f"
+            },
+            {
+                confirm_password
+                    :
+                    "qawsedrf",
+                create_password
+                    :
+                    "qawsedrf",
+                email_id
+                    :
+                    "deepika.sriram@fssa.freshworks.com",
+                f_name
+                    :
+                    "Deepika",
+                l_name
+                    :
+                    "Sriram",
+                mobile
+                    :
+                    "7397314532",
+                uuid
+                    :
+                    "196607b7-8931-47ef-8afc-f755bde2d110"
+            },
+            {
+                confirm_password
+                    :
+                    "?()-&_23meenu",
+                create_password
+                    :
+                    "?()-&_23meenu",
+                email_id
+                    :
+                    "meena.subramaniam@fssa.freshworks.com",
+                f_name
+                    :
+                    "Meena",
+                l_name
+                    :
+                    "Subramaniam",
+                mobile
+                    :
+                    "7698457709",
+                uuid
+                    :
+                    "9600472c-c480-47a3-af7f-49cbe8d1315d"
+            }
+        ]
+    ))
+}
+
+
+
+
+
+
+
+
 const hospitalDetails = JSON.parse(localStorage.getItem('hospital_detail'));
 if (!hospitalDetails) {
     localStorage.setItem('hospital_detail', JSON.stringify(
@@ -113,380 +197,380 @@ if (!hospitalDetails) {
 console.log(hospitalDetails)
 
 const doctorDetails = JSON.parse(localStorage.getItem('doctor_detail'));
-if(!doctorDetails){
-    localStorage.setItem('doctor_detail',JSON.stringify(
+if (!doctorDetails) {
+    localStorage.setItem('doctor_detail', JSON.stringify(
         [
             {
-                Availabilities:[
+                Availabilities: [
                     {
-                        starting_time:"10:00",
-                        ending_time:"14:00"
+                        starting_time: "10:00",
+                        ending_time: "14:00"
                     }
                 ],
-                Departments:["Obstetrician"],
-                Doctor_image:"../../../assets/images/dr.kalailvani.jpeg",
-                Doctor_name:"Dr.Kalaivani Ramalingam",
-                Experience:{
-                    experience_duration:"25",
-                    experience_type:"years"
+                Departments: ["Obstetrician"],
+                Doctor_image: "../../../assets/images/dr.kalailvani.jpeg",
+                Doctor_name: "Dr.Kalaivani Ramalingam",
+                Experience: {
+                    experience_duration: "25",
+                    experience_type: "years"
                 },
-                Hospital_name:"Apollo-hospital",
-                Qualifications:["MBBS","DGO"],
-                Working_days:{
-                    monday:true,tuesday:true,wednesday:true,thursday:true,friday:true,saturday:true,sunday:false
+                Hospital_name: "Apollo-hospital",
+                Qualifications: ["MBBS", "DGO"],
+                Working_days: {
+                    monday: true, tuesday: true, wednesday: true, thursday: true, friday: true, saturday: true, sunday: false
                 },
-                uuid:"bf505193-621d-4219-b0d9-3a6b5cf5f97b"
+                uuid: "bf505193-621d-4219-b0d9-3a6b5cf5f97b"
             },
             {
-                Availabilities:[
+                Availabilities: [
                     {
-                        starting_time:"11:00",
-                        ending_time:"14:30"
+                        starting_time: "11:00",
+                        ending_time: "14:30"
                     }
                 ],
-                Departments:["Obstetrician","Gynecologist"],
-                Doctor_image:"../../../assets/images/dr meera.jpeg",
-                Doctor_name:"Dr.Meera Raghavan",
-                Experience:{
-                    experience_duration:"26",
-                    experience_type:"years"
+                Departments: ["Obstetrician", "Gynecologist"],
+                Doctor_image: "../../../assets/images/dr meera.jpeg",
+                Doctor_name: "Dr.Meera Raghavan",
+                Experience: {
+                    experience_duration: "26",
+                    experience_type: "years"
                 },
-                Hospital_name:"Apollo-hospital",
-                Qualifications:["MBBS","MD-Obstetrics and gynecology","DNB-Obstetrics and gynecology","MRCQG(UK)"],
-                Working_days:{
-                    monday:true,tuesday:true,wednesday:true,thursday:true,friday:true,saturday:true,sunday:false
+                Hospital_name: "Apollo-hospital",
+                Qualifications: ["MBBS", "MD-Obstetrics and gynecology", "DNB-Obstetrics and gynecology", "MRCQG(UK)"],
+                Working_days: {
+                    monday: true, tuesday: true, wednesday: true, thursday: true, friday: true, saturday: true, sunday: false
                 },
-                uuid:"1dcec7bf-268d-4094-9c17-b7d570aaa1e7"
+                uuid: "1dcec7bf-268d-4094-9c17-b7d570aaa1e7"
             },
             {
-                Availabilities:[
+                Availabilities: [
                     {
-                        starting_time:"12:00",
-                        ending_time:"14:00"
+                        starting_time: "12:00",
+                        ending_time: "14:00"
                     }
                 ],
-                Departments:["Obstetrician","Gynecologist"],
-                Doctor_image:"../../../assets/images/dr.alpha.jpeg",
-                Doctor_name:"Dr.Alpha khakhar",
-                Experience:{
-                    experience_duration:"24",
-                    experience_type:"years"
+                Departments: ["Obstetrician", "Gynecologist"],
+                Doctor_image: "../../../assets/images/dr.alpha.jpeg",
+                Doctor_name: "Dr.Alpha khakhar",
+                Experience: {
+                    experience_duration: "24",
+                    experience_type: "years"
                 },
-                Hospital_name:"Apollo-hospital",
-                Qualifications:["MBBS","MD-Obstetrics and gynecology"],
-                Working_days:{
-                    monday:true,tuesday:true,wednesday:true,thursday:true,friday:true,saturday:true,sunday:false
+                Hospital_name: "Apollo-hospital",
+                Qualifications: ["MBBS", "MD-Obstetrics and gynecology"],
+                Working_days: {
+                    monday: true, tuesday: true, wednesday: true, thursday: true, friday: true, saturday: true, sunday: false
                 },
-                uuid:"783f1dc2-0e8b-4938-b7ba-a76a1a5a8542"
+                uuid: "783f1dc2-0e8b-4938-b7ba-a76a1a5a8542"
             },
             {
-                Availabilities:[
+                Availabilities: [
                     {
-                        starting_time:"10:00",
-                        ending_time:"14:00"
+                        starting_time: "10:00",
+                        ending_time: "14:00"
                     },
                     {
-                        starting_time:"18:00",
-                        ending_time:"20:00"
+                        starting_time: "18:00",
+                        ending_time: "20:00"
                     }
                 ],
-                Departments:["Obstetrician","Gynecologist","General physician"],
-                Doctor_image:"../../../assets/images/dr-lakshmi-devarajan-general-physician-chennai-e16ae616-38f0-4f72-a250-8a4179383585-transformed.jpeg",
-                Doctor_name:"Dr.Lakshmi devarajan",
-                Experience:{
-                    experience_duration:"50",
-                    experience_type:"years"
+                Departments: ["Obstetrician", "Gynecologist", "General physician"],
+                Doctor_image: "../../../assets/images/dr-lakshmi-devarajan-general-physician-chennai-e16ae616-38f0-4f72-a250-8a4179383585-transformed.jpeg",
+                Doctor_name: "Dr.Lakshmi devarajan",
+                Experience: {
+                    experience_duration: "50",
+                    experience_type: "years"
                 },
-                Hospital_name:"Bilroth-hospital",
-                Qualifications:["MBBS","MD-Obstetrics and gynecology"],
-                Working_days:{
-                    monday:true,tuesday:true,wednesday:true,thursday:true,friday:true,saturday:true,sunday:false
+                Hospital_name: "Bilroth-hospital",
+                Qualifications: ["MBBS", "MD-Obstetrics and gynecology"],
+                Working_days: {
+                    monday: true, tuesday: true, wednesday: true, thursday: true, friday: true, saturday: true, sunday: false
                 },
-                uuid:"dc404ea0-25ac-4ba7-8fa6-388166539e62"
+                uuid: "dc404ea0-25ac-4ba7-8fa6-388166539e62"
             },
             {
-                Availabilities:[
+                Availabilities: [
                     {
-                        starting_time:"15:00",
-                        ending_time:"17:00"
+                        starting_time: "15:00",
+                        ending_time: "17:00"
                     }
                 ],
-                Departments:["Obstetrician","Gynecologist"],
-                Doctor_image:"../../../assets/images/dr-rajini-specialist-chennai-f8fef08b-a529-4c5e-a1d1-f9f15aef7046-transformed.jpeg",
-                Doctor_name:"Dr.Rajini",
-                Experience:{
-                    experience_duration:"29",
-                    experience_type:"years"
+                Departments: ["Obstetrician", "Gynecologist"],
+                Doctor_image: "../../../assets/images/dr-rajini-specialist-chennai-f8fef08b-a529-4c5e-a1d1-f9f15aef7046-transformed.jpeg",
+                Doctor_name: "Dr.Rajini",
+                Experience: {
+                    experience_duration: "29",
+                    experience_type: "years"
                 },
-                Hospital_name:"Bilroth-hospital",
-                Qualifications:["MBBS","DGO"],
-                Working_days:{
-                    monday:true,tuesday:true,wednesday:true,thursday:true,friday:true,saturday:true,sunday:true
+                Hospital_name: "Bilroth-hospital",
+                Qualifications: ["MBBS", "DGO"],
+                Working_days: {
+                    monday: true, tuesday: true, wednesday: true, thursday: true, friday: true, saturday: true, sunday: true
                 },
-                uuid:"0a0097ee-48f4-4adc-81f5-b6a87e399bfe"
+                uuid: "0a0097ee-48f4-4adc-81f5-b6a87e399bfe"
             },
             {
-                Availabilities:[
+                Availabilities: [
                     {
-                        starting_time:"10:00",
-                        ending_time:"18:00"
+                        starting_time: "10:00",
+                        ending_time: "18:00"
                     }
                 ],
-                Departments:["Obstetrician","Gynecologist"],
-                Doctor_image:"https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
-                Doctor_name:"Dr.Divya yuvakesavan",
-                Experience:{
-                    experience_duration:"12",
-                    experience_type:"years"
+                Departments: ["Obstetrician", "Gynecologist"],
+                Doctor_image: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
+                Doctor_name: "Dr.Divya yuvakesavan",
+                Experience: {
+                    experience_duration: "12",
+                    experience_type: "years"
                 },
-                Hospital_name:"Bilroth-hospital",
-                Qualifications:["MBBS","MD-Obstetrics and gynecology"],
-                Working_days:{
-                    monday:true,tuesday:true,wednesday:true,thursday:true,friday:true,saturday:true,sunday:false
+                Hospital_name: "Bilroth-hospital",
+                Qualifications: ["MBBS", "MD-Obstetrics and gynecology"],
+                Working_days: {
+                    monday: true, tuesday: true, wednesday: true, thursday: true, friday: true, saturday: true, sunday: false
                 },
-                uuid:"d46b1a27-ebea-4266-9ec9-68d57453a9e1"
+                uuid: "d46b1a27-ebea-4266-9ec9-68d57453a9e1"
             },
             {
-                Availabilities:[
+                Availabilities: [
                     {
-                        starting_time:"10:00",
-                        ending_time:"14:00"
+                        starting_time: "10:00",
+                        ending_time: "14:00"
                     },
                     {
-                        starting_time:"15:00",
-                        ending_time:"16:00"
+                        starting_time: "15:00",
+                        ending_time: "16:00"
                     }
                 ],
-                Departments:["Obstetrician","Gynecologist"],
-                Doctor_image:"../../../assets/images/dr nithya.jpeg",
-                Doctor_name:"Dr.Nithya Ramamorthy",
-                Experience:{
-                    experience_duration:"46",
-                    experience_type:"years"
+                Departments: ["Obstetrician", "Gynecologist"],
+                Doctor_image: "../../../assets/images/dr nithya.jpeg",
+                Doctor_name: "Dr.Nithya Ramamorthy",
+                Experience: {
+                    experience_duration: "46",
+                    experience_type: "years"
                 },
-                Hospital_name:"Fortis-malar-hospital",
-                Qualifications:["MBBS","DGO"],
-                Working_days:{
-                    monday:true,tuesday:true,wednesday:true,thursday:true,friday:true,saturday:true,sunday:false
+                Hospital_name: "Fortis-malar-hospital",
+                Qualifications: ["MBBS", "DGO"],
+                Working_days: {
+                    monday: true, tuesday: true, wednesday: true, thursday: true, friday: true, saturday: true, sunday: false
                 },
-                uuid:"3376b955-b3b3-49f3-a1ed-949c531e99b8"
+                uuid: "3376b955-b3b3-49f3-a1ed-949c531e99b8"
             },
             {
-                Availabilities:[
+                Availabilities: [
                     {
-                        starting_time:"09:00",
-                        ending_time:"10:30"
+                        starting_time: "09:00",
+                        ending_time: "10:30"
                     },
                     {
-                        starting_time:"15:00",
-                        ending_time:"17:00"
+                        starting_time: "15:00",
+                        ending_time: "17:00"
                     }
                 ],
-                Departments:["Gynecologist"],
-                Doctor_image:"../../../assets/images/dr thenmozhi.jpeg",
-                Doctor_name:"Dr.Thenmozhi",
-                Experience:{
-                    experience_duration:"43",
-                    experience_type:"years"
+                Departments: ["Gynecologist"],
+                Doctor_image: "../../../assets/images/dr thenmozhi.jpeg",
+                Doctor_name: "Dr.Thenmozhi",
+                Experience: {
+                    experience_duration: "43",
+                    experience_type: "years"
                 },
-                Hospital_name:"Fortis-malar-hospital",
-                Qualifications:["MBBS","DGO"],
-                Working_days:{
-                    monday:true,tuesday:true,wednesday:true,thursday:false,friday:true,saturday:true,sunday:false
+                Hospital_name: "Fortis-malar-hospital",
+                Qualifications: ["MBBS", "DGO"],
+                Working_days: {
+                    monday: true, tuesday: true, wednesday: true, thursday: false, friday: true, saturday: true, sunday: false
                 },
-                uuid:"d60a8682-8953-4ca6-a5d6-471d82473f95"
+                uuid: "d60a8682-8953-4ca6-a5d6-471d82473f95"
             },
             {
-                Availabilities:[
+                Availabilities: [
                     {
-                        starting_time:"12:00",
-                        ending_time:"13:30"
+                        starting_time: "12:00",
+                        ending_time: "13:30"
                     },
                     {
-                        starting_time:"17:00",
-                        ending_time:"18:00"
+                        starting_time: "17:00",
+                        ending_time: "18:00"
                     }
                 ],
-                Departments:["Obstetrician","Gynecologist"],
-                Doctor_image:"../../../assets/images/dr premalatha.jpeg",
-                Doctor_name:"Dr.Premalatha Balachandran",
-                Experience:{
-                    experience_duration:"24",
-                    experience_type:"years"
+                Departments: ["Obstetrician", "Gynecologist"],
+                Doctor_image: "../../../assets/images/dr premalatha.jpeg",
+                Doctor_name: "Dr.Premalatha Balachandran",
+                Experience: {
+                    experience_duration: "24",
+                    experience_type: "years"
                 },
-                Hospital_name:"Fortis-malar-hospital",
-                Qualifications:["MBBS","DGO","MRCQG(UK)"],
-                Working_days:{
-                    monday:true,tuesday:true,wednesday:true,thursday:true,friday:true,saturday:true,sunday:false
+                Hospital_name: "Fortis-malar-hospital",
+                Qualifications: ["MBBS", "DGO", "MRCQG(UK)"],
+                Working_days: {
+                    monday: true, tuesday: true, wednesday: true, thursday: true, friday: true, saturday: true, sunday: false
                 },
-                uuid:"6b552ea8-57c4-4f85-aa1c-e642d80db72e"
+                uuid: "6b552ea8-57c4-4f85-aa1c-e642d80db72e"
             },
             {
-                Availabilities:[
+                Availabilities: [
                     {
-                        starting_time:"10:00",
-                        ending_time:"14:00"
+                        starting_time: "10:00",
+                        ending_time: "14:00"
                     }
                 ],
-                Departments:["General Physician"],
-                Doctor_image:"../../../assets/images/dr thilagavathy.jpeg",
-                Doctor_name:"Dr.Bhuvaneshwari ",
-                Experience:{
-                    experience_duration:"30",
-                    experience_type:"years"
+                Departments: ["General Physician"],
+                Doctor_image: "../../../assets/images/dr thilagavathy.jpeg",
+                Doctor_name: "Dr.Bhuvaneshwari ",
+                Experience: {
+                    experience_duration: "30",
+                    experience_type: "years"
                 },
-                Hospital_name:"Vijaya-hospital",
-                Qualifications:["MBBS"],
-                Working_days:{
-                    monday:true,tuesday:true,wednesday:true,thursday:true,friday:true,saturday:true,sunday:false
+                Hospital_name: "Vijaya-hospital",
+                Qualifications: ["MBBS"],
+                Working_days: {
+                    monday: true, tuesday: true, wednesday: true, thursday: true, friday: true, saturday: true, sunday: false
                 },
-                uuid:"e6a7a865-fdc2-4275-8d7f-85f0c64e3b0e"
+                uuid: "e6a7a865-fdc2-4275-8d7f-85f0c64e3b0e"
             },
             {
-                Availabilities:[
+                Availabilities: [
                     {
-                        starting_time:"16:00",
-                        ending_time:"19:00"
+                        starting_time: "16:00",
+                        ending_time: "19:00"
                     }
                 ],
-                Departments:["general physician"],
-                Doctor_image:"../../../assets/images/dr devi priya.jpeg",
-                Doctor_name:"Dr.Devi priya",
-                Experience:{
-                    experience_duration:"9",
-                    experience_type:"years"
+                Departments: ["general physician"],
+                Doctor_image: "../../../assets/images/dr devi priya.jpeg",
+                Doctor_name: "Dr.Devi priya",
+                Experience: {
+                    experience_duration: "9",
+                    experience_type: "years"
                 },
-                Hospital_name:"Vijaya-hospital",
-                Qualifications:["MBBS","DDVL"],
-                Working_days:{
-                    monday:true,tuesday:true,wednesday:true,thursday:true,friday:true,saturday:true,sunday:false
+                Hospital_name: "Vijaya-hospital",
+                Qualifications: ["MBBS", "DDVL"],
+                Working_days: {
+                    monday: true, tuesday: true, wednesday: true, thursday: true, friday: true, saturday: true, sunday: false
                 },
-                uuid:"ff9ebd3a-e9a0-4958-a8cd-b08e812a475c"
+                uuid: "ff9ebd3a-e9a0-4958-a8cd-b08e812a475c"
             },
             {
-                Availabilities:[
+                Availabilities: [
                     {
-                        starting_time:"13:00",
-                        ending_time:"15:00"
+                        starting_time: "13:00",
+                        ending_time: "15:00"
                     }
                 ],
-                Departments:["general physician"],
-                Doctor_image:"../../../assets/images/dr bhuvaneshwari.jpeg",
-                Doctor_name:"Dr.Thilagavathy",
-                Experience:{
-                    experience_duration:"4",
-                    experience_type:"years"
+                Departments: ["general physician"],
+                Doctor_image: "../../../assets/images/dr bhuvaneshwari.jpeg",
+                Doctor_name: "Dr.Thilagavathy",
+                Experience: {
+                    experience_duration: "4",
+                    experience_type: "years"
                 },
-                Hospital_name:"Vijaya-hospital",
-                Qualifications:["MBBS"],
-                Working_days:{
-                    monday:true,tuesday:true,wednesday:true,thursday:true,friday:true,saturday:true,sunday:false
+                Hospital_name: "Vijaya-hospital",
+                Qualifications: ["MBBS"],
+                Working_days: {
+                    monday: true, tuesday: true, wednesday: true, thursday: true, friday: true, saturday: true, sunday: false
                 },
-                uuid:"734534af-1002-47f4-a451-bbfb4d6bbda9"   
+                uuid: "734534af-1002-47f4-a451-bbfb4d6bbda9"
             }
         ]
     ))
 }
 
 const appointmentList = JSON.parse(localStorage.getItem('appointments'));
-if(!appointmentList){
-    localStorage.setItem('appointments' , JSON.stringify(
+if (!appointmentList) {
+    localStorage.setItem('appointments', JSON.stringify(
         [
             {
                 addDescription: "",
                 address: "",
                 appointment_id: "0cd4d3f9-c4ea-437b-ae61-2601016b1dbf",
-                consultationMethod:{
-                    inPerson:true,
-                    homeConsultation:false,
-                    videoConsultation:false
+                consultationMethod: {
+                    inPerson: true,
+                    homeConsultation: false,
+                    videoConsultation: false
                 },
-                dateOfBooking:"2023-04-01",
-                dateOfConsultation:"2023-04-04",
-                doctorName:"Dr.Premalatha Balachandran",
-                healthIssues:["irregular periods"],
-                patient_age:"18",
-                patient_email_address:"vaishnavisriram76@gmail.com",
-                patient_gender:{
-                    male:false,
-                    female:true,
-                    others:false
+                dateOfBooking: "2023-04-01",
+                dateOfConsultation: "2023-04-04",
+                doctorName: "Dr.Premalatha Balachandran",
+                healthIssues: ["irregular periods"],
+                patient_age: "18",
+                patient_email_address: "vaishnavisriram76@gmail.com",
+                patient_gender: {
+                    male: false,
+                    female: true,
+                    others: false
                 },
-                patient_mobile_number:"7397314532",
-                patient_name:"Vaishnavi",
-                timeOfBooking:"14:45"
+                patient_mobile_number: "7397314532",
+                patient_name: "Vaishnavi",
+                timeOfBooking: "14:45"
             },
             {
                 addDescription: "",
                 address: "",
                 appointment_id: "93b5b247-ace2-4195-8603-2aefbcd564bf",
-                consultationMethod:{
-                    inPerson:true,
-                    homeConsultation:false,
-                    videoConsultation:false
+                consultationMethod: {
+                    inPerson: true,
+                    homeConsultation: false,
+                    videoConsultation: false
                 },
-                dateOfBooking:"2023-04-01",
-                dateOfConsultation:"2023-04-03",
-                doctorName:"Dr.Premalatha Balachandran",
-                healthIssues:["stomachache"],
-                patient_age:"14",
-                patient_email_address:"deepika.sriram@fssa.freshworks.com",
-                patient_gender:{
-                    male:false,
-                    female:true,
-                    others:false
+                dateOfBooking: "2023-04-01",
+                dateOfConsultation: "2023-04-03",
+                doctorName: "Dr.Premalatha Balachandran",
+                healthIssues: ["stomachache"],
+                patient_age: "14",
+                patient_email_address: "deepika.sriram@fssa.freshworks.com",
+                patient_gender: {
+                    male: false,
+                    female: true,
+                    others: false
                 },
-                patient_mobile_number:"9940185339",
-                patient_name:"Subhashini",
-                timeOfBooking:"14:59"
+                patient_mobile_number: "9940185339",
+                patient_name: "Subhashini",
+                timeOfBooking: "14:59"
             },
             {
                 addDescription: "I can't tell the issues in this form..I want to tell you in person",
                 address: "",
                 appointment_id: "b5acced5-cde9-4da4-8997-990715840737",
-                consultationMethod:{
-                    inPerson:true,
-                    homeConsultation:false,
-                    videoConsultation:false
+                consultationMethod: {
+                    inPerson: true,
+                    homeConsultation: false,
+                    videoConsultation: false
                 },
-                dateOfBooking:"2023-03-31",
-                dateOfConsultation:"2023-04-03",
-                doctorName:"Dr.Thenmozhi",
-                healthIssues:[],
-                patient_age:"21",
-                patient_email_address:"sangeetha1997@gmail.com",
-                patient_gender:{
-                    male:false,
-                    female:true,
-                    others:false
+                dateOfBooking: "2023-03-31",
+                dateOfConsultation: "2023-04-03",
+                doctorName: "Dr.Thenmozhi",
+                healthIssues: [],
+                patient_age: "21",
+                patient_email_address: "sangeetha1997@gmail.com",
+                patient_gender: {
+                    male: false,
+                    female: true,
+                    others: false
                 },
-                patient_mobile_number:"944553574",
-                patient_name:"Sangeetha",
-                timeOfBooking:"15:00"
+                patient_mobile_number: "944553574",
+                patient_name: "Sangeetha",
+                timeOfBooking: "15:00"
             },
             {
                 addDescription: "",
                 address: "No.06, abcd steet, x-city",
                 appointment_id: "fcb58cab-5b1d-45b4-a3e2-0f08b8b3c194",
-                consultationMethod:{
-                    inPerson:false,
-                    homeConsultation:true,
-                    videoConsultation:false
+                consultationMethod: {
+                    inPerson: false,
+                    homeConsultation: true,
+                    videoConsultation: false
                 },
-                dateOfBooking:"2023-03-29",
-                dateOfConsultation:"2023-04-04",
-                doctorName:"Dr.Meera Raghavan",
-                healthIssues:["giddiness"],
-                patient_age:"80",
-                patient_email_address:"deepika.sriram@fssa.freshworks.com",
-                patient_gender:{
-                    male:false,
-                    female:true,
-                    others:false
+                dateOfBooking: "2023-03-29",
+                dateOfConsultation: "2023-04-04",
+                doctorName: "Dr.Meera Raghavan",
+                healthIssues: ["giddiness"],
+                patient_age: "80",
+                patient_email_address: "deepika.sriram@fssa.freshworks.com",
+                patient_gender: {
+                    male: false,
+                    female: true,
+                    others: false
                 },
-                patient_mobile_number:"8939094029",
-                patient_name:"Gowri",
-                timeOfBooking:"15:02"
+                patient_mobile_number: "8939094029",
+                patient_name: "Gowri",
+                timeOfBooking: "15:02"
             }
         ]
     ))

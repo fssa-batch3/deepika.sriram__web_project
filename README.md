@@ -6,7 +6,7 @@ Userflow:https://drive.google.com/file/d/1PGCRRS1S6ls64qG4lZUgW-ePol0s916c/view?
 problem statement : https://drive.google.com/file/d/1EKy_ycvJJjS5QxdueMZUpxC11XHqg28U/view?usp=sharing
 
 
-1.User CRUD features:(✅)
+1.User CRUD features:(completed✅)
 ### Registration of user's detail.
 - Scenario: creating an account in my website.
     - Steps:
@@ -75,7 +75,7 @@ problem statement : https://drive.google.com/file/d/1EKy_ycvJJjS5QxdueMZUpxC11XH
        2. It will redirect to home page 
    
 
-2.Hospital features:(✅)
+2.Hospital features:(completed ✅)
 ### View hospital list
    - Scenarios:Users wants to view hospital list 
      - Steps:
@@ -88,37 +88,80 @@ problem statement : https://drive.google.com/file/d/1EKy_ycvJJjS5QxdueMZUpxC11XH
        1. They can see list of hospitals
      
 
-3.Doctor features:(✅)
+3.Doctor features:(completed ✅)
 ### View doctors list
    - Scenarios:Users want to see list of doctors of hospitals which they chose.
      - Steps:
      
-       1. chose any of the hsopitals what you want
+       1. chose any of the hospitals what you want
      
      - Expected result:
      
        1. They can see list of doctors of particular hospital
      
 
-4.Appointment features:(❎).
+4.Appointment features:(completed ✅)
+### Book appointment
+   - Scenario: Users want to book appointment with doctor whom they chose.
+     - Steps:
+     1. choose any doctor you want to book appointment with.
+     2. The appointment form will appear.
+     3. Enter the requirements in the form and click on Book appointment
+   - Expected result:
+     1. An alert box with text "Appointment booked successfully!! you can see past appointments in history" will appear.
+     2. It will redirect to home page
+
+### View past appointments in history page
+   - Scenario - 1: User wants to check the history of appointment list.
+     - Steps:
+     1. In home page click on profile avatar , a dropdown will appear.
+     2. In that dropdown , click on history.
+   - Expected result:
+     1. You can see list of past appointments in history page.
+   - Scenario - 2: User wants to see details of particular appointment.
+     - Steps:
+     1. Click on view history button
+   - Expected result:
+     1. You can see the details of the appointment.
+
+### Edit appointment 
+   - Scenario: User wants to edit their appointment as if they sent any details by mistake instead of something.
+     - Steps:
+     1. Edit the fields which you want to edit.
+     2. Click on update and resend form.
+   - Expected result:
+     1. An alert box with text "updated and resent successfully" will appear.
+     2. It will redirect to homepage.
+
+### Delete appointment
+   - Senario: User wants to delete the particular appointment.
+     - Steps:
+     1. Click on profile avatar on homepage and click the history option in the dropdown
+     2. It will redirect to history page.
+     3. Click on the appointment you want to delete.
+     4. It will redirect to appointment details.
+     5. Click on delete appointment button.
+   - Expected result:
+     1. An alert box with text "deleted appointment successfully" will appear
+     2. It will redirect to home page.
 
 
-<!-- 2.Hospital CRUD features:
+2.Hospital CRUD features(completed ✅):
     Uploading of hospital details
     Read hospital list
     read hospital details
     Update/Edit details 
     Delete  details. 
 
-3.Doctor CRUD features:
+3.Doctor CRUD features(completed ✅):
     Creating doctor's details.
     read doctor's list
     Read details
     Update/edit details
-    Delete details. -->
+    Delete details.
 
-<!-- 4. Appointment CRUD features:
+4. Appointment CRUD features (completed ✅):
     Create appointment
     Read appointment in history page
     Update appointment in history page
-    Delete history of that particular appointment -->
+    Delete history of that particular appointment.
