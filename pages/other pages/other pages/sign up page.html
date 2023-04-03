@@ -69,8 +69,11 @@
                         </div>
                         <br>
                         <div>
-                            <input type="password" required="true" id="pass_1"  style="width:100%;height:30px"  />
+                            <input type="password" required="true" id="pass_1"  style="width:80%;height:30px" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8}" placeholder="Enter atleast 8 characters with a combination of letters, numbers and symbols"  />
+                            <input type="checkbox" id="showCreatedPassword" />
+                            <label for="">Show password</label>
                         </div>
+                        
                     </div>
                     <br>
                     <div>
@@ -79,8 +82,11 @@
                         </div>
                         <br>
                         <div>
-                           <input type="password" id="pass_2" required="true" style="width:100%;height:30px" />
+                           <input type="password" id="pass_2" required="true" style="width:80%;height:30px" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8}" placeholder="Enter atleast 8 characters with a combination of letters, numbers and symbols" />
+                           <input type="checkbox" id="showConfirmPassword" />
+                            <label for="">Show password</label>
                         </div>
+                        
                     </div>
                     <br>
                     <div style="text-align:center">
@@ -113,5 +119,30 @@
         <script>indexPage()</script>
         <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
         <script src="../../../Javascript files/form_1.js"></script>
+        <script>
+            let create_password = document.getElementById("pass_1");
+            confirm_password = document.getElementById("pass_2");
+            checkbox_1 = document.getElementById("showCreatedPassword");
+            checkbox_2 = document.getElementById("showConfirmPassword");
+            checkbox_1.addEventListener('click' , function(){
+                if(checkbox_1.checked){
+                    create_password.type='text'
+                }
+                else{
+                    create_password.type = 'password'
+                }
+            });
+            checkbox_2.addEventListener('click' , function(){
+                if(checkbox_2.checked){
+                    confirm_password.type='text'
+                }
+                else{
+                    confirm_password.type = 'password'
+                }
+            });
+
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     </body>
 </html>

@@ -40,14 +40,16 @@
                 </div>
                 <br>
                 <div>
-                    <input type="password" required="true" id="password" style="width:95%;height:30px"  />
+                    <input type="password" required="true" id="password" style="width:70%;height:30px"  />
+                    <input type="checkbox" id="show" />
+                    <label for="">Show password</label>
                 </div>
             </div>
             <br>
             <div style="display:flex;justify-content:space-between">
                 <div>
                    <a href="../other pages/sign up page.html">
-                      Forgot password?
+                      new member?
                     </a>
                 </div>
                 <div>
@@ -57,5 +59,19 @@
         <script src="../../../Javascript files/form_1.js"></script>
         <script src="../../../Javascript files/header.js"></script>
         <script>indexPage()</script>
+        <script>
+            let password = document.getElementById("password");
+            let checkbox = document.getElementById("show");
+            checkbox.addEventListener('click' , function(){
+                if(checkbox.checked){
+                    password.type = 'text'
+                }
+                else{
+                    password.type = 'password'
+                }
+            })
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     </body>
 </html>

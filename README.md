@@ -11,14 +11,15 @@ problem statement : https://drive.google.com/file/d/1EKy_ycvJJjS5QxdueMZUpxC11XH
 - Scenario: creating an account in my website.
     - Steps:
     
-       1. Navigate to signup (register) page.
-       2. Enter required details in the form.
-       3. Click on submit button
+       1. go to signup option at the top right of the home page
+       2. If there is no sign up option , go to login option at the same top right of home page.
+       3. login page will appear. to register as new member click on new member link.
+       4. Sign up page will appear. type the requirements and click on submit.
     
     - Expected Result:
     
         1. It will redirected to login page by showing "registered successfully" in an alert box
-        2. If you already registered and if you try to register again by mistake, it will show "user already exists" in an alert box
+        2. If you already registered and if you try to register again by mistake, it will show "user already exists" in an alert box.
     
 
 
@@ -26,7 +27,7 @@ problem statement : https://drive.google.com/file/d/1EKy_ycvJJjS5QxdueMZUpxC11XH
    - Scenario:user is to login.
    - Steps:
    
-       1. Navigate to login page
+       1. Go to login option on the top right of the home page.
        2. Enter registered email address and created password
        3. click on login button
    
