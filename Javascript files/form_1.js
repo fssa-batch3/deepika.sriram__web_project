@@ -3,6 +3,26 @@ function enter(e) {
     // hear i collect value from signUp form
     let f_name = document.getElementById("first_name").value.trim();
     l_name = document.getElementById("last_name").value.trim();
+    age = document.getElementById("age").value.trim();
+    user_gender = {};
+
+    male = document.getElementById("male").checked;
+    female = document.getElementById("female").checked;
+    others = document.getElementById("others").checked;
+
+    function gender(gender, name) {
+        if (gender == true) {
+            return user_gender[name] = true;
+        }
+        if (gender != true) {
+            return user_gender[name] = false;
+        }
+    }
+
+    gender(male, "male")
+    gender(female, "female")
+    gender(others, "others");
+
     mobile = document.getElementById("mobile_number").value.trim();
     email_id = document.getElementById("user_email").value.trim();
     create_password = document.getElementById("pass_1").value.trim();
@@ -41,7 +61,7 @@ function enter(e) {
     if (!exist) {
 
         if (create_password === confirm_password) {
-            user_detail.push({ f_name, l_name, mobile, email_id, create_password, confirm_password, user_role, uuid });
+            user_detail.push({ f_name, l_name,age,user_gender, mobile, email_id, create_password, confirm_password, user_role, uuid });
 
             localStorage.setItem('user_detail', JSON.stringify(user_detail));
 

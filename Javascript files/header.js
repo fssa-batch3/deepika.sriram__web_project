@@ -1,4 +1,4 @@
-var origin = window.location.search;
+var origin = window.location.origin;
 var homepage = origin+"/pages/homepage/home page.html"
 var about = origin+"/pages/other pages/other pages/about us.html"
 var image = origin+"/assets/images/gws.png"
@@ -9,6 +9,7 @@ var appointment_history = origin+"/pages/other pages/patient/history.html"
 var hospitals = origin+"/pages/other pages/patient/list of hospital page.html"
 var index = origin+"/index.html"
 var menu = origin+"/pages/other pages/other pages/menu.html"
+var doctor_list = origin+"/pages/other pages/other pages/doctor's list.html"
 
 
 

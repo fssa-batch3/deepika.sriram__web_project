@@ -39,7 +39,7 @@
                 </div>
                 <br>
                 <div>
-                    <input type="text" id="first_name" style="width:95%;height:30px;border:0.5px solid black;padding-left: 10px" disabled/>
+                    <input type="text" id="name" style="width:95%;height:30px;border:0.5px solid black;padding-left: 10px" />
                 </div>
                 <br>
                 <div class="frm">
@@ -74,7 +74,7 @@
                 </div>
                 <br>
                 <div>
-                    <input type="tel" id="mobile_number" style="width:90%;height:30px;border:0.5px solid black;padding-left: 10px" disabled/>
+                    <input type="tel" id="mobile_number" style="width:90%;height:30px;border:0.5px solid black;padding-left: 10px" />
                 </div>
                 <br>
                 <div>
@@ -91,9 +91,7 @@
                 <br>
                 <div id="frm">
                     <div style="margin-top:5%">
-                        <a href="../patient/patient edit profile page.html">
-                            <button type="button">Edit profile</button>
-                        </a>
+                        <button type="submit" id="updateUser">Update profile</button>
                     </div>
                     <div style="margin-top:5%;">
                         <a href="../../homepage/home page.html">
@@ -101,55 +99,13 @@
                         </a>
                     </div>
                     <div>
-                        <button type="button" onclick="deleteAcc(event)">delete profile</button>
+                        <button type="submit" id="deleteUser">delete profile</button>
                     </div>
                 </div>
             </form>
         </main>
-        <script>
-            //get value from local storage
-            let unique_id = JSON.parse(localStorage.getItem("uniqueUser"));
-            let user_detail = JSON.parse(localStorage.getItem("user_detail"));
-            console.log(user_detail);
-            console.log(unique_id);
-
-
-            function profile_data(e){
-                return e.email_id == unique_id;
-            }
-            person_data = user_detail.find(profile_data);
-            console.log(person_data)
-
-            document.getElementById("first_name").value = person_data["f_name"]+" "+person_data["l_name"];
-            document.getElementById("age").value = person_data["age"]
-            document.getElementById("female").value = person_data["gender"]
-            document.getElementById("user_email").value = person_data["email_id"];
-            document.getElementById("mobile_number").value = person_data["mobile"];
-
-            // delete account function
-            function deleteAcc(){
-                if(confirm("Are you sure to delete this account ?")){
-                    let unique_id = JSON.parse(localStorage.getItem("uniqueUser"));
-                    let user_detail = JSON.parse(localStorage.getItem("user_detail"));
-                    console.log(user_detail);
-                    console.log(unique_id);
-
-
-                    function profile_data(e){
-                        return e.email_id == unique_id;
-                    }
-                    person_data = user_detail.find(profile_data);
-                    
-                    // find the index of person_data from userData
-                    let result =user_detail.indexOf(person_data);
-                    // deleting the indexof person data
-                    user_detail.splice(result, 1);
-                    localStorage.setItem("user_detail", JSON.stringify(user_detail));
-                    window.location.href="../../../index.html";
-                }
-            }
-        </script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="../../../CRUD forms/javascript files/profile form.js"></script>
     </body>
 </html>

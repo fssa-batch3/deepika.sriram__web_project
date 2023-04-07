@@ -43,6 +43,29 @@
                        </div>
                     </div>
                     <br>
+                    <div style="display:flex">
+                        <div>
+                            <div>
+                                <label>Age</label>
+                            </div>
+                            <br>
+                            <div>
+                                <input type="number"  id="age" style="height:30px"/>
+                            </div>
+                        </div>
+                        <div style="margin-left: 20px;">
+                            <div>
+                                <label for="">Gender</label>
+                            </div>
+                            <br>
+                            <div>
+                                <input type="radio"  id="male" name="M_F_O"/>male
+                                <input type="radio"  id="female" name="M_F_O" />female
+                                <input type="radio"  id="others" name="M_F_O" />others
+                            </div>
+                        </div>
+                    </div>
+                    <br>
                     <div>
                         <div>
                             <label>Mobile number</label>
@@ -69,7 +92,7 @@
                         </div>
                         <br>
                         <div>
-                            <input type="password" required="true" id="pass_1"  style="width:80%;height:30px" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8}" placeholder="Enter atleast 8 characters with a combination of letters, numbers and symbols"  />
+                            <input type="password" required="true" id="pass_1"  style="width:80%;height:30px" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}" placeholder="Enter atleast 8 characters with a combination of letters, numbers and symbols"  />
                             <input type="checkbox" id="showCreatedPassword" />
                             <label for="">Show password</label>
                         </div>
@@ -82,7 +105,7 @@
                         </div>
                         <br>
                         <div>
-                           <input type="password" id="pass_2" required="true" style="width:80%;height:30px" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8}" placeholder="Enter atleast 8 characters with a combination of letters, numbers and symbols" />
+                           <input type="password" id="pass_2" required="true" style="width:80%;height:30px" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}" placeholder="Enter atleast 8 characters with a combination of letters, numbers and symbols" />
                            <input type="checkbox" id="showConfirmPassword" />
                             <label for="">Show password</label>
                         </div>
