@@ -105,6 +105,7 @@ if(appointmentData){
         localStorage.setItem('appointments' , JSON.stringify(appointmentList));
         alert('Updated and resended appointment successfully!!✅');
         document.querySelector("form").reset();
+        location.href="../../../../index.html"
         document.getElementById("update_appointment").setAttribute("disabled", true);
     
     }

@@ -28,12 +28,12 @@ problem statement : https://drive.google.com/file/d/1EKy_ycvJJjS5QxdueMZUpxC11XH
    - Steps:
    
        1. Go to login option on the top right of the home page.
-       2. Enter registered email address and created password
+       2. Enter registered email address and created password if you are already registered.
        3. click on login button
    
    - Expected Result:
-   
-       1. It will redirect to homepage of the website
+       1. An alert box with text ("logged in successfully") will display.
+       2. It will redirect to homepage of the website
     
 
 ### View profile (read)
@@ -41,7 +41,7 @@ problem statement : https://drive.google.com/file/d/1EKy_ycvJJjS5QxdueMZUpxC11XH
    - Steps: 
    
       1. In the home page, you can see profile avatar on top right of the page.
-      2. A dropdown will appear, on that click profile option
+      2. by hovering on profile avatar,a dropdown will appear, on that click profile option
    
    - Expected result
    
@@ -68,7 +68,7 @@ problem statement : https://drive.google.com/file/d/1EKy_ycvJJjS5QxdueMZUpxC11XH
    - Scenario: User wants to delete their profile (nearly same as deleting their account).
    - Steps:
    
-       1. Click on delete profile 
+       1. Click on delete profile in the profile page
    
    - Expected result:
    
@@ -121,7 +121,7 @@ problem statement : https://drive.google.com/file/d/1EKy_ycvJJjS5QxdueMZUpxC11XH
      1. You can see list of past appointments in history page.
    - Scenario - 2: User wants to see details of particular appointment.
      - Steps:
-     1. Click on view history button
+     1. Click on view history button in the particular appointment.
    - Expected result:
      1. You can see the details of the appointment.
 
