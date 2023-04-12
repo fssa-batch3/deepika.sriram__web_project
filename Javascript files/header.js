@@ -99,7 +99,7 @@ var heading_2 = `
                     <li class="dropdown">
                         <a href="javascript:void(0)" class="dropbtn"><i class="far fa-user" style="color:white;font-size:150%"></i> </a>
                         <div class="dropdown-content" style="right:0%">
-                            <a href="${index}">Sign out <i class="fa fa-sign-out"></i> </a>
+                            <a id="signout">Sign out <i class="fa fa-sign-out"></i></a>
                             <a href="${appointment_history}">History <i class="fa fa-history"></i> </a>
                             <a href="${profile}">Profile <i class="fas fa-user"></i> </a>
                         </div>
@@ -124,5 +124,15 @@ function indexPage(){
         // document.getElementById("header").insertAdjacentHTML("beforebegin" , heading_2);
         header.innerHTML = heading_2
     }
+    document.getElementById("signout").onclick = function(event){
+        event.preventDefault();
+
+        localStorage.removeItem('uniqueUser');
+    }
     
 }
+// document.getElementById("signout").onclick = function(event){
+//     event.preventDefault();
+
+//     localStorage.removeItem('uniqueUser');
+// }
