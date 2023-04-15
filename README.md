@@ -1,12 +1,13 @@
-<h1> My project </h1>
+# My Project
+
 This project is about doctor appointment booking website to book appointment with doctors.
 The following are my wireframe, problem statement, userflow etc.
-Wireframe:https://drive.google.com/file/d/1M8BX5Vc8cSGDFNPyk7VW1ZT6jlXG6OQB/view?usp=sharing
-Userflow:https://drive.google.com/file/d/1PGCRRS1S6ls64qG4lZUgW-ePol0s916c/view?usp=sharing
-problem statement : https://drive.google.com/file/d/1EKy_ycvJJjS5QxdueMZUpxC11XHqg28U/view?usp=sharing
+ - Wireframe: https://drive.google.com/file/d/1M8BX5Vc8cSGDFNPyk7VW1ZT6jlXG6OQB/view?usp=sharing
+ - Userflow: https://drive.google.com/file/d/1PGCRRS1S6ls64qG4lZUgW-ePol0s916c/view?usp=sharing
+ - problem statement : https://drive.google.com/file/d/1EKy_ycvJJjS5QxdueMZUpxC11XHqg28U/view?usp=sharing
 
 
-1.User CRUD features:(completed✅)
+## 1.User CRUD features:(completed✅)
 ### Registration of user's detail.
 - Scenario: creating an account in my website.
     - Steps:
@@ -54,14 +55,12 @@ problem statement : https://drive.google.com/file/d/1EKy_ycvJJjS5QxdueMZUpxC11XH
    - Scenario:User wants to edit their profile.
    - Steps:
    
-       1. Click on edit profile option in that profile page
-       2. It will move to edit profile page
-       3. The user can edit their details 
-       4. press on "update profile" 
+       1. In that same profile page, you can edit the profile except email address.
+       2. click on update profile.
    
-   Expected result
+   - Expected result:
    
-       1. the profile  of the user will be updated by showing "updated successfully" in an alert box
+       1. The profile  of the user will be updated by showing "updated successfully" in an alert box
    
 
 ### Delete profile
@@ -76,7 +75,7 @@ problem statement : https://drive.google.com/file/d/1EKy_ycvJJjS5QxdueMZUpxC11XH
        2. It will redirect to home page 
    
 
-2.Hospital features:(completed ✅)
+## 2.Hospital features:(completed ✅)
 ### View hospital list
    - Scenarios:Users wants to view hospital list 
      - Steps:
@@ -89,7 +88,7 @@ problem statement : https://drive.google.com/file/d/1EKy_ycvJJjS5QxdueMZUpxC11XH
        1. They can see list of hospitals
      
 
-3.Doctor features:(completed ✅)
+## 3.Doctor features:(completed ✅)
 ### View doctors list
    - Scenarios:Users want to see list of doctors of hospitals which they chose.
      - Steps:
@@ -101,7 +100,7 @@ problem statement : https://drive.google.com/file/d/1EKy_ycvJJjS5QxdueMZUpxC11XH
        1. They can see list of doctors of particular hospital
      
 
-4.Appointment features:(completed ✅)
+## 4.Appointment features:(completed ✅)
 ### Book appointment
    - Scenario: Users want to book appointment with doctor whom they chose.
      - Steps:
@@ -141,28 +140,28 @@ problem statement : https://drive.google.com/file/d/1EKy_ycvJJjS5QxdueMZUpxC11XH
      2. It will redirect to history page.
      3. Click on the appointment you want to delete.
      4. It will redirect to appointment details.
-     5. Click on delete appointment button.
+     5. Click on delete history button.
    - Expected result:
      1. An alert box with text "deleted appointment successfully" will appear
      2. It will redirect to home page.
 
 
-2.Hospital CRUD features(completed ✅):
-    Uploading of hospital details
-    Read hospital list
-    read hospital details
-    Update/Edit details 
-    Delete  details. 
+2. Hospital CRUD features(completed ✅):
+   - Uploading of hospital details
+   - Read hospital list
+   - read hospital details
+   - Update/Edit details 
+   - Delete  details. 
 
-3.Doctor CRUD features(completed ✅):
-    Creating doctor's details.
-    read doctor's list
-    Read details
-    Update/edit details
-    Delete details.
+3. Doctor CRUD features(completed ✅):
+   - Creating doctor's details.
+   - read doctor's list
+   - Read details
+   - Update/edit details
+   - Delete details.
 
 4. Appointment CRUD features (completed ✅):
-    Create appointment
-    Read appointment in history page
-    Update appointment in history page
-    Delete history of that particular appointment.
+   - Create appointment
+   - Read appointment in history page
+   - Update appointment in history page
+   - Delete history of that particular appointment.
