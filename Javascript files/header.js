@@ -1,22 +1,25 @@
 var origin = window.location.origin;
-var homepage = origin+"/pages/homepage/home page.html"
-var about = origin+"/pages/other pages/other pages/about us.html"
-var image = origin+"/assets/images/gws.png"
-var login = origin+"/pages/other pages/other pages/login.html"
-var signup = origin+"/pages/other pages/other pages/sign up page.html"
-var profile = origin+"/pages/other pages/patient/patient profile page.html"
-var appointment_history = origin+"/pages/other pages/patient/history.html"
-var hospitals = origin+"/pages/other pages/patient/list of hospital page.html"
-var index = origin+"/index.html"
-var menu = origin+"/pages/other pages/other pages/menu.html"
-var doctor_list = origin+"/pages/other pages/other pages/doctor's list.html"
+var homepage = origin + "/pages/homepage/home page.html"
+var about = origin + "/pages/other pages/other pages/about us.html"
+var image = origin + "/assets/images/gws.png"
+var login = origin + "/pages/other pages/other pages/login.html"
+var signup = origin + "/pages/other pages/other pages/sign up page.html"
+var profile = origin + "/pages/other pages/patient/patient profile page.html"
+var appointment_history = origin + "/pages/other pages/patient/history.html"
+var hospitals = origin + "/pages/other pages/patient/list of hospital page.html"
+var index = origin + "/index.html"
+var menu = origin + "/pages/other pages/other pages/menu.html"
+var doctor_list = origin + "/pages/other pages/other pages/doctor's list.html"
+var femaleAvatar = origin + "/assets/images/female_Avatar-removebg-preview.png"
+var maleAvatar = origin + "/assets/images/male_Avatar-removebg-preview.png"
+var otherAvatar = origin + "/assets/images/profile avatar.png"
 
 
 
 var heading_1 = `
 
             <div>
-                <img src="${image}" alt="logo of get well soon website">
+                <img src="${image}" alt="logo of get well soon website" style="width:10%">
             </div>
             <div id="hide">
                 <ul>
@@ -40,7 +43,6 @@ var heading_1 = `
                         <i class="fa-solid fa-bars" style="font-size:large"></i>
                     </a>
                     <div class="dropdown-content" style="right:2%">
-                        <a href="#">Contact us</a>
                         <a href="${about}">About us</a>
                         <a href="${login}">Login</a>
                         <a href="${signup}">Sign up</a>
@@ -50,45 +52,15 @@ var heading_1 = `
 `
 
 var heading_2 = `
-            <div>
-                <img src="${image}" alt="logo of get well soon website">
-            </div>
+    <img id="logo" src="${image}" alt="logo of get well soon website" style="width:5%">
+        <div style="display:flex;justify-content:flex-end;align-items:center" >
             <div id="hide">
                 <ul>
-                    <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropbtn">Hospitals</a>
-                        <div class="dropdown-content" style="right:25%">
-                            <a href="${hospitals}">All</a>
-                            <a href="${hospitals}">Central govt health scheme entitiled</a>
-                            <a href="${hospitals}">Private insurance entitled</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropbtn">Specialists</a>
-                        <div class="dropdown-content" style="right:15%;">
-                            <div>
-                                <a href="#">Allergy and immunology</a>
-                                <a href="#">Cancer</a>
-                                <a href="#">Cardiology</a>
-                                <a href="#">Dermatology (skin)</a>
-                                <a href="#">Diabetes (blood sugar)</a>
-                                <a href="#">Gastroenterology (digestive)</a>
-                                <a href="#">Ear, Nose and Throat (ENT)</a>
-                                <a href="#">General physician</a>
-                                <a href="#">Liver diseases</a>
-                            </div>
-                            <div>
-                                <a href="#">Nephrology (kidney)</a>
-                                <a href="#">Neurology (nerves and brain)</a>
-                                <a href="#">Opthomology (eyes)</a>
-                                <a href="#">Orthology (bones and joints)</a>
-                                <a href="#">Paediatrics (children)</a>
-                                <a href="#">Pulmonogy (Lungs)</a>
-                            </div>
-                        </div>
+                    <li>
+                        <a href="${hospitals}">Hospitals</a>
                     </li>
                     <li>
-                        <a href="#">Contact us</a>
+                        <a href="#">Specialists</a>
                     </li>
                     <li>
                         <a href="${about}">About us</a>
@@ -96,43 +68,94 @@ var heading_2 = `
                     <li>
                         <a href="${login}">Login</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropbtn"><i class="far fa-user" style="color:white;font-size:150%"></i> </a>
-                        <div class="dropdown-content" style="right:0%">
-                            <a id="signout">Sign out <i class="fa fa-sign-out"></i></a>
-                            <a href="${appointment_history}">History <i class="fa fa-history"></i> </a>
-                            <a href="${profile}">Profile <i class="fas fa-user"></i> </a>
-                        </div>
-                    </li>
                 </ul>
             </div>
-            <div id="vision-2">
-                <a href="${menu}">
-                    <i class="fa-solid fa-bars"></i>
-                </a>
+            <div class="dropdown" style="width:10%">
+                <a id="image" href="javascript:void(0)" class="dropbtn"></a>
+                <div class="dropdown-content" style="right:0%">
+                    <a id="signout">Sign out <i class="fa fa-sign-out"></i></a>
+                    <a href="${appointment_history}">History <i class="fa fa-history"></i> </a>
+                    <a href="${profile}">View profile <i class="fas fa-user"></i> </a>
+                </div>
             </div>
-`
+        </div>
 
-function indexPage(){
+
+        <div id="vision-2">
+            <a href="${menu}">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </div>
+`
+function indexPage() {
     let unique = JSON.parse(localStorage.getItem('uniqueUser'));
     let header = document.getElementById("header");
-    if(!unique){
-        // document.getElementById('header').insertAdjacentHTML("beforeend" , heading_1)
+
+    let maleImage = `<img id="avatar" class="profile" src="${maleAvatar}">`;
+    let femaleImage = `<img id="avatar" class="profile" src="${femaleAvatar}">`;
+    let otherImage = `<img id="avatar" class="profile" src="${otherAvatar}"></i>`;
+    const user_detail = JSON.parse(localStorage.getItem("user_detail"));
+
+    const profileForm = document.querySelector('#profile');
+
+    const insertSearchBar = document.querySelector('#searchBar');
+    let searchBar = `
+    <div>
+        <input type="text" id="text" placeholder="enter the location" />  
+        <a href="../other pages/patient/list of hospital page.html">
+            <button type="button" id="search">Search</button>
+        </a>
+    </div>
+    `
+
+    if (user_detail) {
+        const user = user_detail.find(detail =>
+            detail.email_id === unique
+        );
+        if (!unique) {
+            header.innerHTML = heading_1;
+        }
+        else {
+            header.innerHTML = heading_2;
+            if (insertSearchBar) {
+                insertSearchBar.insertAdjacentHTML('beforeend', searchBar);
+            }
+            document.getElementById("signout").onclick = function (event) {
+                event.preventDefault();
+
+                alert("logged out successfully");
+                localStorage.removeItem('uniqueUser');
+                searchBar.remove();
+                header.innerHTML = heading_1;
+            }
+            if (user) {
+                if (user.user_gender.male === true) {
+                    document.querySelector('#image').insertAdjacentHTML('beforeend', maleImage);
+                    if (profileForm) {
+                        maleImage.id = "profileImage"
+                        profileForm.insertAdjacentHTML('afterbegin', maleImage)
+                    }
+                }
+                if (user.user_gender.female === true) {
+                    document.querySelector('#image').insertAdjacentHTML('beforeend', femaleImage);
+                    if (profileForm) {
+                        femaleImage.id = "profileImage"
+                        profileForm.insertAdjacentHTML('afterbegin', femaleImage)
+                    }
+                }
+                if (user.user_gender.others === true) {
+                    document.querySelector('#image').insertAdjacentHTML('beforeend', otherImage);
+                    if (profileForm) {
+                        otherImage.id = "profileImage"
+                        profileForm.insertAdjacentHTML('afterbegin', otherImage)
+                    }
+                }
+
+            }
+        }
+    }
+    else {
         header.innerHTML = heading_1;
     }
-    else{
-        // document.getElementById("header").insertAdjacentHTML("beforebegin" , heading_2);
-        header.innerHTML = heading_2
-    }
-    document.getElementById("signout").onclick = function(event){
-        event.preventDefault();
-
-        localStorage.removeItem('uniqueUser');
-    }
-    
 }
-// document.getElementById("signout").onclick = function(event){
-//     event.preventDefault();
 
-//     localStorage.removeItem('uniqueUser');
-// }

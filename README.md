@@ -61,18 +61,8 @@ The following are my wireframe, problem statement, userflow etc.
    - Expected result:
    
        1. The profile  of the user will be updated by showing "updated successfully" in an alert box
+       2. It will redirect to home page
    
-
-### Delete profile
-   - Scenario: User wants to delete their profile (nearly same as deleting their account).
-   - Steps:
-   
-       1. Click on delete profile in the profile page
-   
-   - Expected result:
-   
-       1. The user's details will be deleted by showing "deleted account/details successfully" in an alert box
-       2. It will redirect to home page 
    
 
 ## 2.Hospital features:(completed ✅)

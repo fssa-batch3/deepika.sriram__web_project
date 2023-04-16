@@ -50,30 +50,31 @@ if (user) {
         localStorage.setItem('user_detail', JSON.stringify(user_detail));
         alert('updated successfully');
         document.querySelector("form").reset();
+        location.href="../../../index.html"
         document.getElementById("updateUser").setAttribute('disabled' , true);
 
     }
 }
 
-document.getElementById("deleteUser").addEventListener('click' , (event) =>{
-    event.preventDefault();
+// document.getElementById("deleteUser").addEventListener('click' , (event) =>{
+//     event.preventDefault();
 
-    const unique_id = JSON.parse(localStorage.getItem("uniqueUser"));
-    const user_detail = JSON.parse(localStorage.getItem("user_detail"));
+//     const unique_id = JSON.parse(localStorage.getItem("uniqueUser"));
+//     const user_detail = JSON.parse(localStorage.getItem("user_detail"));
 
-    const userIndex = user_detail.findIndex(detail =>
-        detail.email_id === unique_id
-    );
+//     const userIndex = user_detail.findIndex(detail =>
+//         detail.email_id === unique_id
+//     );
 
-    if (userIndex > -1) {
-        user_detail.splice(userIndex, 1);
-        localStorage.setItem('user_detail', JSON.stringify(user_detail));
-        alert("account deleted successfully");
-        document.querySelector('form').reset();
-        location.href="../../../index.html"
+//     if (userIndex > -1) {
+//         user_detail.splice(userIndex, 1);
+//         localStorage.setItem('user_detail', JSON.stringify(user_detail));
+//         alert("account deleted successfully");
+//         document.querySelector('form').reset();
+//         location.href="../../../index.html"
 
-    }
-});
+//     }
+// });
 
 // function profile_data(e){
 //     return e.email_id == unique_id;

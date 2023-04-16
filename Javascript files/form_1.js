@@ -102,7 +102,7 @@ function signIn(e) {
     else {
         localStorage.setItem("uniqueUser", JSON.stringify(email));
         alert("Your login in is successful ✅");
-        location.href = "../../homepage/home page.html"
+        location.href = "../../../../index.html"
     }
 
 }

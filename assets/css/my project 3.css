@@ -3,46 +3,81 @@
     padding:0;
 }
 
-header{
+#header{
     background-color: #03045E;
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:space-between;
-    align-items: center;
     padding-top: 15px;
     padding-bottom: 15px;
-    font-family: 'kumbh sans',sans-serif;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
 }
-header div img{
-    width:15%;
+#header #avatar{
+    width:100%;
 }
-div ul li{
-    text-decoration:none;
+#header ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden; 
     display:inline;
 }
-div ul li a{
-    text-decoration:none;
-    color: white;
-    font-weight:600;
-    font-size:120%;
-    margin-left: 5px;
-    margin-right:5px;
+#header ul li, .dropdown{
+    display:inline;
 }
-div ul li a:hover{
+ul li a,.dropbtn{
+    display:inline-block;
+    color:white;
+    font-size:20px;
+    font-weight: 500;
+    padding:10px;
+    text-decoration: none;
+}
+ul li a:hover, .dropdown:hover .dropbtn{
     color:yellow;
-    transition:0.2s;
+    transition: 0.3s;
+}
+.dropdown-content{
+    display:none;
+    position:absolute;
+    background-color:white;
+    padding:10px 0;
+    min-width: 150px;
+    box-shadow:5px 5px 5px grey;
+    font-family:sans-serif;
+    z-index:1;
+}
+.dropdown-content a{
+    color:#03045E;
+    padding:20px 0;
+    padding-left: 10px;
+    text-decoration:none;
+    display:block;
+}
+.dropdown-content a:hover{
+    background-color:lightgrey;
+    color:rgb(2, 51, 2);
+    transition:0.4s;
+}
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+#vision,#vision-2{
+    display:none;
+}
+.profile{
+    width:25%;
+    /* margin-left:35%; */
 }
 form{
     background-color: white;
     position:absolute;
     top:20%;
-    left:30%;
+    left:35%;
     border:1px solid black;
-    padding:5px 10px;
+    padding:2%;
     box-shadow: 5px 5px 5px grey;
-    height:70%;
-    width:38%;
+    height:fit-content;
+    width:30%;
 }
 form h1 i{
     color:white;
@@ -61,9 +96,8 @@ form label{
 #frm{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    margin-left:20px;
 }
 [type="submit"]{
     padding:10px 15px;
@@ -71,7 +105,7 @@ form label{
     background-color:#03045E;
     border-color:#03045E;
     color:white;
-    border-radius: 200px;
+    border-radius: 0px;
 
 }
 [type="submit"]:hover{
@@ -80,15 +114,16 @@ form label{
     transition:0.3s;
    
 }
-[type="reset"]{
+[type="button"]{
     padding:10px 15px;
     border:none;
     background-color:#03045E;
     border-color:#03045E;
     color:white;
-    border-radius:200px;
+    border-radius:0px;
+    margin-left:10px;
 }
-[type="reset"]:hover{
+[type="button"]:hover{
     background-color:red;
     border-color:red;
     transition:0.3s;

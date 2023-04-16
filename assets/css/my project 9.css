@@ -22,8 +22,8 @@ body{
     justify-content:space-between;
     align-items: center;
 }
-#header div img{
-    width:15%;
+#header #avatar{
+    width:100%;
 }
 #header ul{
     list-style-type:none;
@@ -100,6 +100,20 @@ div.frm{
     border-radius: 200px;
 }
 [type="button"]:hover{
+    background-color:green;
+    border-color:green;
+    transition:0.3s;
+}
+[type="submit"]{
+    padding:10px 15px;
+    border:none;
+    background-color:#03045E;
+    border-color:#03045E;
+    color:white;
+    font-weight: bold;
+    border-radius:200px;
+}
+[type="submit"]:hover{
     background-color:green;
     border-color:green;
     transition:0.3s;

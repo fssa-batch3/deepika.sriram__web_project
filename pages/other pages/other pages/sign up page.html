@@ -43,7 +43,7 @@
                             <label>First name</label>
                         </div>
                         <div>
-                            <input type="text" id="first_name" required="true" style="width:100%;height:30px" />
+                            <input type="text" id="first_name" required="true" style="width:100%;height:30px" pattern="[A-Za-z].*" />
                         </div>
                     </div>
                     <br>
@@ -52,7 +52,7 @@
                            <label>Last name</label>
                        </div>
                        <div>
-                           <input type="text" id="last_name" style="width:100%;height:30px" required />
+                           <input type="text" id="last_name" style="width:100%;height:30px" required pattern="[A-Za-z].*" />
                        </div>
                     </div>
                     <br>
@@ -62,7 +62,7 @@
                                 <label>Age</label>
                             </div>
                             <div>
-                                <input type="number"  id="age" style="height:30px"/>
+                                <input type="number"  id="age" style="height:30px" required/>
                             </div>
                         </div>
                         <div style="margin-left: 20px;">
@@ -71,9 +71,9 @@
                             </div>
                             <br>
                             <div>
-                                <input type="radio"  id="male" name="M_F_O"/>  male
-                                <input type="radio"  id="female" name="M_F_O" />  female
-                                <input type="radio"  id="others" name="M_F_O" />  others
+                                <input type="radio"  id="male" name="M_F_O" required/>  male
+                                <input type="radio"  id="female" name="M_F_O" required/>  female
+                                <input type="radio"  id="others" name="M_F_O" required/>  others
                             </div>
                         </div>
                     </div>
@@ -83,7 +83,7 @@
                             <label>Mobile number</label>
                         </div>
                         <div>
-                            <input type="tel" id="mobile_number" style="width:100%;height:30px" required />
+                            <input type="tel" id="mobile_number" style="width:100%;height:30px" required pattern="[6-9]{1}[0-9]{9}"/>
                         </div>
                     </div>
                     <br>
