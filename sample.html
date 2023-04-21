@@ -16,3 +16,31 @@
     })
     
 </script> -->
+<script>
+    function search() {
+        e.preventDefault();
+        let search = document.getElementById("city").value.trim().toLowerCase();
+        console.log(search);
+
+        if (search === '' || search === null || search === undefined) {
+            alert("invalid search input")
+            return
+        }
+
+
+        const match = []
+
+        for (let i = 0; i < hospitalList.length; i++) {
+            const city = hospitalList[i]["city"].toLowerCase().trim();
+            let condition = search.includes(city, 0)
+            if (condition) {
+                match.push(hospitalList[i])
+                window.location.href = hospitals + "?city=" + search
+            }
+        }
+
+        console.log(match);
+
+    }
+
+</script>

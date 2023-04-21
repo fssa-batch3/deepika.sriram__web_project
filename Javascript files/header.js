@@ -102,20 +102,24 @@ function indexPage() {
 
     const profileForm = document.querySelector('#profile');
 
-    let searchField = document.querySelector('#searchBar');
+    let searchPart = document.querySelector('#searchBar');
     let searchBar = `
         <div>
             <input type="text" id="city" placeholder="enter the city" />
-            <button type="button" id="search_place">Search</button>
+            <a id="search" onclick="searchPlace(event)">
+                <i class="fa fa-search"></i>
+            </a>
+            
         </div>
     `
-
+    // let searchField = document.querySelector('#searchField');
     
     
 
     if (user_detail) {
         const user = user_detail.find(detail =>
             detail.email_id === unique
+
         );
         if (!unique) {
             header.innerHTML = heading_1;
@@ -144,20 +148,32 @@ function indexPage() {
                         profileForm.insertAdjacentHTML('afterbegin', otherImage)
                     }
                 }
-                
+                if(searchPart){
+                    searchPart.insertAdjacentHTML('beforeend' , searchBar);
+                }
+                document.getElementById("signout").onclick = function (event) {
+                    event.preventDefault();
+    
+                    alert("logged out successfully");
+                    document.querySelector('#city').remove();
+                    document.querySelector("#search_place").remove();
+                    header.innerHTML = heading_1;
+                    localStorage.removeItem('uniqueUser');
+                    
+                }
 
             }
-            if(searchField){
-                searchField.insertAdjacentHTML('beforeend' , searchBar);
-            }
-            document.getElementById("signout").onclick = function (event) {
-                event.preventDefault();
+            // if(searchField){
+            //     searchField.insertAdjacentHTML('beforeend' , searchBar);
+            // }
+            // document.getElementById("signout").onclick = function (event) {
+            //     event.preventDefault();
 
-                alert("logged out successfully");
-                header.innerHTML = heading_1;
-                localStorage.removeItem('uniqueUser');
-                searchBar.remove();
-            }
+            //     alert("logged out successfully");
+            //     header.innerHTML = heading_1;
+            //     localStorage.removeItem('uniqueUser');
+            //     searchBar.remove();
+            // }
         }
     }
     else {

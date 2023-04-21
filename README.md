@@ -67,15 +67,18 @@ The following are my wireframe, problem statement, userflow etc.
 
 ## 2.Hospital features:(completed ✅)
 ### View hospital list
-   - Scenarios:Users wants to view hospital list 
+   - Scenario - 1:Users wants to view hospital list 
      - Steps:
      
-       1. In home page, click on hospital option, a dropdown will appear
-       2. In that dropdown, click on "all" option
+       1. In home page, click on hospital option
+                        (OR)
+       1. In the search bar of the home page, type the city of the hospital which you want to see.
+       2. press enter key.
      
      - Expected result:
      
-       1. They can see list of hospitals
+       1. They can see list of hospitals (OR) hospitals of the particular city.
+
      
 
 ## 3.Doctor features:(completed ✅)

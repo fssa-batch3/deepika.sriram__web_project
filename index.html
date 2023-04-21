@@ -104,26 +104,46 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         if (searchBar) {
-            const number_of_hospitals = JSON.parse(localStorage.getItem('hospital_detail'));
+            const hospitalList = JSON.parse(localStorage.getItem('hospital_detail'));
 
             // let filteredName = place_card.filter(e => e.)
             // console.log(filteredPlaceName);
             // console.log(filteredCategory);
             // console.log(specificplace);
 
-            document.querySelector("#search_place").addEventListener('click', function (e) {
-                e.preventDefault();
-                let search = document.getElementById("city").value.toLowerCase();
-                console.log(search);
-                if (search != "") {
-                    for (let i = 0; i < number_of_hospitals.length; i++) {
-                        if (search === number_of_hospitals[i]["city"].toLowerCase()) {
-                            window.location.href = hospitals + "?city=" + search;
-                        }
-
-                    }
+            document.querySelector("#city").addEventListener('keypress', function (e) {
+                if (e.key === "Enter") {
+                    e.preventDefault();
+                    document.getElementById("search").click();
                 }
             })
+
+
+            function searchPlace(e) {
+                e.preventDefault();
+                let search = document.getElementById("city").value.trim().toLowerCase();
+                console.log(search);
+
+                if (search === '' || search === null || search === undefined) {
+                    alert("invalid search input")
+                    return
+                }
+
+
+                const match = []
+
+                for (let i = 0; i < hospitalList.length; i++) {
+                    const city = hospitalList[i]["city"].toLowerCase().trim();
+                    let condition = search.includes(city, 0)
+                    if (condition) {
+                        match.push(hospitalList[i])
+                        window.location.href = hospitals + "?city=" + search
+                    }
+                }
+
+                console.log(match);
+
+            }
         }
 
     </script>
