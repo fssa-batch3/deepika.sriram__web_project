@@ -2,7 +2,9 @@
     margin:0;
     padding:0;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 #header{
     background-color: #03045E;
     padding-top: 15px;
@@ -121,7 +123,7 @@ main section div a{
     transition:0.2s;
     color:#03045E;
 }
-#text{
+#text , #city{
     width:50%;
     height:36.5px;
     background-color: aliceblue;
@@ -130,7 +132,7 @@ main section div a{
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
 }
-#search{
+#search , #search_place{
     width:10%;
     height:40px;
     color:white;

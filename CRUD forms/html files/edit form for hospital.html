@@ -16,21 +16,35 @@
 
 <body>
     <form role="form" class="form">
-        <img src="../../../assets/images/hospital_logo_3-removebg-preview.png" style="width:30%;margin-left:35%"
-            alt="logo of get well soon">
+        <h1 style="text-align: center;color:#03045e">FORM</h1>
         <br>
         <label>enter hospital name</label>
         <input type="text" id="unique_hospital" />
         <button type="submit" id="find_details">find details</button>
-        <h1 style="text-align: center;color:#03045e">FORM</h1>
         <br>
-        <label>hospital_name</label>
+        <label>hospital name</label>
         <br><br>
         <input type="text" id="hosp_name" style="width:100%;height:30px" />
         <br><br>
         <label>Address</label>
         <br><br>
         <input type="text" id="address" style="width:100%;height:30px" placeholder="address" />
+        <br><br>
+        <label for="">Locality</label>
+        <br><br>
+        <input type="text" id="locality" style="width:100%;height:30px" placeholder="enter locality" />
+        <br><br>
+        <label for="">Area</label>
+        <br><br>
+        <input type="text" id="area" style="width:100%;height:30px" placeholder="enter area" />
+        <br><br>
+        <label for="">city</label>
+        <br><br>
+        <input type="text" id="city" style="width:100%;height:30px" placeholder="enter city" />
+        <br><br>
+        <label for="">Pincode</label>
+        <br><br>
+        <input type="number" id="pincode" style="width:100%;height:30px" placeholder="enter pincode" />
         <br><br>
         <label>Alternate</label>
         <br><br>
@@ -67,6 +81,10 @@
         const findDetails = document.getElementById("find_details");
         const hosp_name = document.getElementById("hosp_name")
         const address = document.getElementById("address")
+        const hospArea = document.getElementById("area");
+        const Locality = document.getElementById("locality")
+        const hosCity = document.getElementById("city");
+        const hosPincode = document.getElementById("pincode");
         const alternate = document.getElementById("alt")
         const link_file = document.getElementById("link_file")
         const contact_number = document.getElementById("con_no")
@@ -77,24 +95,32 @@
             event.preventDefault()
             const uniqueId = unique_id.value;
             const hospital_details = JSON.parse(localStorage.getItem('hospital_detail'));
-            const hospital = hospital_details.find(detail=>
-            detail.hospital_name === uniqueId
+            const hospital = hospital_details.find(detail =>
+                detail.hospital_name === uniqueId
             );
 
-            if(hospital){
+            if (hospital) {
                 hosp_name.value = hospital.hospital_name;
                 address.value = hospital.address;
+                hospArea.value = hospital.area;
+                Locality.value = hospital.locality;
+                hosCity.value = hospital.city;
+                hosPincode.value = hospital.pincode;
                 alternate.value = hospital.alternate;
                 link_file.value = hospital.link_file;
                 contact_number.value = hospital.contact_number;
                 email_address.value = hospital.email_address;
                 image_file.value = hospital.image_link;
 
-            document.getElementById("Update").addEventListener("click",(event)=>{
-                event.preventDefault();
-                
+                document.getElementById("Update").addEventListener("click", (event) => {
+                    event.preventDefault();
+
                     let hosName = hosp_name.value;
                     hosAddress = address.value;
+                    hospital_area = hospArea.value;
+                    hospital_locality = Locality.value;
+                    hospital_city =  hosCity.value;
+                    hospital_city_pincode = hosPincode.value;
                     hosAlternate = alternate.value;
                     hosLinkFile = link_file.value;
                     hosContactNumber = contact_number.value;
@@ -105,48 +131,52 @@
                     // Update hospital deatils in localstorage
                     hospital.hospital_name = hosName;
                     hospital.address = hosAddress;
+                    hospital.area = hospital_area;
+                    hospital.locality = hospital_locality;
+                    hospital.city = hospital_city;
+                    hospital.pincode = hospital_city_pincode;
                     hospital.alternate = hosAlternate;
                     hospital.link_file = hosLinkFile;
                     hospital.contact_number = hosContactNumber;
                     hospital.email_address = hosEmailAddress;
                     hospital.image_link = hosImageFile;
-                    localStorage.setItem('hospital_detail',JSON.stringify(hospital_details));
+                    localStorage.setItem('hospital_detail', JSON.stringify(hospital_details));
 
                     alert("Updated successfully!!")
 
                     document.querySelector("form").reset();
                     document.getElementById("Update").setAttribute("disabled", true);
                 }
-            
+
+                );
+
+            }
+
+        });
+
+
+
+
+        //  delete page
+        document.getElementById("delete_del").addEventListener("click", (event) => {
+            event.preventDefault();
+
+            const uniqueId = unique_id.value;
+            const hospital_details = JSON.parse(localStorage.getItem('hospital_detail'));
+            const hospitalIndex = hospital_details.findIndex(detail =>
+                detail.uuid === uniqueId
             );
 
-        }
+            if (hospitalIndex > -1) {
+                hospital_details.splice(hospitalIndex, 1);
+                localStorage.setItem('hospital_detail', JSON.stringify(hospital_details));
+                alert("Hospital details deleted successfully");
+                document.querySelector('form').reset();
 
-     } );
 
+            }
 
-
-
-    //  delete page
-    document.getElementById("delete_del").addEventListener("click", (event) => {
-    event.preventDefault();
-    
-    const uniqueId = unique_id.value;
-    const hospital_details = JSON.parse(localStorage.getItem('hospital_detail'));
-            const hospitalIndex = hospital_details.findIndex(detail=>
-            detail.uuid === uniqueId
-            );
-   
-      if (hospitalIndex > -1) {
-        hospital_details.splice(hospitalIndex, 1);
-        localStorage.setItem('hospital_detail', JSON.stringify(hospital_details));
-        alert("Hospital details deleted successfully");
-        document.querySelector('form').reset();
-       
-       
-      }
-      
-    })
+        })
 
     </script>
 </body>

@@ -82,7 +82,10 @@
     </footer>
 </body>
 <script>
-    const doc = new URLSearchParams(window.location.search).get('hospital-name');
+    const doc = new URLSearchParams(window.location.search).get('hospital');
+    let doc_2 = doc.replace('%20' , ' ').toLowerCase();
+    console.log(doc_2)
+    
     const doctors = JSON.parse(localStorage.getItem('doctor_detail'));
 
     const span = `
@@ -90,14 +93,14 @@
         <a href = "../patient/list of hospital page.html" style="text-decoration:none;color:black">
             <i class="fa fa-angle-double-left"></i>  
         </a>
-        <h1 style="text-align:center">Doctor's list of ${doc}</h1>
+        <h1 style="text-align:center">Doctor's list of ${doc_2}</h1>
     </span>
     `
     document.querySelector("header").insertAdjacentHTML('afterend' , span);
 
     for (i = 0; i < doctors.length; i++) {
         const doctor = doctors[i];
-        if (doc === doctor["Hospital_name"]) {
+        if (doc_2 === doctor["Hospital_name"].toLowerCase().replace(/-/g , ' ')) {
             const doctorCard = renderCard(doctor);
             document.querySelector("main").insertAdjacentHTML('beforeend', doctorCard);
         }
@@ -146,19 +149,19 @@
         const card = `
             <div class="card" style="width:40%;height:70%">
                 <div>
-                   <img src="${doctor["Doctor_image"]}">
+                   <img src="${doctors[i]["Doctor_image"]}">
                 </div>
                 <br>
                 <div style="margin-left:-20%;width:300px">
-                    <h3 style = "width:auto">${doctor["Doctor_name"]}</h3>
+                    <h3 style = "width:auto">${doctors[i]["Doctor_name"]}</h3>
                     <p>${qualificationString}</p>
-                    <p><span style="font-weight:bold">${doctor["Experience"]["experience_duration"]} </span> ${doctor["Experience"]["experience_type"] + " " + "experience" + " " + "overall"+","+" "+departmentString}</p>
+                    <p><span style="font-weight:bold">${doctors[i]["Experience"]["experience_duration"]} </span> ${doctors[i]["Experience"]["experience_type"] + " " + "experience" + " " + "overall"+","+" "+departmentString}</p>
                     <p><span style="font-weight:bold">Time availability:</span> <span>${timeString}</span> </p>
                     <p><span style="font-weight:bold">Working days:</span> <span>${dayString}</span> </p>
                 </div>
                 <br>
                 <div style="display:flex;justify-content:space-between;margin-left:-20%;">
-                    <a href="../patient/appointment-form.html?hospital-name=${doc}&doctor-id=${doctor["uuid"]}">
+                    <a href="../patient/appointment-form.html?hospital-name=${doc}&doctor-id=${doctors[i]["uuid"]}">
                         <button type="button">Book appointment</button>
                     </a>
                     <button type="button">See reviews</button>

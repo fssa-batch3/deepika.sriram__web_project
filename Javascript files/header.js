@@ -13,6 +13,7 @@ var doctor_list = origin + "/pages/other pages/other pages/doctor's list.html"
 var femaleAvatar = origin + "/assets/images/female_Avatar-removebg-preview.png"
 var maleAvatar = origin + "/assets/images/male_Avatar-removebg-preview.png"
 var otherAvatar = origin + "/assets/images/profile avatar.png"
+var index = origin + "/index.html";
 
 
 
@@ -57,6 +58,9 @@ var heading_2 = `
             <div id="hide">
                 <ul>
                     <li>
+                        <a href="${index}">Home</a>
+                    </li>
+                    <li>
                         <a href="${hospitals}">Hospitals</a>
                     </li>
                     <li>
@@ -66,7 +70,7 @@ var heading_2 = `
                         <a href="${about}">About us</a>
                     </li>
                     <li>
-                        <a href="${login}">Login</a>
+                        <a href="#contactUs">Contact us</a>
                     </li>
                 </ul>
             </div>
@@ -98,15 +102,16 @@ function indexPage() {
 
     const profileForm = document.querySelector('#profile');
 
-    const insertSearchBar = document.querySelector('#searchBar');
+    let searchField = document.querySelector('#searchBar');
     let searchBar = `
-    <div>
-        <input type="text" id="text" placeholder="enter the location" />  
-        <a href="../other pages/patient/list of hospital page.html">
-            <button type="button" id="search">Search</button>
-        </a>
-    </div>
+        <div>
+            <input type="text" id="city" placeholder="enter the city" />
+            <button type="button" id="search_place">Search</button>
+        </div>
     `
+
+    
+    
 
     if (user_detail) {
         const user = user_detail.find(detail =>
@@ -117,17 +122,6 @@ function indexPage() {
         }
         else {
             header.innerHTML = heading_2;
-            if (insertSearchBar) {
-                insertSearchBar.insertAdjacentHTML('beforeend', searchBar);
-            }
-            document.getElementById("signout").onclick = function (event) {
-                event.preventDefault();
-
-                alert("logged out successfully");
-                localStorage.removeItem('uniqueUser');
-                searchBar.remove();
-                header.innerHTML = heading_1;
-            }
             if (user) {
                 if (user.user_gender.male === true) {
                     document.querySelector('#image').insertAdjacentHTML('beforeend', maleImage);
@@ -150,7 +144,19 @@ function indexPage() {
                         profileForm.insertAdjacentHTML('afterbegin', otherImage)
                     }
                 }
+                
 
+            }
+            if(searchField){
+                searchField.insertAdjacentHTML('beforeend' , searchBar);
+            }
+            document.getElementById("signout").onclick = function (event) {
+                event.preventDefault();
+
+                alert("logged out successfully");
+                header.innerHTML = heading_1;
+                localStorage.removeItem('uniqueUser');
+                searchBar.remove();
             }
         }
     }

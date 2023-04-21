@@ -1,114 +1,114 @@
 const hospitalDetails = JSON.parse(localStorage.getItem('hospital_detail'));
-if (!hospitalDetails) {
-    localStorage.setItem('hospital_detail', JSON.stringify(
-        [
-            {
-                address
-                    :
-                    "21/22,Greams lane,Greams road, chennai-600006.(opposite to thousand lights police station",
-                alternate
-                    :
-                    "apollo hospital",
-                contact_number
-                    :
-                    "1 800-572-1111",
-                email_address
-                    :
-                    "apollo@gmail.com",
-                hospital_name
-                    :
-                    "Apollo-hospital",
-                image_link
-                    :
-                    "../../../assets/images/apollo-gleneagles-hospitals-kolkata-squarelogo-1464594605205.png",
-                link_file
-                    :
-                    "../other pages/doctor's list.html",
-                uuid
-                    :
-                    "19f15096-9ff0-4c80-88ef-3e3bb9b9e7c0"
-            },
-            {
-                address
-                    :
-                    "No.43, Lakshmi talkies road, Shenoy nagar, Chennai-600030",
-                alternate
-                    :
-                    "Bilroth hospital",
-                contact_number
-                    :
-                    "9865567098",
-                email_address
-                    :
-                    "bilroth@gmail.com",
-                hospital_name
-                    :
-                    "Bilroth-hospital",
-                image_link
-                    :
-                    "../../../assets/images/Billroth_Hospitals__Shenoy_Nagar_logo.jpg",
-                link_file
-                    :
-                    "../other pages/doctor's list.html",
-                uuid
-                    :
-                    "94189af1-f8a7-4c09-a46e-ed37c65a2b3a"
-            },
-            {
-                address
-                    :
-                    "No.434, N.S.K.Salai,Vadapalani,Chennai - 600026.",
-                alternate
-                    :
-                    "logo of vijaya hospital",
-                contact_number
-                    :
-                    "",
-                email_address
-                    :
-                    "vijaya@gmail.com",
-                hospital_name
-                    :
-                    "Vijaya-hospital",
-                image_link
-                    :
-                    "../../../assets/images/vijaya.png",
-                link_file
-                    :
-                    "../other pages/doctor's list.html",
-                uuid
-                    :
-                    "d060e5df-862b-4826-9a4b-98c3e106f638",
-            },
-            {
-                address
-                    :
-                    "No. 52, 1st Main Rd, Gandhi Nagar, Adyar, Chennai,600020",
-                alternate
-                    :
-                    "logo of fortis malar hospital",
-                contact_number
-                    :
-                    "1 800-572-1111",
-                email_address
-                    :
-                    "fortis@gmail.com",
-                hospital_name
-                    :
-                    "Fortis-malar-hospital",
-                image_link
-                    :
-                    "../../../assets/images/fortis logo.png",
-                link_file
-                    :
-                    "../other pages/doctor's list.html",
-                uuid
-                    :
-                    "2b832168-8e70-42f5-b389-def616853f53",
-            }
-        ]
-    ))
-}
+// if (!hospitalDetails) {
+//     localStorage.setItem('hospital_detail', JSON.stringify(
+//         [
+//             {
+//                 address
+//                     :
+//                     "21/22,Greams lane,Greams road, chennai-600006.(opposite to thousand lights police station",
+//                 alternate
+//                     :
+//                     "apollo hospital",
+//                 contact_number
+//                     :
+//                     "1 800-572-1111",
+//                 email_address
+//                     :
+//                     "apollo@gmail.com",
+//                 hospital_name
+//                     :
+//                     "Apollo-hospital",
+//                 image_link
+//                     :
+//                     "../../../assets/images/apollo-gleneagles-hospitals-kolkata-squarelogo-1464594605205.png",
+//                 link_file
+//                     :
+//                     "../other pages/doctor's list.html",
+//                 uuid
+//                     :
+//                     "19f15096-9ff0-4c80-88ef-3e3bb9b9e7c0"
+//             },
+//             {
+//                 address
+//                     :
+//                     "No.43, Lakshmi talkies road, Shenoy nagar, Chennai-600030",
+//                 alternate
+//                     :
+//                     "Bilroth hospital",
+//                 contact_number
+//                     :
+//                     "9865567098",
+//                 email_address
+//                     :
+//                     "bilroth@gmail.com",
+//                 hospital_name
+//                     :
+//                     "Bilroth-hospital",
+//                 image_link
+//                     :
+//                     "../../../assets/images/Billroth_Hospitals__Shenoy_Nagar_logo.jpg",
+//                 link_file
+//                     :
+//                     "../other pages/doctor's list.html",
+//                 uuid
+//                     :
+//                     "94189af1-f8a7-4c09-a46e-ed37c65a2b3a"
+//             },
+//             {
+//                 address
+//                     :
+//                     "No.434, N.S.K.Salai,Vadapalani,Chennai - 600026.",
+//                 alternate
+//                     :
+//                     "logo of vijaya hospital",
+//                 contact_number
+//                     :
+//                     "",
+//                 email_address
+//                     :
+//                     "vijaya@gmail.com",
+//                 hospital_name
+//                     :
+//                     "Vijaya-hospital",
+//                 image_link
+//                     :
+//                     "../../../assets/images/vijaya.png",
+//                 link_file
+//                     :
+//                     "../other pages/doctor's list.html",
+//                 uuid
+//                     :
+//                     "d060e5df-862b-4826-9a4b-98c3e106f638",
+//             },
+//             {
+//                 address
+//                     :
+//                     "No. 52, 1st Main Rd, Gandhi Nagar, Adyar, Chennai,600020",
+//                 alternate
+//                     :
+//                     "logo of fortis malar hospital",
+//                 contact_number
+//                     :
+//                     "1 800-572-1111",
+//                 email_address
+//                     :
+//                     "fortis@gmail.com",
+//                 hospital_name
+//                     :
+//                     "Fortis-malar-hospital",
+//                 image_link
+//                     :
+//                     "../../../assets/images/fortis logo.png",
+//                 link_file
+//                     :
+//                     "../other pages/doctor's list.html",
+//                 uuid
+//                     :
+//                     "2b832168-8e70-42f5-b389-def616853f53",
+//             }
+//         ]
+//     ))
+// }
 
 console.log(hospitalDetails)
 

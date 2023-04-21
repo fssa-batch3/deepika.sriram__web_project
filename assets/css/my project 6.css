@@ -78,6 +78,25 @@ main section div a{
 #vision,#vision-2{
     display:none;
 }
+#text{
+    width:50%;
+    height:36.5px;
+    background-color: white;
+    padding-left:2%;
+    border:2px solid black;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+#search{
+    width:10%;
+    height:40px;
+    color:white;
+    background-image: linear-gradient(to right,#03045e,#1618b3,#4143b7,#4143b7,#1618b3,#03045e);
+    border:none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-left:-4px;
+}
 
 main{
     display:grid;
