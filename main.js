@@ -580,10 +580,10 @@ if (!doctorDetails) {
                 ],
                 Working_days:{
                     monday:true,
-                    tuesday:rue,
+                    tuesday:true,
                     wednesday:true,
                     thursday:true,
-                    friday:rue,
+                    friday:true,
                     saturday:true,
                     sunday:false
                 },
@@ -609,7 +609,7 @@ if (!doctorDetails) {
                     monday:true,
                     tuesday:true,
                     wednesday:true,
-                    thursday:truetrue,
+                    thursday:true,
                     friday:true,
                     saturday:true,
                     sunday:false
@@ -807,6 +807,7 @@ if (!doctorDetails) {
         ]
     ))
 }
+console.log(doctorDetails)
 
 const appointmentList = JSON.parse(localStorage.getItem('appointments'));
 if (!appointmentList) {
