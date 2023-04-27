@@ -8,11 +8,12 @@ function upload(e) {
     city = document.getElementById("city").value.trim();
     pincode = document.getElementById("pincode").value.trim();
     contact_number=document.getElementById("con_no").value.trim();
-    alternate = document.getElementById("alt").value.trim();
     link_file=document.getElementById("link_file").value.trim();
     email_address=document.getElementById("hosp_email").value.trim();
     image_link = document.getElementById("img_file").value.trim();
     uuid = uuidv4();
+
+    let hospital_id = 0;
      
 
     // hear i give var name for local storage data (initially there is no data so we mentioned or (||) symbol to get empty array)
@@ -27,7 +28,11 @@ function upload(e) {
     // if condition fail
     if(!exist){
         
-        hospital_detail.push({hospital_name,address,contact_number,alternate,link_file,email_address,image_link,area,locality,city,pincode,uuid});
+        if(hospital_name !=""){
+            hospital_id = hospital_detail.length + 1
+        }
+        
+        hospital_detail.push({hospital_name,address,contact_number,link_file,email_address,image_link,area,locality,city,pincode,hospital_id,uuid});
         
         localStorage.setItem("unique_id",hospital_name);
         localStorage.setItem('hospital_detail', JSON.stringify(hospital_detail));

@@ -5,7 +5,7 @@ function uploadDoctor(e) {
     Doctor_image = document.getElementById("doctorImage").value.trim();
     Qualifications = document.getElementById("qualification").value.split(",");
     Departments = document.getElementById("department").value.split(",");
-    Hospital_name = document.getElementById("hospital_name").value.trim();
+    Hospital_id = document.getElementById("hospital_id").value.trim();
     experience_type = document.getElementById("experience_type").value;
     experience_duration = document.getElementById("experience_duration").value;
     // time_availability = document.getElementById("time_availability").value;
@@ -63,8 +63,7 @@ function uploadDoctor(e) {
 
     // hear we give some condition for uploading details to restict same unique id
     let exist = doctor_detail.some(data =>
-        data.Doctor_name.trim().toLowerCase() == Doctor_name.toLowerCase() ||
-        data.Doctor_image.trim().toLowerCase() == Doctor_image.toLowerCase()
+        data.Doctor_name.trim().toLowerCase() == Doctor_name.toLowerCase()
     );
 
     // if condition fail
@@ -76,7 +75,7 @@ function uploadDoctor(e) {
         // Departments.push(department);
 
         // Experience = JSON.stringify(experienceObj);
-        doctor_detail.push({ Doctor_name, Doctor_image, Qualifications, Experience, Departments, Hospital_name, Working_days, Availabilities, uuid });
+        doctor_detail.push({ Doctor_name, Doctor_image, Qualifications, Experience, Departments, Hospital_id, Working_days, Availabilities, uuid });
 
         localStorage.setItem("unique_id", Doctor_name);
         localStorage.setItem('doctor_detail', JSON.stringify(doctor_detail));

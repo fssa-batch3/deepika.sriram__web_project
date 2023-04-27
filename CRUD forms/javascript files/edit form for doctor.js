@@ -32,7 +32,7 @@ const doc_qualification = document.getElementById("qualification")
 const docExpDuration = document.getElementById("experience_duration")
 const docExpType = document.getElementById("experience_type")
 const doc_department = document.getElementById("department")
-const docHospName = document.getElementById("hospital_name")
+const docHospId = document.getElementById("hospital_id")
 
 const mon = document.getElementById("Monday")
 const tues = document.getElementById("Tuesday")
@@ -61,7 +61,7 @@ document.getElementById("find_details").addEventListener("click", (event) => {
         docExpDuration.value = doctor.Experience.experience_duration;
         docExpType.value = doctor.Experience.experience_type;
         doc_department.value = doctor.Departments;
-        docHospName.value = doctor.Hospital_name;
+        docHospId.value = doctor.Hospital_id;
         // docWorkingDays.checked = doctor.Working_days;
         docTimingFrom.value = doctor.Availabilities.starting_time;
         docTimingTo.value = doctor.Availabilities.ending_time;
@@ -92,7 +92,7 @@ document.getElementById("find_details").addEventListener("click", (event) => {
             doctorExperienceType = docExpType.value;
             doctorDepartment = doc_department.value.split(",");
             // doctorWorkingDays = docWorkingDays.checked;
-            doctorHospitalName = docHospName.value;
+            doctorHospitalId = docHospId.value;
             doctorTimeFrom = docTimingFrom.value;
             doctorTimeTo = docTimingTo.value;
 
@@ -112,7 +112,7 @@ document.getElementById("find_details").addEventListener("click", (event) => {
             doctor.Experience.experience_duration = doctorExperienceDuration;
             doctor.Experience.experience_type = doctorExperienceType;
             doctor.Departments = doctorDepartment;
-            doctor.Hospital_name = doctorHospitalName;
+            doctor.Hospital_id = doctorHospitalId;
             // doctor.Working_days = doctorWorkingDays;
             doctor.Availabilities.starting_time = doctorTimeFrom;
             doctor.Availabilities.ending_time = doctorTimeTo;
@@ -148,8 +148,9 @@ document.getElementById("find_details").addEventListener("click", (event) => {
 
             alert("Updated successfully!!")
 
-            document.querySelector("form").reset();
-            document.getElementById("update_details").setAttribute("disabled", true);
+            // document.querySelector("form").reset();
+            // document.getElementById("update_details").setAttribute("disabled", true);
+            window.reload();        
         }
     }
 

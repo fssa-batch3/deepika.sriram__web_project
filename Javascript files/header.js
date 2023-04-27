@@ -156,7 +156,7 @@ function indexPage() {
     
                     alert("logged out successfully");
                     document.querySelector('#city').remove();
-                    document.querySelector("#search_place").remove();
+                    document.querySelector("#search").remove();
                     header.innerHTML = heading_1;
                     localStorage.removeItem('uniqueUser');
                     
