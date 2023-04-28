@@ -1,23 +1,21 @@
-var origin = window.location.origin;
-var homepage = origin + "/pages/homepage/home page.html"
-var about = origin + "/pages/other pages/other pages/about us.html"
-var image = origin + "/assets/images/gws.png"
-var login = origin + "/pages/other pages/other pages/login.html"
-var signup = origin + "/pages/other pages/other pages/sign up page.html"
-var profile = origin + "/pages/other pages/patient/patient profile page.html"
-var appointment_history = origin + "/pages/other pages/patient/history.html"
-var hospitals = origin + "/pages/other pages/patient/list of hospital page.html"
-var index = origin + "/index.html"
-var menu = origin + "/pages/other pages/other pages/menu.html"
-var doctor_list = origin + "/pages/other pages/other pages/doctor's list.html"
-var femaleAvatar = origin + "/assets/images/female_Avatar-removebg-preview.png"
-var maleAvatar = origin + "/assets/images/male_Avatar-removebg-preview.png"
-var otherAvatar = origin + "/assets/images/profile avatar.png"
-var index = origin + "/index.html";
+const { origin } = window.location;
+const homepage = `${origin}/pages/homepage/home page.html`;
+const about = `${origin}/pages/other pages/other pages/about us.html`;
+const image = `${origin}/assets/images/gws.png`;
+const login = `${origin}/pages/other pages/other pages/login.html`;
+const signup = `${origin}/pages/other pages/other pages/sign up page.html`;
+const profile = `${origin}/pages/other pages/patient/patient profile page.html`;
+const appointment_history = `${origin}/pages/other pages/patient/history.html`;
+const hospitals = `${origin}/pages/other pages/patient/list of hospital page.html`;
+var index = `${origin}/index.html`;
+const menu = `${origin}/pages/other pages/other pages/menu.html`;
+const doctor_list = `${origin}/pages/other pages/other pages/doctor's list.html`;
+const femaleAvatar = `${origin}/assets/images/female_Avatar-removebg-preview.png`;
+const maleAvatar = `${origin}/assets/images/male_Avatar-removebg-preview.png`;
+const otherAvatar = `${origin}/assets/images/profile avatar.png`;
+var index = `${origin}/index.html`;
 
-
-
-var heading_1 = `
+const heading_1 = `
 
             <div>
                 <img src="${image}" alt="logo of get well soon website" style="width:10%">
@@ -50,9 +48,9 @@ var heading_1 = `
                     </div>
                 </div>
             </div>
-`
+`;
 
-var heading_2 = `
+const heading_2 = `
     <img id="logo" src="${image}" alt="logo of get well soon website" style="width:5%">
         <div style="display:flex;justify-content:flex-end;align-items:center" >
             <div id="hide">
@@ -90,20 +88,20 @@ var heading_2 = `
                 <i class="fa-solid fa-bars"></i>
             </a>
         </div>
-`
+`;
 function indexPage() {
-    let unique = JSON.parse(localStorage.getItem('uniqueUser'));
-    let header = document.getElementById("header");
+  const unique = JSON.parse(localStorage.getItem('uniqueUser'));
+  const header = document.getElementById('header');
 
-    let maleImage = `<img id="avatar" class="profile" src="${maleAvatar}">`;
-    let femaleImage = `<img id="avatar" class="profile" src="${femaleAvatar}">`;
-    let otherImage = `<img id="avatar" class="profile" src="${otherAvatar}"></i>`;
-    const user_detail = JSON.parse(localStorage.getItem("user_detail"));
+  const maleImage = `<img id="avatar" class="profile" src="${maleAvatar}">`;
+  const femaleImage = `<img id="avatar" class="profile" src="${femaleAvatar}">`;
+  const otherImage = `<img id="avatar" class="profile" src="${otherAvatar}"></i>`;
+  const user_detail = JSON.parse(localStorage.getItem('user_detail'));
 
-    const profileForm = document.querySelector('#profile');
+  const profileForm = document.querySelector('#profile');
 
-    let searchPart = document.querySelector('#searchBar');
-    let searchBar = `
+  const searchPart = document.querySelector('#searchBar');
+  const searchBar = `
         <div>
             <input type="text" id="city" placeholder="enter the city" />
             <a id="search" onclick="searchPlace(event)">
@@ -111,73 +109,63 @@ function indexPage() {
             </a>
             
         </div>
-    `
-    // let searchField = document.querySelector('#searchField');
-    
-    
+    `;
+  // let searchField = document.querySelector('#searchField');
 
-    if (user_detail) {
-        const user = user_detail.find(detail =>
-            detail.email_id === unique
-
-        );
-        if (!unique) {
-            header.innerHTML = heading_1;
+  if (user_detail) {
+    const user = user_detail.find((detail) => detail.email_id === unique);
+    if (!unique) {
+      header.innerHTML = heading_1;
+    } else {
+      header.innerHTML = heading_2;
+      if (user) {
+        if (user.user_gender.male === true) {
+          document.querySelector('#image').insertAdjacentHTML('beforeend', maleImage);
+          if (profileForm) {
+            maleImage.id = 'profileImage';
+            profileForm.insertAdjacentHTML('afterbegin', maleImage);
+          }
         }
-        else {
-            header.innerHTML = heading_2;
-            if (user) {
-                if (user.user_gender.male === true) {
-                    document.querySelector('#image').insertAdjacentHTML('beforeend', maleImage);
-                    if (profileForm) {
-                        maleImage.id = "profileImage"
-                        profileForm.insertAdjacentHTML('afterbegin', maleImage)
-                    }
-                }
-                if (user.user_gender.female === true) {
-                    document.querySelector('#image').insertAdjacentHTML('beforeend', femaleImage);
-                    if (profileForm) {
-                        femaleImage.id = "profileImage"
-                        profileForm.insertAdjacentHTML('afterbegin', femaleImage)
-                    }
-                }
-                if (user.user_gender.others === true) {
-                    document.querySelector('#image').insertAdjacentHTML('beforeend', otherImage);
-                    if (profileForm) {
-                        otherImage.id = "profileImage"
-                        profileForm.insertAdjacentHTML('afterbegin', otherImage)
-                    }
-                }
-                if(searchPart){
-                    searchPart.insertAdjacentHTML('beforeend' , searchBar);
-                }
-                document.getElementById("signout").onclick = function (event) {
-                    event.preventDefault();
-    
-                    alert("logged out successfully");
-                    document.querySelector('#city').remove();
-                    document.querySelector("#search").remove();
-                    header.innerHTML = heading_1;
-                    localStorage.removeItem('uniqueUser');
-                    
-                }
-
-            }
-            // if(searchField){
-            //     searchField.insertAdjacentHTML('beforeend' , searchBar);
-            // }
-            // document.getElementById("signout").onclick = function (event) {
-            //     event.preventDefault();
-
-            //     alert("logged out successfully");
-            //     header.innerHTML = heading_1;
-            //     localStorage.removeItem('uniqueUser');
-            //     searchBar.remove();
-            // }
+        if (user.user_gender.female === true) {
+          document.querySelector('#image').insertAdjacentHTML('beforeend', femaleImage);
+          if (profileForm) {
+            femaleImage.id = 'profileImage';
+            profileForm.insertAdjacentHTML('afterbegin', femaleImage);
+          }
         }
+        if (user.user_gender.others === true) {
+          document.querySelector('#image').insertAdjacentHTML('beforeend', otherImage);
+          if (profileForm) {
+            otherImage.id = 'profileImage';
+            profileForm.insertAdjacentHTML('afterbegin', otherImage);
+          }
+        }
+        if (searchPart) {
+          searchPart.insertAdjacentHTML('beforeend', searchBar);
+        }
+        document.getElementById('signout').onclick = function (event) {
+          event.preventDefault();
+
+          alert('logged out successfully');
+          document.querySelector('#city').remove();
+          document.querySelector('#search').remove();
+          header.innerHTML = heading_1;
+          localStorage.removeItem('uniqueUser');
+        };
+      }
+      // if(searchField){
+      //     searchField.insertAdjacentHTML('beforeend' , searchBar);
+      // }
+      // document.getElementById("signout").onclick = function (event) {
+      //     event.preventDefault();
+
+      //     alert("logged out successfully");
+      //     header.innerHTML = heading_1;
+      //     localStorage.removeItem('uniqueUser');
+      //     searchBar.remove();
+      // }
     }
-    else {
-        header.innerHTML = heading_1;
-    }
+  } else {
+    header.innerHTML = heading_1;
+  }
 }
-
