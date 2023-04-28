@@ -88,7 +88,8 @@
     </footer>
 </body>
 <script>
-    const doc = new URLSearchParams(window.location.search).get('hospital-id');
+    const doc = parseInt(new URLSearchParams(window.location.search).get('hospital-id'));
+
 
     const doctors = JSON.parse(localStorage.getItem('doctor_detail'));
 // console.log(doctors)
@@ -96,7 +97,7 @@
 
     for (i = 0; i < doctors.length; i++) {
         let doctor = doctors[i];
-        if (doc === doctor["Hospital_id"]) {
+        if (doc === parseInt(doctor["Hospital_id"])) {
             let doctorCard = renderCard(doctor);
             document.querySelector("main").insertAdjacentHTML('beforeend', doctorCard);
         }
