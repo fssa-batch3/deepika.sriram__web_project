@@ -1,27 +1,31 @@
-const p_name = document.getElementById('patient_name');
-const p_age = document.getElementById('Patient_age');
+const p_name = document.getElementById("patient_name");
+const p_age = document.getElementById("Patient_age");
 
-const pm = document.getElementById('male');
-const pf = document.getElementById('female');
-const pt = document.getElementById('others');
+const pm = document.getElementById("male");
+const pf = document.getElementById("female");
+const pt = document.getElementById("others");
 
-const method_1 = document.getElementById('inPerson');
-const method_2 = document.getElementById('direct2home');
-const method_3 = document.getElementById('videoConsultation');
+const method_1 = document.getElementById("inPerson");
+const method_2 = document.getElementById("direct2home");
+const method_3 = document.getElementById("videoConsultation");
 
-const p_address = document.getElementById('address');
-const p_healthIssues = document.getElementById('health_issues');
-const p_d_name = document.getElementById('doctorName');
-const p_d_book = document.getElementById('dateOfBooking');
-const p_t_book = document.getElementById('timeOfBooking');
-const p_d_c = document.getElementById('dateOfConsultation');
-const p_mobile = document.getElementById('mobile_number');
-const p_email = document.getElementById('email_address');
-const p_addDscrptn = document.getElementById('addDescription');
+const p_address = document.getElementById("address");
+const p_healthIssues = document.getElementById("health_issues");
+const p_d_name = document.getElementById("doctorName");
+const p_d_book = document.getElementById("dateOfBooking");
+const p_t_book = document.getElementById("timeOfBooking");
+const p_d_c = document.getElementById("dateOfConsultation");
+const p_mobile = document.getElementById("mobile_number");
+const p_email = document.getElementById("email_address");
+const p_addDscrptn = document.getElementById("addDescription");
 
-const appointmentId = new URLSearchParams(window.location.search).get('appointment-id');
-const appointmentList = JSON.parse(localStorage.getItem('appointments'));
-const appointmentData = appointmentList.find((detail) => detail.appointment_id === appointmentId);
+const appointmentId = new URLSearchParams(window.location.search).get(
+  "appointment-id"
+);
+const appointmentList = JSON.parse(localStorage.getItem("appointments"));
+const appointmentData = appointmentList.find(
+  (detail) => detail.appointment_id === appointmentId
+);
 
 if (appointmentData) {
   p_name.value = appointmentData.patient_name;
@@ -45,33 +49,27 @@ if (appointmentData) {
   p_email.value = appointmentData.patient_email_address;
   p_addDscrptn.value = appointmentData.addDescription;
 
-  document.getElementById('update_appointment').onclick = function (event) {
-    event.preventDefault();
-
-    updateAppointment();
-  };
-
   function updateAppointment() {
     const update_patient_name = p_name.value;
-    update_patient_age = p_age.value;
+    const update_patient_age = p_age.value;
 
-    update_gender1 = pm.checked;
-    update_gender2 = pf.checked;
-    update_gender3 = pt.checked;
+    const update_gender1 = pm.checked;
+    const update_gender2 = pf.checked;
+    const update_gender3 = pt.checked;
 
-    update_method1 = method_1.checked;
-    update_method2 = method_2.checked;
-    update_method3 = method_3.checked;
+    const update_method1 = method_1.checked;
+    const update_method2 = method_2.checked;
+    const update_method3 = method_3.checked;
 
-    update_address = p_address.value;
-    update_healthIssues = p_healthIssues.value.split(',');
-    update_doctor_name = p_d_name.value;
-    update_book_date = p_d_book.value;
-    update_book_time = p_t_book.value;
-    update_consult_date = p_d_c.value;
-    update_mobile = p_mobile.value;
-    update_email = p_email.value;
-    update_dscrptn = p_addDscrptn.value;
+    const update_address = p_address.value;
+    const update_healthIssues = p_healthIssues.value.split(",");
+    const update_doctor_name = p_d_name.value;
+    const update_book_date = p_d_book.value;
+    const update_book_time = p_t_book.value;
+    const update_consult_date = p_d_c.value;
+    const update_mobile = p_mobile.value;
+    const update_email = p_email.value;
+    const update_dscrptn = p_addDscrptn.value;
 
     // updating details
 
@@ -96,26 +94,35 @@ if (appointmentData) {
     appointmentData.patient_email_address = update_email;
     appointmentData.addDescription = update_dscrptn;
 
-    localStorage.setItem('appointments', JSON.stringify(appointmentList));
-    alert('Updated and resended appointment successfully!!✅');
-    document.querySelector('form').reset();
-    location.href = '../../../../index.html';
-    document.getElementById('update_appointment').setAttribute('disabled', true);
+    localStorage.setItem("appointments", JSON.stringify(appointmentList));
+    alert("Updated and resended appointment successfully!!✅");
+    document.querySelector("form").reset();
+    location.href = "../../../../index.html";
+    document
+      .getElementById("update_appointment")
+      .setAttribute("disabled", true);
   }
+
+  document.getElementById("update_appointment").onclick = function (event) {
+    event.preventDefault();
+
+    updateAppointment();
+  };
 }
 
-document.getElementById('delete_appointmentHistory').addEventListener('click', (event) => {
-  event.preventDefault();
+document
+  .getElementById("delete_appointmentHistory")
+  .addEventListener("click", (event) => {
+    event.preventDefault();
+    const appointmentIndex = appointmentList.findIndex(
+      (detail) => detail.appointment_id === appointmentId
+    );
 
-  const appointmentId = new URLSearchParams(window.location.search).get('appointment-id');
-  const appointmentList = JSON.parse(localStorage.getItem('appointments'));
-  const appointmentIndex = appointmentList.findIndex((detail) => detail.appointment_id === appointmentId);
-
-  if (appointmentIndex > -1) {
-    appointmentList.splice(appointmentIndex, 1);
-    localStorage.setItem('appointments', JSON.stringify(appointmentList));
-    alert('appointment history deleted successfully');
-    document.querySelector('form').reset();
-    window.location.href = '../../../../index.html';
-  }
-});
+    if (appointmentIndex > -1) {
+      appointmentList.splice(appointmentIndex, 1);
+      localStorage.setItem("appointments", JSON.stringify(appointmentList));
+      alert("appointment history deleted successfully");
+      document.querySelector("form").reset();
+      window.location.href = "../../../../index.html";
+    }
+  });

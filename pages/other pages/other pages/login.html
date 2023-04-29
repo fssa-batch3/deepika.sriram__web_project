@@ -45,7 +45,7 @@
                 </div>
                 <br>
                 <div>
-                    <input type="email" required="true" id="email" style="width:100%;height:30px" />
+                    <input type="email" required="true" id="email" style="width:100%;height:30px">
                 </div>
             </div>
             <br>
@@ -55,51 +55,55 @@
                 </div>
                 <br>
                 <div class="password_container">
-                    <input type="password" required="true" id="password" style="width:100%;height:30px" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
+                    <input type="password" required="true" id="password" style="width:100%;height:30px" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                     <a id="toggle-password">
-                        <span class="eye_icon hide" id="open_eye"><i class="fa fa-eye" style="color:#03045e;font-size:20px"></i></span>
-                        <span class="eye_icon" id="close_eye"><i class="fa fa-eye-slash" style="color:#03045e;font-size:20px"></i></span>
+                        <span class="eye_icon hide" id="open_eye">
+                            <i class="fa fa-eye" style="color:#03045e;font-size:20px"></i>
+                        </span>
+                        <span class="eye_icon" id="close_eye">
+                            <i class="fa fa-eye-slash" style="color:#03045e;font-size:20px"></i>
+                        </span>
                     </a>
                 </div>
             </div>
             <br>
             <div style="display:flex;justify-content:space-between">
                 <div>
-                   <a href="../other pages/sign up page.html">
-                      new member?
+                    <a href="../other pages/sign up page.html">
+                        new member?
                     </a>
                 </div>
                 <div>
                     <button type="submit">Login</button>
                 </div>
         </form>
-        <script src="../../../Javascript files/form_1.js"></script>
-        <script src="../../../Javascript files/header.js"></script>
-        <script>indexPage()</script>
-        <script>
-            let password = document.getElementById("password");
+                <script src="../../../Javascript files/form_1.js"></script>
+                <script src="../../../Javascript files/header.js"></script>
+                <script>indexPage();
+</script>
+                <script>
+            const password = document.getElementById("password");
             
-            const togglePassword = document.querySelector('#toggle-password');
-            const openedEye = document.querySelector('#open_eye');
-            const closedEye = document.querySelector('#close_eye');
+            const togglePassword = document.querySelector("#toggle-password");
+            const openedEye = document.querySelector("#open_eye");
+            const closedEye = document.querySelector("#close_eye");
 
             let passwordVisibility = false;
 
-            togglePassword.addEventListener('click' , function(){
-                if(!passwordVisibility){
-                    openedEye.classList.remove('hide');
-                    closedEye.classList.add('hide');
-                    password.type='text';
-                }
-                else{
-                    openedEye.classList.add('hide');
-                    closedEye.classList.remove('hide');
-                    password.type = 'password';
-                }
-                passwordVisibility = !passwordVisibility;
-            })
+            togglePassword.addEventListener("click", function () {
+              if (!passwordVisibility) {
+                openedEye.classList.remove("hide");
+                closedEye.classList.add("hide");
+                password.type = "text";
+              } else {
+                openedEye.classList.add("hide");
+                closedEye.classList.remove("hide");
+                password.type = "password";
+              }
+              passwordVisibility = !passwordVisibility;
+            });
         </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     </body>
 </html>

@@ -3,7 +3,7 @@
     <head>
         <title>Appointment form</title>
         <link rel="stylesheet" href="../../../assets/css/my project 9.css">
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="icon" href="../../../assets/images/hospital logo 3.JPG">
@@ -13,81 +13,81 @@
         <header id="header">
         </header>
         <main>
-            <form onsubmit="bookAppointment(event)">
+            <form >
                 <div style="margin-left:20px">
-                   <h1>Appointment Form</h1>
-                 </div>
-                 <br>
-                <div style="margin-left:20px">
-                   <label>Patient name*</label>
+                    <h1>Appointment Form</h1>
                 </div>
                 <br>
                 <div style="margin-left:20px">
-                    <input type="text" placeholder="firstname" required="true" style="width:80%;height:2rem" id="patient_name" pattern="[A-Za-z].*" />
+                    <label>Patient name*</label>
+                </div>
+                <br>
+                <div style="margin-left:20px">
+                    <input type="text" placeholder="firstname" required="true" style="width:80%;height:2rem" id="patient_name" pattern="[A-Za-z].*">
                 </div>
                 <br>
                 <div class="frm">
                     <div style="margin-left:20px">
                         <div>
-                           <label>Age*</label>
+                            <label>Age*</label>
                         </div>
                         <br>
                         <div>
-                           <input type="number" required="true" style="width:70px;height:2rem"  id="patient_age" pattern="[0-9]{,2}" />
+                            <input type="number" required="true" style="width:70px;height:2rem" id="patient_age" pattern="[0-9]{,2}">
                         </div>
                     </div>
                     <br>
                     <br>
                     <div style="margin-left:30px">
                         <div>
-                           <label>Gender*</label>
+                            <label>Gender*</label>
                         </div>
                         <br>
                         <br>
                         <div>
-                           <input type="radio" required="true" name="M_F_O"  id="male"/>
-                           <label>Male</label>
-                           <input type="radio" required="true" name="M_F_O" id="female" />
-                           <label>Female</label>
-                           <input type="radio" required="true" name="M_F_O" id="others" />
-                           <label>Others</label>
+                            <input type="radio" required="true" name="M_F_O" id="male">
+                            <label>Male</label>
+                            <input type="radio" required="true" name="M_F_O" id="female">
+                            <label>Female</label>
+                            <input type="radio" required="true" name="M_F_O" id="others">
+                            <label>Others</label>
                         </div>
                     </div>
-                 </div>
-                 <br>
-                 <div style="margin-left:20px">
-                     <div>
-                       <label>Method of consulting*</label>
-                     </div>
-                     <br>
-                     <div>
-                        <input type="radio" required="true" name="I_D_V" id="in_person"/>
-                        <label>In-person</label>
-                        <input type="radio" required="true" name="I_D_V" id="direct_to_home"/>
-                        <label>Home consultation</label>
-                        <input type="radio" required="true" name="I_D_V" id="video_consultation"/>
-                        <label>Video consultation</label>
-                     </div>
-                 </div>
-                <br>
-                <div style="margin-left:20px">
-                     <div>
-                         <label>Residential address</label>
-                     </div>
-                     <br>
-                     <div>
-                         <input type="text" id="address" style="width:80%;height:2rem" />
-                     </div>
                 </div>
                 <br>
                 <div style="margin-left:20px">
-                     <div>
-                         <label>Health issues and problems</label>
-                     </div>
-                     <br>
-                     <div>
-                         <input type="text" style="width:80%;height:2rem" id="health_issues" />
-                     </div>
+                    <div>
+                        <label>Method of consulting*</label>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="radio" required="true" name="I_D_V" id="in_person">
+                        <label>In-person</label>
+                        <input type="radio" required="true" name="I_D_V" id="direct_to_home">
+                        <label>Home consultation</label>
+                        <input type="radio" required="true" name="I_D_V" id="video_consultation">
+                        <label>Video consultation</label>
+                    </div>
+                </div>
+                <br>
+                <div style="margin-left:20px">
+                    <div>
+                        <label>Residential address</label>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="text" id="address" style="width:80%;height:2rem">
+                    </div>
+                </div>
+                <br>
+                <div style="margin-left:20px">
+                    <div>
+                        <label>Health issues and problems</label>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="text" style="width:80%;height:2rem" id="health_issues">
+                    </div>
                 </div>
                 <br>
                 <div style="margin-left:20px">
@@ -96,75 +96,77 @@
                     </div>
                     <br>
                     <div>
-                        <input type="text"  id="doctor_name" style="width:80%;height:2rem" pattern="[A-Za-z].*" required />
+                        <input type="text" id="doctor_name" style="width:80%;height:2rem" pattern="[A-Za-z].*" required>
                     </div>
                 </div>
                 <br>
                 <div class="frm">
                     <div style="margin-left:20px">
-                         <div>
-                             <label>Date and time Of Booking*</label>
-                         </div>
-                         <br>
-                         <div>
-                             <input type="date" required="true" style="height:2rem" id="bookDate" />
-                             <input type="time" required="true"  style="height:2rem" id="bookTime" />
-                         </div>
+                        <div>
+                            <label>Date and time Of Booking*</label>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="date" required="true" style="height:2rem" id="bookDate">
+                            <input type="time" required="true" style="height:2rem" id="bookTime">
+                        </div>
                     </div>
                     <br>
                     <div style="margin-left:30px">
-                         <div>
-                             <label>Date of consultation*</label>
-                         </div>
-                         <br>
-                         <div>
-                             <input type="date" required="true"  style="height:2rem" id="consultDate"/>
-                         </div>
+                        <div>
+                            <label>Date of consultation*</label>
+                        </div>
+                        <br>
+                        <div>
+                            <input type="date" required="true" style="height:2rem" id="consultDate">
+                        </div>
                     </div>
                 </div>
                 <br>
                 
-                 <div style="margin-left:20px">
-                     <div>
-                         <label>Mobile Number*</label>
-                     </div>
-                     <br>
-                     <div>
-                         <input type="tel" style="width:80%;height:2rem" id="mobile_number" pattern="[1-9]{1}[0-9]{9}" required/>
-                     </div>
-                 </div>
-                 <br>
-                 <div style="margin-left:20px">
-                     <div>
-                         <label>Email address*</label>
-                     </div>
-                     <br>
-                     <div>
-                         <input type="email" style="width:80%;height:2rem" id="email_address" required placeholder="enter registered email-address"/>
-                     </div>
-                 </div>
+                <div style="margin-left:20px">
+                    <div>
+                        <label>Mobile Number*</label>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="tel" style="width:80%;height:2rem" id="mobile_number" pattern="[1-9]{1}[0-9]{9}" required>
+                    </div>
+                </div>
                 <br>
                 <div style="margin-left:20px">
-                    <input type="text" placeholder="add description" style="width:80%;height:5rem" id="add_description" />
+                    <div>
+                        <label>Email address*</label>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="email" style="width:80%;height:2rem" id="email_address" required placeholder="enter registered email-address">
+                    </div>
+                </div>
+                <br>
+                <div style="margin-left:20px">
+                    <input type="text" placeholder="add description" style="width:80%;height:5rem" id="add_description">
                 </div>
                 <br>
                 <div class="frm" id="button">
                    
                 </div>
             </form>
-           <img src="../../../../../assets/images/Forms.gif" alt="image of a boy filling appointment" style="height:40%;margin-top:10%">
+            <img src="../../../../../assets/images/Forms.gif" alt="image of a boy filling appointment" style="height:40%;margin-top:10%">
         </main>
         <footer style="padding:20px 0;background-color:#03045e;color:white">
             <div>
-                <p style="text-align:center">Website Created By<b> Deepika Sriram</b></p>
+                <p style="text-align:center">
+                    Website Created By<b> Deepika Sriram</b>
+                </p>
                 <br>
                 <p style="text-align:center">copyrights &copy; reserved</p>
             </div>
         </footer>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script>
-            const docList = new URLSearchParams(window.location.search).get('hospital-id');
+            const docList = new URLSearchParams(window.location.search).get("hospital-id");
             const tags = `
                     <div style="margin-left:20px">
                         <a href="../other pages/doctor's list.html?hospital-id=${docList}" >
@@ -177,12 +179,13 @@
                     <div style="margin-left:20px">
                         <button type="submit">book appointment <i class="fa fa-angle-double-right"></i></button>
                     </div>
-                `
-            document.querySelector("div#button").insertAdjacentHTML("beforeend" , tags);
+                `;
+            document.querySelector("div#button").insertAdjacentHTML("beforeend", tags);
         </script>
         <script src="../../../Javascript files/header.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
-        <script>indexPage()</script>
+        <script>indexPage();
+</script>
         <script src="../../../CRUD forms/javascript files/appointment form.js"></script>
     </body>
 </html>

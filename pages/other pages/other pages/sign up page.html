@@ -43,17 +43,17 @@
                             <label>First name</label>
                         </div>
                         <div>
-                            <input type="text" id="first_name" required="true" style="width:100%;height:30px" pattern="[A-Za-z].*" />
+                            <input type="text" id="first_name" required="true" style="width:100%;height:30px" pattern="[A-Za-z].*">
                         </div>
                     </div>
                     <br>
                     <div>
-                       <div>
-                           <label>Last name</label>
-                       </div>
-                       <div>
-                           <input type="text" id="last_name" style="width:100%;height:30px" required pattern="[A-Za-z].*" />
-                       </div>
+                        <div>
+                            <label>Last name</label>
+                        </div>
+                        <div>
+                            <input type="text" id="last_name" style="width:100%;height:30px" required pattern="[A-Za-z].*">
+                        </div>
                     </div>
                     <br>
                     <div style="display:flex">
@@ -62,7 +62,7 @@
                                 <label>Age</label>
                             </div>
                             <div>
-                                <input type="number"  id="age" style="height:30px" required/>
+                                <input type="number" id="age" style="height:30px" required>
                             </div>
                         </div>
                         <div style="margin-left: 20px;">
@@ -71,9 +71,9 @@
                             </div>
                             <br>
                             <div>
-                                <input type="radio"  id="male" name="M_F_O" required/>  male
-                                <input type="radio"  id="female" name="M_F_O" required/>  female
-                                <input type="radio"  id="others" name="M_F_O" required/>  others
+                                <input type="radio" id="male" name="M_F_O" required>  male
+                                <input type="radio" id="female" name="M_F_O" required>  female
+                                <input type="radio" id="others" name="M_F_O" required>  others
                             </div>
                         </div>
                     </div>
@@ -83,7 +83,7 @@
                             <label>Mobile number</label>
                         </div>
                         <div>
-                            <input type="tel" id="mobile_number" style="width:100%;height:30px" required pattern="[6-9]{1}[0-9]{9}"/>
+                            <input type="tel" id="mobile_number" style="width:100%;height:30px" required pattern="[6-9]{1}[0-9]{9}">
                         </div>
                     </div>
                     <br>
@@ -92,19 +92,23 @@
                             <label>Email address</label>
                         </div>
                         <div>
-                            <input type="email" id="user_email" style="width:100%;height:30px" required />
+                            <input type="email" id="user_email" style="width:100%;height:30px" required>
                         </div>
                     </div>
                     <br>
                     <div>
                         <div>
-                          <label>Create Password</label>
+                            <label>Create Password</label>
                         </div>
                         <div class="password_container">
-                            <input type="password" required="true" id="pass_1"  style="width:100%;height:30px" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
+                            <input type="password" required="true" id="pass_1" style="width:100%;height:30px" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                             <a id="toggle-password-1">
-                                <span class="eye_icon-1 hide" id="open_eye-1"><i class="fa fa-eye" style="color:#03045e;font-size:20px"></i></span>
-                                <span class="eye_icon-1" id="close_eye-1"><i class="fa fa-eye-slash" style="color:#03045e;font-size:20px"></i></span>
+                                <span class="eye_icon-1 hide" id="open_eye-1">
+                                    <i class="fa fa-eye" style="color:#03045e;font-size:20px"></i>
+                                </span>
+                                <span class="eye_icon-1" id="close_eye-1">
+                                    <i class="fa fa-eye-slash" style="color:#03045e;font-size:20px"></i>
+                                </span>
                             </a>
                         </div>
                         
@@ -115,11 +119,15 @@
                             <label>Confirm Password</label>
                         </div>
                         <div class="password_container">
-                           <input type="password" id="pass_2" required="true" style="width:100%;height:30px" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  />
-                           <a id="toggle-password-2">
-                                <span class="eye_icon-2 hide" id="open_eye-2"><i class="fa fa-eye" style="color:#03045e;font-size:20px"></i></span>
-                                <span class="eye_icon-2" id="close_eye-2"><i class="fa fa-eye-slash" style="color:#03045e;font-size:20px"></i></span>
-                           </a>
+                            <input type="password" id="pass_2" required="true" style="width:100%;height:30px" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                            <a id="toggle-password-2">
+                                <span class="eye_icon-2 hide" id="open_eye-2">
+                                    <i class="fa fa-eye" style="color:#03045e;font-size:20px"></i>
+                                </span>
+                                <span class="eye_icon-2" id="close_eye-2">
+                                    <i class="fa fa-eye-slash" style="color:#03045e;font-size:20px"></i>
+                                </span>
+                            </a>
                         </div>
                         
                     </div>
@@ -130,91 +138,90 @@
                         </div>
                         <br>
                         <div>
-                            <input type="radio" name="D_P" id="doctor" required="true" />
+                            <input type="radio" name="D_P" id="doctor" required="true">
                             <label>Doctor</label>
-                            <input type="radio" name="D_P" id="patient" required="true" />
+                            <input type="radio" name="D_P" id="patient" required="true">
                             <label>Patient</label>
                         </div>
                     </div>
                     <br>
                     <div style="display:flex;justify-content:space-between">
                         <div>
-                           <a href="../other pages/login.html" style="color:blue">
-                              Already a member?
+                            <a href="../other pages/login.html" style="color:blue">
+                                Already a member?
                             </a>
-                       </div>
-                       <div>
-                              <button type="submit">SIGN UP</button>
-                       </div>
+                        </div>
+                        <div>
+                            <button type="submit">SIGN UP</button>
+                        </div>
                     </div>
                 </section>
             </form>
         </main>
         <script src="../../../Javascript files/header.js"></script>
-        <script>indexPage()</script>
+        <script>indexPage();
+</script>
         <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
         <script src="../../../Javascript files/form_1.js"></script>
         <script>
-            let create_password = document.getElementById("pass_1");
+            const create_password = document.getElementById("pass_1");
             confirm_password = document.getElementById("pass_2");
 
-            let note = document.createElement("p");
-            note.innerText = "enter at least 8 to 12 characters with a combination of uppercase , lowercase , numbers and special symbols";
+            const note = document.createElement("p");
+            note.innerText =
+  "enter at least 8 to 12 characters with a combination of uppercase , lowercase , numbers and special symbols";
             note.style.fontSize = "13px";
             note.style.fontWeight = "bold";
-            note.style.fontStyle = 'Roboto-Condensed';
-            note.style.color = "green"
+            note.style.fontStyle = "Roboto-Condensed";
+            note.style.color = "green";
 
-            create_password.addEventListener('focus' ,  function(){
-                create_password.insertAdjacentElement('afterend'  , note)
-            })
-            create_password.addEventListener('blur' , function(){
-                note.remove()
-            })
+            create_password.addEventListener("focus", function () {
+              create_password.insertAdjacentElement("afterend", note);
+            });
+            create_password.addEventListener("blur", function () {
+              note.remove();
+            });
 
-            const togglePassword1 = document.querySelector('#toggle-password-1');
-            const openedEye1 = document.querySelector('#open_eye-1');
-            const closedEye1 = document.querySelector('#close_eye-1');
+            const togglePassword1 = document.querySelector("#toggle-password-1");
+            const openedEye1 = document.querySelector("#open_eye-1");
+            const closedEye1 = document.querySelector("#close_eye-1");
 
             let passwordVisibility1 = false;
 
-            togglePassword1.addEventListener('click' , function(){
-                if(!passwordVisibility1){
-                    openedEye1.classList.remove('hide');
-                    closedEye1.classList.add('hide');
-                    create_password.type='text';
-                }
-                else{
-                    openedEye1.classList.add('hide');
-                    closedEye1.classList.remove('hide');
-                    create_password.type = 'password';
-                }
-                passwordVisibility1 = !passwordVisibility1;
-            })
+            togglePassword1.addEventListener("click", function () {
+              if (!passwordVisibility1) {
+                openedEye1.classList.remove("hide");
+                closedEye1.classList.add("hide");
+                create_password.type = "text";
+              } else {
+                openedEye1.classList.add("hide");
+                closedEye1.classList.remove("hide");
+                create_password.type = "password";
+              }
+              passwordVisibility1 = !passwordVisibility1;
+            });
 
-            const togglePassword2 = document.querySelector('#toggle-password-2');
-            const openedEye2 = document.querySelector('#open_eye-2');
-            const closedEye2 = document.querySelector('#close_eye-2');
+            const togglePassword2 = document.querySelector("#toggle-password-2");
+            const openedEye2 = document.querySelector("#open_eye-2");
+            const closedEye2 = document.querySelector("#close_eye-2");
 
             let passwordVisibility2 = false;
 
-            togglePassword2.addEventListener('click' , function(){
-                if(!passwordVisibility2){
-                    openedEye2.classList.remove('hide');
-                    closedEye2.classList.add('hide');
-                    confirm_password.type='text';
-                }
-                else{
-                    openedEye2.classList.add('hide');
-                    closedEye2.classList.remove('hide');
-                    confirm_password.type = 'password';
-                }
-                passwordVisibility2 = !passwordVisibility2;
-            })
-
+            togglePassword2.addEventListener("click", function () {
+              if (!passwordVisibility2) {
+                openedEye2.classList.remove("hide");
+                closedEye2.classList.add("hide");
+                confirm_password.type = "text";
+              } else {
+                openedEye2.classList.add("hide");
+                closedEye2.classList.remove("hide");
+                confirm_password.type = "password";
+              }
+              passwordVisibility2 = !passwordVisibility2;
+            });
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
     </body>
 </html>

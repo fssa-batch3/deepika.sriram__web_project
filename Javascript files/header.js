@@ -90,21 +90,21 @@ const heading_2 = `
         </div>
 `;
 function indexPage() {
-  const unique = JSON.parse(localStorage.getItem('uniqueUser'));
-  const header = document.getElementById('header');
+  const unique = JSON.parse(localStorage.getItem("uniqueUser"));
+  const header = document.getElementById("header");
 
   const maleImage = `<img id="avatar" class="profile" src="${maleAvatar}">`;
   const femaleImage = `<img id="avatar" class="profile" src="${femaleAvatar}">`;
   const otherImage = `<img id="avatar" class="profile" src="${otherAvatar}"></i>`;
-  const user_detail = JSON.parse(localStorage.getItem('user_detail'));
+  const user_detail = JSON.parse(localStorage.getItem("user_detail"));
 
-  const profileForm = document.querySelector('#profile');
+  const profileForm = document.querySelector("#profile");
 
-  const searchPart = document.querySelector('#searchBar');
+  const searchPart = document.querySelector("#searchBar");
   const searchBar = `
         <div>
             <input type="text" id="city" placeholder="enter the city" />
-            <a id="search" onclick="searchPlace(event)">
+            <a id="search">
                 <i class="fa fa-search"></i>
             </a>
             
@@ -120,37 +120,43 @@ function indexPage() {
       header.innerHTML = heading_2;
       if (user) {
         if (user.user_gender.male === true) {
-          document.querySelector('#image').insertAdjacentHTML('beforeend', maleImage);
+          document
+            .querySelector("#image")
+            .insertAdjacentHTML("beforeend", maleImage);
           if (profileForm) {
-            maleImage.id = 'profileImage';
-            profileForm.insertAdjacentHTML('afterbegin', maleImage);
+            maleImage.id = "profileImage";
+            profileForm.insertAdjacentHTML("afterbegin", maleImage);
           }
         }
         if (user.user_gender.female === true) {
-          document.querySelector('#image').insertAdjacentHTML('beforeend', femaleImage);
+          document
+            .querySelector("#image")
+            .insertAdjacentHTML("beforeend", femaleImage);
           if (profileForm) {
-            femaleImage.id = 'profileImage';
-            profileForm.insertAdjacentHTML('afterbegin', femaleImage);
+            femaleImage.id = "profileImage";
+            profileForm.insertAdjacentHTML("afterbegin", femaleImage);
           }
         }
         if (user.user_gender.others === true) {
-          document.querySelector('#image').insertAdjacentHTML('beforeend', otherImage);
+          document
+            .querySelector("#image")
+            .insertAdjacentHTML("beforeend", otherImage);
           if (profileForm) {
-            otherImage.id = 'profileImage';
-            profileForm.insertAdjacentHTML('afterbegin', otherImage);
+            otherImage.id = "profileImage";
+            profileForm.insertAdjacentHTML("afterbegin", otherImage);
           }
         }
         if (searchPart) {
-          searchPart.insertAdjacentHTML('beforeend', searchBar);
+          searchPart.insertAdjacentHTML("beforeend", searchBar);
         }
-        document.getElementById('signout').onclick = function (event) {
+        document.getElementById("signout").onclick = function (event) {
           event.preventDefault();
 
-          alert('logged out successfully');
-          document.querySelector('#city').remove();
-          document.querySelector('#search').remove();
+          alert("logged out successfully");
+          document.querySelector("#city").remove();
+          document.querySelector("#search").remove();
           header.innerHTML = heading_1;
-          localStorage.removeItem('uniqueUser');
+          localStorage.removeItem("uniqueUser");
         };
       }
       // if(searchField){

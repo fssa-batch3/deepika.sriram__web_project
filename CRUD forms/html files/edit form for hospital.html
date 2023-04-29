@@ -1,176 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>hospital details</title>
-    <link rel="stylesheet" href="../../../assets/css/register.css">
-    <link rel="icon" href="../../../assets/images/hospital logo 3.JPG">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Hammersmith+One&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
-        rel="stylesheet">
-</head>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>hospital details</title>
+        <link rel="stylesheet" href="../../../assets/css/register.css">
+        <link rel="icon" href="../../../assets/images/hospital logo 3.JPG">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Hammersmith+One&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+            rel="stylesheet">
+    </head>
 
-<body>
-    <form role="form" class="form">
-        <h1 style="text-align: center;color:#03045e">FORM</h1>
-        <br>
-        <label>enter hospital name</label>
-        <input type="text" id="unique_hospital" />
-        <button type="submit" id="find_details">find details</button>
-        <br>
-        <label>hospital name</label>
-        <br><br>
-        <input type="text" id="hosp_name" style="width:100%;height:30px" />
-        <br><br>
-        <label>Address</label>
-        <br><br>
-        <input type="text" id="address" style="width:100%;height:30px" placeholder="address" />
-        <br><br>
-        <label for="">Locality</label>
-        <br><br>
-        <input type="text" id="locality" style="width:100%;height:30px" placeholder="enter locality" />
-        <br><br>
-        <label for="">Area</label>
-        <br><br>
-        <input type="text" id="area" style="width:100%;height:30px" placeholder="enter area" />
-        <br><br>
-        <label for="">city</label>
-        <br><br>
-        <input type="text" id="city" style="width:100%;height:30px" placeholder="enter city" />
-        <br><br>
-        <label for="">Pincode</label>
-        <br><br>
-        <input type="number" id="pincode" style="width:100%;height:30px" placeholder="enter pincode" />
-        <br><br>
-        <label>Link file</label>
-        <br><br>
-        <input type="text" id="link_file" style="width:100%;height:30px" placeholder="link file" />
-        <br><br>
-        <label>Contact number</label>
-        <br><br>
-        <input type="tel" id="con_no" style="width:100%;height:30px" placeholder="contact number" />
-        <br><br>
-        <label>Email address</label>
-        <br><br>
-        <input type="email" id="hosp_email" style="width:100%;height:30px" placeholder="email address" />
-        <br><br>
-        <label>image of hospital</label>
-        <br><br>
-        <input type="text" id="img_file" placeholder="upload url of image of a hospital"
-            style="width:100%;height:30px" />
-        <br><br>
-        <button type="submit" id="Update">update</button>
+    <body>
+        <form role="form" class="form">
+            <h1 style="text-align: center;color:#03045e">FORM</h1>
+            <br>
+            <label>enter hospital name</label>
+            <input type="text" id="unique_hospital">
+            <button type="submit" id="find_details">find details</button>
+            <br>
+            <label>hospital name</label>
+            <br>
+            <br>
+            <input type="text" id="hosp_name" style="width:100%;height:30px">
+            <br>
+            <br>
+            <label>Address</label>
+            <br>
+            <br>
+            <input type="text" id="address" style="width:100%;height:30px" placeholder="address">
+            <br>
+            <br>
+            <label for="">Locality</label>
+            <br>
+            <br>
+            <input type="text" id="locality" style="width:100%;height:30px" placeholder="enter locality">
+            <br>
+            <br>
+            <label for="">Area</label>
+            <br>
+            <br>
+            <input type="text" id="area" style="width:100%;height:30px" placeholder="enter area">
+            <br>
+            <br>
+            <label for="">city</label>
+            <br>
+            <br>
+            <input type="text" id="city" style="width:100%;height:30px" placeholder="enter city">
+            <br>
+            <br>
+            <label for="">Pincode</label>
+            <br>
+            <br>
+            <input type="number" id="pincode" style="width:100%;height:30px" placeholder="enter pincode">
+            <br>
+            <br>
+            <label>Link file</label>
+            <br>
+            <br>
+            <input type="text" id="link_file" style="width:100%;height:30px" placeholder="link file">
+            <br>
+            <br>
+            <label>Contact number</label>
+            <br>
+            <br>
+            <input type="tel" id="con_no" style="width:100%;height:30px" placeholder="contact number">
+            <br>
+            <br>
+            <label>Email address</label>
+            <br>
+            <br>
+            <input type="email" id="hosp_email" style="width:100%;height:30px" placeholder="email address">
+            <br>
+            <br>
+            <label>image of hospital</label>
+            <br>
+            <br>
+            <input type="text" id="img_file" placeholder="upload url of image of a hospital"
+                style="width:100%;height:30px">
+            <br>
+            <br>
+            <button type="submit" id="Update">update</button>
 
-        <button type="submit" id="delete_del"> Delete details </button>
-    </form>
-    <script>
+            <button type="submit" id="delete_del"> Delete details </button>
+        </form>
+        <script>
         //get value from local storage
-        const form = document.querySelector('.form');
         const unique_id = document.getElementById("unique_hospital");
 
         // let hospital_detail = JSON.parse(localStorage.getItem("hospital_detail"));
 
         const findDetails = document.getElementById("find_details");
-        const hosp_name = document.getElementById("hosp_name")
-        const address = document.getElementById("address")
+        const hosp_name = document.getElementById("hosp_name");
+        const address = document.getElementById("address");
         const hospArea = document.getElementById("area");
-        const Locality = document.getElementById("locality")
+        const Locality = document.getElementById("locality");
         const hosCity = document.getElementById("city");
         const hosPincode = document.getElementById("pincode");
-        const link_file = document.getElementById("link_file")
-        const contact_number = document.getElementById("con_no")
-        const email_address = document.getElementById("hosp_email")
-        const image_file = document.getElementById("img_file")
+        const link_file = document.getElementById("link_file");
+        const contact_number = document.getElementById("con_no");
+        const email_address = document.getElementById("hosp_email");
+        const image_file = document.getElementById("img_file");
 
         findDetails.addEventListener("click", (event) => {
-            event.preventDefault()
-            const uniqueId = unique_id.value;
-            const hospital_details = JSON.parse(localStorage.getItem('hospital_detail'));
-            const hospital = hospital_details.find(detail =>
-                detail.hospital_name === uniqueId
-            );
+          event.preventDefault();
+          const uniqueId = unique_id.value;
+          const hospital_details = JSON.parse(localStorage.getItem("hospital_detail"));
+          const hospital = hospital_details.find(
+    (detail) => detail.hospital_name === uniqueId
+          );
 
-            if (hospital) {
-                hosp_name.value = hospital.hospital_name;
-                address.value = hospital.address;
-                hospArea.value = hospital.area;
-                Locality.value = hospital.locality;
-                hosCity.value = hospital.city;
-                hosPincode.value = hospital.pincode;
-                link_file.value = hospital.link_file;
-                contact_number.value = hospital.contact_number;
-                email_address.value = hospital.email_address;
-                image_file.value = hospital.image_link;
+          if (hospital) {
+            hosp_name.value = hospital.hospital_name;
+            address.value = hospital.address;
+            hospArea.value = hospital.area;
+            Locality.value = hospital.locality;
+            hosCity.value = hospital.city;
+            hosPincode.value = hospital.pincode;
+            link_file.value = hospital.link_file;
+            contact_number.value = hospital.contact_number;
+            email_address.value = hospital.email_address;
+            image_file.value = hospital.image_link;
 
-                document.getElementById("Update").addEventListener("click", (event) => {
-                    event.preventDefault();
+            document.getElementById("Update").addEventListener("click", (event) => {
+              event.preventDefault();
 
-                    let hosName = hosp_name.value;
-                    hosAddress = address.value;
-                    hospital_area = hospArea.value;
-                    hospital_locality = Locality.value;
-                    hospital_city =  hosCity.value;
-                    hospital_city_pincode = hosPincode.value;
-                    hosLinkFile = link_file.value;
-                    hosContactNumber = contact_number.value;
-                    hosEmailAddress = email_address.value;
-                    hosImageFile = image_file.value;
+              const hosName = hosp_name.value;
+              const hosAddress = address.value;
+              const hospital_area = hospArea.value;
+              const hospital_locality = Locality.value;
+              const hospital_city = hosCity.value;
+              const hospital_city_pincode = hosPincode.value;
+              const hosLinkFile = link_file.value;
+              const hosContactNumber = contact_number.value;
+              const hosEmailAddress = email_address.value;
+              const hosImageFile = image_file.value;
 
+      // Update hospital deatils in localstorage
+              hospital.hospital_name = hosName;
+              hospital.address = hosAddress;
+              hospital.area = hospital_area;
+              hospital.locality = hospital_locality;
+              hospital.city = hospital_city;
+              hospital.pincode = hospital_city_pincode;
+              hospital.link_file = hosLinkFile;
+              hospital.contact_number = hosContactNumber;
+              hospital.email_address = hosEmailAddress;
+              hospital.image_link = hosImageFile;
+              localStorage.setItem("hospital_detail", JSON.stringify(hospital_details));
 
-                    // Update hospital deatils in localstorage
-                    hospital.hospital_name = hosName;
-                    hospital.address = hosAddress;
-                    hospital.area = hospital_area;
-                    hospital.locality = hospital_locality;
-                    hospital.city = hospital_city;
-                    hospital.pincode = hospital_city_pincode;
-                    hospital.link_file = hosLinkFile;
-                    hospital.contact_number = hosContactNumber;
-                    hospital.email_address = hosEmailAddress;
-                    hospital.image_link = hosImageFile;
-                    localStorage.setItem('hospital_detail', JSON.stringify(hospital_details));
+              alert("Updated successfully!!");
 
-                    alert("Updated successfully!!")
-
-                    document.querySelector("form").reset();
-                    document.getElementById("Update").setAttribute("disabled", true);
-                }
-
-                );
-
-            }
-
+              document.querySelector("form").reset();
+              document.getElementById("Update").setAttribute("disabled", true);
+            });
+  }
         });
-
-
-
 
         //  delete page
         document.getElementById("delete_del").addEventListener("click", (event) => {
-            event.preventDefault();
+          event.preventDefault();
 
-            const uniqueId = unique_id.value;
-            const hospital_details = JSON.parse(localStorage.getItem('hospital_detail'));
-            const hospitalIndex = hospital_details.findIndex(detail =>
-                detail.hospital_name === uniqueId
-            );
+          const uniqueId = unique_id.value;
+          const hospital_details = JSON.parse(localStorage.getItem("hospital_detail"));
+          const hospitalIndex = hospital_details.findIndex(
+    (detail) => detail.hospital_name === uniqueId
+          );
 
-            if (hospitalIndex > -1) {
-                hospital_details.splice(hospitalIndex, 1);
-                localStorage.setItem('hospital_detail', JSON.stringify(hospital_details));
-                alert("Hospital details deleted successfully");
-                document.querySelector('form').reset();
-
-
-            }
-
-        })
-
+          if (hospitalIndex > -1) {
+            hospital_details.splice(hospitalIndex, 1);
+            localStorage.setItem("hospital_detail", JSON.stringify(hospital_details));
+            alert("Hospital details deleted successfully");
+            document.querySelector("form").reset();
+  }
+        });
     </script>
-</body>
+    </body>
 
 </html>
