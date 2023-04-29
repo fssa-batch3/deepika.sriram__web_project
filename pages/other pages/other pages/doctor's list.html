@@ -117,17 +117,6 @@
     const doctors = JSON.parse(localStorage.getItem("doctor_detail"));
     // console.log(doctors)
 
-    for (let i = 0; i < doctors.length; i++) {
-      const doctor = doctors[i];
-      // eslint-disable-next-line radix
-      if (doc === parseInt(doctor.Hospital_id)) {
-        const doctorCard = renderCard(doctor);
-        document.querySelector("main").insertAdjacentHTML("beforeend", doctorCard);
-      }
-      // const doctorCard = renderCard(doctor);
-      // document.querySelector("main").insertAdjacentHTML('beforeend', doctorCard);
-    }
-    // eslint-disable-next-line consistent-return
     function renderTime(time) {
       // eslint-disable-next-line no-unreachable-loop
       for (let i = 0; i < 2; i++) {
@@ -197,7 +186,17 @@
         `;
       return card;
     }
-  </script>
+
+    for (let i = 0; i < doctors.length; i++) {
+      const doctor = doctors[i];
+      // eslint-disable-next-line radix
+      if (doc === parseInt(doctor.Hospital_id)) {
+        const doctorCard = renderCard(doctor);
+        document.querySelector("main").insertAdjacentHTML("beforeend", doctorCard);
+      }
+    }
+    // eslint-disable-next-line consistent-return
+      </script>
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"

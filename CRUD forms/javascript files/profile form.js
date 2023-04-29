@@ -21,17 +21,12 @@ if (user) {
   gender_2.checked = user.user_gender.female;
   gender_3.checked = user.user_gender.others;
 
-  document.getElementById("updateUser").onclick = function (event) {
+  document.getElementById("updateUser").onclick = function update_user(event) {
     event.preventDefault();
-
-    update_user();
-  };
-
-  function update_user() {
     const uName = userName.value;
-    uAge = userAge.value;
-    uNumber = mobileNumber.value;
-    uEmail = emailId.value;
+    const uAge = userAge.value;
+    const uNumber = mobileNumber.value;
+    const uEmail = emailId.value;
 
     const u_gender_1 = gender_1.checked;
     const u_gender_2 = gender_2.checked;
@@ -48,9 +43,9 @@ if (user) {
     localStorage.setItem("user_detail", JSON.stringify(user_detail));
     alert("updated successfully");
     document.querySelector("form").reset();
-    location.href = "../../../index.html";
+    window.location.href = "../../../index.html";
     document.getElementById("updateUser").setAttribute("disabled", true);
-  }
+  };
 }
 
 // document.getElementById("deleteUser").addEventListener('click' , (event) =>{

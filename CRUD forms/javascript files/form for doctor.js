@@ -11,7 +11,9 @@ document
     const Departments = document.getElementById("department").value.split(",");
     const Hospital_id = document.getElementById("hospital_id").value;
     const experience_type = document.getElementById("experience_type").value;
-    const experience_duration = document.getElementById("experience_duration").value;
+    const experience_duration = document.getElementById(
+      "experience_duration"
+    ).value;
     // time_availability = document.getElementById("time_availability").value;
     const Working_days = {};
     // working_days = document.querySelectorAll("input[type='checkbox']:checked");
@@ -32,14 +34,12 @@ document
     // console.log(monday)
 
     function condition(day, name) {
-      const trueCondition = Working_days[name] = true;
-      const falseCondition = Working_days[name] = false; 
 
       if (day === true) {
-        return trueCondition;
+        return Working_days[name] = true;
       }
       if (day !== true) {
-        return falseCondition;
+        return Working_days[name] = false;
       }
     }
 

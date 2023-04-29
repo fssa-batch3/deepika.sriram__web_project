@@ -1,5 +1,4 @@
 const { origin } = window.location;
-const homepage = `${origin}/pages/homepage/home page.html`;
 const about = `${origin}/pages/other pages/other pages/about us.html`;
 const image = `${origin}/assets/images/gws.png`;
 const login = `${origin}/pages/other pages/other pages/login.html`;
@@ -7,13 +6,11 @@ const signup = `${origin}/pages/other pages/other pages/sign up page.html`;
 const profile = `${origin}/pages/other pages/patient/patient profile page.html`;
 const appointment_history = `${origin}/pages/other pages/patient/history.html`;
 const hospitals = `${origin}/pages/other pages/patient/list of hospital page.html`;
-var index = `${origin}/index.html`;
 const menu = `${origin}/pages/other pages/other pages/menu.html`;
-const doctor_list = `${origin}/pages/other pages/other pages/doctor's list.html`;
 const femaleAvatar = `${origin}/assets/images/female_Avatar-removebg-preview.png`;
 const maleAvatar = `${origin}/assets/images/male_Avatar-removebg-preview.png`;
 const otherAvatar = `${origin}/assets/images/profile avatar.png`;
-var index = `${origin}/index.html`;
+const index = `${origin}/index.html`;
 
 const heading_1 = `
 
@@ -89,6 +86,7 @@ const heading_2 = `
             </a>
         </div>
 `;
+// eslint-disable-next-line no-unused-vars
 function indexPage() {
   const unique = JSON.parse(localStorage.getItem("uniqueUser"));
   const header = document.getElementById("header");
@@ -149,7 +147,7 @@ function indexPage() {
         if (searchPart) {
           searchPart.insertAdjacentHTML("beforeend", searchBar);
         }
-        document.getElementById("signout").onclick = function (event) {
+        document.getElementById("signout").onclick = function logOut(event) {
           event.preventDefault();
 
           alert("logged out successfully");
@@ -159,17 +157,6 @@ function indexPage() {
           localStorage.removeItem("uniqueUser");
         };
       }
-      // if(searchField){
-      //     searchField.insertAdjacentHTML('beforeend' , searchBar);
-      // }
-      // document.getElementById("signout").onclick = function (event) {
-      //     event.preventDefault();
-
-      //     alert("logged out successfully");
-      //     header.innerHTML = heading_1;
-      //     localStorage.removeItem('uniqueUser');
-      //     searchBar.remove();
-      // }
     }
   } else {
     header.innerHTML = heading_1;

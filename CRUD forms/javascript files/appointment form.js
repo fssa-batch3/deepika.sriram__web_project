@@ -3,16 +3,16 @@ document
   .addEventListener("submit", function bookAppointment(e) {
     e.preventDefault();
     // collecting value from appointment form
-    let patient_name = document.getElementById("patient_name").value.trim();
-    let patient_age = document.getElementById("patient_age").value.trim();
-    let patient_gender = {};
+    const patient_name = document.getElementById("patient_name").value.trim();
+    const patient_age = document.getElementById("patient_age").value.trim();
+    const patient_gender = {};
 
-    let male = document.getElementById("male").checked;
-    let female = document.getElementById("female").checked;
-    let others = document.getElementById("others").checked;
+    const male = document.getElementById("male").checked;
+    const female = document.getElementById("female").checked;
+    const others = document.getElementById("others").checked;
 
     function gender(gender, name) {
-    if (gender === true) {
+      if (gender === true) {
         return (patient_gender[name] = true);
       }
       if (gender !== true) {
@@ -24,11 +24,11 @@ document
     gender(female, "female");
     gender(others, "others");
 
-    let consultationMethod = {};
+    const consultationMethod = {};
 
-    let inPersonConsult = document.getElementById("in_person").checked;
-    let direct2home = document.getElementById("direct_to_home").checked;
-    let videoConsult = document.getElementById("video_consultation").checked;
+    const inPersonConsult = document.getElementById("in_person").checked;
+    const direct2home = document.getElementById("direct_to_home").checked;
+    const videoConsult = document.getElementById("video_consultation").checked;
 
     function methodOfConsultation(method, name) {
       if (method === true) {
@@ -43,16 +43,20 @@ document
     methodOfConsultation(direct2home, "homeConsultation");
     methodOfConsultation(videoConsult, "videoConsultation");
 
-    let address = document.getElementById("address").value;
-    let healthIssues = document.getElementById("health_issues").value.split(",");
-    let doctorName = document.getElementById("doctor_name").value;
-    let dateOfBooking = document.getElementById("bookDate").value;
-    let timeOfBooking = document.getElementById("bookTime").value;
-    let dateOfConsultation = document.getElementById("consultDate").value;
-    let patient_mobile_number = document.getElementById("mobile_number").value;
-    let patient_email_address = document.getElementById("email_address").value;
-    let addDescription = document.getElementById("add_description").value;
-    let appointment_id = uuidv4();
+    const address = document.getElementById("address").value;
+    const healthIssues = document
+      .getElementById("health_issues")
+      .value.split(",");
+    const doctorName = document.getElementById("doctor_name").value;
+    const dateOfBooking = document.getElementById("bookDate").value;
+    const timeOfBooking = document.getElementById("bookTime").value;
+    const dateOfConsultation = document.getElementById("consultDate").value;
+    const patient_mobile_number =
+      document.getElementById("mobile_number").value;
+    const patient_email_address =
+      document.getElementById("email_address").value;
+    const addDescription = document.getElementById("add_description").value;
+    const appointment_id = uuidv4();
 
     const Appointments = JSON.parse(localStorage.getItem("appointments")) || [];
 

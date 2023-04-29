@@ -68,72 +68,69 @@ document.getElementById("find_details").addEventListener("click", (event) => {
     sat.checked = doctor.Working_days.saturday;
     sun.checked = doctor.Working_days.sunday;
 
-    function updateDoctor() {
-      const doctorName = doc_name.value;
-      const doctorImage = doc_image.value;
-      const doctorQualification = doc_qualification.value.split(",");
-      const doctorExperienceDuration = docExpDuration.value;
-      const doctorExperienceType = docExpType.value;
-      const doctorDepartment = doc_department.value.split(",");
-      const doctorHospitalId = docHospId.value;
-      const doctorTimeFrom = docTimingFrom.value;
-      const doctorTimeTo = docTimingTo.value;
+    document.getElementById("update_details").onclick =
+      function updateDoctorDetails(event) {
+        event.preventDefault();
 
-      // working days
-      const m_day = mon.checked;
-      const tue_day = tues.checked;
-      const wed_day = wed.checked;
-      const thur_day = thurs.checked;
-      const fri_day = fri.checked;
-      const sat_day = sat.checked;
-      const sun_day = sun.checked;
+        const doctorName = doc_name.value;
+        const doctorImage = doc_image.value;
+        const doctorQualification = doc_qualification.value.split(",");
+        const doctorExperienceDuration = docExpDuration.value;
+        const doctorExperienceType = docExpType.value;
+        const doctorDepartment = doc_department.value.split(",");
+        const doctorHospitalId = docHospId.value;
+        const doctorTimeFrom = docTimingFrom.value;
+        const doctorTimeTo = docTimingTo.value;
 
-      // Update doctor deatils in localstorage
-      doctor.Doctor_name = doctorName;
-      doctor.Doctor_image = doctorImage;
-      doctor.Qualifications = doctorQualification;
-      doctor.Experience.experience_duration = doctorExperienceDuration;
-      doctor.Experience.experience_type = doctorExperienceType;
-      doctor.Departments = doctorDepartment;
-      doctor.Hospital_id = doctorHospitalId;
-      // doctor.Working_days = doctorWorkingDays;
-      doctor.Availabilities.starting_time = doctorTimeFrom;
-      doctor.Availabilities.ending_time = doctorTimeTo;
+        // working days
+        const m_day = mon.checked;
+        const tue_day = tues.checked;
+        const wed_day = wed.checked;
+        const thur_day = thurs.checked;
+        const fri_day = fri.checked;
+        const sat_day = sat.checked;
+        const sun_day = sun.checked;
 
-      // working days
-      doctor.Working_days.monday = m_day;
-      doctor.Working_days.tuesday = tue_day;
-      doctor.Working_days.wednesday = wed_day;
-      doctor.Working_days.thursday = thur_day;
-      doctor.Working_days.friday = fri_day;
-      doctor.Working_days.saturday = sat_day;
-      doctor.Working_days.sunday = sun_day;
+        // Update doctor deatils in localstorage
+        doctor.Doctor_name = doctorName;
+        doctor.Doctor_image = doctorImage;
+        doctor.Qualifications = doctorQualification;
+        doctor.Experience.experience_duration = doctorExperienceDuration;
+        doctor.Experience.experience_type = doctorExperienceType;
+        doctor.Departments = doctorDepartment;
+        doctor.Hospital_id = doctorHospitalId;
+        // doctor.Working_days = doctorWorkingDays;
+        doctor.Availabilities.starting_time = doctorTimeFrom;
+        doctor.Availabilities.ending_time = doctorTimeTo;
 
-      // let department = document.getElementById("additional_department").value;
-      const starting_time = document.getElementById("2nd_from").value;
-      const ending_time = document.getElementById("2nd_to").value;
+        // working days
+        doctor.Working_days.monday = m_day;
+        doctor.Working_days.tuesday = tue_day;
+        doctor.Working_days.wednesday = wed_day;
+        doctor.Working_days.thursday = thur_day;
+        doctor.Working_days.friday = fri_day;
+        doctor.Working_days.saturday = sat_day;
+        doctor.Working_days.sunday = sun_day;
 
-      if (starting_time && ending_time) {
-        if (starting_time.value !== "" || ending_time.value !== "") {
-          doctor.Availabilities.push({ starting_time, ending_time });
+        // let department = document.getElementById("additional_department").value;
+        const starting_time = document.getElementById("2nd_from").value;
+        const ending_time = document.getElementById("2nd_to").value;
+
+        if (starting_time && ending_time) {
+          if (starting_time.value !== "" || ending_time.value !== "") {
+            doctor.Availabilities.push({ starting_time, ending_time });
+          }
         }
-      }
 
-      localStorage.setItem("doctor_detail", JSON.stringify(doctor_details));
+        localStorage.setItem("doctor_detail", JSON.stringify(doctor_details));
 
-      alert("Updated successfully!!");
+        alert("Updated successfully!!");
 
-      document.querySelector("form").reset();
-      document.getElementById("update_details").setAttribute("disabled", true);
-    }
-
-    document.getElementById("update_details").onclick = function (event) {
-      event.preventDefault();
-
-      updateDoctor();
-    };
-
-    
+        document.querySelector("form").reset();
+        document
+          .getElementById("update_details")
+          .setAttribute("disabled", true);
+      };
   }
 });
 //  delete page
