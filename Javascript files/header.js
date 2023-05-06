@@ -162,3 +162,5 @@ function indexPage() {
     header.innerHTML = heading_1;
   }
 }
+
+indexPage();

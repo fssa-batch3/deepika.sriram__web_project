@@ -1,3 +1,4 @@
+<!-- eslint-disable prettier/prettier -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -29,7 +30,7 @@
     <body>
         <header id="header">
         </header>
-        <form role="form" class="lgn">
+        <form role="form" onsubmit="signIn(event)">
             <div style="text-align:center">
                 <div>
                     <img src="../../../assets/images/hospital_logo_3-removebg-preview.png" alt="logo of gws" style="width:40%">
@@ -80,7 +81,7 @@
         </form>
         <script src="../../../Javascript files/form_1.js"></script>
         <script src="../../../Javascript files/header.js"></script>
-        <script>indexPage();
+        <script>
             </script>
         <script>
             const password = document.getElementById("password");
@@ -90,6 +91,7 @@
 
             let passwordVisibility = false;
 
+            // eslint-disable-next-line func-names
             togglePassword.addEventListener("click", function () {
               if (!passwordVisibility) {
                 openedEye.classList.remove("hide");

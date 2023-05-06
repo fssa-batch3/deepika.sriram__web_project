@@ -12,12 +12,12 @@ const method_3 = document.getElementById("videoConsultation");
 const p_address = document.getElementById("address");
 const p_healthIssues = document.getElementById("health_issues");
 const p_d_name = document.getElementById("doctorName");
-const p_d_book = document.getElementById("dateOfBooking");
-const p_t_book = document.getElementById("timeOfBooking");
+// const p_d_book = document.getElementById("dateOfBooking");
+// const p_t_book = document.getElementById("timeOfBooking");
 const p_d_c = document.getElementById("dateOfConsultation");
 const p_mobile = document.getElementById("mobile_number");
-const p_email = document.getElementById("email_address");
-const p_addDscrptn = document.getElementById("addDescription");
+// const p_email = document.getElementById("email_address");
+// const p_addDscrptn = document.getElementById("addDescription");
 
 const appointmentId = new URLSearchParams(window.location.search).get(
   "appointment-id"
@@ -42,12 +42,12 @@ if (appointmentData) {
   p_address.value = appointmentData.address;
   p_healthIssues.value = appointmentData.healthIssues;
   p_d_name.value = appointmentData.doctorName;
-  p_d_book.value = appointmentData.dateOfBooking;
-  p_t_book.value = appointmentData.timeOfBooking;
+  // p_d_book.value = appointmentData.date_of_booking;
+  // p_t_book.value = appointmentData.time_of_booking;
   p_d_c.value = appointmentData.dateOfConsultation;
   p_mobile.value = appointmentData.patient_mobile_number;
-  p_email.value = appointmentData.patient_email_address;
-  p_addDscrptn.value = appointmentData.addDescription;
+  // p_email.value = appointmentData.patient_email_address;
+  // p_addDscrptn.value = appointmentData.addDescription;
 
   document.getElementById("update_appointment").onclick =
     function updateAppointment(event) {
@@ -66,12 +66,12 @@ if (appointmentData) {
       const update_address = p_address.value;
       const update_healthIssues = p_healthIssues.value.split(",");
       const update_doctor_name = p_d_name.value;
-      const update_book_date = p_d_book.value;
-      const update_book_time = p_t_book.value;
+      // const update_book_date = p_d_book.value;
+      // const update_book_time = p_t_book.value;
       const update_consult_date = p_d_c.value;
       const update_mobile = p_mobile.value;
-      const update_email = p_email.value;
-      const update_dscrptn = p_addDscrptn.value;
+      // const update_email = p_email.value;
+      // const update_dscrptn = p_addDscrptn.value;
 
       // updating details
 
@@ -89,12 +89,12 @@ if (appointmentData) {
       appointmentData.address = update_address;
       appointmentData.healthIssues = update_healthIssues;
       appointmentData.doctorName = update_doctor_name;
-      appointmentData.dateOfBooking = update_book_date;
-      appointmentData.timeOfBooking = update_book_time;
+      // appointmentData.date_of_booking = update_book_date;
+      // appointmentData.time_of_booking = update_book_time;
       appointmentData.dateOfConsultation = update_consult_date;
       appointmentData.patient_mobile_number = update_mobile;
-      appointmentData.patient_email_address = update_email;
-      appointmentData.addDescription = update_dscrptn;
+      // appointmentData.patient_email_address = update_email;
+      // appointmentData.addDescription = update_dscrptn;
 
       localStorage.setItem("appointments", JSON.stringify(appointmentList));
       alert("Updated and resended appointment successfully!!✅");
@@ -119,6 +119,6 @@ document
       localStorage.setItem("appointments", JSON.stringify(appointmentList));
       alert("appointment history deleted successfully");
       document.querySelector("form").reset();
-      window.location.href = "../../../../index.html";
+      location.href = "../../../../index.html";
     }
   });

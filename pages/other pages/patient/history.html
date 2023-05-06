@@ -119,11 +119,10 @@
             integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="../../../Javascript files/header.js"></script>
-        <script>indexPage();
-</script>
         <script>const Appointments = JSON.parse(localStorage.getItem("appointments"));
         for (let i = 0; i < Appointments.length; i++) {
           const Appointment = Appointments[i];
+          // eslint-disable-next-line no-use-before-define
           const sectionAppend = appendSection(Appointment);
           document.querySelector("main").insertAdjacentHTML("beforeend", sectionAppend);
         }
@@ -134,6 +133,8 @@
                 <div>
                     <p> Patient name: ${Appointment.patient_name} </p>
                     <p> consulted with : ${Appointment.doctorName}</p>
+                    <p> Status: ${Appointment.status}</p>
+                    <p>Booked on: ${Appointment.date_of_booking} , ${Appointment.time_of_booking}</p>
                 </div>
                 <div>
                     <a href="../patient/history details form.html?appointment-id=${Appointment.appointment_id}">

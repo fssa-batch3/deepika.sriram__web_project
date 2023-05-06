@@ -48,15 +48,18 @@ document
       .getElementById("health_issues")
       .value.split(",");
     const doctorName = document.getElementById("doctor_name").value;
-    const dateOfBooking = document.getElementById("bookDate").value;
-    const timeOfBooking = document.getElementById("bookTime").value;
+    const doctorId = new URLSearchParams(window.location.search).get('doctor-id');
+    const currentDate = new Date();
+    const date_of_booking = currentDate.toLocaleDateString('en-US');
+    const time_of_booking = currentDate.toLocaleTimeString('en-US');
     const dateOfConsultation = document.getElementById("consultDate").value;
     const patient_mobile_number =
       document.getElementById("mobile_number").value;
-    const patient_email_address =
-      document.getElementById("email_address").value;
-    const addDescription = document.getElementById("add_description").value;
+    // const patient_email_address =
+    //   document.getElementById("email_address").value;
+    // const addDescription = document.getElementById("add_description").value;
     const appointment_id = uuidv4();
+    const status = "In pogress";
 
     const Appointments = JSON.parse(localStorage.getItem("appointments")) || [];
 
@@ -68,13 +71,15 @@ document
       address,
       healthIssues,
       doctorName,
-      dateOfBooking,
-      timeOfBooking,
+      doctorId,
+      date_of_booking,
+      time_of_booking,
       dateOfConsultation,
       patient_mobile_number,
-      patient_email_address,
-      addDescription,
+      // patient_email_address,
+      // addDescription,
       appointment_id,
+      status
     });
     localStorage.setItem("appointments", JSON.stringify(Appointments));
     localStorage.setItem("unique_appointment", appointment_id);

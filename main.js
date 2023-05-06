@@ -831,108 +831,108 @@ if (!doctorDetails) {
 }
 console.log(doctorDetails);
 
-const appointmentList = JSON.parse(localStorage.getItem("appointments"));
-if (!appointmentList) {
-  localStorage.setItem(
-    "appointments",
-    JSON.stringify([
-      {
-        addDescription: "",
-        address: "",
-        appointment_id: "0cd4d3f9-c4ea-437b-ae61-2601016b1dbf",
-        consultationMethod: {
-          inPerson: true,
-          homeConsultation: false,
-          videoConsultation: false,
-        },
-        dateOfBooking: "2023-04-01",
-        dateOfConsultation: "2023-04-04",
-        doctorName: "Dr.Premalatha Balachandran",
-        healthIssues: ["irregular periods"],
-        patient_age: "18",
-        patient_email_address: "vaishnavisriram76@gmail.com",
-        patient_gender: {
-          male: false,
-          female: true,
-          others: false,
-        },
-        patient_mobile_number: "7397314532",
-        patient_name: "Vaishnavi",
-        timeOfBooking: "14:45",
-      },
-      {
-        addDescription: "",
-        address: "",
-        appointment_id: "93b5b247-ace2-4195-8603-2aefbcd564bf",
-        consultationMethod: {
-          inPerson: true,
-          homeConsultation: false,
-          videoConsultation: false,
-        },
-        dateOfBooking: "2023-04-01",
-        dateOfConsultation: "2023-04-03",
-        doctorName: "Dr.Premalatha Balachandran",
-        healthIssues: ["stomachache"],
-        patient_age: "14",
-        patient_email_address: "deepika.sriram@fssa.freshworks.com",
-        patient_gender: {
-          male: false,
-          female: true,
-          others: false,
-        },
-        patient_mobile_number: "9940185339",
-        patient_name: "Subhashini",
-        timeOfBooking: "14:59",
-      },
-      {
-        addDescription:
-          "I can't tell the issues in this form..I want to tell you in person",
-        address: "",
-        appointment_id: "b5acced5-cde9-4da4-8997-990715840737",
-        consultationMethod: {
-          inPerson: true,
-          homeConsultation: false,
-          videoConsultation: false,
-        },
-        dateOfBooking: "2023-03-31",
-        dateOfConsultation: "2023-04-03",
-        doctorName: "Dr.Thenmozhi",
-        healthIssues: [],
-        patient_age: "21",
-        patient_email_address: "sangeetha1997@gmail.com",
-        patient_gender: {
-          male: false,
-          female: true,
-          others: false,
-        },
-        patient_mobile_number: "944553574",
-        patient_name: "Sangeetha",
-        timeOfBooking: "15:00",
-      },
-      {
-        addDescription: "",
-        address: "No.06, abcd steet, x-city",
-        appointment_id: "fcb58cab-5b1d-45b4-a3e2-0f08b8b3c194",
-        consultationMethod: {
-          inPerson: false,
-          homeConsultation: true,
-          videoConsultation: false,
-        },
-        dateOfBooking: "2023-03-29",
-        dateOfConsultation: "2023-04-04",
-        doctorName: "Dr.Meera Raghavan",
-        healthIssues: ["giddiness"],
-        patient_age: "80",
-        patient_email_address: "deepika.sriram@fssa.freshworks.com",
-        patient_gender: {
-          male: false,
-          female: true,
-          others: false,
-        },
-        patient_mobile_number: "8939094029",
-        patient_name: "Gowri",
-        timeOfBooking: "15:02",
-      },
-    ])
-  );
-}
+// const appointmentList = JSON.parse(localStorage.getItem("appointments"));
+// if (!appointmentList) {
+//   localStorage.setItem(
+//     "appointments",
+//     JSON.stringify([
+//       {
+//         addDescription: "",
+//         address: "",
+//         appointment_id: "0cd4d3f9-c4ea-437b-ae61-2601016b1dbf",
+//         consultationMethod: {
+//           inPerson: true,
+//           homeConsultation: false,
+//           videoConsultation: false,
+//         },
+//         dateOfBooking: "2023-04-01",
+//         dateOfConsultation: "2023-04-04",
+//         doctorName: "Dr.Premalatha Balachandran",
+//         healthIssues: ["irregular periods"],
+//         patient_age: "18",
+//         patient_email_address: "vaishnavisriram76@gmail.com",
+//         patient_gender: {
+//           male: false,
+//           female: true,
+//           others: false,
+//         },
+//         patient_mobile_number: "7397314532",
+//         patient_name: "Vaishnavi",
+//         timeOfBooking: "14:45",
+//       },
+//       {
+//         addDescription: "",
+//         address: "",
+//         appointment_id: "93b5b247-ace2-4195-8603-2aefbcd564bf",
+//         consultationMethod: {
+//           inPerson: true,
+//           homeConsultation: false,
+//           videoConsultation: false,
+//         },
+//         dateOfBooking: "2023-04-01",
+//         dateOfConsultation: "2023-04-03",
+//         doctorName: "Dr.Premalatha Balachandran",
+//         healthIssues: ["stomachache"],
+//         patient_age: "14",
+//         patient_email_address: "deepika.sriram@fssa.freshworks.com",
+//         patient_gender: {
+//           male: false,
+//           female: true,
+//           others: false,
+//         },
+//         patient_mobile_number: "9940185339",
+//         patient_name: "Subhashini",
+//         timeOfBooking: "14:59",
+//       },
+//       {
+//         addDescription:
+//           "I can't tell the issues in this form..I want to tell you in person",
+//         address: "",
+//         appointment_id: "b5acced5-cde9-4da4-8997-990715840737",
+//         consultationMethod: {
+//           inPerson: true,
+//           homeConsultation: false,
+//           videoConsultation: false,
+//         },
+//         dateOfBooking: "2023-03-31",
+//         dateOfConsultation: "2023-04-03",
+//         doctorName: "Dr.Thenmozhi",
+//         healthIssues: [],
+//         patient_age: "21",
+//         patient_email_address: "sangeetha1997@gmail.com",
+//         patient_gender: {
+//           male: false,
+//           female: true,
+//           others: false,
+//         },
+//         patient_mobile_number: "944553574",
+//         patient_name: "Sangeetha",
+//         timeOfBooking: "15:00",
+//       },
+//       {
+//         addDescription: "",
+//         address: "No.06, abcd steet, x-city",
+//         appointment_id: "fcb58cab-5b1d-45b4-a3e2-0f08b8b3c194",
+//         consultationMethod: {
+//           inPerson: false,
+//           homeConsultation: true,
+//           videoConsultation: false,
+//         },
+//         dateOfBooking: "2023-03-29",
+//         dateOfConsultation: "2023-04-04",
+//         doctorName: "Dr.Meera Raghavan",
+//         healthIssues: ["giddiness"],
+//         patient_age: "80",
+//         patient_email_address: "deepika.sriram@fssa.freshworks.com",
+//         patient_gender: {
+//           male: false,
+//           female: true,
+//           others: false,
+//         },
+//         patient_mobile_number: "8939094029",
+//         patient_name: "Gowri",
+//         timeOfBooking: "15:02",
+//       },
+//     ])
+//   );
+// }

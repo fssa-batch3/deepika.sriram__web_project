@@ -1,3 +1,4 @@
+<!-- eslint-disable prettier/prettier -->
 <!-- eslint-disable no-undef -->
 <!-- eslint-disable prettier/prettier -->
 <!-- eslint-disable no-undef -->
@@ -119,8 +120,6 @@
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="./Javascript files/header.js"></script>
         // eslint-disable-next-line no-undef
-        <script>indexPage();
-</script>
         <script>
         // eslint-disable-next-line no-undef
         if (searchBar) {
@@ -133,7 +132,7 @@
 
           // eslint-disable-next-line func-names
           document.querySelector("#city").addEventListener("keypress", function (e) {
-            if (e.key === "Enter"){
+            if (e.key === "Enter") {
               e.preventDefault();
               document.getElementById("search").click();
             }
@@ -154,6 +153,7 @@
 
               for (let i = 0; i < hospitalList.length; i++) {
                 const city = hospitalList[i].city.toLowerCase().trim();
+                // eslint-disable-next-line prettier/prettier
                 const condition = search.includes(city, 0);
                 if (condition) {
                   match.push(hospitalList[i]);

@@ -1,4 +1,4 @@
-document.querySelector(".sgn").addEventListener("submit", function enter(e) {
+function enter(e) {
   e.preventDefault();
   // hear i collect value from signUp form
   const f_name = document.getElementById("first_name").value.trim();
@@ -94,10 +94,10 @@ document.querySelector(".sgn").addEventListener("submit", function enter(e) {
     );
     document.querySelector("form").reset();
   }
-});
+};
 
 // for sign in()
-document.querySelector("lgn").addEventListener("submit", function signIn(e) {
+function signIn(e) {
   e.preventDefault();
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value.trim();
@@ -119,4 +119,4 @@ document.querySelector("lgn").addEventListener("submit", function signIn(e) {
     alert("Your login in is successful ✅");
     window.location.href = "../../../../index.html";
   }
-});
+};

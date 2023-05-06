@@ -1,3 +1,4 @@
+<!-- eslint-disable func-names -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -32,7 +33,7 @@
 
         </header>
         <main>
-            <form class="sgn" role="form">
+            <form class="sgn" role="form" onsubmit="enter(event)">
                 <!-- <img src="../../../assets/images/hospital_logo_3-removebg-preview.png" style="width:30%;margin-left:35%" alt="logo of get well soon"> -->
                 <h2 style="color:#03045e;text-align: center;">SIGN UP</h2>
                 <br>
@@ -159,8 +160,6 @@
             </form>
         </main>
         <script src="../../../Javascript files/header.js"></script>
-        <script>indexPage();
-</script>
         <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
         <script src="../../../Javascript files/form_1.js"></script>
         <script>
@@ -169,15 +168,17 @@
 
             const note = document.createElement("p");
             note.innerText =
-    "enter at least 8 to 12 characters with a combination of uppercase , lowercase , numbers and special symbols";
+  "enter at least 8 to 12 characters with a combination of uppercase , lowercase , numbers and special symbols";
             note.style.fontSize = "13px";
             note.style.fontWeight = "bold";
             note.style.fontStyle = "Roboto-Condensed";
             note.style.color = "green";
 
+            // eslint-disable-next-line func-names
             create_password.addEventListener("focus", function () {
               create_password.insertAdjacentElement("afterend", note);
             });
+            // eslint-disable-next-line func-names
             create_password.addEventListener("blur", function () {
               note.remove();
             });
@@ -188,6 +189,7 @@
 
             let passwordVisibility1 = false;
 
+            // eslint-disable-next-line func-names
             togglePassword1.addEventListener("click", function () {
               if (!passwordVisibility1) {
                 openedEye1.classList.remove("hide");
@@ -207,6 +209,7 @@
 
             let passwordVisibility2 = false;
 
+            // eslint-disable-next-line func-names
             togglePassword2.addEventListener("click", function () {
               if (!passwordVisibility2) {
                 openedEye2.classList.remove("hide");
