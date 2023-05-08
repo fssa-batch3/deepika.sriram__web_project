@@ -159,6 +159,7 @@ if (!doctorDetails) {
             ending_time: "14:30",
           },
         ],
+        detail_page:"./detail page.html",
         Working_days: {
           monday: true,
           tuesday: true,
@@ -191,6 +192,7 @@ if (!doctorDetails) {
             ending_time: "14:30",
           },
         ],
+        detail_page:"./detail page.html",
         Working_days: {
           monday: true,
           tuesday: true,
@@ -227,6 +229,7 @@ if (!doctorDetails) {
           saturday: true,
           sunday: false,
         },
+        detail_page:"./detail page.html",
         Hospital_id: 2,
         uuid: "921a89e5-97d3-4e45-98fb-64b5dd4815f7",
       },
@@ -250,6 +253,7 @@ if (!doctorDetails) {
             ending_time: "20:00",
           },
         ],
+        detail_page:"./detail page.html",
         Working_days: {
           monday: true,
           tuesday: true,
@@ -278,6 +282,7 @@ if (!doctorDetails) {
             ending_time: "17:00",
           },
         ],
+        detail_page:"./detail page.html",
         Working_days: {
           monday: true,
           tuesday: true,
@@ -315,6 +320,7 @@ if (!doctorDetails) {
           saturday: true,
           sunday: false,
         },
+        detail_page:"./detail page.html",
         Hospital_id: 1,
         uuid: "cd96c616-8af5-45af-9f39-56aed40fbc43",
       },
@@ -337,6 +343,7 @@ if (!doctorDetails) {
             ending_time: "16:00",
           },
         ],
+        detail_page:"./detail page.html",
         Working_days: {
           monday: true,
           tuesday: true,
@@ -368,6 +375,7 @@ if (!doctorDetails) {
             ending_time: "17:00",
           },
         ],
+        detail_page:"./detail page.html",
         Working_days: {
           monday: true,
           tuesday: true,
@@ -399,6 +407,7 @@ if (!doctorDetails) {
             ending_time: "18:00",
           },
         ],
+        detail_page:"./detail page.html",
         Working_days: {
           monday: true,
           tuesday: true,
@@ -426,6 +435,7 @@ if (!doctorDetails) {
             ending_time: "14:00",
           },
         ],
+        detail_page:"./detail page.html",
         Working_days: {
           monday: true,
           tuesday: true,
@@ -453,6 +463,7 @@ if (!doctorDetails) {
             ending_time: "19:00",
           },
         ],
+        detail_page:"./detail page.html",
         Working_days: {
           monday: true,
           tuesday: true,
@@ -489,6 +500,7 @@ if (!doctorDetails) {
           saturday: true,
           sunday: false,
         },
+        detail_page:"./detail page.html",
         Hospital_id: 4,
         uuid: "7f191918-1831-40e6-9c25-08efa9650f59",
       },
@@ -516,6 +528,7 @@ if (!doctorDetails) {
           saturday: true,
           sunday: false,
         },
+        detail_page:"./detail page.html",
         Hospital_id: 7,
         uuid: "4b6a6699-4e67-43fa-beb4-0e2cda2cb977",
       },
@@ -534,6 +547,7 @@ if (!doctorDetails) {
             ending_time: "14:00",
           },
         ],
+        detail_page:"./detail page.html",
         Working_days: {
           monday: false,
           tuesday: false,
@@ -566,6 +580,7 @@ if (!doctorDetails) {
             ending_time: "20:00",
           },
         ],
+        detail_page:"./detail page.html",
         Working_days: {
           monday: true,
           tuesday: true,
@@ -593,6 +608,7 @@ if (!doctorDetails) {
             ending_time: "10:30",
           },
         ],
+        detail_page:"./detail page.html",
         Working_days: {
           monday: true,
           tuesday: true,
@@ -621,6 +637,7 @@ if (!doctorDetails) {
             ending_time: "20:00",
           },
         ],
+        detail_page:"./detail page.html",
         Working_days: {
           monday: true,
           tuesday: true,
@@ -648,6 +665,7 @@ if (!doctorDetails) {
             ending_time: "16:00",
           },
         ],
+        detail_page:"./detail page.html",
         Working_days: {
           monday: true,
           tuesday: true,
@@ -675,6 +693,7 @@ if (!doctorDetails) {
             ending_time: "15:00",
           },
         ],
+        detail_page:"./detail page.html",
         Working_days: {
           monday: true,
           tuesday: true,
@@ -702,6 +721,7 @@ if (!doctorDetails) {
             ending_time: "13:30",
           },
         ],
+        detail_page:"./detail page.html",
         Working_days: {
           monday: true,
           tuesday: true,
@@ -715,7 +735,7 @@ if (!doctorDetails) {
         uuid: "63a3b8a7-584e-4861-8d21-5c4500d0fe37",
       },
       {
-        Doctor_name: "Dr.Shalini josh",
+        Doctor_name: "Dr.Shalini joshi",
         Doctor_image: "../../../assets/images/Dr.Shalini joshi.jpeg",
         Qualifications: ["MBBS", "MD-Medicine"],
         Experience: {
@@ -729,6 +749,7 @@ if (!doctorDetails) {
             ending_time: "13:30",
           },
         ],
+        detail_page:"./detail page.html",
         Working_days: {
           monday: true,
           tuesday: true,
@@ -762,6 +783,7 @@ if (!doctorDetails) {
             ending_time: "13:00",
           },
         ],
+        detail_page:"./detail page.html",
         Working_days: {
           monday: true,
           tuesday: true,
@@ -793,6 +815,7 @@ if (!doctorDetails) {
             ending_time: "19:00",
           },
         ],
+        detail_page:"./detail page.html",
         Working_days: {
           monday: true,
           tuesday: true,
@@ -814,7 +837,11 @@ if (!doctorDetails) {
           experience_type: "years",
         },
         Departments: ["Psychiatrist"],
-        Availabilities: {
+        Availabilities: [{
+          starting_time:"12:00",
+          ending_time:"17:00"
+        }],
+        Working_days:{
           monday: false,
           tuesday: false,
           wednesday: true,

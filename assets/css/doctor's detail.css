@@ -1,69 +1,37 @@
-body{
-    background-color: aliceblue;
-    font-family: "source sans pro",sans-serif;
+main{
+    margin:50px 60px;
+    font-family: 'Inter' , sans-serif;
 }
-header{
-    background-color: #03045E;
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:space-between;
+.doctor_detail{
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-family: 'kumbh sans',sans-serif;
+    border:1px solid rgb(203,202,202);
+    padding:1% 2%;
 }
-header div img{
-    width:15%;
+.doctor_detail img{
+    width:12%;
+    height: 12%;
 }
-header div a{
+.doctor_detail h2{
+    font-size:25px;
+    color:#1b3c74;
+}
+.doctor_detail div p{
+    width:500px;
+    color:#00a1cf;
+}
+.doctor_detail div button{
+    padding:10px 30px;
     color:white;
-    text-decoration: none;
-    font-weight:600;
-    font-family:'kumbh sans',sans-serif;
-    font-size:120%;
+    background-color: #08ad37;
+    border:none;
+    font-weight: bold;
+    border-radius: 5px;
 }
-header div a:hover{
-    color:yellow;
-    transition:0.2s;
-}
-div ul li{
-    text-decoration:none;
-    display:inline;
-}
-div ul li a{
-    text-decoration:none;
-    color: white;
-    font-weight:600;
-    font-size:120%;
-    margin-left: 10px;
-    margin-right:10px;
-}
-div ul li a:hover{
-    color:yellow;
-    transition:0.2s;
-}
-/* main{
-    background-color: aliceblue;
-} */
-section{
+.doctor_detail div button:hover{
     background-color: white;
-    margin-top: 10%;
-    margin-left: 8%;
-    padding:2%;
-    width:80%;
-    box-shadow: 3px 3px 10px 2px grey;
-    border: 1px solid transparent;
-    color:#03045E;
-}
-div.details{
-    display:flex;
-    justify-content:flex-start;
-}
-.details img{
-    width:20%;
-    height:20%;
-}
-details{
-    border:1px solid black;
+    color:#08ad37;
+    border:1px solid #08ad37;
+    transition: 0.3s;
 }

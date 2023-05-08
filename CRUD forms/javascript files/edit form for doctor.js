@@ -28,6 +28,7 @@ const docExpDuration = document.getElementById("experience_duration");
 const docExpType = document.getElementById("experience_type");
 const doc_department = document.getElementById("department");
 const docHospId = document.getElementById("hospital_id");
+const docDetail = document.getElementById("detail");
 
 const mon = document.getElementById("Monday");
 const tues = document.getElementById("Tuesday");
@@ -59,6 +60,7 @@ document.getElementById("find_details").addEventListener("click", (event) => {
     // docWorkingDays.checked = doctor.Working_days;
     docTimingFrom.value = doctor.Availabilities.starting_time;
     docTimingTo.value = doctor.Availabilities.ending_time;
+    docDetail.value = doctor.detail_page;
 
     mon.checked = doctor.Working_days.monday;
     tues.checked = doctor.Working_days.tuesday;
@@ -81,6 +83,7 @@ document.getElementById("find_details").addEventListener("click", (event) => {
         const doctorHospitalId = docHospId.value;
         const doctorTimeFrom = docTimingFrom.value;
         const doctorTimeTo = docTimingTo.value;
+        const doctor_detail_page = docDetail.value;
 
         // working days
         const m_day = mon.checked;
@@ -102,6 +105,7 @@ document.getElementById("find_details").addEventListener("click", (event) => {
         // doctor.Working_days = doctorWorkingDays;
         doctor.Availabilities.starting_time = doctorTimeFrom;
         doctor.Availabilities.ending_time = doctorTimeTo;
+        doctor.detail_page = doctor_detail_page;
 
         // working days
         doctor.Working_days.monday = m_day;
@@ -112,7 +116,6 @@ document.getElementById("find_details").addEventListener("click", (event) => {
         doctor.Working_days.saturday = sat_day;
         doctor.Working_days.sunday = sun_day;
 
-        // let department = document.getElementById("additional_department").value;
         const starting_time = document.getElementById("2nd_from").value;
         const ending_time = document.getElementById("2nd_to").value;
 

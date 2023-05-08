@@ -1,6 +1,4 @@
-document
-  .querySelector("form")
-  .addEventListener("submit", function uploadDoctor(e) {
+function uploadDoctor(e) {
     e.preventDefault();
     // hear i collect value from details form
     const Doctor_name = document.getElementById("doctor_name").value.trim();
@@ -56,6 +54,7 @@ document
     const starting_time = document.getElementById("from").value;
     const ending_time = document.getElementById("to").value;
     const uuid = uuidv4();
+    const detail_page = "./detail page.html"
 
     // here i give var name for local storage data (initially there is no data so we mentioned or (||) symbol to get empty array)
     const doctor_detail =
@@ -81,6 +80,7 @@ document
       doctor_detail.push({
         Doctor_name,
         Doctor_image,
+        detail_page,
         Qualifications,
         Experience,
         Departments,
@@ -102,4 +102,4 @@ document
       alert("doctor detail already exist!!");
       document.querySelector("form").reset();
     }
-  });
+  };

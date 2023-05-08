@@ -1,0 +1,233 @@
+main{
+    margin:60px;
+    font-family: 'Inter',sans-serif;
+}
+#sec1{
+    margin:10px 0;
+    padding:5% 0;
+    background-image: url("/assets/images/doctor with blue background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+    border-radius: 20px;
+    
+}
+#sec1 div{
+    margin-left:50%;
+    color:white;
+}
+#sec1 div button{
+    padding:2% 6%;
+    width:fit-content;
+    color:white;
+    font-weight: bold;
+    border: none;
+    background-color: #08ad37;
+    border-radius: 50px;
+    font-size: 20px;
+}
+#sec1 div button:hover{
+    background-color:white;
+    color:#08ad37;
+    transition: 0.4s;
+}
+#sec1 div input[type="text"]{
+    width:60%;
+    height:30px;
+    border-radius: 30px;
+    border: none;
+    padding:2px 2px 0px 15px;
+}
+#sec2{
+    margin:10px 0;
+   
+    display: flex;
+    justify-content: space-between;
+}
+#sec3{
+    background-image: linear-gradient(to bottom right,#00a1cf,#4abcf1,#ecf9ff);
+    display: flex;
+    margin:10px 0;
+   
+    border-radius: 20px;
+    color:white;
+}
+#sec3 img{
+    width:40%
+}#hospImage{
+    display:grid;
+    margin-left:150px;
+    grid-template-columns: repeat(auto-fit,minmax(10rem,1fr));
+    gap:0.5rem;
+    align-items: center;
+}
+#hospImage img{
+    opacity: 0.3;
+    filter:grayscale(100%)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media  screen and (max-width:800px) {
+    header,#hp{
+        width:auto;
+        display:flex;
+        justify-content:flex-start;
+        
+    }
+    header div img{
+        width:20%;
+    }
+    #hide{
+        content-visibility: hidden;
+    }
+    ul li a,.dropbtn{
+        display:ruby-base;
+        font-size:1rem;
+        padding:0%;
+    }
+    #vision,#vision-2{
+        display:unset;
+
+    }
+    #vision-2 a{
+        text-decoration: none;
+        color:white;
+        margin-right:20px;
+    }
+    #GWS{
+        margin-top:2%;
+        margin-left:2%;
+        margin-right:2%;
+        display:flex;
+        justify-content: space-around;
+        font-family: 'source sans pro',sans-serif;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: unset;
+        border-bottom-right-radius: unset;
+    }
+    #GWS div{
+        margin-left:9%;
+    }
+    #GWS div h1{
+        font-size:140%;
+        width:auto;
+        margin-top:15%;
+    }
+    #text,#search{
+        display:none;
+    }
+    #location{
+        content-visibility: visible;
+        background-color: #90E0EF;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        margin:0 2%;
+        padding:2% 0;
+        align-items: center;
+    }
+    #text-2{
+        width:70%;
+        margin-left:10%;
+        background-color: aliceblue;
+        border:1px solid black;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius:20px;
+        height:25px;
+    }
+    #search-2{
+        color:white;
+        background-image: linear-gradient(to right,#03045e,#1618b3,#4143b7,#4143b7,#1618b3,#03045e);
+        border:none;
+        border-top-right-radius:20px;
+        border-bottom-right-radius: 20px;
+        margin-left:-4px;
+        margin-top:-10px;
+        font-size:50%;
+       width:10%;
+        height:28px;
+    }
+    #start{
+        padding:10% 15%;
+        border-radius:10px;
+        font-size:50%;
+    }
+    #about_us{
+        padding:5% 0;
+        font-size:90%;
+        margin:20px;
+    }
+    .box{
+        display:flex;
+        width:auto;
+        margin:0 5%;
+    }
+    .box div{
+        border-radius:10px;
+        width:85%;
+        height:30%;
+        margin-bottom:20px;
+        padding: 15px;
+    }
+    footer{
+        font-size: 90%;
+    }
+    footer div.ftr{
+        flex-direction:column;
+        row-gap:5%;
+        margin-left:25%;
+        justify-content: space-between;
+    }
+    footer div.ftr div{
+        margin:2% 0;
+    }
+    footer div img{
+        width:20%;
+        left:40%;
+    }
+} */

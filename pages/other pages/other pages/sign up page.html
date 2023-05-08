@@ -1,183 +1,201 @@
+<!-- eslint-disable func-names -->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Sign up</title>
-        <link rel="stylesheet" href="../../../assets/css/register.css">
-        <link rel="icon" href="../../../assets/images/hospital logo 3.JPG">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Hammersmith+One&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
 
-        <style>
-            .password_container{
-                position:relative
-            }
-            .eye_icon-1,.eye_icon-2{
-                position:absolute;
-                top: 8px;
-                right:0;
-                cursor:pointer;
-            }
-            .hide{
-                visibility:hidden;
-            }
-        </style>
-    </head>
-    <body>
-        <header id="header">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Sign up</title>
+    <!-- <link rel="stylesheet" href="../../../assets/css/register.css"> -->
+    <link rel="stylesheet" href="../../../assets/css/header.css">
+    <link rel="stylesheet" href="../../../assets/css/signup.css">
+    <link rel="stylesheet" href="../../../assets/css/footer.css">
+    <link rel="icon" href="../../../assets/images/logo for care central.JPG">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
-        </header>
+    <style>
+        .password_container {
+            position: relative
+        }
 
-        </header>
-        <main>
-            <form class="sgn" role="form">
-                <!-- <img src="../../../assets/images/hospital_logo_3-removebg-preview.png" style="width:30%;margin-left:35%" alt="logo of get well soon"> -->
-                <h2 style="color:#03045e;text-align: center;">SIGN UP</h2>
-                <br>
-                <br>
-                <section>
+        .eye_icon-1,
+        .eye_icon-2 {
+            position: absolute;
+            top: 5px;
+            right: 2%;
+            cursor: pointer;
+        }
+
+        .hide {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header"></header>
+    <main>
+        <form class="sgn" role="form" onsubmit="enter(event)">
+            <center><img src="../../../assets/images/logo_for_care_central-removebg-preview.png"
+                    alt="logo for carecentral" style="width:30%;"></center>
+            <center>
+                <h2 style="font-size: 35px;color:#1b3c74">SIGN UP</h2>
+            </center>
+            <section>
+                <div>
                     <div>
-                        <div>
-                            <label>First name</label>
-                        </div>
-                        <div>
-                            <input type="text" id="first_name" required="true" style="width:100%;height:30px" pattern="[A-Za-z].*">
-                        </div>
+                        <label>First name</label>
                     </div>
-                    <br>
                     <div>
-                        <div>
-                            <label>Last name</label>
-                        </div>
-                        <div>
-                            <input type="text" id="last_name" style="width:100%;height:30px" required pattern="[A-Za-z].*">
-                        </div>
+                        <input type="text" id="first_name" style="width:290px" />
                     </div>
-                    <br>
-                    <div style="display:flex">
-                        <div>
-                            <div>
-                                <label>Age</label>
-                            </div>
-                            <div>
-                                <input type="number" id="age" style="height:30px" required>
-                            </div>
-                        </div>
-                        <div style="margin-left: 20px;">
-                            <div>
-                                <label for="">Gender</label>
-                            </div>
-                            <br>
-                            <div>
-                                <input type="radio" id="male" name="M_F_O" required>  male
-                                <input type="radio" id="female" name="M_F_O" required>  female
-                                <input type="radio" id="others" name="M_F_O" required>  others
-                            </div>
-                        </div>
-                    </div>
-                    <br>
+                </div>
+                <div style="margin-left:20px">
                     <div>
-                        <div>
-                            <label>Mobile number</label>
-                        </div>
-                        <div>
-                            <input type="tel" id="mobile_number" style="width:100%;height:30px" required pattern="[6-9]{1}[0-9]{9}">
-                        </div>
+                        <label>Last name</label>
                     </div>
-                    <br>
                     <div>
-                        <div>
-                            <label>Email address</label>
-                        </div>
-                        <div>
-                            <input type="email" id="user_email" style="width:100%;height:30px" required>
-                        </div>
+                        <input type="text" id="last_name" style="width:290px" />
                     </div>
-                    <br>
+                </div>
+            </section>
+            <br>
+            <section>
+                <div>
                     <div>
-                        <div>
-                            <label>Create Password</label>
-                        </div>
-                        <div class="password_container">
-                            <input type="password" required="true" id="pass_1" style="width:100%;height:30px" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-                            <a id="toggle-password-1">
-                                <span class="eye_icon-1 hide" id="open_eye-1">
-                                    <i class="fa fa-eye" style="color:#03045e;font-size:20px"></i>
-                                </span>
-                                <span class="eye_icon-1" id="close_eye-1">
-                                    <i class="fa fa-eye-slash" style="color:#03045e;font-size:20px"></i>
-                                </span>
-                            </a>
-                        </div>
-                        
+                        <label>Age</label>
                     </div>
-                    <br>
                     <div>
-                        <div>
-                            <label>Confirm Password</label>
-                        </div>
-                        <div class="password_container">
-                            <input type="password" id="pass_2" required="true" style="width:100%;height:30px" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-                            <a id="toggle-password-2">
-                                <span class="eye_icon-2 hide" id="open_eye-2">
-                                    <i class="fa fa-eye" style="color:#03045e;font-size:20px"></i>
-                                </span>
-                                <span class="eye_icon-2" id="close_eye-2">
-                                    <i class="fa fa-eye-slash" style="color:#03045e;font-size:20px"></i>
-                                </span>
-                            </a>
-                        </div>
-                        
+                        <input type="number" id="age" style="width:120px" />
                     </div>
-                    <br>
-                    <div style="text-align:center">
-                        <div>
-                            <label>The user is a:</label>
-                        </div>
-                        <br>
-                        <div>
-                            <input type="radio" name="D_P" id="doctor" required="true">
-                            <label>Doctor</label>
-                            <input type="radio" name="D_P" id="patient" required="true">
-                            <label>Patient</label>
-                        </div>
+                </div>
+                <div style="margin-left:20px;">
+                    <div>
+                        <label>Gender</label>
                     </div>
-                    <br>
-                    <div style="display:flex;justify-content:space-between">
-                        <div>
-                            <a href="../other pages/login.html" style="color:blue">
-                                Already a member?
-                            </a>
-                        </div>
-                        <div>
-                            <button type="submit">SIGN UP</button>
-                        </div>
+                    <div>
+                        <select id="gender" style="width:150px">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="others">Others</option>
+                        </select>
                     </div>
-                </section>
-            </form>
-        </main>
-        <script src="../../../Javascript files/header.js"></script>
-        <script>indexPage();
-</script>
-        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
-        <script src="../../../Javascript files/form_1.js"></script>
-        <script>
+                </div>
+                <div style="margin-left:20px">
+                    <div>
+                        <label>Mobile number</label>
+                    </div>
+                    <div>
+                        <input type="tel" id="mobile_number" pattern="[6-9]{1}[0-9]{9}" style="width:290px">
+                    </div>
+                </div>
+            </section>
+            <br>
+            <section>
+                <div>
+                    <div>
+                        <label>Email address</label>
+                    </div>
+                    <div>
+                        <input type="email" id="user_email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                            style="width:290px">
+                    </div>
+                </div>
+                <div style="margin-left:20px">
+                    <div>
+                        <label>Role of the user</label>
+                    </div>
+                    <div>
+                        <select id="role" style="width:290px">
+                            <option value="doctor">Doctor</option>
+                            <option value="patient">Patient</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <section>
+                <div>
+                    <div>
+                        <label for="">Create password</label>
+                    </div>
+                    <div class="password_container">
+                        <input type="password" required="true" id="pass_1" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            style="width:290px">
+                        <a id="toggle-password-1">
+                            <span class="eye_icon-1 hide" id="open_eye-1">
+                                <i class="fa fa-eye" style="color:#08ad37;font-size:20px"></i>
+                            </span>
+                            <span class="eye_icon-1" id="close_eye-1">
+                                <i class="fa fa-eye-slash" style="color:#1b3c74;font-size:20px"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div style="margin-left:20px">
+                    <div>
+                        <label>Confirm password</label>
+                    </div>
+                    <div class="password_container">
+                        <input type="password" id="pass_2" required="true" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            style="width:290px">
+                        <a id="toggle-password-2">
+                            <span class="eye_icon-2 hide" id="open_eye-2">
+                                <i class="fa fa-eye" style="color:#08ad37;font-size:20px"></i>
+                            </span>
+                            <span class="eye_icon-2" id="close_eye-2">
+                                <i class="fa fa-eye-slash" style="color:#1b3c74;font-size:20px"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <button type="submit" id="register">SIGN UP</button>
+        </form>
+    </main>
+    <footer>
+        <div id="Contact">
+            <div>
+                <h3>FOLLOW US</h3>
+                <p><i class="fa-brands fa-square-facebook"></i> Facebook</p>
+                <p><i class="fa-brands fa-square-instagram"></i> Instagram</p>
+                <p><i class="fa-brands fa-square-twitter"></i> Twitter</p>
+                <p><i class="fa-brands fa-square-google-plus"></i> Google</p>
+            </div>
+            <div style="border-left:1px solid grey;width:50%;text-align: right;">
+                <h3>CONTACT US</h3>
+                <p><i class="fa-solid fa-phone"></i> +91 6754239901</p>
+                <p><i class="fa-solid fa-envelope"></i> carecentral@gmail.com</p>
+            </div>
+        </div>
+        <div>
+            <p style="text-align: center;">copyrights@2023 carecentral. All Rights Reserved</p>
+        </div>
+    </footer>
+    <script src="../../../Javascript files/header.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+    <script src="../../../Javascript files/form_1.js"></script>
+    <script>
             const create_password = document.getElementById("pass_1");
             const confirm_password = document.getElementById("pass_2");
 
             const note = document.createElement("p");
             note.innerText =
-    "enter at least 8 to 12 characters with a combination of uppercase , lowercase , numbers and special symbols";
+  "enter at least 8 to 12 characters with a combination of uppercase , lowercase , numbers and special symbols";
             note.style.fontSize = "13px";
             note.style.fontWeight = "bold";
             note.style.fontStyle = "Roboto-Condensed";
             note.style.color = "green";
 
+            // eslint-disable-next-line func-names
             create_password.addEventListener("focus", function () {
               create_password.insertAdjacentElement("afterend", note);
             });
+            // eslint-disable-next-line func-names
             create_password.addEventListener("blur", function () {
               note.remove();
             });
@@ -188,6 +206,7 @@
 
             let passwordVisibility1 = false;
 
+            // eslint-disable-next-line func-names
             togglePassword1.addEventListener("click", function () {
               if (!passwordVisibility1) {
                 openedEye1.classList.remove("hide");
@@ -207,6 +226,7 @@
 
             let passwordVisibility2 = false;
 
+            // eslint-disable-next-line func-names
             togglePassword2.addEventListener("click", function () {
               if (!passwordVisibility2) {
                 openedEye2.classList.remove("hide");
@@ -220,8 +240,13 @@
               passwordVisibility2 = !passwordVisibility2;
             });
         </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js" integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
+        integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    </body>
+</body>
+
 </html>
