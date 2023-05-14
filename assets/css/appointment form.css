@@ -5,6 +5,7 @@ main{
     border:1px solid black;
     padding:1% 2%;
     position:relative;
+    left:20%;
 }
 form h2{
     color:#1b3c74;
@@ -62,6 +63,12 @@ span button{
     border: none;
     font-weight: bold;
     border-radius: 3px;
+}
+span button:hover{
+    background-color: white;
+    color:#08ad37;
+    border:1px solid #08ad37;
+    transition: 0.3s;
 }
 
 

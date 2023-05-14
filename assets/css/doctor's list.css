@@ -62,8 +62,7 @@ article{
 .card{
     border:1.5px solid transparent;
     position: relative;
-    border-radius:0px;
-    width:50%;
+    width:200px;
     height:fit-content;
     padding-top:2%;
     padding-left:10%;
@@ -79,7 +78,8 @@ article{
     color:#1b3c74;
 }
 .card button{
-    width:136%;
+    position: relative;
+    width:275px;
     padding:15px 5%;
     margin-left:-20%;
     color:white;

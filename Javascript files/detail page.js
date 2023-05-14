@@ -1,12 +1,9 @@
 const hsp = new URLSearchParams(window.location.search).get('hospital-id');
 const a = JSON.parse(localStorage.getItem("doctor_detail"));
-const back = `
-    <a href="../other pages/doctor's list.html?hospital-id=${hsp}" style="text-decoration: none; color:#1b3c74" id="back">
-        <i class="fa fa-angle-double-left"></i>
-        <b>Back</b>
-    </a>
-`
-document.querySelector("#header").insertAdjacentHTML('afterend', back);
+const back = document.getElementById("back");
+back.addEventListener('click', function () {
+    window.history.back();
+})
 
 
 const dctr = new URLSearchParams(window.location.search).get('doctor-id');
@@ -16,7 +13,7 @@ for (let i = 0; i < a.length; i++) {
     if (dctr === b.uuid) {
         const doctorCard = renderCard(b);
 
-        document.querySelector("main").insertAdjacentHTML('beforeend', doctorCard)
+        document.querySelector("main").insertAdjacentHTML('afterbegin', doctorCard)
     }
 }
 
@@ -50,7 +47,7 @@ function renderCard(b) {
     const timeCount = timeArray.length;
 
     for (let i = 0; i < timeCount; i++) {
-      timeString += renderTime(timeArray[i]);
+        timeString += renderTime(timeArray[i]);
     }
 
     let dayString = [];
@@ -58,9 +55,9 @@ function renderCard(b) {
 
     // eslint-disable-next-line no-restricted-syntax
     for (const key in dayObj) {
-      if (dayObj[key] === true) {
-        dayString.push(workingDays(key));
-      }
+        if (dayObj[key] === true) {
+            dayString.push(workingDays(key));
+        }
     }
 
     const card = `
@@ -82,9 +79,6 @@ function renderCard(b) {
                         <a href="../patient/appointment-form.html?doctor-id=${dctr}" style="text-decoration:none">
                             <button type="button">Book Appointment</button>
                         </a>
-                        <span style="margin-left:10px">
-                            <button type="button">View Reviews</button>
-                        </span>
                     </div>
                 </div>
             </div>
@@ -93,3 +87,27 @@ function renderCard(b) {
 
     return card;
 }
+
+// const patientReview = JSON.parse(localStorage.getItem('patient_review'));
+
+
+// for(let k=0;k<patientReview.length;k++){
+//     if(dctr === patientReview[k]["doctorid"]){
+//         const reviewCard = `
+//             <section class="review">
+//                 <div>
+//                     <div>
+//                         <img src="../../../assets/images/22-223968_default-profile-picture-circle-hd-png-download-removebg-preview.png">
+//                     </div>
+//                     <div>
+//                         <p>${patientReview[k]["userid"]}</p>
+//                     </div>
+//                 </div>
+//                 <div>
+//                     <p>${patientReview[k]["review_message"]}</p>
+//                 </div>
+//             </section>
+//         `
+//         document.querySelector('main').insertAdjacentHTML('beforeend' , reviewCard);
+//     }
+// }

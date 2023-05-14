@@ -1,44 +1,55 @@
-const userName = document.getElementById("name");
+const userFirstName = document.getElementById("first_name");
+const userLastName = document.getElementById("last_name");
 const userAge = document.getElementById("age");
 
-const gender_1 = document.getElementById("male");
-const gender_2 = document.getElementById("female");
-const gender_3 = document.getElementById("others");
+// const gender_1 = document.getElementById("male");
+// const gender_2 = document.getElementById("female");
+// const gender_3 = document.getElementById("others");
+
+const userGender = document.getElementById("gender");
 
 const mobileNumber = document.getElementById("mobile_number");
-const emailId = document.getElementById("user_email");
+const emailId = document.getElementById("email");
 
 const unique_id = JSON.parse(localStorage.getItem("uniqueUser"));
 const user_detail = JSON.parse(localStorage.getItem("user_detail"));
 
 const user = user_detail.find((detail) => detail.email_id === unique_id);
 if (user) {
-  userName.value = user.f_name;
+  userFirstName.value = user.f_name;
+  userLastName.value = user.l_name;
   userAge.value = user.age;
   mobileNumber.value = user.mobile;
   emailId.value = user.email_id;
-  gender_1.checked = user.user_gender.male;
-  gender_2.checked = user.user_gender.female;
-  gender_3.checked = user.user_gender.others;
+  userGender.value = user.user_gender;
+  // gender_1.checked = user.user_gender.male;
+  // gender_2.checked = user.user_gender.female;
+  // gender_3.checked = user.user_gender.others;
 
   document.getElementById("updateUser").onclick = function update_user(event) {
     event.preventDefault();
-    const uName = userName.value;
+    const uFName = userFirstName.value;
+    const uLName = userLastName.value;
     const uAge = userAge.value;
     const uNumber = mobileNumber.value;
     const uEmail = emailId.value;
 
-    const u_gender_1 = gender_1.checked;
-    const u_gender_2 = gender_2.checked;
-    const u_gender_3 = gender_3.checked;
+    // const u_gender_1 = gender_1.checked;
+    // const u_gender_2 = gender_2.checked;
+    // const u_gender_3 = gender_3.checked;
 
-    user.f_name = uName;
+    const uGender = userGender.value;
+
+    user.f_name = uFName;
+    user.l_name = uLName;
     user.age = uAge;
     user.mobile = uNumber;
     user.email_id = uEmail;
-    user.user_gender.male = u_gender_1;
-    user.user_gender.female = u_gender_2;
-    user.user_gender.others = u_gender_3;
+    // user.user_gender.male = u_gender_1;
+    // user.user_gender.female = u_gender_2;
+    // user.user_gender.others = u_gender_3;
+
+    user.user_gender = uGender;
 
     localStorage.setItem("user_detail", JSON.stringify(user_detail));
     alert("updated successfully");

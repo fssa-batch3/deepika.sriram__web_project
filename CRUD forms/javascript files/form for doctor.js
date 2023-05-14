@@ -49,12 +49,22 @@ function uploadDoctor(e) {
     condition(saturday, "saturday");
     condition(sunday, "sunday");
 
-    console.log(Working_days);
 
     const starting_time = document.getElementById("from").value;
     const ending_time = document.getElementById("to").value;
     const uuid = uuidv4();
-    const detail_page = "./detail page.html"
+
+    const doctor_description = document.getElementById('doctorDescription').value;
+
+    let timeStamp = new Date();
+    const created_date = timeStamp.toLocaleDateString('en-US');
+    const created_time = timeStamp.toLocaleTimeString('en-US');
+    const modified_date = "";
+    const modified_time = "";
+
+    const doctor_mobile_number = document.getElementById("doctor_mobile_number").value;
+    const doctor_email_address = document.getElementById("doctor_email").value;
+    const password = document.getElementById("doctor_password").value;
 
     // here i give var name for local storage data (initially there is no data so we mentioned or (||) symbol to get empty array)
     const doctor_detail =
@@ -80,7 +90,6 @@ function uploadDoctor(e) {
       doctor_detail.push({
         Doctor_name,
         Doctor_image,
-        detail_page,
         Qualifications,
         Experience,
         Departments,
@@ -88,6 +97,14 @@ function uploadDoctor(e) {
         Working_days,
         Availabilities,
         uuid,
+        doctor_description,
+        created_date,
+        created_time,
+        modified_date,
+        modified_time,
+        doctor_mobile_number,
+        doctor_email_address,
+        password
       });
 
       localStorage.setItem("unique_id", Doctor_name);

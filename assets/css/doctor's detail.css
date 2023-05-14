@@ -35,3 +35,32 @@ main{
     border:1px solid #08ad37;
     transition: 0.3s;
 }
+/* .hr-lines {
+    position: relative;
+    max-width:100%;
+    margin: 30px auto;
+    text-align: center;
+    color:#1b3c74;
+}
+
+.hr-lines:before {
+    content: " ";
+    height: 5px;
+    width:35%;
+    background:#00a1cf;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left:0;
+}
+
+.hr-lines:after {
+    content: " ";
+    height: 5px;
+    width:35%;
+    background:#00a1cf;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right:0;
+} */

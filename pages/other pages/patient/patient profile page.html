@@ -1,109 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <title>patient profile page</title>
-        <link rel="stylesheet" href="../../../assets/css/my project 3.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="icon" href="../../../assets/images/hospital logo 3.JPG">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Hammersmith+One&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
-            rel="stylesheet">
-    </head>
+<head>
+    <title>patient profile page</title>
+    <link rel="stylesheet" href="../../../assets/css/header.css">
+    <link rel="stylesheet" href="../../../assets/css/profile page.css">
+    <link rel="stylesheet" href="../../../assets/css/footer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../../assets/images/logo for care central.JPG">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <style>
+        #user_image{
+            display: none;
+        }
+    </style>
+</head>
 
-    <body>
-        <header id="header">
+<body>
+    <header id="header"></header>
+    <main>
+        <form id="profile">
+            <div>
+                <!-- <img src="https://freeimage.host/i/HUBXMRp"
+                    id="profile_img" alt=""> -->
+                    <img src="https://iili.io/HUBXMRp.png" alt="HUBXMRp.png" border="0" id="profile_img"/>
+            </div>
 
-        </header>
-        <main>
-            <form>
-                <div id="profile" style="text-align: center">
-                    <h1>Profile</h1>
-                </div>
-            
-                <div>
-                    <label>Username</label>
-                </div>
-                <br>
-                <div>
-                    <input type="text" id="name"
-                        style="width:95%;height:30px;border:0.5px solid black;padding-left: 10px">
-                </div>
-                <br>
-                <div class="frm">
-                    <div>
-                        <div>
-                            <label>Age</label>
-                        </div>
-                        <br>
-                        <div>
-                            <input type="number" id="age"
-                                style="width:50%;height:30px;border:0.5px solid black;padding-left: 10px">
-                        </div>
-                    </div>
-                    <div style="margin-left:20px">
-                        <div>
-                            <label>Gender</label>
-                        </div>
-                        <br>
-                        <br>
-                        <div>
-                            <input type="radio" id="male" name="M_F_O">
-                            <label>male</label>
-                            <input type="radio" id="female" name="M_F_O">
-                            <label>female</label>
-                            <input type="radio" id="others" name="M_F_O">
-                            <label>others</label>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div>
-                    <label>Mobile number</label>
-                </div>
-                <br>
-                <div>
-                    <input type="tel" id="mobile_number"
-                        style="width:90%;height:30px;border:0.5px solid black;padding-left: 10px">
-                </div>
-                <br>
+            <h1 style="text-align: center;">PROFILE</h1>
+            <section>
                 <div>
                     <div>
-                        <div>
-                            <label>E-mail id</label>
-                        </div>
-                        <br>
-                        <div>
-                            <input type="email" id="user_email"
-                                style="width:99%;height:30px;border:0.5px solid black;padding-left:10px" disabled>
-                        </div>
+                        <label for="">First name</label>
+                    </div>
+                    <div>
+                        <input type="text" id="first_name" style="width: 250px;" />
                     </div>
                 </div>
-                <br>
-                <div id="frm">
-                    <div style="margin-top:5%">
-                        <button type="submit" id="updateUser">Update profile</button>
+                <div style="margin-left: 5%;">
+                    <div>
+                        <label for="">Last name</label>
                     </div>
-                    <div style="margin-top:5%;">
-                        <a href="../../../index.html">
-                            <button type="button">Skip</button>
-                        </a>
+                    <div>
+                        <input type="text" id="last_name" style="width: 250px;" />
                     </div>
                 </div>
-            </form>
-        </main>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-            crossorigin="anonymous" referrerpolicy="no-referrer">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
-            integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="../../../CRUD forms/javascript files/profile form.js"></script>
-        <script src="../../../Javascript files/header.js"></script>
-        <script>indexPage();
-</script>
-    </body>
+            </section>
+            <br>
+            <section>
+                <div>
+                    <div>
+                        <label for="">Age</label>
+                    </div>
+                    <div>
+                        <input type="number" id="age" style="width:80px" />
+                    </div>
+                </div>
+                <div style="margin-left: 5%;">
+                    <div>
+                        <label for="">Gender</label>
+                    </div>
+                    <div>
+                        <select id="gender" style="width:140px">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+                </div>
+                <div style="margin-left: 5%;">
+                    <div>
+                        <label for="">Mobile number</label>
+                    </div>
+                    <div>
+                        <input type="tel" id="mobile_number" style="width: 250px;" />
+                    </div>
+                </div>
+            </section>
+            <br>
+            <section>
+                <div>
+                    <div>
+                        <label for="">Email address</label>
+                    </div>
+                    <div>
+                        <input type="email" id="email" style="width: 530px;" />
+                    </div>
+                </div>
+            </section>
+            <br>
+            <section>
+                <button type="button" id="updateUser">Update</button>
+            </section>
+        </form>
+    </main>
+    <footer>
+        <div id="Contact">
+            <div>
+                <h3>FOLLOW US</h3>
+                <p><i class="fa-brands fa-square-facebook"></i> Facebook</p>
+                <p><i class="fa-brands fa-square-instagram"></i> Instagram</p>
+                <p><i class="fa-brands fa-square-twitter"></i> Twitter</p>
+                <p><i class="fa-brands fa-square-google-plus"></i> Google</p>
+            </div>
+            <div style="border-left:1px solid grey;width:50%;text-align: right;">
+                <h3>CONTACT US</h3>
+                <p><i class="fa-solid fa-phone"></i> +91 6754239901</p>
+                <p><i class="fa-solid fa-envelope"></i> carecentral@gmail.com</p>
+            </div>
+        </div>
+        <div>
+            <p style="text-align: center;">copyrights@2023 carecentral. All Rights Reserved</p>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
+        integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../../../Javascript files/header.js"></script>
+    <script src="../../../CRUD forms/javascript files/profile form.js"></script>
+</body>
 
 </html>

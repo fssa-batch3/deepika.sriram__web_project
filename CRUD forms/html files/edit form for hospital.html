@@ -110,7 +110,7 @@
           const uniqueId = unique_id.value;
           const hospital_details = JSON.parse(localStorage.getItem("hospital_detail"));
           const hospital = hospital_details.find(
-    (detail) => detail.hospital_id === uniqueId
+            (detail) => detail.hospital_id === parseInt(uniqueId)
           );
 
           if (hospital) {
@@ -167,7 +167,7 @@
           const uniqueId = unique_id.value;
           const hospital_details = JSON.parse(localStorage.getItem("hospital_detail"));
           const hospitalIndex = hospital_details.findIndex(
-    (detail) => detail.hospital_name === uniqueId
+    (detail) => detail.hospital_id === parseInt(uniqueId)
           );
 
           if (hospitalIndex > -1) {

@@ -29,6 +29,7 @@ function enter(e) {
   const confirm_password = document.getElementById("pass_2").value.trim();
   // eslint-disable-next-line no-undef
   const uuid = uuidv4();
+
   const user_role = document.getElementById('role').value;
   // const doctor = document.getElementById("doctor").checked;
   // const patient = document.getElementById("patient").checked;
@@ -74,7 +75,7 @@ function enter(e) {
         create_password,
         confirm_password,
         user_role,
-        uuid,
+        uuid
       });
 
       localStorage.setItem("user_detail", JSON.stringify(user_detail));

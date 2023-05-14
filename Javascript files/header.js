@@ -1,15 +1,16 @@
 const { origin } = window.location;
 const about = `${origin}/pages/other pages/other pages/about us.html`;
-const image = `${origin}/assets/images/logo_for_care_central-removebg-preview.png`;
+const image = `${origin}/assets/images/deepika logo-4.png`;
 const login = `${origin}/pages/other pages/other pages/login.html`;
 const signup = `${origin}/pages/other pages/other pages/sign up page.html`;
 const profile = `${origin}/pages/other pages/patient/patient profile page.html`;
 const appointment_history = `${origin}/pages/other pages/patient/history.html`;
 const hospitals = `${origin}/pages/other pages/patient/list of hospital page.html`;
 const menu = `${origin}/pages/other pages/other pages/menu.html`;
-const femaleAvatar = `${origin}/assets/images/female_Avatar-removebg-preview.png`;
-const maleAvatar = `${origin}/assets/images/male_Avatar-removebg-preview.png`;
-const otherAvatar = `${origin}/assets/images/profile avatar.png`;
+const avatar = `${origin}/assets/images/22-223968_default-profile-picture-circle-hd-png-download-removebg-preview.png`
+// const femaleAvatar = `${origin}/assets/images/female_Avatar-removebg-preview.png`;
+// const maleAvatar = `${origin}/assets/images/male_Avatar-removebg-preview.png`;
+// const otherAvatar = `${origin}/assets/images/profile avatar.png`;
 const index = `${origin}/index.html`;
 
 const heading_1 = `
@@ -46,9 +47,6 @@ const heading_2 = `
             <a href="${hospitals}">Hospitals</a>
         </li>
         <li>
-            <a href="#">Specialist</a>
-        </li>
-        <li>
             <a href="${signup}">About Us</a>
         </li>
         <li>
@@ -57,6 +55,7 @@ const heading_2 = `
     </ul>
     <div class="dropdown" style="width:10%">
       <a id="image" href="javascript:void(0)" class="dropbtn"></a>
+      <img src="${avatar}" id="avatar"/>
       <div class="dropdown-content">
         <a id="signout">Sign out <i class="fa fa-sign-out"></i></a>
         <a href="${appointment_history}">History <i class="fa fa-history"></i> </a>
@@ -71,12 +70,9 @@ function indexPage() {
   const unique = JSON.parse(localStorage.getItem("uniqueUser"));
   const header = document.getElementById("header");
 
-  const maleImage = `<img id="avatar" class="profile" src="${maleAvatar}">`;
-  const femaleImage = `<img id="avatar" class="profile" src="${femaleAvatar}">`;
-  const otherImage = `<img id="avatar" class="profile" src="${otherAvatar}"></i>`;
   const user_detail = JSON.parse(localStorage.getItem("user_detail"));
 
-  const profileForm = document.querySelector("#profile");
+  
   const registerButton = `
   <div>
     <a href="/pages/other pages/other pages/sign up page.html">
@@ -95,14 +91,7 @@ function indexPage() {
         </div>
     `;
 
-  // const registerButton = `
-  // <div>
-  //   <a href="${signup}">
-  //     <button type="button" id="register">Register</button>
-  //   </a>
-  // </div>
-  // `
-  // let searchField = document.querySelector('#searchField');
+ 
 
   if (user_detail) {
     const user = user_detail.find((detail) => detail.email_id === unique);
@@ -112,33 +101,6 @@ function indexPage() {
     } else {
       header.innerHTML = heading_2;
       if (user) {
-        if (user.user_gender.male === true) {
-          document
-            .querySelector("#image")
-            .insertAdjacentHTML("beforeend", maleImage);
-          if (profileForm) {
-            maleImage.id = "profileImage";
-            profileForm.insertAdjacentHTML("afterbegin", maleImage);
-          }
-        }
-        if (user.user_gender.female === true) {
-          document
-            .querySelector("#image")
-            .insertAdjacentHTML("beforeend", femaleImage);
-          if (profileForm) {
-            femaleImage.id = "profileImage";
-            profileForm.insertAdjacentHTML("afterbegin", femaleImage);
-          }
-        }
-        if (user.user_gender.others === true) {
-          document
-            .querySelector("#image")
-            .insertAdjacentHTML("beforeend", otherImage);
-          if (profileForm) {
-            otherImage.id = "profileImage";
-            profileForm.insertAdjacentHTML("afterbegin", otherImage);
-          }
-        }
         if (section_1) {
           section_1.removeChild(section_1.lastElementChild)
           section_1.insertAdjacentHTML('beforeend', searchBar)
@@ -147,6 +109,7 @@ function indexPage() {
           event.preventDefault();
 
           alert("logged out successfully");
+          window.location.href=index;
           document.querySelector("#city").remove();
           document.querySelector("#search").remove();
           section_1.insertAdjacentHTML("beforeend" , registerButton);

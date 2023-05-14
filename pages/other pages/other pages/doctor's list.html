@@ -19,10 +19,7 @@
 <body>
   <header id="header"></header>
   <br>
-  <a href="../patient/list of hospital page.html" style="text-decoration: none; color:#1b3c74" id="back">
-    <i class="fa fa-angle-double-left"></i>
-    <b>Back</b>
-  </a>
+  <a id="back" style="cursor: pointer;"><b>BACK</b></a>
   <main>
     <section id="list">
       <h1 style="font-size: 40px;color:#1b3c74" class="hr-lines">OUR DOCTORS</h1>
@@ -96,7 +93,7 @@
             <p>${doctor.Departments}</p>   
           </div> 
           <div>
-            <a href="${doctor.detail_page}?hospital-id=${doctor.Hospital_id}&doctor-id=${doctor.uuid}">
+            <a href="../other pages/detail page.html?hospital-id=${doctor.Hospital_id}&doctor-id=${doctor.uuid}">
               <button type="button">View doctor</button>    
             </a>    
           </div> 
@@ -107,92 +104,11 @@
     }
   }
 
-</script>
-<script>
-  // eslint-disable-next-line radix
-  
+  const back = document.getElementById("back");
+  back.addEventListener('click' , function(){
+    window.history.back()
+  })
 
-  // console.log(doctors)
-
-  // function renderTime(time) {
-  //   // eslint-disable-next-line no-unreachable-loop
-  //   for (let i = 0; i < 2; i++) {
-  //     return `
-  //           <span>
-  //             from ${time.starting_time} to ${time.ending_time}
-  //           </span>
-  //           `;
-  //   }
-  // }
-  // function workingDays(day) {
-  //   return `
-  //       <span>${day},
-  //       `;
-  // }
-  // function renderCard(doctor) {
-  //   let departmentString = "";
-  //   const departmentArray = doctor.Departments;
-  //   departmentString += departmentArray.join(", ");
-
-  //   let qualificationString = "";
-  //   const qualificationArray = doctor.Qualifications;
-  //   qualificationString += qualificationArray.join(", ");
-
-  //   let timeString = "";
-  //   const timeArray = doctor.Availabilities;
-  //   const timeCount = timeArray.length;
-
-  //   for (let i = 0; i < timeCount; i++) {
-  //     timeString += renderTime(timeArray[i]);
-  //   }
-
-  //   let dayString = "";
-  //   const dayObj = doctor.Working_days;
-
-  //   // eslint-disable-next-line no-restricted-syntax
-  //   for (const key in Object.keys(dayObj)) {
-  //     if (dayObj[key] === true) {
-  //       dayString += workingDays(key);
-  //     }
-  //   }
-
-  //   const card = `
-  //           <div class="card" style="width:40%;height:70%">
-  //               <div>
-  //                  <img src="${doctor.Doctor_image}">
-  //               </div>
-  //               <br>
-  //               <div style="margin-left:-20%;width:300px">
-  //                   <h3 style = "width:auto">${doctor.Doctor_name}</h3>
-  //                   <p>${qualificationString}</p>
-  //                   <p><span style="font-weight:bold">${doctor.Experience.experience_duration} </span>
-  //                   ${doctor.Experience.experience_type} experience overall
-  //        ${departmentString}
-  //     </p>
-  //                   <p><span style="font-weight:bold">Time availability:</span> <span>${timeString}</span> </p>
-  //                   <p><span style="font-weight:bold">Working days:</span> <span>${dayString}</span> </p>
-  //               </div>
-  //               <br>
-  //               <div style="display:flex;justify-content:space-between;margin-left:-20%;">
-  //                   <a href="../patient/appointment-form.html?hospital-id=${doc}&doctor-id=${doctor.uuid}">
-  //                       <button type="button">Book appointment</button>
-  //                   </a>
-  //                   <button type="button">See reviews</button>
-  //               </div>
-  //           </div>
-  //       `;
-  //   return card;
-  // }
-
-  // for (let i = 0; i < doctors.length; i++) {
-  //   const doctor = doctors[i];
-  //   // eslint-disable-next-line radix
-  //   if (doc === parseInt(doctor.Hospital_id)) {
-  //     const doctorCard = renderCard(doctor);
-  //     document.querySelector("main").insertAdjacentHTML("beforeend", doctorCard);
-  //   }
-  // }
-    // eslint-disable-next-line consistent-return
 </script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
   integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
