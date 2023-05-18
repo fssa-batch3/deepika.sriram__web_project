@@ -19,9 +19,14 @@ function bookAppointment(e) {
     const doctorName = document.getElementById("doctor_name").value;
     const dateandtime = new Date();
 
+    const doctorId = new URLSearchParams(window.location.search).get('doctor-id');
+
     const dateOfBooking = dateandtime.toLocaleDateString('en-US');
     const timeOfBooking = dateandtime.toLocaleTimeString('en-US');
-    const dateOfConsultation = document.getElementById("consultDate").value;
+
+    let dateconsult = document.getElementById("consultDate").value;
+    const dateConsult_2 = new Date(dateconsult);
+    const dateOfConsultation = dateConsult_2.toLocaleString();
     const patient_mobile_number =
       document.getElementById("mobile_number").value;
     const appointment_id = uuidv4();
@@ -39,6 +44,7 @@ function bookAppointment(e) {
       address,
       healthIssues,
       doctorName,
+      doctorId,
       dateOfBooking,
       timeOfBooking,
       dateOfConsultation,

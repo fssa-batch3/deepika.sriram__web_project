@@ -1,10 +1,11 @@
 const { origin } = window.location;
 const about = `${origin}/pages/other pages/other pages/about us.html`;
 const image = `${origin}/assets/images/deepika logo-4.png`;
-const login = `${origin}/pages/other pages/other pages/login.html`;
+const patient_login = `${origin}/pages/other pages/other pages/login for patient.html`;
+const doctor_login = `${origin}/pages/other pages/other pages/login for doctor.html`
 const signup = `${origin}/pages/other pages/other pages/sign up page.html`;
 const profile = `${origin}/pages/other pages/patient/patient profile page.html`;
-const appointment_history = `${origin}/pages/other pages/patient/history.html`;
+const my_appointment = `${origin}/pages/other pages/patient/my appointment.html`;
 const hospitals = `${origin}/pages/other pages/patient/list of hospital page.html`;
 const menu = `${origin}/pages/other pages/other pages/menu.html`;
 const avatar = `${origin}/assets/images/22-223968_default-profile-picture-circle-hd-png-download-removebg-preview.png`
@@ -29,10 +30,14 @@ const heading_1 = `
                 <li>
                     <a href="${signup}">Sign up</a>
                 </li>
-                <li>
-                    <a href="${login}">Login</a>
-                </li>
             </ul>
+            <div class="dropdown" style="width:10%">
+              <a href="javascript:void(0)" class="dropbtn">Login</a>
+              <div class="dropdown-content">
+                <a href="${doctor_login}">Doctor</a>
+                <a href="${patient_login}">Patient</a>
+              </div>
+            </div>
         </section>
 `;
 
@@ -58,7 +63,7 @@ const heading_2 = `
       <img src="${avatar}" id="avatar"/>
       <div class="dropdown-content">
         <a id="signout">Sign out <i class="fa fa-sign-out"></i></a>
-        <a href="${appointment_history}">History <i class="fa fa-history"></i> </a>
+        <a href="${my_appointment}">My appointments <i class="fa-solid fa-calendar-check"></i> </a>
         <a href="${profile}">View profile <i class="fas fa-user"></i> </a>
       </div>
     </div>

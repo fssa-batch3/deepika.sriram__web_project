@@ -107,7 +107,6 @@ function uploadDoctor(e) {
         password
       });
 
-      localStorage.setItem("unique_id", Doctor_name);
       localStorage.setItem("doctor_detail", JSON.stringify(doctor_detail));
 
       document.querySelector("form").reset();

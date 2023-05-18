@@ -83,7 +83,7 @@ function enter(e) {
       document.querySelector("form").reset();
       alert("Account created Successfully✅");
 
-      window.location.href = "./login.html";
+      window.location.href = "./login for patient.html";
     } else {
       alert("create password and confirm password doesn't match ❎");
     }
@@ -105,14 +105,14 @@ function signIn(e) {
 
   const user_detail = JSON.parse(localStorage.getItem("user_detail")) || [];
 
-  const exist =
+  const exist_1 =
     user_detail.length &&
     JSON.parse(localStorage.getItem("user_detail")).some(
-      (data) =>
-        data.email_id.toLowerCase() === email.toLowerCase() &&
-        data.confirm_password === password
+      (data_1) =>
+        data_1.email_id.toLowerCase() === email.toLowerCase() &&
+        data_1.confirm_password === password
     );
-  if (!exist) {
+  if (!exist_1) {
     alert("User details didn't match ❌");
     // location.href = "../pages/homepage/home page.html"
   } else {

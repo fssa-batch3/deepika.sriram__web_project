@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>History</title>
+        <link rel="stylesheet" href="../../../assets/css/header.css">
+        <link rel="stylesheet" href="../../../assets/css/history.css">
+        <link rel="stylesheet" href="../../../assets/css/footer.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../../../assets/images/logo for care central.JPG">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header id="header"></header>
+        <main>
+            <h1 style="color:#1b3c74;text-align: center;">LIST   OF   APPOINTMENTS</h1>
+            <table>
+                <tr>
+                    <th>Sno.</th>
+                    <th>Patient name</th>
+                    <th>Doctor name</th>
+                    <th>Date and time of booking</th>
+                    <th>Date and time of consultation</th>
+                    <th>Status</th>
+                    <th>View details</th>
+                </tr>
+            </table>
+        </main>
+        <footer style="margin-top:15%;">
+            <div id="Contact">
+                <div>
+                    <h3>FOLLOW US</h3>
+                    <p><i class="fa-brands fa-square-facebook"></i> Facebook</p>
+                    <p><i class="fa-brands fa-square-instagram"></i> Instagram</p>
+                    <p><i class="fa-brands fa-square-twitter"></i> Twitter</p>
+                    <p><i class="fa-brands fa-square-google-plus"></i> Google</p>
+                </div>
+                <div style="border-left:1px solid grey;width:50%;text-align: right;">
+                    <h3>CONTACT US</h3>
+                    <p><i class="fa-solid fa-phone"></i>  +91 6754239901</p>
+                    <p><i class="fa-solid fa-envelope"></i>  carecentral@gmail.com</p>
+                </div>
+            </div>
+            <div>
+                <p style="text-align: center;">copyrights@2023 carecentral. All Rights Reserved</p>
+            </div>
+        </footer>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
+            integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="../../../Javascript files/header.js"></script>
+        <script>const Appointments = JSON.parse(localStorage.getItem("appointments"));
+        for (let i = 0; i < Appointments.length; i++) {
+          const Appointment = Appointments[i];
+
+
+
+          const historyTable = `
+                <tr>
+                    <td>${i+1} . </td>
+                    <td>${Appointment.patient_first_name} ${Appointment.patient_last_name}</td>
+                    <td>${Appointment.doctorName}</td>
+                    <td>${Appointment.dateOfBooking} , ${Appointment.timeOfBooking}</td> 
+                    <td>${Appointment.dateOfConsultation}</td>
+                    <td>${Appointment.status}</td>
+                    <td>
+                        <a href="./appointment detail form.html?appointment-id=${Appointment.appointment_id}">
+                            <button type="button">Click here</button>
+                        </a>    
+                    </td>  
+                </tr>
+            `;
+          document.querySelector("table").insertAdjacentHTML("beforeend", historyTable);
+        }
+    </script>
+    </body>
+</html>

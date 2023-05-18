@@ -52,11 +52,12 @@
                         <label for="">Gender</label>
                     </div>
                     <div>
-                        <select id="gender" style="width:150px">
+                        <!-- <select id="gender" style="width:150px">
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                             <option value="Others">Others</option>
-                        </select>
+                        </select> -->
+                        <input type="text" id="gender">
                     </div>
                 </div>
                 <div style="margin-left:5%;">
@@ -94,18 +95,19 @@
                         <label for="">Method of consultation</label>
                     </div>
                     <div>
-                        <select id="consultation_method" style="width:200px">
+                        <!-- <select id="consultation_method" style="width:200px">
                             <option value="In person">In person</option>
                             <option value="Video consultation">Video consultation</option>
-                        </select>
+                        </select> -->
+                        <input type="text" id="consultation_method">
                     </div>
                 </div>
                 <div style="margin-left:3.5%;">
                     <div>
-                        <label for="">Date of consultation</label>
+                        <label for="">Date and time of consultation</label>
                     </div>
                     <div>
-                        <input type="date" id="consultDate" style="width:150px" />
+                        <input type="text" id="consultDate" style="width:150px" />
                     </div>
                 </div>
                 <div style="margin-left:3.5%;">
@@ -120,12 +122,6 @@
             <br><br>
             <section>
                 <span>
-                    <button type="button" id="delete_appointmentHistory">DELETE</button>
-                </span>
-                <span style="margin-left:2%">
-                    <button type="button" id="update_appointment">UPDATE AND RESEND FORM</button>
-                </span>
-                <span style="margin-left:2%">
                     <button type="button" id="back">BACK</button>
                 </span>
             </section>
