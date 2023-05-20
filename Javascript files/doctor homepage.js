@@ -54,63 +54,97 @@ prevNextIcon.forEach(icon => { // getting prev and next icons
     });
 });
 
+
+// getting logged in doctor,doctor_detail and appointmentList JSON from LS.
+
 const uniqueDoctor = JSON.parse(localStorage.getItem('uniqueDoctor'));
 const doctor_detail = JSON.parse(localStorage.getItem('doctor_detail'));
 const appointmentList = JSON.parse(localStorage.getItem('appointments'));
 const doctor = doctor_detail.find((data_1) => data_1.doctor_email_address === uniqueDoctor);
 if (doctor) {
+
     const idOfDoctor = doctor.uuid;
-    console.log(idOfDoctor)
+    // console.log(idOfDoctor)
+
+    //filtering appointments as per matching of doctor's name.
     const doctorAppointment = appointmentList.filter((a) => {
         return a.doctorId === idOfDoctor
     });
     console.log(doctorAppointment)
+
+
     let each;
     let fname;
     let lname;
     let time;
     let time2;
     let time3;
+    let status;
+    let True = "ACCEPTED";
+    let False = "REJECTED";
+    let a;
 
     for (let j = 0; j < doctorAppointment.length; j++) {
         each = doctorAppointment[j];
+
+        // extracting first letter of first name and laast name to create an icon for appointment list.
         fname = each.patient_first_name.charAt(0).toUpperCase();
         lname = each.patient_last_name.charAt(0).toUpperCase();
+        status = each.status.toLowerCase();
+
 
         time = each.dateOfConsultation;
         time2 = new Date(time);
         time3 = time2.getHours() + ":" + time2.getMinutes();
 
 
+        
+        
+        // to display the color of the status: accepted as green and rejected as red.
+        if(status.toLowerCase() === True.toLowerCase()){
+            a = document.createElement('div');
+            a.setAttribute('class' , "status");
+            a.setAttribute('style' , "color:#08ad37;font-size:14px;font-weight:bold")
+            a.innerHTML = status;
+            console.log(a)
+        }
+        else if(status.toLowerCase() === False.toLowerCase()){
+            a = document.createElement('div');
+            a.setAttribute('class' , 'status');
+            a.setAttribute('style' , 'color:#930202;font-size:14px;font-weight:bold');
+            a.innerHTML = status;
+            console.log(a)
+        }
+        else{
+            a="";
+        }
+
+
 
         const appointment = `
             <div class="individual" id="${fname}">
                 <div class="avatar" value="${each.appointment_id}">${fname}${lname}</div>
-                <div class="name">
-                    <div id="name">${each.patient_first_name}  ${each.patient_last_name}</div>
-                    <div id="time">${time3}</div>
+                <div class="name" id="${each.patient_first_name}">
+                    <div class="patient_name">${each.patient_first_name}  ${each.patient_last_name}</div>
+                    <div class="time" style="font-weight:bold;font-size:14px">${time3}</div>
                 </div>
             </div>
         `
-
-        document.querySelector('#appointmentList').insertAdjacentHTML('beforeend', appointment)
+        document.querySelector('#appointmentList').insertAdjacentHTML('beforeend', appointment);
+        document.getElementById(each.patient_first_name).append(a);
     }
 
-
+    // to display the appointment details of each by clicking each appointment.
     let details = document.querySelectorAll('.individual');
-
-
-
         details.forEach(function (data) {
             data.addEventListener('click', function () {
 
                 let section = document.querySelector('#appointmentDetails');
-                section.innerHTML = ""
-
-                // let dtl = document.getElementById(fname).value;
-                // console.log(fname)
+                if(section){
+                    section.remove();
+                }
+                
                 let parent = this.closest(".individual");
-                // console.log(parent);
                 let app_id = parent.querySelector(".avatar").getAttribute("value");
                 
                 console.log(app_id);
@@ -125,58 +159,77 @@ if (doctor) {
                     time2 = new Date(d);
                     time3 = time2.getHours() + ":" + time2.getMinutes();
 
-                    
+                    // if one value of an appointment id is matched with any of the appointment id listed
                     if(app_id === d.appointment_id){
                         console.log(name1);
                         console.log(name2);
                         const appointDetails = `
+                      <section id="appointmentDetails">
                         <div class="each">
                             <div class="avatar">${name1}${name2}</div>
                             <div>
-                                <h2 style="text-align:center">${d.patient_first_name} ${d.patient_last_name}</h2>
+                                <h2 style="text-align:center;font-size:25px">${d.patient_first_name} ${d.patient_last_name}</h2>
                             </div>
                         </div>
                         <div class="each" style="display:flex">
-                            <div>Age: ${d.patient_age}</div>
-                            <div style="margin-left: 20px;">Gender:${d.patient_gender}</div>
+                            <div><b>Age:</b> ${d.patient_age}</div>
+                            <div style="margin-left: 20px;"><b>Gender:</b>${d.patient_gender}</div>
                         </div>
                         <div class="each">
-                            <div>Health issues:${d.healthIssues}</div>
+                            <div><b>Health issues:</b>${d.healthIssues}</div>
                         </div>
                         <div class="each">
-                            <div>Method of consultation:</div>
+                            <div><b>Method of consultation:</b></div>
                             <div>${d.method_of_consultation}</div>
                         </div>
                         <div class="each">
-                            <div>Date and time of consultation:</div>
+                            <div><b>Date and time of consultation:</b></div>
                             <div>${d.dateOfConsultation}</div>
                         </div>
                         <div class="each">
-                            <div>Mobile number:</div>
+                            <div><b>Mobile number:</b></div>
                             <div>${d.patient_mobile_number}</div>
                         </div>
-                        <div class="each" style="display:flex;justify-content:space-between">
+                        <div class="each" id="buttons" style="display:flex;justify-content:space-between">
                             <button type="button" id="accept">ACCEPT</button>
                             <button type="button" id="reject">REJECT</button>
                         </div>
+                      </section>
                         `
-                        section.insertAdjacentHTML('beforeend', appointDetails);
-                        
-                        document.getElementById('accept').addEventListener('click' , function acceptAppointment(){
-                            d.status = "ACCEPTED";
-                            localStorage.setItem('appointments' , JSON.stringify(appointmentList))
-                            alert('appointment accepted ✅');
-                            document.getElementById('reject').setAttribute('disabled' , true)
-                            document.getElementById('accept').setAttribute('disabled' , true)
-                        })
+                        document.querySelector('#appointmentList').insertAdjacentHTML('afterend', appointDetails);
 
-                        document.getElementById('reject').addEventListener('click' , function rejectAppointment(){
-                            d.status = "REJECTED";
-                            localStorage.setItem('appointments' , JSON.stringify(appointmentList))
-                            alert('appointment rejected ❎');
-                            document.getElementById('reject').setAttribute('disabled' , true)
-                            document.getElementById('accept').setAttribute('disabled' , true)
-                        })
+
+                        // if doctor responsed as accepted or rejected I want the buttons to remove.
+                        if(d.status.toLowerCase() === "accepted" || d.status.toLowerCase() === "rejected"){
+                            document.querySelector('#buttons').remove();
+                        }
+
+                        let accept = document.getElementById('accept');
+                        let reject = document.getElementById('reject');
+
+
+                        // if there is accept or reject buttons, I want this function to be run.
+                        if(accept && reject){
+                            accept.addEventListener('click' , function acceptAppointment(){
+                                d.status = "ACCEPTED";
+                                localStorage.setItem('appointments' , JSON.stringify(appointmentList)) // update the status of particular user and stores in local storage
+                                alert('appointment accepted ✅');
+
+                                // disabling the buttons so that the doctors can accept or reject the patient at once
+                                document.querySelector('#buttons').remove();
+                            })
+    
+                            reject.addEventListener('click' , function rejectAppointment(){
+                                d.status = "REJECTED";
+                                localStorage.setItem('appointments' , JSON.stringify(appointmentList)) // update the status of particular user and stores in local storage
+                                alert('appointment rejected ❎');
+
+                                // disabling the buttons so that the doctors can accept or reject the patient at once
+                                document.querySelector('#buttons').remove();
+                            })
+                        }
+                        
+                        
                     }
                 }
 
@@ -187,6 +240,29 @@ if (doctor) {
     )
 }
 
+
+// profile part of doctor
+
+const dashBoard = document.getElementById('dashBoard'); // appointment dashboard
+const proDashBoard = document.getElementById('profileDashBoard'); // profile dashboard
+const viewAll = document.getElementById('all'); // to view all appointments irrespective of accepted , rejected and past
+
+
+const profile = document.getElementById('viewpro');
+
+// to see the profile part at the same page, I hide the appointment dashboard and display the profile dashboard
+profile.addEventListener('click' , function (){
+    dashBoard.classList.add("hide");
+    proDashBoard.classList.remove("hide");
+})
+
+// to see the appointment list at the same page , I hide the profile dashboard and display the profile dashboard. (same as toggling between two pages)
+viewAll.addEventListener('click' , function(){
+    dashBoard.classList.remove('hide');
+    proDashBoard.classList.add('hide');
+})
+
+// log out part
 const logOut = document.getElementById('logOut');
 logOut.addEventListener('click', function () {
     localStorage.removeItem('uniqueDoctor');

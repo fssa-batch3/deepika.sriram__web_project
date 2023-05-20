@@ -45,7 +45,7 @@
                 </div>
             </div>
             <div>
-                <p style="text-align: center;">copyrights@2023 carecentral. All Rights Reserved</p>
+                <p style="text-align: center;">copyrights  &copy 2023 carecentral. All Rights Reserved</p>
             </div>
         </footer>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -55,22 +55,28 @@
             integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="../../../Javascript files/header.js"></script>
-        <script>const Appointments = JSON.parse(localStorage.getItem("appointments"));
-        for (let i = 0; i < Appointments.length; i++) {
-          const Appointment = Appointments[i];
+        <script>
+            const uniqueUser = JSON.parse(localStorage.getItem('uniqueUser'));
+            const Appointments = JSON.parse(localStorage.getItem("appointments"));
+
+            const userAppointments = Appointments.filter((data) =>
+                data.user_email_id === uniqueUser)
+            console.log(userAppointments)
+        for (let i = 0; i < userAppointments.length; i++) {
+          const userAppointment = userAppointments[i];
 
 
 
           const historyTable = `
                 <tr>
                     <td>${i+1} . </td>
-                    <td>${Appointment.patient_first_name} ${Appointment.patient_last_name}</td>
-                    <td>${Appointment.doctorName}</td>
-                    <td>${Appointment.dateOfBooking} , ${Appointment.timeOfBooking}</td> 
-                    <td>${Appointment.dateOfConsultation}</td>
-                    <td>${Appointment.status}</td>
+                    <td>${userAppointment.patient_first_name} ${userAppointment.patient_last_name}</td>
+                    <td>${userAppointment.doctorName}</td>
+                    <td>${userAppointment.dateOfBooking} , ${userAppointment.timeOfBooking}</td> 
+                    <td>${userAppointment.dateOfConsultation}</td>
+                    <td>${userAppointment.status}</td>
                     <td>
-                        <a href="./appointment detail form.html?appointment-id=${Appointment.appointment_id}">
+                        <a href="./appointment detail form.html?appointment-id=${userAppointment.appointment_id}">
                             <button type="button">Click here</button>
                         </a>    
                     </td>  

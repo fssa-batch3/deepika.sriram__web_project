@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Doctor form</title>
+        <!-- <link rel="stylesheet" href="../../../assets/css/register.css"> -->
+        <link rel="icon" href="../../../assets/images/hospital logo 3.JPG">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Hammersmith+One&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+            rel="stylesheet">
+    </head>
+<body>
+    <form action="" onsubmit="uploadAdditional(event)">
+        <div>
+            <label for="">Doctor id:</label>
+            <input type="text"  id="doctor_id" />
+        </div>
+        <div>
+            <label for="">Other hospitals for the doctor:</label>
+            <input type="text" id="other_hospitals" />
+        </div>
+        <div>
+            <label for="">Hospital address:</label>
+            <input type="text" id="addressOfHospital" />
+        </div>
+        <div>
+            <label for="">Time availability:</label>
+            <label for="">From</label>
+            <input type="time" id="other_hospital_time_from" />
+            <label for="">To</label>
+            <input type="time" id="other_hospital_time_to" />
+        </div>
+        <div>
+            <label for="">Additional time availabilities:</label>
+            <label for="">From</label>
+            <input type="time"  id="other_hospital_time_from_2" />
+            <label for="">To</label>
+            <input type="time" id="other_hospital_time_to_2" />
+        </div>
+        <div>
+            <label for="">Working days:</label>
+            <input type="checkbox" id="Monday">Monday
+            <input type="checkbox" id="Tuesday">Tuesday
+            <input type="checkbox" id="Wednesday">Wednesday
+            <input type="checkbox" id="Thursday">Thursday
+            <input type="checkbox" id="Friday">Friday
+            <input type="checkbox" id="Saturday">Saturday
+            <input type="checkbox" id="Sunday">Sunday
+        </div>
+        <button type="submit">Upload</button>
+    </form>
+</body>
+<script>
+    function uploadAdditional(e){
+        e.preventDefault()
+    
+        const Doctor_id = document.getElementById('doctor_id').value;
+        const other_hospitals = document.getElementById('other_hospitals').value;
+        const hospital_address = document.getElementById('addressOfHospital').value;
+        const Availabilities = [];
+        const from = document.getElementById('other_hospital_time_from').value;
+        const to = document.getElementById('other_hospital_time_to').value;
+
+        const from_2 = document.getElementById('other_hospital_time_from_2').value;
+        const to_2 = document.getElementById('other_hospital_time_to_2').value;
+
+        const Working_days={};
+        const additional_hospitals=[];
+
+        const monday = document.getElementById("Monday").checked;
+        const tuesday = document.getElementById("Tuesday").checked;
+        const wednesday = document.getElementById("Wednesday").checked;
+        const thursday = document.getElementById("Thursday").checked;
+        const friday = document.getElementById("Friday").checked;
+        const saturday = document.getElementById("Saturday").checked;
+        const sunday = document.getElementById("Sunday").checked;
+        // console.log(monday)
+
+        function condition(day, name) {
+
+        if (day === true) {
+            return Working_days[name] = true;
+        }
+        if (day !== true) {
+            return Working_days[name] = false;
+        }
+        }
+
+        condition(monday, "monday");
+        condition(tuesday, "tuesday");
+        condition(wednesday, "wednesday");
+        condition(thursday, "thursday");
+        condition(friday, "friday");
+        condition(saturday, "saturday");
+        condition(sunday, "sunday");
+
+
+        const additionalHospitals = JSON.parse(localStorage.getItem('additional_hospitals')) || [];
+
+        Availabilities.push({from,to});
+        if(from_2!=="" && to_2!==""){
+            Availabilities.push({from:from_2,to:to_2})
+        }
+        additional_hospitals.push({other_hospitals,hospital_address,Availabilities,Working_days})
+        additionalHospitals.push({
+            Doctor_id,
+            additional_hospitals
+        })
+        localStorage.setItem('additional_hospitals' , JSON.stringify(additionalHospitals))
+        alert('uploaded successfully')
+        document.querySelector('form').reset();
+    }
+</script>

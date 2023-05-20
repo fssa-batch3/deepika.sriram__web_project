@@ -6,6 +6,12 @@ function uploadDoctor(e) {
     const Qualifications = document
       .getElementById("qualification")
       .value.split(",");
+
+    const Doctor_age = document.getElementById('doctor_age').value;
+    const Doctor_DOB = document.getElementById('doctorDOB').value;
+    const Doctor_gender = document.getElementById('doctorGender').value;
+    const Doctor_hospital_name = document.getElementById('doctorHospitalName').value;
+    const University_of_doctor = document.getElementById('doctor_sUniversity').value.split(';');
     const Departments = document.getElementById("department").value.split(",");
     const Hospital_id = document.getElementById("hospital_id").value;
     const experience_type = document.getElementById("experience_type").value;
@@ -90,6 +96,11 @@ function uploadDoctor(e) {
       doctor_detail.push({
         Doctor_name,
         Doctor_image,
+        Doctor_age,
+        Doctor_DOB,
+        Doctor_gender,
+        Doctor_hospital_name,
+        University_of_doctor,
         Qualifications,
         Experience,
         Departments,

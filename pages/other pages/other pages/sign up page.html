@@ -39,7 +39,7 @@
     <header id="header"></header>
     <main>
         <form class="sgn" role="form" onsubmit="enter(event)">
-            <center><img src="../../../assets/images/logo_for_care_central-removebg-preview.png"
+            <center><img src="https://iili.io/HgM93tj.png"
                     alt="logo for carecentral" style="width:30%;"></center>
             <center>
                 <h2 style="font-size: 35px;color:#1b3c74">SIGN UP</h2>
@@ -50,7 +50,7 @@
                         <label>First name</label>
                     </div>
                     <div>
-                        <input type="text" id="first_name" style="width:290px" />
+                        <input type="text" id="first_name" style="width:290px" required/>
                     </div>
                 </div>
                 <div style="margin-left:20px">
@@ -58,7 +58,7 @@
                         <label>Last name</label>
                     </div>
                     <div>
-                        <input type="text" id="last_name" style="width:290px" />
+                        <input type="text" id="last_name" style="width:290px" required/>
                     </div>
                 </div>
             </section>
@@ -69,7 +69,7 @@
                         <label>Age</label>
                     </div>
                     <div>
-                        <input type="number" id="age" style="width:120px" />
+                        <input type="number" id="age" style="width:120px" required/>
                     </div>
                 </div>
                 <div style="margin-left:20px;">
@@ -77,7 +77,7 @@
                         <label>Gender</label>
                     </div>
                     <div>
-                        <select id="gender" style="width:150px">
+                        <select id="gender" style="width:150px" required>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                             <option value="Others">Others</option>
@@ -89,7 +89,7 @@
                         <label>Mobile number</label>
                     </div>
                     <div>
-                        <input type="tel" id="mobile_number" pattern="[6-9]{1}[0-9]{9}" style="width:290px">
+                        <input type="tel" id="mobile_number" pattern="[6-9]{1}[0-9]{9}" style="width:290px" required/>
                     </div>
                 </div>
             </section>
@@ -101,10 +101,10 @@
                     </div>
                     <div>
                         <input type="email" id="user_email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
-                            style="width:290px">
+                            style="width:600px" required>
                     </div>
                 </div>
-                <div style="margin-left:20px">
+                <!-- <div style="margin-left:20px">
                     <div>
                         <label>Role of the user</label>
                     </div>
@@ -114,7 +114,7 @@
                             <option value="patient">Patient</option>
                         </select>
                     </div>
-                </div>
+                </div> -->
             </section>
             <br>
             <section>
@@ -173,7 +173,7 @@
             </div>
         </div>
         <div>
-            <p style="text-align: center;">copyrights@2023 carecentral. All Rights Reserved</p>
+            <p style="text-align: center;">copyrights  &copy 2023 carecentral. All Rights Reserved</p>
         </div>
     </footer>
     <script src="../../../Javascript files/header.js"></script>

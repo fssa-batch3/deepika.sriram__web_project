@@ -1,3 +1,4 @@
+// getting 
 const hsp = new URLSearchParams(window.location.search).get('hospital-id');
 const a = JSON.parse(localStorage.getItem("doctor_detail"));
 const back = document.getElementById("back");
@@ -53,7 +54,7 @@ function renderCard(b) {
     let dayString = [];
     const dayObj = b.Working_days;
 
-    // eslint-disable-next-line no-restricted-syntax
+    
     for (const key in dayObj) {
         if (dayObj[key] === true) {
             dayString.push(workingDays(key));
@@ -76,7 +77,7 @@ function renderCard(b) {
                     <div style="margin-left:5%">
                         <p><i class="fa-solid fa-clock"></i> : ${timeString}</p>
                         <p><i class="fa-solid fa-calendar-days"></i> : ${dayString}</p>
-                        <a href="../patient/appointment-form.html?doctor-id=${dctr}" style="text-decoration:none">
+                        <a href="../patient/appointment-form.html?doctor-id=${dctr}&doctor-name=${b.Doctor_name}" style="text-decoration:none">
                             <button type="button">Book Appointment</button>
                         </a>
                     </div>
@@ -87,27 +88,3 @@ function renderCard(b) {
 
     return card;
 }
-
-// const patientReview = JSON.parse(localStorage.getItem('patient_review'));
-
-
-// for(let k=0;k<patientReview.length;k++){
-//     if(dctr === patientReview[k]["doctorid"]){
-//         const reviewCard = `
-//             <section class="review">
-//                 <div>
-//                     <div>
-//                         <img src="../../../assets/images/22-223968_default-profile-picture-circle-hd-png-download-removebg-preview.png">
-//                     </div>
-//                     <div>
-//                         <p>${patientReview[k]["userid"]}</p>
-//                     </div>
-//                 </div>
-//                 <div>
-//                     <p>${patientReview[k]["review_message"]}</p>
-//                 </div>
-//             </section>
-//         `
-//         document.querySelector('main').insertAdjacentHTML('beforeend' , reviewCard);
-//     }
-// }

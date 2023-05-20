@@ -1,3 +1,6 @@
+// here I collecting all the files and storing in each variable so thst we can avoid relative path of the file
+
+
 const { origin } = window.location;
 const about = `${origin}/pages/other pages/other pages/about us.html`;
 const image = `${origin}/assets/images/deepika logo-4.png`;
@@ -9,10 +12,9 @@ const my_appointment = `${origin}/pages/other pages/patient/my appointment.html`
 const hospitals = `${origin}/pages/other pages/patient/list of hospital page.html`;
 const menu = `${origin}/pages/other pages/other pages/menu.html`;
 const avatar = `${origin}/assets/images/22-223968_default-profile-picture-circle-hd-png-download-removebg-preview.png`
-// const femaleAvatar = `${origin}/assets/images/female_Avatar-removebg-preview.png`;
-// const maleAvatar = `${origin}/assets/images/male_Avatar-removebg-preview.png`;
-// const otherAvatar = `${origin}/assets/images/profile avatar.png`;
 const index = `${origin}/index.html`;
+
+// header before login
 
 const heading_1 = `
         <img id="logo" src="${image}" alt="logo of carecentral">
@@ -20,9 +22,6 @@ const heading_1 = `
             <ul>
                 <li>
                     <a href="${index}">Home</a>
-                </li>
-                <li>
-                    <a href="#">About us</a>
                 </li>
                 <li>
                     <a href="#Contact">Contact us</a>
@@ -41,6 +40,8 @@ const heading_1 = `
         </section>
 `;
 
+// header after login
+
 const heading_2 = `
 <img id="logo" src="${image}" alt="logo of carecentral">
 <section class="head">
@@ -50,9 +51,6 @@ const heading_2 = `
         </li>
         <li>
             <a href="${hospitals}">Hospitals</a>
-        </li>
-        <li>
-            <a href="${signup}">About Us</a>
         </li>
         <li>
             <a href="#Contact">Contact Us</a>
@@ -70,8 +68,9 @@ const heading_2 = `
 </section>
 
 `;
-// eslint-disable-next-line no-unused-vars
+
 function indexPage() {
+  // collecting logged in user, id of header and user_detail JSON from local storage
   const unique = JSON.parse(localStorage.getItem("uniqueUser"));
   const header = document.getElementById("header");
 
@@ -102,8 +101,11 @@ function indexPage() {
     const user = user_detail.find((detail) => detail.email_id === unique);
     if (!unique) {
       header.innerHTML = heading_1;
-      section_1.insertAdjacentHTML("beforeend" , registerButton);
-    } else {
+      if(section_1){
+        section_1.insertAdjacentHTML("beforeend" , registerButton);
+      }
+    } 
+    else {
       header.innerHTML = heading_2;
       if (user) {
         if (section_1) {
@@ -124,10 +126,6 @@ function indexPage() {
         if (section_1) {
           const hospitalList = JSON.parse(localStorage.getItem("hospital_detail"));
 
-          // let filteredName = place_card.filter(e => e.)
-          // console.log(filteredPlaceName);
-          // console.log(filteredCategory);
-          // console.log(specificplace);
 
           document.querySelector("#city").addEventListener("keypress", function (e) {
             if (e.key === "Enter") {
@@ -151,11 +149,11 @@ function indexPage() {
 
               for (let i = 0; i < hospitalList.length; i++) {
                 const city = hospitalList[i].city.toLowerCase().trim();
-                // eslint-disable-next-line prettier/prettier
+                
                 const condition = search.includes(city, 0);
                 if (condition) {
                   match.push(hospitalList[i]);
-                  // eslint-disable-next-line prettier/prettier, no-undef
+                  
                   window.location.href = `${hospitals}?city=${search}`;
                 }
               }

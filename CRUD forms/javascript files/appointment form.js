@@ -33,6 +33,7 @@ function bookAppointment(e) {
 
     const status = "On process"
 
+    const user_email_id = JSON.parse(localStorage.getItem('uniqueUser'));
     const Appointments = JSON.parse(localStorage.getItem("appointments")) || [];
 
     Appointments.push({
@@ -50,6 +51,7 @@ function bookAppointment(e) {
       dateOfConsultation,
       patient_mobile_number,
       status,
+      user_email_id,
       appointment_id,
     });
     localStorage.setItem("appointments", JSON.stringify(Appointments));

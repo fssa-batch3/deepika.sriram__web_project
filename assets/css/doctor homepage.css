@@ -107,15 +107,20 @@ header .current-date{
 }
 .days li:not(.active):hover::before{
   background: #f2f2f2;
+  color:#1b3c74;
 }
 
 .appointments li,h2{
     list-style-type: none;
     padding:15px 0px;
+    font-weight: 500;
+    font-size: 18px;
 }
 .appointments h2{
     border-bottom: 0.5px solid white;
     padding-bottom: 5px;
+    cursor: pointer;
+    font-size: 25px;
 }
 .appointments li:hover{
     background-color: #ecf9ff;
@@ -174,11 +179,14 @@ header .current-date{
   cursor:pointer;
 }
 #appointmentList .avatar{
-  padding:2%;
+  padding:4%;
   border:2px solid #00a1cf;
   border-radius: 50%;
   color:white;
+  font-weight: 600;
+  font-size: 25px;
   background-color:#00a1cf;
+  display: inline-block;
 }
 #appointmentList .name{
   margin-left: 15px;
@@ -202,12 +210,14 @@ header .current-date{
   position: relative;
   left:40%;
   display: inline;
-  padding:2%;
+  padding:4%;
   border:2px solid #00a1cf;
   border-radius: 50%;
   border-style: double;
   color:white;
-  background-color:#00a1cf; 
+  background-color:#00a1cf;
+  font-weight: 600;
+  font-size: 25px; 
 }
 #accept{
   background-color: #08ad37;
@@ -238,4 +248,38 @@ header .current-date{
   color:#d00404;
   border:1px solid #d00404;
   transition:0.3s;
+}
+#profileDashBoard{
+  width:100%;
+  padding:1% 2%;
+}
+#profileDashBoard section{
+  margin-left: 2%;
+}
+#profileDashBoard label{
+  color:#1b3c74;
+}
+#profileDashBoard input[type="text"],input[type="number"],input[type="email"],input[type="password"],input[type="date"],input[type="time"],input[type="tel"],select{
+  height:30px;
+  background-color: #ecf9ff;
+  border:none;
+  border-radius:3px;
+  word-wrap: break-word;
+  font-family: 'Inter',sans-serif;
+}
+#profileDashBoard section button[type="button"]{
+  padding:1% 2%;
+  width:50%;
+  background-color: #08ad37;
+  border:none;
+  color:white;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+}
+#profileDashBoard section button[type="button"]:hover{
+  background-color: white;
+  border:1px solid #08ad37;
+  color:#08ad37;
+  transition: 0.3s;
 }

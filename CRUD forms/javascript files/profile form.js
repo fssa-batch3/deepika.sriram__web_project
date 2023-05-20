@@ -34,22 +34,18 @@ if (user) {
     const uNumber = mobileNumber.value;
     const uEmail = emailId.value;
 
-    // const u_gender_1 = gender_1.checked;
-    // const u_gender_2 = gender_2.checked;
-    // const u_gender_3 = gender_3.checked;
-
     const uGender = userGender.value;
+    const b=new Date();
 
     user.f_name = uFName;
     user.l_name = uLName;
     user.age = uAge;
     user.mobile = uNumber;
     user.email_id = uEmail;
-    // user.user_gender.male = u_gender_1;
-    // user.user_gender.female = u_gender_2;
-    // user.user_gender.others = u_gender_3;
 
     user.user_gender = uGender;
+    
+    user.modified_at = b.toLocaleString('en-US');
 
     localStorage.setItem("user_detail", JSON.stringify(user_detail));
     alert("updated successfully");

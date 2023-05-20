@@ -6,45 +6,17 @@ function enter(e) {
   const age = document.getElementById("age").value.trim();
   const user_gender = document.getElementById('gender').value;
 
-  // const male = document.getElementById("male").checked;
-  // const female = document.getElementById("female").checked;
-  // const others = document.getElementById("others").checked;
-
-  // function gender(gender, name) {
-  //   if (gender === true) {
-  //     return (user_gender[name] = true);
-  //   }
-  //   if (gender !== true) {
-  //     return (user_gender[name] = false);
-  //   }
-  // }
-
-  // gender(male, "male");
-  // gender(female, "female");
-  // gender(others, "others");
-
   const mobile = document.getElementById("mobile_number").value.trim();
   const email_id = document.getElementById("user_email").value.trim();
   const create_password = document.getElementById("pass_1").value.trim();
   const confirm_password = document.getElementById("pass_2").value.trim();
-  // eslint-disable-next-line no-undef
+  
   const uuid = uuidv4();
+  const a = new Date();
+  const created_at = a.toLocaleString('en-US');
+  const modified_at = "";
 
-  const user_role = document.getElementById('role').value;
-  // const doctor = document.getElementById("doctor").checked;
-  // const patient = document.getElementById("patient").checked;
-
-  // function userRole(role, name) {
-  //   if (role === true) {
-  //     return (user_role[name] = true);
-  //   }
-  //   if (role !== true) {
-  //     return (user_role[name] = false);
-  //   }
-  // }
-
-  // userRole(doctor, "doctor");
-  // userRole(patient, "patient");
+  
 
   // hear i give var name for local storage data (initially there is no data so we mentioned or (||) symbol to get empty array)
   const user_detail = JSON.parse(localStorage.getItem("user_detail")) || [];
@@ -74,7 +46,8 @@ function enter(e) {
         email_id,
         create_password,
         confirm_password,
-        user_role,
+        created_at,
+        modified_at,
         uuid
       });
 
@@ -114,8 +87,8 @@ function signIn(e) {
     );
   if (!exist_1) {
     alert("User details didn't match ❌");
-    // location.href = "../pages/homepage/home page.html"
-  } else {
+  } 
+  else {
     localStorage.setItem("uniqueUser", JSON.stringify(email));
     alert("Your login in is successful ✅");
     window.location.href = "../../../../index.html";
