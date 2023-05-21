@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>History</title>
+        <link rel="stylesheet" href="../../../assets/css/history.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="icon" href="../../../assets/images/hospital logo 3.JPG">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Hammersmith+One&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+        <header id="header">
+            <!-- <img src="../../../assets/images/gws.png" alt="logo of get well soon website">
+                <ul id="hide">
+                <li>
+                <a href="../../homepage/home page.html"> Home </a>
+                </li>
+                <li>
+                <a href="#">Contact us</a>
+                </li>
+                <li>
+                <a href="../other pages/about us.html">About us</a>
+                </li>
+                <li>
+                <a href="../patient/patient profile page.html"><i class="fas fa-user" alt="profile"></i></a>
+                </li>
+                </ul> -->
+        </header>
+        <main>
+            <!-- <h1 style="text-align:center">History</h1>
+                <section>
+                <div>
+                <i class="fa fa-history" style="color:#03045e;font-size:20px"></i> Dr. Premalatha - Fortis malar hospital
+                </div>
+                <div>
+                <a href="../../other pages/patient/details 1.html">
+                <button type="button">View history</button>
+                </a>
+                </div>
+                </section>
+                <br>
+                <section>
+                <div>
+                <i class="fa fa-history" style="color:#03045e;font-size:20px"></i> Dr. Meera Raghavan - Apollo hospital
+                </div>
+                <div>
+                <a href="../../other pages/patient/details 2.html">
+                <button type="button">View history</button>
+                </a>
+                </div>
+                </section>
+                <br>
+                <section>
+                <div>
+                <i class="fa fa-history" style="color:#03045e;font-size:20px"></i> Dr. Kalaivani - Apollo hospital
+                </div>
+                <div>
+                <a href="../../other pages/patient/details 3.html">
+                <button type="button">View history</button>
+                </a>
+                </div>
+                </section> -->
+        </main>
+        <footer style="margin-top:5%">
+            <div>
+                <div>
+                    <img src="../../../assets/images/hospital_logo_3-removebg-preview.png" alt="logo of gws">
+                </div>
+                <div class="ftr">
+                    <div>
+                        <h3>Contact Us</h3>
+
+                        <p>
+                            <i class="fa fa-phone"></i> +91 89097 87645
+                        </p>
+
+                        <p>
+                            <i class="fa fa-envelope"></i> deepika.sriram@fssa.freshworks.com
+                        </p>
+                    </div>
+                    <div>
+                        <h3>Follow Us</h3>
+
+                        <p>
+                            <i class="fa-brands fa-facebook"></i> Facebook
+                        </p>
+
+                        <p>
+                            <i class="fa-brands fa-square-twitter"></i> Twitter
+                        </p>
+
+                        <p>
+                            <i class="fa-brands fa-github"></i> Github
+                        </p>
+
+                        <p>
+                            <i class="fa-brands fa-linkedin"></i> Linkedin
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div style="padding:10px 0;background-color:#03045e;color:white">
+                <p style="text-align:center">
+                    Website Created By<b> Deepika Sriram</b>
+                </p>
+                <br>
+                <p style="text-align:center">copyrights &copy; reserved</p>
+            </div>
+        </footer>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
+            integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="../../../Javascript files/header.js"></script>
+        <script>const Appointments = JSON.parse(localStorage.getItem("appointments"));
+        for (let i = 0; i < Appointments.length; i++) {
+          const Appointment = Appointments[i];
+          // eslint-disable-next-line no-use-before-define
+          const sectionAppend = appendSection(Appointment);
+          document.querySelector("main").insertAdjacentHTML("beforeend", sectionAppend);
+        }
+
+        function appendSection(Appointment) {
+          const historyList = `
+            <section>
+                <div>
+                    <p> Patient name: ${Appointment.patient_name} </p>
+                    <p> consulted with : ${Appointment.doctorName}</p>
+                    <p> Status: ${Appointment.status}</p>
+                    <p>Booked on: ${Appointment.date_of_booking} , ${Appointment.time_of_booking}</p>
+                </div>
+                <div>
+                    <a href="../patient/history details form.html?appointment-id=${Appointment.appointment_id}">
+                        <button type="button">view history</button>    
+                    </a>
+                </div>
+            </section>
+            `;
+          return historyList;
+        }
+    </script>
+    </body>
+</html>

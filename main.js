@@ -923,37 +923,5 @@ if (!doctor_detail) {
   ))
 }
 
-const user_detail = JSON.parse(localStorage.getItem('user_detail'));
-if(!user_detail){
-  localStorage.setItem('user_detail' , JSON.stringify(
-    [
-      {
-        age: "18",
-        confirm_password: "DeepikaSRM@2005",
-        create_password: "DeepikaSRM@2005",
-        created_at: "5/20/2023, 11:53:46 AM",
-        email_id: "deepika.sriram@fssa.freshworks.com",
-        f_name: "Deepika",
-        l_name: "Sriram Rao",
-        mobile: "7397314532",
-        modified_at: "5/20/2023, 11:55:01 AM",
-        user_gender: "Female",
-        uuid: "7b909f02-ef5d-4304-86d3-d7037b690765"
-      },
-      {
-        age: "18",
-        confirm_password: "Mithra@2004",
-        create_password: "Mithra@2004",
-        created_at: "5/20/2023, 12:01:40 PM",
-        email_id: "shruthi5704@gmail.com",
-        f_name: "Shruthi",
-        l_name: "Lakshmi Narayanan",
-        mobile: "9445535374",
-        modified_at: "",
-        user_gender: "Female",
-        uuid: "de4e4b17-f9d5-4738-921f-a637eaa7f9fc"
-      }
-    ]
-  ))
-}
+
 

@@ -38,12 +38,11 @@ function uploadDoctor(e) {
     // console.log(monday)
 
     function condition(day, name) {
-
       if (day === true) {
-        return Working_days[name] = true;
+        return (Working_days[name] = true);
       }
       if (day !== true) {
-        return Working_days[name] = false;
+        return (Working_days[name] = false);
       }
     }
 

@@ -1,3 +1,8 @@
+
+<!-- eslint-disable prettier/prettier -->
+<!-- eslint-disable no-undef -->
+<!-- eslint-disable prettier/prettier -->
+<!-- eslint-disable no-undef -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -95,5 +100,60 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./Javascript files/header.js"></script>
 </body>
+        </footer>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
+            integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="./Javascript files/header.js"></script>
+        // eslint-disable-next-line no-undef
+        <script>
+        // eslint-disable-next-line no-undef
+        if (searchBar) {
+          const hospitalList = JSON.parse(localStorage.getItem("hospital_detail"));
 
+          // let filteredName = place_card.filter(e => e.)
+          // console.log(filteredPlaceName);
+          // console.log(filteredCategory);
+          // console.log(specificplace);
+
+          // eslint-disable-next-line func-names
+          document.querySelector("#city").addEventListener("keypress", function (e) {
+            if (e.key === "Enter") {
+              e.preventDefault();
+              document.getElementById("search").click();
+            }
+          });
+          document
+            .querySelector("#search")
+            .addEventListener("click", function searchPlace(e) {
+              e.preventDefault();
+              const search = document.getElementById("city").value.trim().toLowerCase();
+              console.log(search);
+
+              if (search === "" || search === null || search === undefined) {
+                alert("invalid search input");
+                return;
+              }
+
+              const match = [];
+
+              for (let i = 0; i < hospitalList.length; i++) {
+                const city = hospitalList[i].city.toLowerCase().trim();
+                // eslint-disable-next-line prettier/prettier
+                const condition = search.includes(city, 0);
+                if (condition) {
+                  match.push(hospitalList[i]);
+                  // eslint-disable-next-line prettier/prettier, no-undef
+                window.location.href = `${hospitals}?city=${search}`;
+                }
+              }
+
+              console.log(match);
+            });
+        }
+        </script>
+    </body>
 </html>

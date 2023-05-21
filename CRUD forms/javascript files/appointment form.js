@@ -27,8 +27,14 @@ function bookAppointment(e) {
     let dateconsult = document.getElementById("consultDate").value;
     const dateConsult_2 = new Date(dateconsult);
     const dateOfConsultation = dateConsult_2.toLocaleString();
-    const patient_mobile_number =
-      document.getElementById("mobile_number").value;
+    const patient_mobile_number =document.getElementById("mobile_number").value;
+    
+    const currentDate = new Date();
+    const date_of_booking = currentDate.toLocaleDateString('en-US');
+    const time_of_booking = currentDate.toLocaleTimeString('en-US');
+    // const patient_email_address =
+    //   document.getElementById("email_address").value;
+    // const addDescription = document.getElementById("add_description").value;
     const appointment_id = uuidv4();
 
     const status = "On process"
@@ -52,7 +58,14 @@ function bookAppointment(e) {
       patient_mobile_number,
       status,
       user_email_id,
+      date_of_booking,
+      time_of_booking,
+      dateOfConsultation,
+      patient_mobile_number,
+      // patient_email_address,
+      // addDescription,
       appointment_id,
+      status
     });
     localStorage.setItem("appointments", JSON.stringify(Appointments));
     localStorage.setItem("unique_appointment", appointment_id);

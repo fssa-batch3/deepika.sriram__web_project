@@ -8,6 +8,7 @@ const consult_method = document.getElementById("consultation_method");
 
 const p_address = document.getElementById("address");
 const p_healthIssues = document.getElementById("health_issues");
+
 const p_d_name = document.getElementById("doctor_name");
 
 
@@ -16,6 +17,9 @@ const p_mobile = document.getElementById("mobile_number");
 
 const status = "";
 const today = new Date();
+
+
+
 
 
 const appointmentId = new URLSearchParams(window.location.search).get(
@@ -38,11 +42,15 @@ if (appointmentData) {
   p_address.value = appointmentData.address;
   p_healthIssues.value = appointmentData.healthIssues;
   p_d_name.value = appointmentData.doctorName;
+
   
   p_d_c.value = appointmentData.dateOfConsultation;
   p_mobile.value = appointmentData.patient_mobile_number;
 
+
+
   const consultDate = new Date(appointmentData.dateOfConsultation);
+
 
   if(appointmentData.status.toLowerCase() === "accepted"){
     if((consultDate.getDate() - today.getDate())<0){
@@ -58,11 +66,7 @@ if (appointmentData) {
       localStorage.setItem('appointments' , JSON.stringify(appointmentList))
     }
   }
-  
 }
-
-
-
 document.querySelector('#back').addEventListener('click' , function(){
   window.history.back();
 })
