@@ -4,7 +4,7 @@
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>hospital details</title>
-        <link rel="stylesheet" href="../../../assets/css/register.css">
+        <link rel="stylesheet" href="../../../assets/css/signup.css">
         <link rel="icon" href="../../../assets/images/hospital logo 3.JPG">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,8 +18,8 @@
         <form role="form" class="form">
             <h1 style="text-align: center;color:#03045e">FORM</h1>
             <br>
-            <label>enter hospital name</label>
-            <input type="text" id="unique_hospital">
+            <label>enter hospital id</label>
+            <input type="number" id="unique_hospital">
             <button type="submit" id="find_details">find details</button>
             <br>
             <label>hospital name</label>
@@ -110,7 +110,7 @@
           const uniqueId = unique_id.value;
           const hospital_details = JSON.parse(localStorage.getItem("hospital_detail"));
           const hospital = hospital_details.find(
-    (detail) => detail.hospital_name === uniqueId
+            (detail) => detail.hospital_id === parseInt(uniqueId)
           );
 
           if (hospital) {
@@ -167,7 +167,7 @@
           const uniqueId = unique_id.value;
           const hospital_details = JSON.parse(localStorage.getItem("hospital_detail"));
           const hospitalIndex = hospital_details.findIndex(
-    (detail) => detail.hospital_name === uniqueId
+    (detail) => detail.hospital_id === parseInt(uniqueId)
           );
 
           if (hospitalIndex > -1) {

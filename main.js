@@ -77,55 +77,13 @@ if (!hospitalDetails) {
         uuid: "3bf7c9bf-be92-4f1c-adba-92cc19e8d7c9",
       },
       {
-        address: "227/2, C2",
-        area: "Perungudi",
-        city: "Chennai",
-        contact_number: "",
-        email_address: "",
-        hospital_name: "Gem hospital",
-        hospital_id: 6,
-        image_link: "../../../assets/images/gem hospital.png",
-        link_file: "../other pages/doctor's list.html",
-        locality: "MGR Main road",
-        pincode: "600096",
-        uuid: "e911e209-0489-4bbd-8b9e-5e31c8c73ba2",
-      },
-      {
-        address: "No.1",
-        area: "Porur",
-        city: "Chennai",
-        contact_number: "1 800-572-1111",
-        email_address: "",
-        hospital_name: "Ramachandra hospital",
-        hospital_id: 7,
-        image_link: "../../../assets/images/srm.png",
-        link_file: "../other pages/doctor's list.html",
-        locality: "Ramachandra nagar",
-        pincode: "600116",
-        uuid: "d00c82c9-32c7-488f-ae5f-fdf008cd0152",
-      },
-      {
-        address: "9, Air Force Station Rd",
-        area: "East Tambaram",
-        city: "Chennai",
-        contact_number: "098846 00061",
-        email_address: "coshospital@gmail.com",
-        hospital_name: "COSH hospital",
-        hospital_id: 8,
-        image_link: "../../../assets/images/cropped-COSH-LOGO.jpg",
-        link_file: "../other pages/doctor's list.html",
-        locality: "Duraisamy nagar",
-        pincode: "600059",
-        uuid: "889f2943-6043-48da-859b-a12b927f9412",
-      },
-      {
         address: "154/11,",
         area: "Bannerghatta Main road",
         city: "Bengaluru",
         contact_number: "",
         email_address: "infochennai@apollohospitals.com",
         hospital_name: "Apollo hospitals",
-        hospital_id: 9,
+        hospital_id: 6,
         image_link:
           "../../../assets/images/apollo-gleneagles-hospitals-kolkata-squarelogo-1464594605205.png",
         link_file: "../other pages/doctor's list.html",
@@ -139,26 +97,130 @@ if (!hospitalDetails) {
 
 console.log(hospitalDetails);
 
-const doctorDetails = JSON.parse(localStorage.getItem("doctor_detail"));
-if (!doctorDetails) {
-  localStorage.setItem(
-    "doctor_detail",
-    JSON.stringify([
+const appointments = JSON.parse(localStorage.getItem('appointments'));
+if (!appointments) {
+  localStorage.setItem('appointments', JSON.stringify(
+    [
       {
-        Doctor_name: "Dr.Kalaivani Ramalingam",
-        Doctor_image: "../../../assets/images/dr.kalailvani.jpeg",
-        Qualifications: ["MBBS", "DGO"],
-        Experience: {
-          experience_duration: 25,
-          experience_type: "years",
-        },
-        Departments: ["Obstrtrician"],
+        address: "",
+        user_email_id:"deepika.sriram@fssa.freshworks.com",
+        appointment_id: "883e3eb9-eb0c-4378-b1bd-4dd0a5817487",
+        dateOfBooking: "5/20/2023",
+        dateOfConsultation: "5/21/2023, 11:40:00 AM",
+        doctorId: "aee049b7-1043-404e-a848-901a6d30996c",
+        doctorName: "Dr.Meera Raghavan",
+        healthIssues: ["irregular periods"],
+        method_of_consultation: "Video consultation",
+        patient_age: "18",
+        patient_first_name: "Deepika",
+        patient_gender: "Female",
+        patient_last_name: "Sriram",
+        patient_mobile_number: "7397314532",
+        status: "consulted",
+        timeOfBooking: "9:40:23 AM",
+      },
+      {
+        address: "",
+        user_email_id:"deepika.sriram@fssa.freshworks.com",
+        appointment_id: "87476f32-abb8-47d4-a5b8-c9ece4edcc36",
+        dateOfBooking: "5/20/2023",
+        dateOfConsultation: "5/21/2023, 11:40:00 AM",
+        doctorId: "aee049b7-1043-404e-a848-901a6d30996c",
+        doctorName: "Dr.Meera Raghavan",
+        healthIssues: [""],
+        method_of_consultation: "In person",
+        patient_age: "20",
+        patient_first_name: "Sangeetha",
+        patient_gender: "Female",
+        patient_last_name: "Ramachandran",
+        patient_mobile_number: "9445535374",
+        status: "REJECTED",
+        timeOfBooking: "9:43:49 AM",
+      },
+      {
+        address: "",
+        user_email_id:"shruthi5704@gmail.com",
+        appointment_id: "89606a18-2812-46cc-bb58-afda4699d3e9",
+        dateOfBooking: "5/20/2023",
+        dateOfConsultation: "5/22/2023, 11:45:00 AM",
+        doctorId: "aee049b7-1043-404e-a848-901a6d30996c",
+        doctorName: "Dr.Meera Raghavan",
+        healthIssues: [""],
+        method_of_consultation: "In person",
+        patient_age: "23",
+        patient_first_name: "Durga",
+        patient_gender: "Female",
+        patient_last_name: "Lakshmi",
+        patient_mobile_number: "8939094029",
+        status: "REJECTED",
+        timeOfBooking: "9:45:07 AM"
+      },
+      {
+        address: "",
+        user_email_id:"shruthi5704@gmail.com",
+        appointment_id: "520bf8f9-7923-40ae-aefc-089a9abd51e8",
+        dateOfBooking: "5/20/2023",
+        dateOfConsultation: "5/25/2023, 11:50:00 AM",
+        doctorId: "aee049b7-1043-404e-a848-901a6d30996c",
+        doctorName: "Dr.Meera Raghavan",
+        healthIssues: [""],
+        method_of_consultation: "In person",
+        patient_age: "12",
+        patient_first_name: "Saranya",
+        patient_gender: "Female",
+        patient_last_name: "Ramachandran",
+        patient_mobile_number: "9043690851",
+        status: "ACCEPTED",
+        timeOfBooking: "9:46:45 AM"
+      },
+      {
+        address: "",
+        user_email_id:"deepika.sriram@fssa.freshworks.com",
+        appointment_id: "62b0738e-3ee3-43d2-9912-30f58c3d2e33",
+        dateOfBooking: "5/20/2023",
+        dateOfConsultation: "5/23/2023, 10:30:00 AM",
+        doctorId: "427423c7-1339-4b59-8b57-27e6a26450f6",
+        doctorName: "Dr.Shalini shetty",
+        healthIssues: ["eye irritation", " eyepain", " can't see distant objects"],
+        method_of_consultation: "In person",
+        patient_age: "18",
+        patient_first_name: "Deepika",
+        patient_gender: "Female",
+        patient_last_name: "Sriram",
+        patient_mobile_number: "7397314532",
+        status: "ACCEPTED",
+        timeOfBooking: "9:49:18 AM"
+      },
+      
+    ]
+  ))
+}
+
+const doctor_detail = JSON.parse(localStorage.getItem('doctor_detail'));
+if (!doctor_detail) {
+  localStorage.setItem('doctor_detail', JSON.stringify(
+    [
+      {
         Availabilities: [
           {
             starting_time: "10:00",
-            ending_time: "14:30",
-          },
+            ending_time: "14:00"
+          }
         ],
+        Departments: ["Obstetrician"],
+        Doctor_image: "https://iili.io/HU0F8Ba.jpg",
+        Doctor_name: "Dr.Kalaivani Ramalingam",
+        Experience: {
+          experience_duration: "26",
+          experience_type: "years"
+        },
+        Doctor_age: "",
+        Doctor_DOB: "",
+        Doctor_gender: "",
+        University_of_doctor: "",
+        Doctor_hospital_name: "",
+        Hospital_id: 2,
+        Qualifications: ["MBBS", " DGO"],
         Working_days: {
           monday: true,
           tuesday: true,
@@ -166,31 +228,39 @@ if (!doctorDetails) {
           thursday: true,
           friday: true,
           saturday: true,
-          sunday: false,
+          sunday: false
         },
-        Hospital_id: 2,
-        uuid: "2d17c05c-8fac-4159-af3b-8c8acb1f33c7",
+        created_date: "5/13/2023",
+        created_time: "3:16:26 PM",
+        doctor_description: "Obstetrician and Gynaecologist with advanced training in Urogynaecology",
+        doctor_email_address: "kalaivani001@gmail.com",
+        doctor_mobile_number: "+91 64475 66954",
+        modified_date: "5/13/2023",
+        modified_time: "3:17:18 PM",
+        password: "J9lpRtFXVb",
+        uuid: "2d17c05c-8fac-4159-af3b-8c8acb1f33c7"
       },
       {
-        Doctor_name: "Dr.Meera Raghavan",
-        Doctor_image: "../../../assets/images/dr meera.jpeg",
-        Qualifications: [
-          "MBBS",
-          "MD-Obstetrics and gynecology",
-          "DNB-Obstetrics and gynecology",
-          "MRCQG(UK)",
-        ],
-        Experience: {
-          experience_duration: 26,
-          experience_type: "years",
-        },
-        Departments: ["Obstetrician", "Gynecologist"],
         Availabilities: [
           {
             starting_time: "11:00",
-            ending_time: "14:30",
-          },
+            ending_time: "14:30"
+          }
         ],
+        Departments: ["Obstetrician", "Gynecologist"],
+        Doctor_image: "https://iili.io/HU0fftt.jpg",
+        Doctor_name: "Dr.Meera Raghavan",
+        Doctor_age: "",
+        Doctor_DOB: "",
+        Doctor_gender: "",
+        University_of_doctor: "",
+        Doctor_hospital_name: "",
+        Experience: {
+          experience_duration: "26",
+          experience_type: "years"
+        },
+        Hospital_id: 2,
+        Qualifications: ["MBBS", "MD-Obstetrics and gynecology", "DNB-Obstetrics and gynecology", "MRCQG(UK)"],
         Working_days: {
           monday: true,
           tuesday: true,
@@ -198,26 +268,38 @@ if (!doctorDetails) {
           thursday: true,
           friday: true,
           saturday: true,
-          sunday: false,
+          sunday: false
         },
-        Hospital_id: 2,
-        uuid: "aee049b7-1043-404e-a848-901a6d30996c",
+        created_date: "5/13/2023",
+        created_time: "3:39:26 PM",
+        doctor_email_address: "meera002@gmail.com",
+        doctor_mobile_number: "+91 61279 18397",
+        modified_date: "5/13/2023",
+        modified_time: "3:42:18 PM",
+        password: "Z5ZJe1NRau",
+        uuid: "aee049b7-1043-404e-a848-901a6d30996c"
       },
       {
-        Doctor_name: "Dr.Alpha Khakhar",
-        Doctor_image: "../../../assets/images/dr.alpha.jpeg",
-        Qualifications: ["MD-Obstetrics and gynecology", "MBBS"],
-        Experience: {
-          experience_duration: 24,
-          experience_type: "years",
-        },
-        Departments: ["Obstetrician", "Gynecologist"],
         Availabilities: [
           {
             starting_time: "12:00",
-            ending_time: "14:00",
-          },
+            ending_time: "14:00"
+          }
         ],
+        Departments: ["Obstetrician", "Gynecologist"],
+        Doctor_image: "https://iili.io/HU0CIUJ.jpg",
+        Doctor_name: "Dr.Alpha Khakhar",
+        Doctor_age: "",
+        Doctor_DOB: "",
+        Doctor_gender: "",
+        University_of_doctor: "",
+        Doctor_hospital_name: "",
+        Experience: {
+          experience_duration: "24",
+          experience_type: "years"
+        },
+        Hospital_id: 2,
+        Qualifications: ["MD-Obstetrics and gynecology", "MBBS"],
         Working_days: {
           monday: true,
           tuesday: true,
@@ -225,87 +307,42 @@ if (!doctorDetails) {
           thursday: true,
           friday: true,
           saturday: true,
-          sunday: false,
+          sunday: false
         },
-        Hospital_id: 2,
-        uuid: "921a89e5-97d3-4e45-98fb-64b5dd4815f7",
+        created_date: "5/13/2023",
+        created_time: "3:47:26 PM",
+        doctor_email_address: "alpa003@gmail.com",
+        doctor_mobile_number: "+91 788 708 2985",
+        modified_date: "5/13/2023",
+        modified_time: "3:17:18 PM",
+        password: "fDswD1Aatz",
+        uuid: "921a89e5-97d3-4e45-98fb-64b5dd4815f7"
       },
       {
-        Doctor_name: "Dr.Lakshmi devarajan",
-        Doctor_image:
-          "../../../assets/images/dr-lakshmi-devarajan-general-physician-chennai-e16ae616-38f0-4f72-a250-8a4179383585-transformed.jpeg",
-        Qualifications: ["MD-Obstetrics and gynecology", "MBBS"],
-        Experience: {
-          experience_duration: 25,
-          experience_type: "years",
-        },
-        Departments: ["general physician", "gynecologist", "obstetrician"],
         Availabilities: [
           {
             starting_time: "10:00",
-            ending_time: "14:00",
+            ending_time: "14:00"
           },
           {
             starting_time: "18:00",
-            ending_time: "20:00",
-          },
+            ending_time: "20:00"
+          }
         ],
-        Working_days: {
-          monday: true,
-          tuesday: true,
-          wednesday: true,
-          thursday: true,
-          friday: true,
-          saturday: true,
-          sunday: false,
-        },
-        Hospital_id: 1,
-        uuid: "f415762e-5687-43ed-acf2-d2e762fa7821",
-      },
-      {
-        Doctor_name: "Dr.Rajini",
-        Doctor_image:
-          "../../../assets/images/dr-rajini-specialist-chennai-f8fef08b-a529-4c5e-a1d1-f9f15aef7046-transformed.jpeg",
-        Qualifications: ["MBBS", "DGO"],
+        Departments: ["general physician", "gynecologist", "obstetrician"],
+        Doctor_image: "https://iili.io/HU0aJLb.jpg",
+        Doctor_name: "Dr.Lakshmi Devarajan",
+        Doctor_age: "",
+        Doctor_DOB: "",
+        Doctor_gender: "",
+        University_of_doctor: "",
+        Doctor_hospital_name: "",
         Experience: {
-          experience_duration: 29,
-          experience_type: "years",
-        },
-        Departments: ["Obstetrician", "Gynecologist"],
-        Availabilities: [
-          {
-            starting_time: "15:00",
-            ending_time: "17:00",
-          },
-        ],
-        Working_days: {
-          monday: true,
-          tuesday: true,
-          wednesday: true,
-          thursday: true,
-          friday: true,
-          saturday: true,
-          sunday: true,
+          experience_duration: "25",
+          experience_type: "years"
         },
         Hospital_id: 1,
-        uuid: "417e0b71-af81-4a54-9182-22292cbff291",
-      },
-      {
-        Doctor_name: "Dr.Divya yuvakesavan",
-        Doctor_image:
-          "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
         Qualifications: ["MD-Obstetrics and gynecology", "MBBS"],
-        Experience: {
-          experience_duration: 12,
-          experience_type: "years",
-        },
-        Departments: ["Obstetrician", "Gynecologist"],
-        Availabilities: [
-          {
-            starting_time: "10:00",
-            ending_time: "18:00",
-          },
-        ],
         Working_days: {
           monday: true,
           tuesday: true,
@@ -313,61 +350,163 @@ if (!doctorDetails) {
           thursday: true,
           friday: true,
           saturday: true,
-          sunday: false,
+          sunday: false
         },
-        Hospital_id: 1,
-        uuid: "cd96c616-8af5-45af-9f39-56aed40fbc43",
+        created_date: "5/13/2023",
+        created_time: "4:58:26 PM",
+        doctor_email_address: "lakshmi004@gmail.com",
+        doctor_mobile_number: "+91 788 797 3492",
+        modified_date: "5/13/2023",
+        modified_time: "5:05:18 PM",
+        password: "yobB3KPaqx",
+        uuid: "f415762e-5687-43ed-acf2-d2e762fa7821"
       },
       {
-        Doctor_name: "Dr.Nithya ramamorthy",
-        Doctor_image: "../../../assets/images/dr nithya.jpeg",
-        Qualifications: ["MBBS", "DGO"],
-        Experience: {
-          experience_duration: 26,
-          experience_type: "years",
-        },
+        Availabilities: [
+          {
+            starting_time: "15:00",
+            ending_time: "17:00"
+          }
+        ],
         Departments: ["Obstetrician", "Gynecologist"],
+        Doctor_image: "https://iili.io/HU01clf.jpg",
+        Doctor_name: "Dr.Rajini",
+        Doctor_age: "",
+        Doctor_DOB: "",
+        Doctor_gender: "",
+        University_of_doctor: "",
+        Doctor_hospital_name: "",
+        Experience: {
+          experience_duration: "29",
+          experience_type: "years"
+        },
+        Hospital_id: 1,
+        Qualifications: ["MBBS", "DGO"],
+        Working_days: {
+          monday: true,
+          tuesday: true,
+          wednesday: true,
+          thursday: true,
+          friday: true,
+          saturday: true,
+          sunday: true
+        },
+        created_date: "5/13/2023",
+        created_time: "5:13:26 PM",
+        doctor_email_address: "rajini005@gmail.com",
+        doctor_mobile_number: "+91 62982 98455",
+        modified_date: "5/13/2023",
+        modified_time: "5:15:18 PM",
+        password: "c4mmka5ztq",
+        uuid: "417e0b71-af81-4a54-9182-22292cbff291"
+      },
+      {
         Availabilities: [
           {
             starting_time: "10:00",
-            ending_time: "14:00",
+            ending_time: "18:00"
+          }
+        ],
+        Departments: ["Obstetrician", "Gynecologist"],
+        Doctor_image: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
+        Doctor_name: "Dr.Divya Yuvakesavan",
+        Doctor_age: "",
+        Doctor_DOB: "",
+        Doctor_gender: "",
+        University_of_doctor: "",
+        Doctor_hospital_name: "",
+        Experience: {
+          experience_duration: "12",
+          experience_type: "years"
+        },
+        Hospital_id: 1,
+        Qualifications: ["MD-Obstetrics and gynecology", "MBBS"],
+        Working_days: {
+          monday: true,
+          tuesday: true,
+          wednesday: true,
+          thursday: true,
+          friday: true,
+          saturday: true,
+          sunday: false
+        },
+        created_date: "5/13/2023",
+        created_time: "5:22:26 PM",
+        doctor_email_address: "divyayuva006@gmail.com",
+        doctor_mobile_number: "+91 61279 17374",
+        modified_date: "5/13/2023",
+        modified_time: "5:23:18 PM",
+        password: "G3hOMj2tZ7",
+        uuid: "cd96c616-8af5-45af-9f39-56aed40fbc43"
+      },
+      {
+        Availabilities: [
+          {
+            starting_time: "10:00",
+            ending_time: "14:00"
           },
           {
             starting_time: "15:00",
-            ending_time: "16:00",
-          },
+            ending_time: "16:00"
+          }
         ],
-        Working_days: {
-          monday: true,
-          tuesday: true,
-          wednesday: true,
-          thursday: true,
-          friday: true,
-          saturday: true,
-          sunday: false,
+        Departments: ["Obstetrician", "Gynecologist"],
+        Doctor_image: "https://iili.io/HU0Gi9R.jpg",
+        Doctor_name: "Dr.Nithya ramamorthy",
+        Doctor_age: "",
+        Doctor_DOB: "",
+        Doctor_gender: "",
+        University_of_doctor: "",
+        Doctor_hospital_name: "",
+        Experience: {
+          experience_duration: "26",
+          experience_type: "years"
         },
         Hospital_id: 3,
-        uuid: "fca9c853-72a0-4e3f-a8a3-89644ec510d4",
+        Qualifications: ["MBBS", "DGO"],
+        Working_days: {
+          monday: true,
+          tuesday: true,
+          wednesday: true,
+          thursday: true,
+          friday: true,
+          saturday: true,
+          sunday: false
+        },
+        created_date: "5/13/2023",
+        created_time: "5:26:26 PM",
+        doctor_email_address: "nithyaram007@gmail.com",
+        doctor_mobile_number: "+91 88475 89288",
+        modified_date: "5/13/2023",
+        modified_time: "5:28:18 PM",
+        password: "MxtRcCMcbC",
+        uuid: "fca9c853-72a0-4e3f-a8a3-89644ec510d4"
       },
       {
-        Doctor_name: "Dr.Thenmozhi",
-        Doctor_image: "../../../assets/images/dr thenmozhi.jpeg",
-        Qualifications: ["MBBS", "DGO"],
-        Experience: {
-          experience_duration: 43,
-          experience_type: "years",
-        },
-        Departments: ["gynecologist"],
         Availabilities: [
           {
             starting_time: "09:00",
-            ending_time: "10:30",
+            ending_time: "10:30"
           },
           {
             starting_time: "15:00",
-            ending_time: "17:00",
-          },
+            ending_time: "17:00"
+          }
         ],
+        Departments: ["gynecologist"],
+        Doctor_image: "https://iili.io/HU0M1Hv.jpg",
+        Doctor_name: "Dr.Thenmozhi",
+        Doctor_age: "",
+        Doctor_DOB: "",
+        Doctor_gender: "",
+        University_of_doctor: "",
+        Doctor_hospital_name: "",
+        Experience: {
+          experience_duration: "43",
+          experience_type: "years"
+        },
+        Hospital_id: 3,
+        Qualifications: ["MBBS", " DGO"],
         Working_days: {
           monday: true,
           tuesday: true,
@@ -375,30 +514,42 @@ if (!doctorDetails) {
           thursday: false,
           friday: true,
           saturday: true,
-          sunday: false,
+          sunday: false
         },
-        Hospital_id: 3,
-        uuid: "ca75ff1f-a7b9-4168-83e7-be6942ba2292",
+        created_date: "5/13/2023",
+        created_time: "5:31:26 PM",
+        doctor_email_address: "thenmozhi008@gmail.com",
+        doctor_mobile_number: "+91 66386 37086",
+        modified_date: "5/13/2023",
+        modified_time: "5:33:18 PM",
+        password: "L05Anw8giq",
+        uuid: "ca75ff1f-a7b9-4168-83e7-be6942ba2292"
       },
       {
-        Doctor_name: "Dr.Premalatha balachandran",
-        Doctor_image: "../../../assets/images/dr premalatha.jpeg",
-        Qualifications: ["MBBS", "DGO", "MRCOG(UK)"],
-        Experience: {
-          experience_duration: 24,
-          experience_type: "years",
-        },
-        Departments: ["Obstetrician", "Gynecologist"],
         Availabilities: [
           {
             starting_time: "12:00",
-            ending_time: "13:30",
+            ending_time: "13:30"
           },
           {
             starting_time: "17:00",
-            ending_time: "18:00",
-          },
+            ending_time: "18:00"
+          }
         ],
+        Departments: ["Obstetrician", "Gynecologist"],
+        Doctor_image: "https://iili.io/HU0MDbV.jpg",
+        Doctor_name: "Dr.Premalatha balachandran",
+        Doctor_age: "",
+        Doctor_DOB: "",
+        Doctor_gender: "",
+        University_of_doctor: "",
+        Doctor_hospital_name: "",
+        Experience: {
+          experience_duration: "24",
+          experience_type: "years"
+        },
+        Hospital_id: 3,
+        Qualifications: ["MBBS", "DGO", "MRCOG(UK)"],
         Working_days: {
           monday: true,
           tuesday: true,
@@ -406,26 +557,38 @@ if (!doctorDetails) {
           thursday: true,
           friday: true,
           saturday: true,
-          sunday: false,
+          sunday: false
         },
-        Hospital_id: 3,
-        uuid: "3b00a604-23e0-4401-8927-75d6d164aad6",
+        created_date: "5/13/2023",
+        created_time: "5:35:26 PM",
+        doctor_email_address: "premalatha009@gmail.com",
+        doctor_mobile_number: "+91 74287 51448",
+        modified_date: "5/13/2023",
+        modified_time: "5:37:18 PM",
+        password: "uSthJdJ9Ri",
+        uuid: "3b00a604-23e0-4401-8927-75d6d164aad6"
       },
       {
-        Doctor_name: "Dr.Bhuvaneshwari",
-        Doctor_image: "../../../assets/images/dr bhuvaneshwari.jpeg",
-        Qualifications: ["MBBS"],
-        Experience: {
-          experience_duration: 30,
-          experience_type: "years",
-        },
-        Departments: ["general physician"],
         Availabilities: [
           {
             starting_time: "10:00",
-            ending_time: "14:00",
-          },
+            ending_time: "14:00"
+          }
         ],
+        Departments: ["general physician"],
+        Doctor_image: "https://iili.io/HU0X2NR.jpg",
+        Doctor_name: "Dr.Bhuvaneshwari",
+        Doctor_age: "",
+        Doctor_DOB: "",
+        Doctor_gender: "",
+        University_of_doctor: "",
+        Doctor_hospital_name: "",
+        Experience: {
+          experience_duration: "30",
+          experience_type: "years"
+        },
+        Hospital_id: 4,
+        Qualifications: ["MBBS"],
         Working_days: {
           monday: true,
           tuesday: true,
@@ -433,26 +596,38 @@ if (!doctorDetails) {
           thursday: true,
           friday: true,
           saturday: true,
-          sunday: false,
+          sunday: false
         },
-        Hospital_id: 4,
-        uuid: "a20e96b1-06f5-4ee7-87fe-459e928f9832",
+        created_date: "5/13/2023",
+        created_time: "5:41:26 PM",
+        doctor_email_address: "bhuvaneshwari010@gmail.com",
+        doctor_mobile_number: "+91 61279 63319",
+        modified_date: "5/13/2023",
+        modified_time: "5:43:18 PM",
+        password: "rl4vndBEDa",
+        uuid: "a20e96b1-06f5-4ee7-87fe-459e928f9832"
       },
       {
-        Doctor_name: "Dr.Devi priya",
-        Doctor_image: "../../../assets/images/dr devi priya.jpeg",
-        Qualifications: ["MBBS", "DDVL"],
-        Experience: {
-          experience_duration: 9,
-          experience_type: "years",
-        },
-        Departments: ["general physician"],
         Availabilities: [
           {
             starting_time: "16:00",
-            ending_time: "19:00",
-          },
+            ending_time: "19:00"
+          }
         ],
+        Departments: ["general physician"],
+        Doctor_image: "https://iili.io/HU0XpX2.jpg",
+        Doctor_name: "Dr.Devi priya",
+        Doctor_age: "",
+        Doctor_DOB: "",
+        Doctor_gender: "",
+        University_of_doctor: "",
+        Doctor_hospital_name: "",
+        Experience: {
+          experience_duration: "9",
+          experience_type: "years"
+        },
+        Hospital_id: 4,
+        Qualifications: ["MBBS", "DDVL"],
         Working_days: {
           monday: true,
           tuesday: true,
@@ -460,53 +635,38 @@ if (!doctorDetails) {
           thursday: true,
           friday: true,
           saturday: true,
-          sunday: false,
+          sunday: false
         },
-        Hospital_id: 4,
-        uuid: "af83bb57-3ed0-4a12-9238-1498e2b3a540",
+        created_date: "5/13/2023",
+        created_time: "5:49:26 PM",
+        doctor_email_address: "devipriya011@gmail.com",
+        doctor_mobile_number: "+91 80796 56908",
+        modified_date: "5/13/2023",
+        modified_time: "5:51:18 PM",
+        password: "AnGgBDkbTU",
+        uuid: "af83bb57-3ed0-4a12-9238-1498e2b3a540"
       },
       {
-        Doctor_name: "Dr.Thilagavathy",
-        Doctor_image: "../../../assets/images/dr thilagavathy.jpeg",
-        Qualifications: ["MBBS"],
-        Experience: {
-          experience_duration: 4,
-          experience_type: "years",
-        },
-        Departments: ["general physician"],
         Availabilities: [
           {
             starting_time: "13:00",
-            ending_time: "15:00",
-          },
+            ending_time: "15:00"
+          }
         ],
-        Working_days: {
-          monday: true,
-          tuesday: true,
-          wednesday: true,
-          thursday: true,
-          friday: true,
-          saturday: true,
-          sunday: false,
+        Departments: ["general physician"],
+        Doctor_image: "https://iili.io/HU0Vvrg.jpg",
+        Doctor_name: "Dr.Thilagavathy",
+        Doctor_age: "",
+        Doctor_DOB: "",
+        Doctor_gender: "",
+        University_of_doctor: "",
+        Doctor_hospital_name: "",
+        Experience: {
+          experience_duration: "4",
+          experience_type: "years"
         },
         Hospital_id: 4,
-        uuid: "7f191918-1831-40e6-9c25-08efa9650f59",
-      },
-      {
-        Doctor_name: "Dr.Divya Arun",
-        Doctor_image: "../../../assets/images/dr divya.jpeg",
-        Qualifications: ["MS-Obstetrics and gynecology", "MBBS"],
-        Experience: {
-          experience_duration: 17,
-          experience_type: "years",
-        },
-        Departments: ["Obstetrician", "Gynecologist"],
-        Availabilities: [
-          {
-            starting_time: "08:00",
-            ending_time: "15:00",
-          },
-        ],
+        Qualifications: ["MBBS"],
         Working_days: {
           monday: true,
           tuesday: true,
@@ -514,113 +674,38 @@ if (!doctorDetails) {
           thursday: true,
           friday: true,
           saturday: true,
-          sunday: false,
+          sunday: false
         },
-        Hospital_id: 7,
-        uuid: "4b6a6699-4e67-43fa-beb4-0e2cda2cb977",
+        created_date: "5/13/2023",
+        created_time: "5:56:26 PM",
+        doctor_email_address: "thilagavathy012@gmail.com",
+        doctor_mobile_number: "+91 80799 14320",
+        modified_date: "5/13/2023",
+        modified_time: "5:57:18 PM",
+        password: "AxtN1ZNMeW",
+        uuid: "7f191918-1831-40e6-9c25-08efa9650f59"
       },
       {
-        Doctor_name: "Dr.Dhanalakshmi",
-        Doctor_image: "../../../assets/images/dr dhanalakshmi.jpeg",
-        Qualifications: ["MD-Obstetrics and gynecology", "MBBS", "DGO"],
-        Experience: {
-          experience_duration: 29,
-          experience_type: "years",
-        },
-        Departments: ["Obstetrician"],
-        Availabilities: [
-          {
-            starting_time: "08:00",
-            ending_time: "14:00",
-          },
-        ],
-        Working_days: {
-          monday: false,
-          tuesday: false,
-          wednesday: true,
-          thursday: false,
-          friday: false,
-          saturday: false,
-          sunday: false,
-        },
-        Hospital_id: 7,
-        uuid: "7f7d4cf1-8267-422b-ab03-bf1ca8d08b2a",
-      },
-      {
-        Doctor_name: "Dr.Ajantha Sanjeev",
-        Doctor_image:
-          "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
-        Qualifications: ["MD-Obstetrics and gynecologist", "MBBS"],
-        Experience: {
-          experience_duration: 30,
-          experience_type: "years",
-        },
-        Departments: ["Obstetrician", "Gynecologist", "General physician"],
-        Availabilities: [
-          {
-            starting_time: "10:00",
-            ending_time: "14:00",
-          },
-          {
-            starting_time: "18:00",
-            ending_time: "20:00",
-          },
-        ],
-        Working_days: {
-          monday: true,
-          tuesday: true,
-          wednesday: true,
-          thursday: true,
-          friday: true,
-          saturday: true,
-          sunday: false,
-        },
-        Hospital_id: 6,
-        uuid: "c4f3cfa1-0362-4da0-9a78-1bb5fc0742ae",
-      },
-      {
-        Doctor_name: "Dr.Swarna Das",
-        Doctor_image: "../../../assets/images/Dr.Swarna das.jpeg",
-        Qualifications: ["MBBS", "MD-General medicine"],
-        Experience: {
-          experience_duration: 31,
-          experience_type: "years",
-        },
-        Departments: ["general physician"],
         Availabilities: [
           {
             starting_time: "09:00",
-            ending_time: "10:30",
-          },
+            ending_time: "10:30"
+          }
         ],
-        Working_days: {
-          monday: true,
-          tuesday: true,
-          wednesday: true,
-          thursday: true,
-          friday: true,
-          saturday: true,
-          sunday: false,
-        },
-        Hospital_id: 9,
-        uuid: "f1cb5c06-edf8-4f6b-9b58-ecb1b517c9bb",
-      },
-      {
-        Doctor_name: "Dr.Sachin manjunath",
-        Doctor_image:
-          "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
-        Qualifications: ["MBBS"],
-        Experience: {
-          experience_duration: 5,
-          experience_type: "years",
-        },
         Departments: ["general physician"],
-        Availabilities: [
-          {
-            starting_time: "19:30",
-            ending_time: "20:00",
-          },
-        ],
+        Doctor_image: "https://iili.io/HU0jktR.jpg",
+        Doctor_name: "Dr.Swarna Das",
+        Doctor_age: "",
+        Doctor_DOB: "",
+        Doctor_gender: "",
+        University_of_doctor: "",
+        Doctor_hospital_name: "",
+        Experience: {
+          experience_duration: "31",
+          experience_type: "years"
+        },
+        Hospital_id: 6,
+        Qualifications: ["MBBS", "MD-General medicine"],
         Working_days: {
           monday: true,
           tuesday: true,
@@ -628,26 +713,38 @@ if (!doctorDetails) {
           thursday: true,
           friday: true,
           saturday: true,
-          sunday: false,
+          sunday: false
         },
-        Hospital_id: 9,
-        uuid: "c7278080-c0a2-4428-a9e9-b40a2c25c622",
+        created_date: "5/13/2023",
+        created_time: "5:58:26 PM",
+        doctor_email_address: "swarnadas013@gmail.com",
+        doctor_mobile_number: "+91 72473 92151",
+        modified_date: "5/13/2023",
+        modified_time: "5:59:18 PM",
+        password: "zkYQPRQoEN",
+        uuid: "f1cb5c06-edf8-4f6b-9b58-ecb1b517c9bb"
       },
       {
-        Doctor_name: "Ms.Sugami ramesh",
-        Doctor_image: "../../../assets/images/Dr.Sugami ramesh.jpeg",
-        Qualifications: ["MA-Clinical psychology"],
-        Experience: {
-          experience_duration: 39,
-          experience_type: "years",
-        },
-        Departments: ["Clinical psychologist"],
         Availabilities: [
           {
             starting_time: "14:30",
-            ending_time: "16:00",
-          },
+            ending_time: "16:00"
+          }
         ],
+        Departments: ["Clinical psychologist"],
+        Doctor_image: "https://iili.io/HU0Nu29.jpg",
+        Doctor_name: "Ms.Sugami ramesh",
+        Doctor_age: "",
+        Doctor_DOB: "",
+        Doctor_gender: "",
+        University_of_doctor: "",
+        Doctor_hospital_name: "",
+        Experience: {
+          experience_duration: "39",
+          experience_type: "years"
+        },
+        Hospital_id: 6,
+        Qualifications: ["MA-Clinical psychology"],
         Working_days: {
           monday: true,
           tuesday: true,
@@ -655,26 +752,38 @@ if (!doctorDetails) {
           thursday: true,
           friday: true,
           saturday: true,
-          sunday: false,
+          sunday: false
         },
-        Hospital_id: 9,
-        uuid: "846810a5-4699-4185-ba8f-c5a86bbf10bb",
+        created_date: "5/13/2023",
+        created_time: "6:09:26 PM",
+        doctor_email_address: "sugami014@gmail.com",
+        doctor_mobile_number: "+91 89172 08183",
+        modified_date: "5/13/2023",
+        modified_time: "6:11:18 PM",
+        password: "fQRGyZTPK8",
+        uuid: "846810a5-4699-4185-ba8f-c5a86bbf10bb"
       },
       {
-        Doctor_name: "Dr.Shalini shetty",
-        Doctor_image: "../../../assets/images/Dr.Shalini shetty.jpeg",
-        Qualifications: ["MBBS", "MS-Opthalmology"],
-        Experience: {
-          experience_duration: 30,
-          experience_type: "years",
-        },
-        Departments: ["Opthalmologist / eye surgeon"],
         Availabilities: [
           {
             starting_time: "10:00",
-            ending_time: "15:00",
-          },
+            ending_time: "15:00"
+          }
         ],
+        Departments: ["Opthalmologist / eye surgeon"],
+        Doctor_image: "https://iili.io/HU0g7sa.jpg",
+        Doctor_name: "Dr.Shalini shetty",
+        Doctor_age: "",
+        Doctor_DOB: "",
+        Doctor_gender: "",
+        University_of_doctor: "",
+        Doctor_hospital_name: "",
+        Experience: {
+          experience_duration: "30",
+          experience_type: "years"
+        },
+        Hospital_id: 6,
+        Qualifications: ["MBBS", "MS-Opthalmology"],
         Working_days: {
           monday: true,
           tuesday: true,
@@ -682,26 +791,38 @@ if (!doctorDetails) {
           thursday: true,
           friday: true,
           saturday: true,
-          sunday: false,
+          sunday: false
         },
-        Hospital_id: 9,
-        uuid: "427423c7-1339-4b59-8b57-27e6a26450f6",
+        created_date: "5/13/2023",
+        created_time: "6:17:26 PM",
+        doctor_email_address: "shalinishty015@gmail.com",
+        doctor_mobile_number: "+91 99346 60537",
+        modified_date: "5/13/2023",
+        modified_time: "6:19:18 PM",
+        password: "NDNP4mxE1z",
+        uuid: "427423c7-1339-4b59-8b57-27e6a26450f6"
       },
       {
-        Doctor_name: "Dr.Sheela chakravarthy",
-        Doctor_image: "../../../assets/images/Dr.Sheela chakravarthy.jpeg",
-        Qualifications: ["MD-General medicine", "MBBS"],
-        Experience: {
-          experience_duration: 31,
-          experience_type: "years",
-        },
+        Availabilities: [
+          {
+            starting_time: "09:30",
+            ending_time: "13:30"
+          }
+        ],
         Departments: ["Internal medicine", "general medicine"],
-        Availabilities: [
-          {
-            starting_time: "09:30",
-            ending_time: "13:30",
-          },
-        ],
+        Doctor_image: "https://iili.io/HU0gzJV.jpg",
+        Doctor_name: "Dr.Sheela chakravarthy",
+        Doctor_age: "",
+        Doctor_DOB: "",
+        Doctor_gender: "",
+        University_of_doctor: "",
+        Doctor_hospital_name: "",
+        Experience: {
+          experience_duration: "31",
+          experience_type: "years"
+        },
+        Hospital_id: 5,
+        Qualifications: ["MD-General medicine", "MBBS"],
         Working_days: {
           monday: true,
           tuesday: true,
@@ -709,26 +830,38 @@ if (!doctorDetails) {
           thursday: true,
           friday: true,
           saturday: true,
-          sunday: false,
+          sunday: false
         },
-        Hospital_id: 5,
-        uuid: "63a3b8a7-584e-4861-8d21-5c4500d0fe37",
+        created_date: "5/13/2023",
+        created_time: "6:43:26 PM",
+        doctor_email_address: "sheela016@gmail.com",
+        doctor_mobile_number: "+91 61279 83322",
+        modified_date: "5/13/2023",
+        modified_time: "6:44:18 PM",
+        password: "j4dZqExrtG",
+        uuid: "63a3b8a7-584e-4861-8d21-5c4500d0fe37"
       },
       {
-        Doctor_name: "Dr.Shalini josh",
-        Doctor_image: "../../../assets/images/Dr.Shalini joshi.jpeg",
-        Qualifications: ["MBBS", "MD-Medicine"],
-        Experience: {
-          experience_duration: 19,
-          experience_type: "years",
-        },
+        Availabilities: [
+          {
+            starting_time: "09:30",
+            ending_time: "13:30"
+          }
+        ],
         Departments: ["General medicine"],
-        Availabilities: [
-          {
-            starting_time: "09:30",
-            ending_time: "13:30",
-          },
-        ],
+        Doctor_image: "https://iili.io/HU0rYT7.jpg",
+        Doctor_name: "Dr.Shalini joshi",
+        Doctor_age: "",
+        Doctor_DOB: "",
+        Doctor_gender: "",
+        University_of_doctor: "",
+        Doctor_hospital_name: "",
+        Experience: {
+          experience_duration: "19",
+          experience_type: "years"
+        },
+        Hospital_id: 5,
+        Qualifications: ["MBBS", "MD-Medicine"],
         Working_days: {
           monday: true,
           tuesday: true,
@@ -736,63 +869,38 @@ if (!doctorDetails) {
           thursday: true,
           friday: true,
           saturday: true,
-          sunday: false,
+          sunday: false
         },
-        Hospital_id: 5,
-        uuid: "98790358-74ed-4d01-bd94-ba8c63536845",
+        created_date: "5/13/2023",
+        created_time: "6:46:26 PM",
+        doctor_email_address: "shalinijoshi017@gmail.com",
+        doctor_mobile_number: "+91 74482 62827",
+        modified_date: "5/13/2023",
+        modified_time: "6:47:18 PM",
+        password: "0KCbyBHmhc",
+        uuid: "98790358-74ed-4d01-bd94-ba8c63536845"
       },
       {
-        Doctor_name: "Dr.Niti Raizada",
-        Doctor_image: "../../../assets/images/Dr.Nithi raizada.jpeg",
-        Qualifications: [
-          "MBBS",
-          "MD-General medicine",
-          "DNB-General medicine",
-          "DM-Oncology",
-          "MRCP(UK)",
-        ],
-        Experience: {
-          experience_duration: 26,
-          experience_type: "years",
-        },
-        Departments: ["Medical oncologist", "Hematologic oncologist"],
         Availabilities: [
           {
             starting_time: "09:00",
-            ending_time: "13:00",
-          },
+            ending_time: "13:00"
+          }
         ],
-        Working_days: {
-          monday: true,
-          tuesday: true,
-          wednesday: true,
-          thursday: true,
-          friday: true,
-          saturday: true,
-          sunday: false,
+        Departments: ["Medical oncologist", "Hematologic oncologist"],
+        Doctor_image: "https://iili.io/HU0rZ6G.jpg",
+        Doctor_name: "Dr.Niti Raizada",
+        Doctor_age: "",
+        Doctor_DOB: "",
+        Doctor_gender: "",
+        University_of_doctor: "",
+        Doctor_hospital_name: "",
+        Experience: {
+          experience_duration: "26",
+          experience_type: "years"
         },
         Hospital_id: 5,
-        uuid: "dd82f6fc-2daa-4926-9996-0b2e99c9023f",
-      },
-      {
-        Doctor_name: "Dr.Sudhan christudas",
-        Doctor_image: "../../../assets/images/Dr.Sudhan christudas.jpeg",
-        Qualifications: ["MBBS", "MS-Orthopaedics"],
-        Experience: {
-          experience_duration: 25,
-          experience_type: "years",
-        },
-        Departments: ["Orthopaedic surgeon"],
-        Availabilities: [
-          {
-            starting_time: "10:30",
-            ending_time: "11:30",
-          },
-          {
-            starting_time: "18:00",
-            ending_time: "19:00",
-          },
-        ],
+        Qualifications: ["MBBS", "MD-General medicine", "DNB-General medicine", "DM-Oncology", "MRCP(UK)"],
         Working_days: {
           monday: true,
           tuesday: true,
@@ -800,139 +908,20 @@ if (!doctorDetails) {
           thursday: true,
           friday: true,
           saturday: true,
-          sunday: false,
+          sunday: false
         },
-        Hospital_id: 8,
-        uuid: "918437af-3ef4-4ee1-a7cc-40caa43b3f80",
-      },
-      {
-        Doctor_name: "Dr.Siddhika iyer",
-        Doctor_image: "../../../assets/images/Dr.Siddhika iyer.jpeg",
-        Qualifications: ["DNB-Psychiatry", "MBBS-Psychiatry"],
-        Experience: {
-          experience_duration: 15,
-          experience_type: "years",
-        },
-        Departments: ["Psychiatrist"],
-        Availabilities: {
-          monday: false,
-          tuesday: false,
-          wednesday: true,
-          thursday: false,
-          friday: false,
-          saturday: false,
-          sunday: false,
-        },
-        Hospital_id: 8,
-        uuid: "f5c2a0c5-a674-40ea-bb57-4bca29f7aad3",
-      },
-    ])
-  );
+        created_date: "5/13/2023",
+        created_time: "6:52:26 PM",
+        doctor_email_address: "nitiraizada018@gmail.com",
+        doctor_mobile_number: "+91 65799 76286",
+        modified_date: "5/13/2023",
+        modified_time: "6:54:18 PM",
+        password: "mgcZALGeCn",
+        uuid: "dd82f6fc-2daa-4926-9996-0b2e99c9023f"
+      }
+    ]
+  ))
 }
-console.log(doctorDetails);
 
-// const appointmentList = JSON.parse(localStorage.getItem("appointments"));
-// if (!appointmentList) {
-//   localStorage.setItem(
-//     "appointments",
-//     JSON.stringify([
-//       {
-//         addDescription: "",
-//         address: "",
-//         appointment_id: "0cd4d3f9-c4ea-437b-ae61-2601016b1dbf",
-//         consultationMethod: {
-//           inPerson: true,
-//           homeConsultation: false,
-//           videoConsultation: false,
-//         },
-//         dateOfBooking: "2023-04-01",
-//         dateOfConsultation: "2023-04-04",
-//         doctorName: "Dr.Premalatha Balachandran",
-//         healthIssues: ["irregular periods"],
-//         patient_age: "18",
-//         patient_email_address: "vaishnavisriram76@gmail.com",
-//         patient_gender: {
-//           male: false,
-//           female: true,
-//           others: false,
-//         },
-//         patient_mobile_number: "7397314532",
-//         patient_name: "Vaishnavi",
-//         timeOfBooking: "14:45",
-//       },
-//       {
-//         addDescription: "",
-//         address: "",
-//         appointment_id: "93b5b247-ace2-4195-8603-2aefbcd564bf",
-//         consultationMethod: {
-//           inPerson: true,
-//           homeConsultation: false,
-//           videoConsultation: false,
-//         },
-//         dateOfBooking: "2023-04-01",
-//         dateOfConsultation: "2023-04-03",
-//         doctorName: "Dr.Premalatha Balachandran",
-//         healthIssues: ["stomachache"],
-//         patient_age: "14",
-//         patient_email_address: "deepika.sriram@fssa.freshworks.com",
-//         patient_gender: {
-//           male: false,
-//           female: true,
-//           others: false,
-//         },
-//         patient_mobile_number: "9940185339",
-//         patient_name: "Subhashini",
-//         timeOfBooking: "14:59",
-//       },
-//       {
-//         addDescription:
-//           "I can't tell the issues in this form..I want to tell you in person",
-//         address: "",
-//         appointment_id: "b5acced5-cde9-4da4-8997-990715840737",
-//         consultationMethod: {
-//           inPerson: true,
-//           homeConsultation: false,
-//           videoConsultation: false,
-//         },
-//         dateOfBooking: "2023-03-31",
-//         dateOfConsultation: "2023-04-03",
-//         doctorName: "Dr.Thenmozhi",
-//         healthIssues: [],
-//         patient_age: "21",
-//         patient_email_address: "sangeetha1997@gmail.com",
-//         patient_gender: {
-//           male: false,
-//           female: true,
-//           others: false,
-//         },
-//         patient_mobile_number: "944553574",
-//         patient_name: "Sangeetha",
-//         timeOfBooking: "15:00",
-//       },
-//       {
-//         addDescription: "",
-//         address: "No.06, abcd steet, x-city",
-//         appointment_id: "fcb58cab-5b1d-45b4-a3e2-0f08b8b3c194",
-//         consultationMethod: {
-//           inPerson: false,
-//           homeConsultation: true,
-//           videoConsultation: false,
-//         },
-//         dateOfBooking: "2023-03-29",
-//         dateOfConsultation: "2023-04-04",
-//         doctorName: "Dr.Meera Raghavan",
-//         healthIssues: ["giddiness"],
-//         patient_age: "80",
-//         patient_email_address: "deepika.sriram@fssa.freshworks.com",
-//         patient_gender: {
-//           male: false,
-//           female: true,
-//           others: false,
-//         },
-//         patient_mobile_number: "8939094029",
-//         patient_name: "Gowri",
-//         timeOfBooking: "15:02",
-//       },
-//     ])
-//   );
-// }
+
+

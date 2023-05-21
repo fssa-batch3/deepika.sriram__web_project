@@ -1,0 +1,118 @@
+main{
+    font-family: 'Inter',sans-serif;
+    margin:50px 60px;
+    width:50%;
+    border:1px solid black;
+    padding:1% 2%;
+    position:relative;
+    left:20%;
+}
+form h2{
+    color:#1b3c74;
+    font-size: 30px;
+    text-align: center;
+}
+.hr-lines {
+    position: relative;
+    max-width:100%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.hr-lines:before {
+    content: " ";
+    height: 5px;
+    width:20%;
+    background:#08ad37;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left:0;
+}
+
+.hr-lines:after {
+    content: " ";
+    height: 5px;
+    width:20%;
+    background:#08ad37;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right:0;
+}
+.appointment{
+    display:flex;
+}
+input,select{
+    height:30px;
+    background-color: #ecf9ff;
+    border: none;
+    border-radius: 3px;
+}
+label{
+    color:#1b3c74;
+}
+span a{
+    text-decoration: none;
+}
+span button{
+    width:40%;
+    padding:1% 0;
+    color:white;
+    background-color: #08ad37;
+    border: none;
+    font-weight: bold;
+    border-radius: 3px;
+}
+span button:hover{
+    background-color: white;
+    color:#08ad37;
+    border:1px solid #08ad37;
+    transition: 0.3s;
+}
+
+
+@media screen and (max-width:800px) {
+    header{
+        justify-content:unset;
+        flex-wrap: nowrap;
+        align-items: center;
+        width:100%;
+    }
+    #hide{
+        font-weight:400;
+        font-family:'kumbh sans',sans-serif;
+        font-size:70%;
+        margin-left:-250px;
+    }
+    header div ul li a{
+        margin-left:5px;
+        margin-right:5px;
+    }
+    main{
+        background-image: url(../images/imageedit_1_2739336866.png);
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+    }
+    main img{
+        display:none;
+    }
+    form{
+        background-color: white;
+        font-size:60%;
+        width:65%;
+    }
+     div br{
+        display:none;
+    }
+    input,textarea{
+        border: 1px solid grey;
+        border-radius: 5px;
+    }
+    [type="button"],[type="reset"]{
+        padding:5px 10px;
+        font-size: 50%;
+        border-radius: 20px;
+    }
+}

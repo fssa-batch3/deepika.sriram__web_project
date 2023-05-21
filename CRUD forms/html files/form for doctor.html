@@ -4,7 +4,7 @@
     <head>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Doctor form</title>
-        <link rel="stylesheet" href="../../../assets/css/register.css">
+        <!-- <link rel="stylesheet" href="../../../assets/css/register.css"> -->
         <link rel="icon" href="../../../assets/images/hospital logo 3.JPG">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,10 +15,7 @@
     </head>
 
     <body>
-        <form role="form" style="width: fit-content;left:30%;top:15%">
-            <img src="../../../assets/images/hospital_logo_3-removebg-preview.png" style="width:30%;margin-left:35%"
-                alt="logo of get well soon">
-            <br>
+        <form role="form" style="width: fit-content;left:30%;top:15%" onsubmit="uploadDoctor(event)">
             <h1 style="text-align: center;color:#03045e">FORM</h1>
             <br>
             <div style="display: flex">
@@ -28,12 +25,29 @@
             </div>
             <br>
             <br>
+            <div style="display:flex">
+                <input type="number"  id="doctor_age" style="width:100%;height:30px" placeholder="enter doctor's age"/>
+                <input type="date"  id="doctorDOB" style="width:100%;height:30px;margin-left: 20px" placeholder="enter doctor's date of birth"/>
+                <select  id="doctorGender" style="width:100%;height:30px;margin-left: 20px">
+                    <option>Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
             <div id="Qualifications">
                 <input type="text" id="qualification" placeholder="enter doctor's qualification"
                     style="width:95%;height:30px">
             </div>
             <br>
             <br>
+            <div>
+                <input type="text" id="department" placeholder="enter doctor's department" style="width:70%;height:30px">
+                <input type="text" id="doctorHospitalName" placeholder="enter hospital name" style="width:90%;height:30px" />
+                <input type="number" id="hospital_id" placeholder="enter hospital id"
+                    style="height:30px">
+            </div>
+            <br><br>
             <div style="display:flex">
                 <input type="number" id="experience_duration" placeholder="enter doctor's experience"
                     style="width:90%;height:30px">
@@ -45,9 +59,7 @@
             <br>
             <br>
             <div>
-                <input type="text" id="department" placeholder="enter doctor's department" style="width:70%;height:30px">
-                <input type="number" id="hospital_id" placeholder="enter hospital id"
-                    style="height:30px">
+                <input type="text" id="doctor_sUniversity" style="width:100%;height:30px" placeholder="enter university which the doctor finished their studies"/>
             </div>
             <br>
             <br>
@@ -72,13 +84,26 @@
                 <input type="time" id="to">
                 <br>
                 <br>
-                <!-- <label>From</label>
-                    <input type="time" id="2ndfrom" />
-                    <label>To </label>
-                    <input type="time" id="2ndto" /> -->
-                <!-- <button type="submit" id="time">enter timezone</button> -->
             </div>
             <br>
+            <div>
+                <label for="">Mobile number</label>
+                <input type="tel" id="doctor_mobile_number" style="width:100%;height:30px"/>
+            </div>
+            <br>
+            <div>
+                <label for="">Email address</label>
+                <input type="tel" id="doctor_email" style="width:100%;height:30px"/>
+            </div>
+            <div>
+                <label for="">Password</label>
+                <input type="password" id="doctor_password" style="width:100%;height:30px">
+            </div>
+            <div>
+                <label for="">Description</label>
+                <br>
+                <textarea id="doctorDescription" cols="30" rows="10"></textarea>
+            </div>
             <button type="submit">submit</button>
         </form>
         <script src="../javascript files/form for doctor.js"></script>

@@ -40,6 +40,12 @@ const sun = document.getElementById("Sunday");
 const docTimingFrom = document.getElementById("from");
 const docTimingTo = document.getElementById("to");
 
+
+const mobile_number = document.getElementById("doctor_mobile_number");
+const email_address = document.getElementById("doctor_email");
+const doctor_password = document.getElementById("doctor_password");
+const dscrptn = document.getElementById("doctorDescription");
+
 document.getElementById("find_details").addEventListener("click", (event) => {
   event.preventDefault();
   const uniqueId = unique_id.value;
@@ -68,6 +74,11 @@ document.getElementById("find_details").addEventListener("click", (event) => {
     sat.checked = doctor.Working_days.saturday;
     sun.checked = doctor.Working_days.sunday;
 
+    mobile_number.value = doctor.doctor_mobile_number;
+    email_address.value = doctor.doctor_email_address;
+    doctor_password.value = doctor.password;
+    dscrptn.value = doctor.doctor_description;
+
     document.getElementById("update_details").onclick =
       function updateDoctorDetails(event) {
         event.preventDefault();
@@ -81,6 +92,15 @@ document.getElementById("find_details").addEventListener("click", (event) => {
         const doctorHospitalId = docHospId.value;
         const doctorTimeFrom = docTimingFrom.value;
         const doctorTimeTo = docTimingTo.value;
+
+        const docMobile = mobile_number.value;
+        const docEmail = email_address.value;
+        const docPassword = doctor_password.value;
+        const docDscrptn = dscrptn.value;
+
+        let stamp = new Date();
+        const modifed_at_date = stamp.toLocaleDateString('en-US');
+        const modified_at_time = stamp.toLocaleTimeString('en-US');
 
         // working days
         const m_day = mon.checked;
@@ -102,6 +122,13 @@ document.getElementById("find_details").addEventListener("click", (event) => {
         // doctor.Working_days = doctorWorkingDays;
         doctor.Availabilities.starting_time = doctorTimeFrom;
         doctor.Availabilities.ending_time = doctorTimeTo;
+        doctor.doctor_mobile_number = docMobile;
+        doctor.doctor_email_address = docEmail;
+        doctor.password = docPassword;
+        doctor.doctor_description = docDscrptn;
+
+        doctor.modified_date = modifed_at_date;
+        doctor.modified_time = modified_at_time;
 
         // working days
         doctor.Working_days.monday = m_day;
@@ -112,7 +139,6 @@ document.getElementById("find_details").addEventListener("click", (event) => {
         doctor.Working_days.saturday = sat_day;
         doctor.Working_days.sunday = sun_day;
 
-        // let department = document.getElementById("additional_department").value;
         const starting_time = document.getElementById("2nd_from").value;
         const ending_time = document.getElementById("2nd_to").value;
 
