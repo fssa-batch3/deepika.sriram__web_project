@@ -14,6 +14,9 @@ const p_d_name = document.getElementById("doctor_name");
 const p_d_c = document.getElementById("consultDate");
 const p_mobile = document.getElementById("mobile_number");
 
+const status = "";
+const today = new Date();
+
 
 const appointmentId = new URLSearchParams(window.location.search).get(
   "appointment-id"
@@ -38,8 +41,26 @@ if (appointmentData) {
   
   p_d_c.value = appointmentData.dateOfConsultation;
   p_mobile.value = appointmentData.patient_mobile_number;
+
+  const consultDate = new Date(appointmentData.dateOfConsultation);
+
+  if(appointmentData.status.toLowerCase() === "accepted"){
+    if((consultDate.getDate() - today.getDate())<0){
+      appointmentData.status = "consulted"
+      localStorage.setItem('appointments' , JSON.stringify(appointmentList))
+    }
+    else if((consultDate.getDate() - today.getDate() === 0)){
+      appointmentData.status = "due on this day"
+      localStorage.setItem('appointments' , JSON.stringify(appointmentList))
+    }
+    else{
+      appointmentData.status = "accepted";
+      localStorage.setItem('appointments' , JSON.stringify(appointmentList))
+    }
+  }
   
 }
+
 
 
 document.querySelector('#back').addEventListener('click' , function(){

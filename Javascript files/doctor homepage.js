@@ -132,6 +132,12 @@ if (doctor) {
         `
         document.querySelector('#appointmentList').insertAdjacentHTML('beforeend', appointment);
         document.getElementById(each.patient_first_name).append(a);
+
+        let consultedApp = document.getElementById(fname);
+
+        if(status.toLowerCase() === "consulted"){
+            consultedApp.style.contentVisibility = "hidden"
+        }
     }
 
     // to display the appointment details of each by clicking each appointment.

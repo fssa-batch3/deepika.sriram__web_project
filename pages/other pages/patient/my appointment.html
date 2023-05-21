@@ -55,35 +55,6 @@
             integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="../../../Javascript files/header.js"></script>
-        <script>
-            const uniqueUser = JSON.parse(localStorage.getItem('uniqueUser'));
-            const Appointments = JSON.parse(localStorage.getItem("appointments"));
-
-            const userAppointments = Appointments.filter((data) =>
-                data.user_email_id === uniqueUser)
-            console.log(userAppointments)
-        for (let i = 0; i < userAppointments.length; i++) {
-          const userAppointment = userAppointments[i];
-
-
-
-          const historyTable = `
-                <tr>
-                    <td>${i+1} . </td>
-                    <td>${userAppointment.patient_first_name} ${userAppointment.patient_last_name}</td>
-                    <td>${userAppointment.doctorName}</td>
-                    <td>${userAppointment.dateOfBooking} , ${userAppointment.timeOfBooking}</td> 
-                    <td>${userAppointment.dateOfConsultation}</td>
-                    <td>${userAppointment.status}</td>
-                    <td>
-                        <a href="./appointment detail form.html?appointment-id=${userAppointment.appointment_id}">
-                            <button type="button">Click here</button>
-                        </a>    
-                    </td>  
-                </tr>
-            `;
-          document.querySelector("table").insertAdjacentHTML("beforeend", historyTable);
-        }
-    </script>
+        <script src="../../../Javascript files/my appointment.js"></script>
     </body>
 </html>

@@ -94,51 +94,6 @@
         integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./Javascript files/header.js"></script>
-    <!-- <script>
-        // eslint-disable-next-line no-undef
-        if (section_1) {
-            const hospitalList = JSON.parse(localStorage.getItem("hospital_detail"));
-
-            // let filteredName = place_card.filter(e => e.)
-            // console.log(filteredPlaceName);
-            // console.log(filteredCategory);
-            // console.log(specificplace);
-
-            document.querySelector("#city").addEventListener("keypress", function (e) {
-                if (e.key === "Enter") {
-                    e.preventDefault();
-                    document.getElementById("search").click();
-                }
-            });
-            document
-                .querySelector("#search")
-                .addEventListener("click", function searchPlace(e) {
-                    e.preventDefault();
-                    const search = document.getElementById("city").value.trim().toLowerCase();
-                    console.log(search);
-
-                    if (search === "" || search === null || search === undefined) {
-                        alert("invalid search input");
-                        return;
-                    }
-
-                    const match = [];
-
-                    for (let i = 0; i < hospitalList.length; i++) {
-                        const city = hospitalList[i].city.toLowerCase().trim();
-                        // eslint-disable-next-line prettier/prettier
-                        const condition = search.includes(city, 0);
-                        if (condition) {
-                            match.push(hospitalList[i]);
-                            // eslint-disable-next-line prettier/prettier, no-undef
-                            window.location.href = `${hospitals}?city=${search}`;
-                        }
-                    }
-
-                    console.log(match);
-                });
-        }
-    </script> -->
 </body>
 
 </html>
