@@ -116,7 +116,7 @@ if (!appointments) {
         patient_gender: "Female",
         patient_last_name: "Sriram",
         patient_mobile_number: "7397314532",
-        status: "ACCEPTED",
+        status: "consulted",
         timeOfBooking: "9:40:23 AM",
       },
       {
@@ -160,7 +160,7 @@ if (!appointments) {
         user_email_id:"shruthi5704@gmail.com",
         appointment_id: "520bf8f9-7923-40ae-aefc-089a9abd51e8",
         dateOfBooking: "5/20/2023",
-        dateOfConsultation: "5/22/2023, 11:50:00 AM",
+        dateOfConsultation: "5/25/2023, 11:50:00 AM",
         doctorId: "aee049b7-1043-404e-a848-901a6d30996c",
         doctorName: "Dr.Meera Raghavan",
         healthIssues: [""],
@@ -190,7 +190,8 @@ if (!appointments) {
         patient_mobile_number: "7397314532",
         status: "ACCEPTED",
         timeOfBooking: "9:49:18 AM"
-      }
+      },
+      
     ]
   ))
 }
