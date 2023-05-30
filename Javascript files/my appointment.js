@@ -2,6 +2,8 @@ let date_of_consultation;
 // let currentDate = new Date();
 // let current = new Date().toLocaleString('en-US');
 let consultDate;
+let dateDiff;
+let date_difference;
 
 const uniqueUser = JSON.parse(localStorage.getItem('uniqueUser'));
 const Appointments = JSON.parse(localStorage.getItem("appointments"));
@@ -10,13 +12,16 @@ const today = new Date();
 for(let j=0;j<Appointments.length;j++){
     const a = Appointments[j];
     consultDate = new Date(a.dateOfConsultation);
+    dateDiff = consultDate-today;
+    date_difference = Math.floor(dateDiff/(1000*60*60*24));
+    
 
     if(a.status.toLowerCase() === "accepted"){
-        if((consultDate.getDate() - today.getDate())<0){
+        if(date_difference<0){
           a.status = "consulted"
           localStorage.setItem('appointments' , JSON.stringify(Appointments))
         }
-        else if((consultDate.getDate() - today.getDate() === 0)){
+        else if(date_difference === 0){
           a.status = "due on this day"
           localStorage.setItem('appointments' , JSON.stringify(Appointments))
         }
@@ -26,7 +31,7 @@ for(let j=0;j<Appointments.length;j++){
         }
     }
     else if(a.status.toLowerCase() === "due on this day"){
-        if((consultDate.getDate() - today.getDate())<0){
+        if(date_difference<0){
             a.status = "consulted"
             localStorage.setItem('appointments' , JSON.stringify(Appointments))
         }
@@ -53,7 +58,7 @@ for (let i = 0; i < userAppointments.length; i++) {
                     <td>${userAppointment.patient_first_name} ${userAppointment.patient_last_name}</td>
                     <td>${userAppointment.doctorName}</td>
                     <td>${userAppointment.dateOfBooking} , ${userAppointment.timeOfBooking}</td> 
-                    <td>${userAppointment.dateOfConsultation}</td>
+                    <td>${userAppointment.dateOfConsultation} ${userAppointment.timeOfConsultation}</td>
                     <td>${userAppointment.status}</td>
                     <td>
                         <a href="./appointment detail form.html?appointment-id=${userAppointment.appointment_id}">

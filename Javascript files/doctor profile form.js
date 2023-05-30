@@ -3,7 +3,7 @@
 const doctor_name = document.getElementById('doctor_name');
 const doctor_age = document.getElementById('doctor_age');
 const doctor_gender = document.getElementById('doctor_gender');
-const doctor_dob = document.getElementById('doctorDOB');
+// const doctor_dob = document.getElementById('doctorDOB');
 const doctorQualifications = document.getElementById('doctorQualifications');
 const doctorDepartments = document.getElementById('doctorDepartment');
 
@@ -43,7 +43,7 @@ if(udoctor){
     doctor_name.value = udoctor.Doctor_name;
     doctor_age.value = udoctor.Doctor_age;
     doctor_gender.value = udoctor.Doctor_gender;
-    doctor_dob.value = udoctor.Doctor_DOB;
+    // doctor_dob.value = udoctor.Doctor_DOB;
     doctorQualifications.value = udoctor.Qualifications;
     doctorDepartments.value = udoctor.Departments;
     
@@ -75,7 +75,7 @@ if(udoctor){
         const doctorName = doctor_name.value;
         const doctorAge = doctor_age.value;
         const doctorGender = doctor_gender.value;
-        const doctorDOB = doctor_dob.value;
+        // const doctorDOB = doctor_dob.value;
         const doctorQualification = doctorQualifications.value.split(",");
         const doctorExperienceDuration = experience_duration.value;
         const doctorExperienceType = experience_type.value;
@@ -106,7 +106,7 @@ if(udoctor){
         udoctor.Doctor_name = doctorName;
         udoctor.Doctor_age = doctorAge;
         udoctor.Doctor_gender = doctorGender;
-        udoctor.Doctor_DOB = doctorDOB;
+        // udoctor.Doctor_DOB = doctorDOB;
         udoctor.Qualifications = doctorQualification;
         udoctor.Departments = doctorDepartment;
         udoctor.Experience.experience_duration = doctorExperienceDuration;
@@ -136,9 +136,12 @@ if(udoctor){
         const start_time = document.getElementById('starting_time_2').value;
         const end_time = document.getElementById('ending_time_2').value;
 
-        if(start_time.value!== "" && end_time.value!== ""){
-            udoctor.Availabilities.push({starting_time:start_time , ending_time:end_time})
+        if(start_time && end_time){
+            if(start_time.value!== "" || end_time.value!== ""){
+                udoctor.Availabilities.push({starting_time:start_time , ending_time:end_time})
+            }
         }
+        
 
         localStorage.setItem('doctor_detail' , JSON.stringify(list_doctor_detail));
         alert('profile updated successfully !!')

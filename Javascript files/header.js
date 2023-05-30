@@ -3,6 +3,7 @@
 
 const { origin } = window.location;
 const about = `${origin}/pages/other pages/other pages/about us.html`;
+const contact = `${origin}/pages/other pages/other pages/contact us.html`
 const image = `${origin}/assets/images/deepika logo-4.png`;
 const patient_login = `${origin}/pages/other pages/other pages/login for patient.html`;
 const doctor_login = `${origin}/pages/other pages/other pages/login for doctor.html`
@@ -14,6 +15,7 @@ const menu = `${origin}/pages/other pages/other pages/menu.html`;
 const avatar = `${origin}/assets/images/22-223968_default-profile-picture-circle-hd-png-download-removebg-preview.png`
 const index = `${origin}/index.html`;
 
+
 // header before login
 
 const heading_1 = `
@@ -24,7 +26,7 @@ const heading_1 = `
                     <a href="${index}">Home</a>
                 </li>
                 <li>
-                    <a href="#Contact">Contact us</a>
+                    <a href="${contact}">Contact us</a>
                 </li>
                 <li>
                     <a href="${signup}">Sign up</a>
@@ -53,16 +55,16 @@ const heading_2 = `
             <a href="${hospitals}">Hospitals</a>
         </li>
         <li>
-            <a href="#Contact">Contact Us</a>
+            <a href="${contact}">Contact Us</a>
         </li>
     </ul>
     <div class="dropdown" style="width:10%">
       <a id="image" href="javascript:void(0)" class="dropbtn"></a>
       <img src="${avatar}" id="avatar"/>
       <div class="dropdown-content">
-        <a id="signout">Sign out <i class="fa fa-sign-out"></i></a>
-        <a href="${my_appointment}">My appointments <i class="fa-solid fa-calendar-check"></i> </a>
         <a href="${profile}">View profile <i class="fas fa-user"></i> </a>
+        <a href="${my_appointment}">My appointments <i class="fa-solid fa-calendar-check"></i> </a>
+        <a id="signout">Sign out <i class="fa fa-sign-out"></i></a>
       </div>
     </div>
 </section>

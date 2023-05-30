@@ -1,200 +1,167 @@
-const hospitalDetails = JSON.parse(localStorage.getItem("hospital_detail"));
-if (!hospitalDetails) {
-  localStorage.setItem(
-    "hospital_detail",
-    JSON.stringify([
+const hospitalDetails = JSON.parse(localStorage.getItem('hospital_detail'));
+if(!hospitalDetails){
+  localStorage.setItem('hospital_detail' , JSON.stringify(
+    [
       {
         address: "No.43, Lakshmi talkies road",
-        area: "Shenoy nagar",
         city: "Chennai",
-        contact_number: "9865567098",
+        contact_number: "1 800-572-1111",
         email_address: "bilroth@gmail.com",
-        hospital_name: "Bilroth hospital",
+        hosp_license_no: "",
         hospital_id: 1,
-        image_link:
-          "../../../assets/images/Billroth_Hospitals__Shenoy_Nagar_logo.jpg",
-        link_file: "../other pages/doctor's list.html",
-        locality: "",
+        hospital_name: "Bilroth hospital",
+        image_link: "https://iili.io/HrYVYBt.jpg",
+        license_img: "",
+        locality: "Shenoy nagar",
         pincode: "600030",
-        uuid: "2ad66111-1826-4c7d-907c-9d2a356ef514",
+        state: "Tamil Nadu",
+        uuid: "2ad66111-1826-4c7d-907c-9d2a356ef514"
       },
       {
-        address:
-          "21/22,Greams lane(opposite to thousand lights police station)",
-        area: "",
+        address: "21/22,Greams lane(opposite to thousand lights police station)",
         city: "Chennai",
         contact_number: "1 800-572-1111",
         email_address: "infochennai@apollohospitals.com",
-        hospital_name: "Apollo hospital",
+        hosp_license_no: "",
         hospital_id: 2,
-        image_link:
-          "../../../assets/images/apollo-gleneagles-hospitals-kolkata-squarelogo-1464594605205.png",
-        link_file: "../other pages/doctor's list.html",
+        hospital_name: "Apollo hospital",
+        image_link: "https://iili.io/HrYVaEX.png",
+        license_img: "",
         locality: "Greams road",
         pincode: "600006",
-        uuid: "152c0929-bc27-4ac2-a783-300a095238f7",
+        state: "Tamil Nadu",
+        uuid: "152c0929-bc27-4ac2-a783-300a095238f7"
       },
       {
         address: "No. 52, 1st Main Rd",
-        area: "Adyar",
         city: "Chennai",
         contact_number: "9865567098",
         email_address: "fortis@gmail.com",
-        hospital_name: "Fortis malar hospital",
+        hosp_license_no: "",
         hospital_id: 3,
-        image_link: "../../../assets/images/fortis logo.png",
-        link_file: "../other pages/doctor's list.html",
-        locality: "Gandhi nagar",
+        hospital_name: "Fortis malar hospital",
+        image_link: "https://iili.io/HrYVRhN.png",
+        license_img: "",
+        locality: "Gandhi nagar, Adyar",
         pincode: "600020",
-        uuid: "995c3789-f4a2-40b6-9da0-6e4a88a05e78",
+        state: "Tamil Nadu",
+        uuid: "995c3789-f4a2-40b6-9da0-6e4a88a05e78"
       },
       {
-        address: "No.434",
-        area: "Vadapalani",
+        address: "No.434, N S K Salai",
         city: "Chennai",
         contact_number: "9865567098",
         email_address: "vijaya@gmail.com",
-        hospital_name: "Vijaya hospital",
+        hosp_license_no: "",
         hospital_id: 4,
-        image_link: "../../../assets/images/vijaya.png",
-        link_file: "../other pages/doctor's list.html",
-        locality: "N S K Salai",
+        hospital_name: "Vijaya hospital",
+        image_link: "https://iili.io/HrYV5QI.png",
+        license_img: "",
+        locality: "Vadapalani",
         pincode: "600026",
-        uuid: "8ba7b85a-3cb9-4f4d-9e41-080391a08c19",
+        state: "Tamil Nadu",
+        uuid: "8ba7b85a-3cb9-4f4d-9e41-080391a08c19"
       },
       {
         address: "154/9, Opposite IIM-B",
-        area: "Bannerghatta Road",
         city: "Bengaluru",
         contact_number: "1 800-572-1111",
-        email_address: "fortis@gmail.com",
-        hospital_name: "Fortis hospital",
+        email_address: "fortisblore@gmail.com",
+        hosp_license_no: "",
         hospital_id: 5,
-        image_link: "../../../assets/images/fortis logo.png",
-        link_file: "../other pages/doctor's list.html",
-        locality: "",
+        hospital_name: "Fortis hospital",
+        image_link: "https://iili.io/HrYVRhN.png",
+        license_img: "",
+        locality: "Bannerghatta Road",
         pincode: "560076",
-        uuid: "3bf7c9bf-be92-4f1c-adba-92cc19e8d7c9",
+        state: "Karnataka",
+        uuid: "3bf7c9bf-be92-4f1c-adba-92cc19e8d7c9"
       },
       {
         address: "154/11,",
-        area: "Bannerghatta Main road",
         city: "Bengaluru",
         contact_number: "",
-        email_address: "infochennai@apollohospitals.com",
-        hospital_name: "Apollo hospitals",
+        email_address: "infoblore@apollohospitals.com",
+        hosp_license_no: "",
         hospital_id: 6,
-        image_link:
-          "../../../assets/images/apollo-gleneagles-hospitals-kolkata-squarelogo-1464594605205.png",
-        link_file: "../other pages/doctor's list.html",
-        locality: "",
+        hospital_name: "Apollo hospitals",
+        image_link: "https://iili.io/HrYVaEX.png",
+        license_img: "",
+        locality: "Bannerghatta Main road",
         pincode: "560076",
-        uuid: "79bd3c90-40ef-4659-8ea0-2c258f534b75",
-      },
-    ])
-  );
-}
-
-console.log(hospitalDetails);
-
-const appointments = JSON.parse(localStorage.getItem('appointments'));
-if (!appointments) {
-  localStorage.setItem('appointments', JSON.stringify(
-    [
-      {
-        address: "",
-        user_email_id:"deepika.sriram@fssa.freshworks.com",
-        appointment_id: "883e3eb9-eb0c-4378-b1bd-4dd0a5817487",
-        dateOfBooking: "5/20/2023",
-        dateOfConsultation: "5/21/2023, 11:40:00 AM",
-        doctorId: "aee049b7-1043-404e-a848-901a6d30996c",
-        doctorName: "Dr.Meera Raghavan",
-        healthIssues: ["irregular periods"],
-        method_of_consultation: "Video consultation",
-        patient_age: "18",
-        patient_first_name: "Deepika",
-        patient_gender: "Female",
-        patient_last_name: "Sriram",
-        patient_mobile_number: "7397314532",
-        status: "consulted",
-        timeOfBooking: "9:40:23 AM",
-      },
-      {
-        address: "",
-        user_email_id:"deepika.sriram@fssa.freshworks.com",
-        appointment_id: "87476f32-abb8-47d4-a5b8-c9ece4edcc36",
-        dateOfBooking: "5/20/2023",
-        dateOfConsultation: "5/21/2023, 11:40:00 AM",
-        doctorId: "aee049b7-1043-404e-a848-901a6d30996c",
-        doctorName: "Dr.Meera Raghavan",
-        healthIssues: [""],
-        method_of_consultation: "In person",
-        patient_age: "20",
-        patient_first_name: "Sangeetha",
-        patient_gender: "Female",
-        patient_last_name: "Ramachandran",
-        patient_mobile_number: "9445535374",
-        status: "REJECTED",
-        timeOfBooking: "9:43:49 AM",
-      },
-      {
-        address: "",
-        user_email_id:"shruthi5704@gmail.com",
-        appointment_id: "89606a18-2812-46cc-bb58-afda4699d3e9",
-        dateOfBooking: "5/20/2023",
-        dateOfConsultation: "5/22/2023, 11:45:00 AM",
-        doctorId: "aee049b7-1043-404e-a848-901a6d30996c",
-        doctorName: "Dr.Meera Raghavan",
-        healthIssues: [""],
-        method_of_consultation: "In person",
-        patient_age: "23",
-        patient_first_name: "Durga",
-        patient_gender: "Female",
-        patient_last_name: "Lakshmi",
-        patient_mobile_number: "8939094029",
-        status: "REJECTED",
-        timeOfBooking: "9:45:07 AM"
-      },
-      {
-        address: "",
-        user_email_id:"shruthi5704@gmail.com",
-        appointment_id: "520bf8f9-7923-40ae-aefc-089a9abd51e8",
-        dateOfBooking: "5/20/2023",
-        dateOfConsultation: "5/25/2023, 11:50:00 AM",
-        doctorId: "aee049b7-1043-404e-a848-901a6d30996c",
-        doctorName: "Dr.Meera Raghavan",
-        healthIssues: [""],
-        method_of_consultation: "In person",
-        patient_age: "12",
-        patient_first_name: "Saranya",
-        patient_gender: "Female",
-        patient_last_name: "Ramachandran",
-        patient_mobile_number: "9043690851",
-        status: "ACCEPTED",
-        timeOfBooking: "9:46:45 AM"
-      },
-      {
-        address: "",
-        user_email_id:"deepika.sriram@fssa.freshworks.com",
-        appointment_id: "62b0738e-3ee3-43d2-9912-30f58c3d2e33",
-        dateOfBooking: "5/20/2023",
-        dateOfConsultation: "5/23/2023, 10:30:00 AM",
-        doctorId: "427423c7-1339-4b59-8b57-27e6a26450f6",
-        doctorName: "Dr.Shalini shetty",
-        healthIssues: ["eye irritation", " eyepain", " can't see distant objects"],
-        method_of_consultation: "In person",
-        patient_age: "18",
-        patient_first_name: "Deepika",
-        patient_gender: "Female",
-        patient_last_name: "Sriram",
-        patient_mobile_number: "7397314532",
-        status: "ACCEPTED",
-        timeOfBooking: "9:49:18 AM"
-      },
+        state: "Tamil Nadu",
+        uuid: "79bd3c90-40ef-4659-8ea0-2c258f534b75"
+      }
       
     ]
   ))
 }
+
+// const appointments = JSON.parse(localStorage.getItem('appointments'));
+// if (!appointments) {
+//   localStorage.setItem('appointments', JSON.stringify(
+//     [
+//       {
+//         address: "",
+//         user_email_id:"deepika.sriram@fssa.freshworks.com",
+//         appointment_id: "883e3eb9-eb0c-4378-b1bd-4dd0a5817487",
+//         dateOfBooking: "5/20/2023",
+//         dateOfConsultation: "5/21/2023, 11:40:00 AM",
+//         doctorId: "aee049b7-1043-404e-a848-901a6d30996c",
+//         doctorName: "Dr.Meera Raghavan",
+//         healthIssues: ["irregular periods"],
+//         method_of_consultation: "Video consultation",
+//         patient_age: "18",
+//         patient_first_name: "Deepika",
+//         patient_gender: "Female",
+//         patient_last_name: "Sriram",
+//         patient_mobile_number: "7397314532",
+//         status: "consulted",
+//         reason:"",
+//         timeOfBooking: "9:40:23 AM",
+//       },
+//       {
+//         address: "",
+//         user_email_id:"deepika.sriram@fssa.freshworks.com",
+//         appointment_id: "87476f32-abb8-47d4-a5b8-c9ece4edcc36",
+//         dateOfBooking: "5/20/2023",
+//         dateOfConsultation: "5/21/2023, 11:40:00 AM",
+//         doctorId: "aee049b7-1043-404e-a848-901a6d30996c",
+//         doctorName: "Dr.Meera Raghavan",
+//         healthIssues: [""],
+//         method_of_consultation: "In person",
+//         patient_age: "20",
+//         patient_first_name: "Sangeetha",
+//         patient_gender: "Female",
+//         patient_last_name: "Ramachandran",
+//         patient_mobile_number: "9445535374",
+//         status: "rejected",
+//         reason:"commited with another appointment",
+//         timeOfBooking: "9:43:49 AM",
+//       },
+//       {
+//         address: "",
+//         user_email_id:"deepika.sriram@fssa.freshworks.com",
+//         appointment_id: "62b0738e-3ee3-43d2-9912-30f58c3d2e33",
+//         dateOfBooking: "5/20/2023",
+//         dateOfConsultation: "5/23/2023, 10:30:00 AM",
+//         doctorId: "427423c7-1339-4b59-8b57-27e6a26450f6",
+//         doctorName: "Dr.Shalini shetty",
+//         healthIssues: ["eye irritation", " eyepain", " can't see distant objects"],
+//         method_of_consultation: "In person",
+//         patient_age: "18",
+//         patient_first_name: "Deepika",
+//         patient_gender: "Female",
+//         patient_last_name: "Sriram",
+//         patient_mobile_number: "7397314532",
+//         status: "accepted",
+//         reason:"",
+//         timeOfBooking: "9:49:18 AM"
+//       },
+      
+//     ]
+//   ))
+// }
 
 const doctor_detail = JSON.parse(localStorage.getItem('doctor_detail'));
 if (!doctor_detail) {
@@ -208,17 +175,16 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["Obstetrician"],
+        Department_id:[3],
         Doctor_image: "https://iili.io/HU0F8Ba.jpg",
         Doctor_name: "Dr.Kalaivani Ramalingam",
         Experience: {
           experience_duration: "26",
           experience_type: "years"
         },
-        Doctor_age: "",
-        Doctor_DOB: "",
-        Doctor_gender: "",
+        Doctor_gender: "Female",
         University_of_doctor: "",
-        Doctor_hospital_name: "",
+        Doctor_hospital_name: "Apollo hospital",
         Hospital_id: 2,
         Qualifications: ["MBBS", " DGO"],
         Working_days: {
@@ -230,9 +196,12 @@ if (!doctor_detail) {
           saturday: true,
           sunday: false
         },
+        Medical_license_img:"",
+        mrc_number:"",
+        year_of_registration:"",
+        name_of_the_council:"",
         created_date: "5/13/2023",
         created_time: "3:16:26 PM",
-        doctor_description: "Obstetrician and Gynaecologist with advanced training in Urogynaecology",
         doctor_email_address: "kalaivani001@gmail.com",
         doctor_mobile_number: "+91 64475 66954",
         modified_date: "5/13/2023",
@@ -248,15 +217,16 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["Obstetrician", "Gynecologist"],
+        Department_id:[3],
         Doctor_image: "https://iili.io/HU0fftt.jpg",
         Doctor_name: "Dr.Meera Raghavan",
-        Doctor_age: "",
-        Doctor_DOB: "",
-        Doctor_gender: "",
-        University_of_doctor: "",
-        Doctor_hospital_name: "",
+        
+        
+        Doctor_gender: "Female",
+        University_of_doctor: " PGI Chandigarh, JIPMER and Manchester, UK.",
+        Doctor_hospital_name: "Apollo hospital",
         Experience: {
-          experience_duration: "26",
+          experience_duration: "19",
           experience_type: "years"
         },
         Hospital_id: 2,
@@ -270,13 +240,17 @@ if (!doctor_detail) {
           saturday: true,
           sunday: false
         },
+        Medical_license_img:"",
+        mrc_number:"",
+        year_of_registration:"",
+        name_of_the_council:"",
         created_date: "5/13/2023",
         created_time: "3:39:26 PM",
         doctor_email_address: "meera002@gmail.com",
         doctor_mobile_number: "+91 61279 18397",
         modified_date: "5/13/2023",
         modified_time: "3:42:18 PM",
-        password: "Z5ZJe1NRau",
+        password: "Asdf***123",
         uuid: "aee049b7-1043-404e-a848-901a6d30996c"
       },
       {
@@ -287,13 +261,14 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["Obstetrician", "Gynecologist"],
+        Department_id:[3],
         Doctor_image: "https://iili.io/HU0CIUJ.jpg",
         Doctor_name: "Dr.Alpha Khakhar",
-        Doctor_age: "",
-        Doctor_DOB: "",
-        Doctor_gender: "",
+        
+        
+        Doctor_gender: "Female",
         University_of_doctor: "",
-        Doctor_hospital_name: "",
+        Doctor_hospital_name: "Apollo hospital",
         Experience: {
           experience_duration: "24",
           experience_type: "years"
@@ -309,6 +284,10 @@ if (!doctor_detail) {
           saturday: true,
           sunday: false
         },
+        Medical_license_img:"",
+        mrc_number:"",
+        year_of_registration:"",
+        name_of_the_council:"",
         created_date: "5/13/2023",
         created_time: "3:47:26 PM",
         doctor_email_address: "alpa003@gmail.com",
@@ -330,13 +309,14 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["general physician", "gynecologist", "obstetrician"],
+        Department_id:[17,3],
         Doctor_image: "https://iili.io/HU0aJLb.jpg",
         Doctor_name: "Dr.Lakshmi Devarajan",
-        Doctor_age: "",
-        Doctor_DOB: "",
-        Doctor_gender: "",
+        
+        
+        Doctor_gender: "Female",
         University_of_doctor: "",
-        Doctor_hospital_name: "",
+        Doctor_hospital_name: "Bilroth hospital",
         Experience: {
           experience_duration: "25",
           experience_type: "years"
@@ -352,6 +332,10 @@ if (!doctor_detail) {
           saturday: true,
           sunday: false
         },
+        Medical_license_img:"",
+        mrc_number:"",
+        year_of_registration:"",
+        name_of_the_council:"",
         created_date: "5/13/2023",
         created_time: "4:58:26 PM",
         doctor_email_address: "lakshmi004@gmail.com",
@@ -369,13 +353,14 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["Obstetrician", "Gynecologist"],
+        Department_id:[3],
         Doctor_image: "https://iili.io/HU01clf.jpg",
         Doctor_name: "Dr.Rajini",
-        Doctor_age: "",
-        Doctor_DOB: "",
-        Doctor_gender: "",
+        
+        
+        Doctor_gender: "Female",
         University_of_doctor: "",
-        Doctor_hospital_name: "",
+        Doctor_hospital_name: "Bilroth hospital",
         Experience: {
           experience_duration: "29",
           experience_type: "years"
@@ -391,6 +376,10 @@ if (!doctor_detail) {
           saturday: true,
           sunday: true
         },
+        Medical_license_img:"",
+        mrc_number:"",
+        year_of_registration:"",
+        name_of_the_council:"",
         created_date: "5/13/2023",
         created_time: "5:13:26 PM",
         doctor_email_address: "rajini005@gmail.com",
@@ -408,13 +397,14 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["Obstetrician", "Gynecologist"],
+        Department_id:[3],
         Doctor_image: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
         Doctor_name: "Dr.Divya Yuvakesavan",
-        Doctor_age: "",
-        Doctor_DOB: "",
-        Doctor_gender: "",
+        
+        
+        Doctor_gender: "Female",
         University_of_doctor: "",
-        Doctor_hospital_name: "",
+        Doctor_hospital_name: "Bilroth hospital",
         Experience: {
           experience_duration: "12",
           experience_type: "years"
@@ -430,6 +420,10 @@ if (!doctor_detail) {
           saturday: true,
           sunday: false
         },
+        Medical_license_img:"",
+        mrc_number:"",
+        year_of_registration:"",
+        name_of_the_council:"",
         created_date: "5/13/2023",
         created_time: "5:22:26 PM",
         doctor_email_address: "divyayuva006@gmail.com",
@@ -451,13 +445,14 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["Obstetrician", "Gynecologist"],
+        Department_id:[3],
         Doctor_image: "https://iili.io/HU0Gi9R.jpg",
         Doctor_name: "Dr.Nithya ramamorthy",
-        Doctor_age: "",
-        Doctor_DOB: "",
-        Doctor_gender: "",
+        
+        
+        Doctor_gender: "Female",
         University_of_doctor: "",
-        Doctor_hospital_name: "",
+        Doctor_hospital_name: "Fortis malar hospital",
         Experience: {
           experience_duration: "26",
           experience_type: "years"
@@ -473,6 +468,10 @@ if (!doctor_detail) {
           saturday: true,
           sunday: false
         },
+        Medical_license_img:"",
+        mrc_number:"",
+        year_of_registration:"",
+        name_of_the_council:"",
         created_date: "5/13/2023",
         created_time: "5:26:26 PM",
         doctor_email_address: "nithyaram007@gmail.com",
@@ -494,13 +493,14 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["gynecologist"],
+        Department_id:[3],
         Doctor_image: "https://iili.io/HU0M1Hv.jpg",
         Doctor_name: "Dr.Thenmozhi",
-        Doctor_age: "",
-        Doctor_DOB: "",
-        Doctor_gender: "",
+        
+        
+        Doctor_gender: "Female",
         University_of_doctor: "",
-        Doctor_hospital_name: "",
+        Doctor_hospital_name: "Fortis malar hospital",
         Experience: {
           experience_duration: "43",
           experience_type: "years"
@@ -516,6 +516,10 @@ if (!doctor_detail) {
           saturday: true,
           sunday: false
         },
+        Medical_license_img:"",
+        mrc_number:"",
+        year_of_registration:"",
+        name_of_the_council:"",
         created_date: "5/13/2023",
         created_time: "5:31:26 PM",
         doctor_email_address: "thenmozhi008@gmail.com",
@@ -537,13 +541,14 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["Obstetrician", "Gynecologist"],
+        Department_id:[3],
         Doctor_image: "https://iili.io/HU0MDbV.jpg",
         Doctor_name: "Dr.Premalatha balachandran",
-        Doctor_age: "",
-        Doctor_DOB: "",
-        Doctor_gender: "",
+        
+        
+        Doctor_gender: "Female",
         University_of_doctor: "",
-        Doctor_hospital_name: "",
+        Doctor_hospital_name: "Fortis malar hospital",
         Experience: {
           experience_duration: "24",
           experience_type: "years"
@@ -559,6 +564,10 @@ if (!doctor_detail) {
           saturday: true,
           sunday: false
         },
+        Medical_license_img:"",
+        mrc_number:"",
+        year_of_registration:"",
+        name_of_the_council:"",
         created_date: "5/13/2023",
         created_time: "5:35:26 PM",
         doctor_email_address: "premalatha009@gmail.com",
@@ -576,13 +585,14 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["general physician"],
+        Department_id:[17],
         Doctor_image: "https://iili.io/HU0X2NR.jpg",
         Doctor_name: "Dr.Bhuvaneshwari",
-        Doctor_age: "",
-        Doctor_DOB: "",
-        Doctor_gender: "",
+        
+        
+        Doctor_gender: "Female",
         University_of_doctor: "",
-        Doctor_hospital_name: "",
+        Doctor_hospital_name: "Vijaya hospital",
         Experience: {
           experience_duration: "30",
           experience_type: "years"
@@ -598,6 +608,10 @@ if (!doctor_detail) {
           saturday: true,
           sunday: false
         },
+        Medical_license_img:"",
+        mrc_number:"",
+        year_of_registration:"",
+        name_of_the_council:"",
         created_date: "5/13/2023",
         created_time: "5:41:26 PM",
         doctor_email_address: "bhuvaneshwari010@gmail.com",
@@ -615,13 +629,14 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["general physician"],
+        Department_id:[17],
         Doctor_image: "https://iili.io/HU0XpX2.jpg",
         Doctor_name: "Dr.Devi priya",
-        Doctor_age: "",
-        Doctor_DOB: "",
-        Doctor_gender: "",
+        
+        
+        Doctor_gender: "Female",
         University_of_doctor: "",
-        Doctor_hospital_name: "",
+        Doctor_hospital_name: "Vijaya hospital",
         Experience: {
           experience_duration: "9",
           experience_type: "years"
@@ -637,6 +652,10 @@ if (!doctor_detail) {
           saturday: true,
           sunday: false
         },
+        Medical_license_img:"",
+        mrc_number:"",
+        year_of_registration:"",
+        name_of_the_council:"",
         created_date: "5/13/2023",
         created_time: "5:49:26 PM",
         doctor_email_address: "devipriya011@gmail.com",
@@ -654,13 +673,14 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["general physician"],
+        Department_id:[17],
         Doctor_image: "https://iili.io/HU0Vvrg.jpg",
         Doctor_name: "Dr.Thilagavathy",
-        Doctor_age: "",
-        Doctor_DOB: "",
-        Doctor_gender: "",
+        
+        
+        Doctor_gender: "Female",
         University_of_doctor: "",
-        Doctor_hospital_name: "",
+        Doctor_hospital_name: "Vijaya hospital",
         Experience: {
           experience_duration: "4",
           experience_type: "years"
@@ -676,6 +696,10 @@ if (!doctor_detail) {
           saturday: true,
           sunday: false
         },
+        Medical_license_img:"",
+        mrc_number:"",
+        year_of_registration:"",
+        name_of_the_council:"",
         created_date: "5/13/2023",
         created_time: "5:56:26 PM",
         doctor_email_address: "thilagavathy012@gmail.com",
@@ -693,13 +717,14 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["general physician"],
+        Department_id:[17],
         Doctor_image: "https://iili.io/HU0jktR.jpg",
         Doctor_name: "Dr.Swarna Das",
-        Doctor_age: "",
-        Doctor_DOB: "",
-        Doctor_gender: "",
+        
+        
+        Doctor_gender: "Female",
         University_of_doctor: "",
-        Doctor_hospital_name: "",
+        Doctor_hospital_name: "Apollo hospital",
         Experience: {
           experience_duration: "31",
           experience_type: "years"
@@ -715,6 +740,10 @@ if (!doctor_detail) {
           saturday: true,
           sunday: false
         },
+        Medical_license_img:"",
+        mrc_number:"",
+        year_of_registration:"",
+        name_of_the_council:"",
         created_date: "5/13/2023",
         created_time: "5:58:26 PM",
         doctor_email_address: "swarnadas013@gmail.com",
@@ -732,13 +761,14 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["Clinical psychologist"],
+        Department_id:[18],
         Doctor_image: "https://iili.io/HU0Nu29.jpg",
         Doctor_name: "Ms.Sugami ramesh",
-        Doctor_age: "",
-        Doctor_DOB: "",
-        Doctor_gender: "",
+        
+        
+        Doctor_gender: "Female",
         University_of_doctor: "",
-        Doctor_hospital_name: "",
+        Doctor_hospital_name: "Apollo hospital",
         Experience: {
           experience_duration: "39",
           experience_type: "years"
@@ -754,6 +784,10 @@ if (!doctor_detail) {
           saturday: true,
           sunday: false
         },
+        Medical_license_img:"",
+        mrc_number:"",
+        year_of_registration:"",
+        name_of_the_council:"",
         created_date: "5/13/2023",
         created_time: "6:09:26 PM",
         doctor_email_address: "sugami014@gmail.com",
@@ -771,13 +805,14 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["Opthalmologist / eye surgeon"],
+        Department_id:[5],
         Doctor_image: "https://iili.io/HU0g7sa.jpg",
         Doctor_name: "Dr.Shalini shetty",
-        Doctor_age: "",
-        Doctor_DOB: "",
-        Doctor_gender: "",
+        
+        
+        Doctor_gender: "Female",
         University_of_doctor: "",
-        Doctor_hospital_name: "",
+        Doctor_hospital_name: "Apollo hospital",
         Experience: {
           experience_duration: "30",
           experience_type: "years"
@@ -793,13 +828,17 @@ if (!doctor_detail) {
           saturday: true,
           sunday: false
         },
+        Medical_license_img:"",
+        mrc_number:"",
+        year_of_registration:"",
+        name_of_the_council:"",
         created_date: "5/13/2023",
         created_time: "6:17:26 PM",
         doctor_email_address: "shalinishty015@gmail.com",
         doctor_mobile_number: "+91 99346 60537",
         modified_date: "5/13/2023",
         modified_time: "6:19:18 PM",
-        password: "NDNP4mxE1z",
+        password: "Shlnshty***123",
         uuid: "427423c7-1339-4b59-8b57-27e6a26450f6"
       },
       {
@@ -810,13 +849,14 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["Internal medicine", "general medicine"],
+        Department_id:[1],
         Doctor_image: "https://iili.io/HU0gzJV.jpg",
         Doctor_name: "Dr.Sheela chakravarthy",
-        Doctor_age: "",
-        Doctor_DOB: "",
-        Doctor_gender: "",
+        
+        
+        Doctor_gender: "Female",
         University_of_doctor: "",
-        Doctor_hospital_name: "",
+        Doctor_hospital_name: "Fortis hospital",
         Experience: {
           experience_duration: "31",
           experience_type: "years"
@@ -832,6 +872,10 @@ if (!doctor_detail) {
           saturday: true,
           sunday: false
         },
+        Medical_license_img:"",
+        mrc_number:"",
+        year_of_registration:"",
+        name_of_the_council:"",
         created_date: "5/13/2023",
         created_time: "6:43:26 PM",
         doctor_email_address: "sheela016@gmail.com",
@@ -849,13 +893,14 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["General medicine"],
+        Department_id:[1],
         Doctor_image: "https://iili.io/HU0rYT7.jpg",
         Doctor_name: "Dr.Shalini joshi",
-        Doctor_age: "",
-        Doctor_DOB: "",
-        Doctor_gender: "",
+        
+        
+        Doctor_gender: "Female",
         University_of_doctor: "",
-        Doctor_hospital_name: "",
+        Doctor_hospital_name: "Fortis hospital",
         Experience: {
           experience_duration: "19",
           experience_type: "years"
@@ -871,6 +916,10 @@ if (!doctor_detail) {
           saturday: true,
           sunday: false
         },
+        Medical_license_img:"",
+        mrc_number:"",
+        year_of_registration:"",
+        name_of_the_council:"",
         created_date: "5/13/2023",
         created_time: "6:46:26 PM",
         doctor_email_address: "shalinijoshi017@gmail.com",
@@ -888,13 +937,14 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["Medical oncologist", "Hematologic oncologist"],
+        Department_id:[14],
         Doctor_image: "https://iili.io/HU0rZ6G.jpg",
         Doctor_name: "Dr.Niti Raizada",
-        Doctor_age: "",
-        Doctor_DOB: "",
-        Doctor_gender: "",
+        
+        
+        Doctor_gender: "Female",
         University_of_doctor: "",
-        Doctor_hospital_name: "",
+        Doctor_hospital_name: "Fortis hospital",
         Experience: {
           experience_duration: "26",
           experience_type: "years"
@@ -910,6 +960,10 @@ if (!doctor_detail) {
           saturday: true,
           sunday: false
         },
+        Medical_license_img:"",
+        mrc_number:"",
+        year_of_registration:"",
+        name_of_the_council:"",
         created_date: "5/13/2023",
         created_time: "6:52:26 PM",
         doctor_email_address: "nitiraizada018@gmail.com",
@@ -923,5 +977,428 @@ if (!doctor_detail) {
   ))
 }
 
+const admin = JSON.parse(localStorage.getItem('Admin'));
+if(!admin){
+  localStorage.setItem('Admin' , JSON.stringify(
+    {
+      name:"Deepika Sriram",
+      mobile_number:"9876543210",
+      email_address:"admin@gmail.com",
+      password:"Admin***2005"
+    }
+  ))
+}
+
+const patient_review = JSON.parse(localStorage.getItem('patient_reviews'));
+if(!patient_review){
+  localStorage.setItem('patient_review' , JSON.stringify(
+    [
+      {
+        created_at:"5/26/2023 , 1:50:00 PM",
+        modified_at:"",
+        created_by:"Deepika Sriram",
+        user_id:"vaishnavisriram76@gmail.com",
+        created_for:"Dr.Kalaivani Ramalingam",
+        doctor_id:"2d17c05c-8fac-4159-af3b-8c8acb1f33c7",
+        review_msg:"Dr. Kalai is very professional and treats every patient with care and patience. She was recommended to me and she sure is a life saver! She is a brilliant doctor who is non-judgemental and just lovely to visit." 
+      },
+      {
+        created_at:"5/24/2023 , 10:30:00 AM",
+        modified_at:"",
+        created_by:"Ramya Sathyanarayan",
+        user_id:"ramyasathyanarayanan@gmail.com",
+        created_for:"Dr.Kalaivani Ramalingam",
+        doctor_id:"2d17c05c-8fac-4159-af3b-8c8acb1f33c7",
+        review_msg:"Very friendly. Speaking in Hindi to my mother boosted her a lot.Before taking medicines Patient gets confidence of getting well from the doctor itself . That is more important according to me . And this happened with my mother also with the doctor." 
+      },
+      {
+        created_at:"5/22/2023 , 12:30:49 PM",
+        modified_at:"",
+        created_by:"Shruthi Lakshminarayanan",
+        user_id:"shruthinarayanan@gmail.com",
+        created_for:"Dr.Kalaivani Ramalingam",
+        doctor_id:"2d17c05c-8fac-4159-af3b-8c8acb1f33c7",
+        review_msg:"Dr behavior is well . Explain about the deases properly.so I satisfied with her treatment.but I don't satisfied the her secretary's behaviour." 
+      },
+      {
+        created_at:"4/27/2023 , 1:55:00 PM",
+        modified_at:"",
+        created_by:"Deepika Sriram",
+        user_id:"vaishnavisriram76@gmail.com",
+        created_for:"Dr.Meera Raghavan",
+        doctor_id:"aee049b7-1043-404e-a848-901a6d30996c",
+        review_msg:"Affordable fees. She prescribes only the necessary tests and medicines and diagnoses well. She also speaks in a kind manner and listens to our queries and answers them patiently." 
+      },
+      {
+        created_at:"5/18/2023 , 2:50:18 PM",
+        modified_at:"",
+        created_by:"Ramya Sathyanarayanan",
+        user_id:"ramyasathyanarayan@gmail.com",
+        created_for:"Dr.Meera Raghavan",
+        doctor_id:"aee049b7-1043-404e-a848-901a6d30996c",
+        review_msg:"Good,nice,open and friendly doctor.gace good details about the problem and diagnostics.details were very clear." 
+      },
+      {
+        created_at:"3/12/2023 , 4:30:12 PM",
+        modified_at:"",
+        created_by:"Shruthi Lakshminarayanan",
+        user_id:"shruthinarayanan@gmail.com",
+        created_for:"Dr.Meera Raghavan",
+        doctor_id:"aee049b7-1043-404e-a848-901a6d30996c",
+        review_msg:" Dr friendly speaking with patients" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      },
+      {
+        created_at:"",
+        modified_at:"",
+        created_by:"",
+        user_id:"",
+        created_for:"",
+        doctor_id:"",
+        review_msg:"" 
+      }
+    ]
+  ))
+}
 
 
+
+const specialistsList = JSON.parse(localStorage.getItem('list_of_specialist'));
+if(!specialistsList){
+  localStorage.setItem('list_of_specialist' , JSON.stringify(
+    [
+      {
+        specialty:"General medicine",
+        specialty_id:1
+      },
+      {
+        specialty:"Pediatrics",
+        specialty_id:2
+      },
+      {
+        specialty:"Obstetrics and gynecology",
+        specialty_id:3
+      },
+      {
+        specialty:"Orthopaedics",
+        specialty_id:4
+      },
+      {
+        specialty:"Ophthalmology",
+        specialty_id:5
+      },
+      {
+        specialty:"ENT",
+        specialty_id:6
+      },
+      {
+        specialty:"Dermatology",
+        specialty_id:7
+      },
+      {
+        specialty:"Psychiatry",
+        specialty_id:8
+      },
+      {
+        specialty:"Cardiology",
+        specialty_id:9
+      },
+      {
+        specialty:"Neurology",
+        specialty_id:10
+      },
+      {
+        specialty:"Nephrology",
+        specialty_id:11
+      },
+      {
+        specialty:"Pulmonology",
+        specialty_id:12
+      },
+      {
+        specialty:"Gastroenterology",
+        specialty_id:13
+      },
+      {
+        specialty:"Oncology",
+        specialty_id:14
+      },
+      {
+        specialty:"Urology",
+        specialty_id:15
+      },
+      {
+        specialty:"Allergy and immunology",
+        specialty_id:16
+      },
+      {
+        specialty:"General physician",
+        specialty_id:17
+      },
+      {
+        specialty:"Psychology",
+        specialty_id:18
+      }
+    ]
+  ))
+}

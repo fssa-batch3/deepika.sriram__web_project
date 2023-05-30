@@ -18,57 +18,7 @@
     <header id="header"></header>
     <main>
         <form>
-            <h1>Appointment form</h1>
-            <section class="appointment">
-                <div>
-                    <div>
-                        <label>Patient first name</label>
-                    </div>
-                    <div>
-                        <input type="text" id="patient_first_name" style="width:350px" />
-                    </div>
-                </div>
-                <div style="margin-left:5%;">
-                    <div>
-                        <label>Patient last name</label>
-                    </div>
-                    <div>
-                        <input type="text" id="patient_last_name" style="width:350px" />
-                    </div>
-                </div>
-            </section>
-            <br>
-            <section class="appointment">
-                <div>
-                    <div>
-                        <label for="">Age</label>
-                    </div>
-                    <div>
-                        <input type="number" id="patient_age" />
-                    </div>
-                </div>
-                <div style="margin-left:5%;">
-                    <div>
-                        <label for="">Gender</label>
-                    </div>
-                    <div>
-                        <!-- <select id="gender" style="width:150px">
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                            <option value="Others">Others</option>
-                        </select> -->
-                        <input type="text" id="gender">
-                    </div>
-                </div>
-                <div style="margin-left:5%;">
-                    <div>
-                        <label>Mobile number</label>
-                    </div>
-                    <div>
-                        <input type="tel" id="mobile_number" style="width:350px" />
-                    </div>
-                </div>
-            </section>
+            <h1 style="text-align: center;color: #1b3c74;">Appointment Details</h1>
             <br>
             <section class="appointment">
                 <div>
@@ -81,7 +31,7 @@
                 </div>
                 <div style="margin-left:5%;">
                     <div>
-                        <label for="">Consulting with Dr.</label>
+                        <label for="">Doctor name</label>
                     </div>
                     <div>
                         <input type="text" id="doctor_name" style="width:350px" />
@@ -95,27 +45,35 @@
                         <label for="">Method of consultation</label>
                     </div>
                     <div>
-                        <!-- <select id="consultation_method" style="width:200px">
-                            <option value="In person">In person</option>
-                            <option value="Video consultation">Video consultation</option>
-                        </select> -->
-                        <input type="text" id="consultation_method">
+                        <input type="text" id="consultation_method" style="width:350px">
                     </div>
                 </div>
-                <div style="margin-left:3.5%;">
+                <div style="margin-left:5%;">
                     <div>
                         <label for="">Date and time of consultation</label>
                     </div>
                     <div>
-                        <input type="text" id="consultDate" style="width:150px" />
+                        <input type="text" id="consultDate" style="width:350px" />
                     </div>
                 </div>
-                <div style="margin-left:3.5%;">
+                
+            </section>
+            <br><br>
+            <section class="appointment">
+                <div>
                     <div>
-                        <label for="">Residential address</label>
+                        <label for="">Status</label>
                     </div>
                     <div>
-                        <input type="text" id="address" style="width:325px" />
+                        <input type="text" id="status" style="width:350px" />
+                    </div>
+                </div>
+                <div id="reasonPart" style="margin-left:3.5%">
+                    <div>
+                        <label for="">Reason for rejecting</label>
+                    </div>
+                    <div>
+                        <input type="text" id="rejected_reason" style="width:325px" />
                     </div>
                 </div>
             </section>

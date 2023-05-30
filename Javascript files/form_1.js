@@ -5,21 +5,42 @@ function enter(e) {
   const l_name = document.getElementById("last_name").value.trim();
   const age = document.getElementById("age").value.trim();
   const user_gender = document.getElementById('gender').value;
+  
 
   const mobile = document.getElementById("mobile_number").value.trim();
   const email_id = document.getElementById("user_email").value.trim();
   const create_password = document.getElementById("pass_1").value.trim();
   const confirm_password = document.getElementById("pass_2").value.trim();
-  
+
   const uuid = uuidv4();
   const a = new Date();
   const created_at = a.toLocaleString('en-US');
   const modified_at = "";
 
-  
+
+
+  const Experiences = {};
+  const experience_duration = "";
+  const experience_type = "";
+  const speciality = "";
+  const Availabilities = [];
+  const starting_time = "";
+  const ending_time = "";
+  const working_days = {};
+  const medical_license_img = "";
+  const university = "";
+  const mrc_number = "";
+  const year_of_mrcnumber = "";
+  const name_of_council = "";
+  const status = "";
+  const hospital_name = "";
+
+  const Doctor_name = f_name + l_name;
+
 
   // hear i give var name for local storage data (initially there is no data so we mentioned or (||) symbol to get empty array)
   const user_detail = JSON.parse(localStorage.getItem("user_detail")) || [];
+  // const doctor_detail = JSON.parse(localStorage.getItem('doctor_detail')) || [];
 
   // hear we give some condition for signup to restict same unique id
   const exist = user_detail.some(
@@ -29,38 +50,46 @@ function enter(e) {
       data.mobile.trim().toLowerCase() === mobile.toLowerCase() ||
       data.email_id.trim().toLowerCase() === email_id.toLowerCase() ||
       data.create_password.trim().toLowerCase() ===
-        create_password.toLowerCase() ||
+      create_password.toLowerCase() ||
       data.confirm_password.trim().toLowerCase() ===
-        confirm_password.toLowerCase()
+      confirm_password.toLowerCase()
   );
 
   // if condition fail
   if (!exist) {
     if (create_password === confirm_password) {
-      user_detail.push({
-        f_name,
-        l_name,
-        age,
-        user_gender,
-        mobile,
-        email_id,
-        create_password,
-        confirm_password,
-        created_at,
-        modified_at,
-        uuid
-      });
+      if(age>0 && age<100){
+        user_detail.push({
+          f_name,
+          l_name,
+          age,
+          user_gender,
+          mobile,
+          email_id,
+          create_password,
+          confirm_password,
+          created_at,
+          modified_at,
+          uuid
+        })
+  
+        localStorage.setItem("user_detail", JSON.stringify(user_detail));
+  
+        document.querySelector("form").reset();
+        alert("Account created Successfully✅");
+  
+        window.location.href = "./login for patient.html";
+      }
+      else{
+        alert('Invalid age')
+      }
 
-      localStorage.setItem("user_detail", JSON.stringify(user_detail));
-
-      document.querySelector("form").reset();
-      alert("Account created Successfully✅");
-
-      window.location.href = "./login for patient.html";
-    } else {
+    }
+    else {
       alert("create password and confirm password doesn't match ❎");
     }
   }
+
   // if condition pass
   else {
     alert(
@@ -68,7 +97,8 @@ function enter(e) {
     );
     document.querySelector("form").reset();
   }
-};
+}
+;
 
 // for sign in()
 function signIn(e) {
@@ -78,19 +108,24 @@ function signIn(e) {
 
   const user_detail = JSON.parse(localStorage.getItem("user_detail")) || [];
 
-  const exist_1 =
-    user_detail.length &&
-    JSON.parse(localStorage.getItem("user_detail")).some(
-      (data_1) =>
-        data_1.email_id.toLowerCase() === email.toLowerCase() &&
-        data_1.confirm_password === password
-    );
-  if (!exist_1) {
-    alert("User details didn't match ❌");
-  } 
-  else {
-    localStorage.setItem("uniqueUser", JSON.stringify(email));
+  const unique = user_detail.find((data) => {
+    // let check = 0;
+    data.email_id === email || data.confirm_password === password
+    return data;
+
+  })
+
+  if (email === "admin@gmail.com") {
+    alert("logged in successfully")
+    localStorage.setItem("uniqueUser" , JSON.stringify(email))
+    window.location.href = "./admin.html"
+  }
+  else if(unique){
     alert("Your login in is successful ✅");
-    window.location.href = "../../../../index.html";
+    localStorage.setItem("uniqueUser", JSON.stringify(email));
+    window.location.href = "/index.html";
+  }
+  else{
+    alert("invaild users")
   }
 };

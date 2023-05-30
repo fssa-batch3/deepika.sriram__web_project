@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>List of hospitals for admin</title>
+    <link rel="stylesheet" href="../../../assets/css/header.css">
+    <!-- <link rel="stylesheet" href="../../../assets/css/signup.css"> -->
+    <link rel="stylesheet" href="../../../assets/css/list of hopital.css">
+    <link rel="stylesheet" href="../../../assets/css/footer.css">
+    <link rel="icon" href="../../../assets/images/logo for care central.JPG">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+        <style>
+            #header img{
+                width:5%;
+            }
+        </style>
+</head>
+<body>
+    <header id="header">
+        <img src="../../../assets/images/deepika logo-4.png" alt="logo for carecentral">
+        <section class="head">
+            <ul>
+                <li>
+                    <a href="./admin profile form.html">View Profile</a>
+                </li>
+                <li>
+                    <a id="signout">Sign out</a>
+                </li>
+            </ul>
+        </section>
+    </header>
+    <H1 style="text-align: center;">LIST OF HOSPITALS</H1>
+    <main>
+        <a href="./hospital adding form.html" style="text-decoration: none;color: black;">
+            <div class="card" style="width:fit-content;font-size:250px;font-weight: lighter;cursor: pointer;" id="addHosp">+</div>
+        </a>
+        
+    </main>
+</body>
+<script>
+    const hospital = JSON.parse(localStorage.getItem("hospital_detail"));
+    for (let i = 0; i < hospital.length; i++) {
+        const hospitalDetail = hospital[i];
+
+        const card = `
+                <div class="card">
+                    <div>
+                        <img src="${hospitalDetail.image_link}";
+                    </div>
+                    <div>
+                        <h3>${hospitalDetail.hospital_name}</h3>    
+                    </div> 
+                    <div>
+                        <a href="./edit hospital form.html?hospital-id=${hospitalDetail.hospital_id}">
+                            <button type="button">View and edit details</button>    
+                        </a>    
+                    </div> 
+                </div>
+            `;
+        document.querySelector("main").insertAdjacentHTML("afterbegin", card);
+        // search();
+    }
+
+    const signout = document.getElementById('signout');
+    signout.addEventListener('click' , function(){
+        if(confirm('are you sure you want to log out?')){
+            alert('logged out successfully');
+            localStorage.removeItem('uniqueUser');
+            window.location.href="../../../index.html"
+        }
+    })
+
+    
+</script>
+</html>
