@@ -1,80 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Doctor form</title>
-    <link rel="stylesheet" href="../../../assets/css/register.css">
-    <link rel="icon" href="../../../assets/images/hospital logo 3.JPG">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Hammersmith+One&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
-        rel="stylesheet">
-</head>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Doctor form</title>
+        <!-- <link rel="stylesheet" href="../../../assets/css/register.css"> -->
+        <link rel="icon" href="../../../assets/images/hospital logo 3.JPG">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Hammersmith+One&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+            rel="stylesheet">
+    </head>
 
-<body>
-    <form role="form" style="width: fit-content;left:30%;top:15%" onsubmit="uploadDoctor(event)">
-        <img src="../../../assets/images/hospital_logo_3-removebg-preview.png" style="width:30%;margin-left:35%"
-            alt="logo of get well soon">
-        <br>
-        <h1 style="text-align: center;color:#03045e">FORM</h1>
-        <br>
-        <div style="display: flex">
-            <input type="text" id="doctor_name" placeholder="enter doctor name" style="width:100%;height:30px" />
-            <input type="text" id="doctorImage" placeholder="upload image of the doctor"
-                style="margin-left: 20px;width:100%;height:30px" />
-        </div>
-        <br><br>
-        <div id="Qualifications">
-            <input type="text" id="qualification" placeholder="enter doctor's qualification"
-                style="width:95%;height:30px" />
-        </div>
-        <br><br>
-        <div style="display:flex">
-            <input type="number" id="experience_duration" placeholder="enter doctor's experience"
-                style="width:90%;height:30px" />
-            <select id="experience_type">
-                <option value="months">Months</option>
-                <option value="years">Years</option>
-            </select>
-        </div>
-        <br><br>
-        <div>
-            <input type="text" id="department" placeholder="enter doctor's department" style="width:100%;height:30px" />
-        </div>
-        <br><br>
-        <div>
-            <input type="text" id="hospital_name" placeholder="enter hospital name of the doctor"
-                style="width:100%;height:30px" />
-        </div>
-        <br><br>
-        <div>
-            <label>working days:</label>
-            <input type="checkbox" value="Monday" />Monday
-            <input type="checkbox" value="Tuesday" />Tuesday
-            <input type="checkbox" value="Wedneshday" />Wednesday
-            <input type="checkbox" value="Thursday" />Thursday
-            <input type="checkbox" value="Friday" />Friday
-            <input type="checkbox" value="Saturday" />Saturday
-            <input type="checkbox" value="Sunday" />Sunday
-        </div>
-        <br><br>
-        <div>
-            <!-- <input type="text" id="time_availability" placeholder="enter time availability of doctor" style="width:100%;height:30px"/> -->
-            <label>Time availability:</label>
-            <label>From</label>
-            <input type="time" id="from" />
-            <label>To </label>
-            <input type="time" id="to" />
-            <button type="submit" id="time">enter time</button>
-        </div>
-        <br>
-        <button type="submit">submit</button>
-    </form>
-    <script src="../javascript files/form for doctor.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
-</body>
+    <body>
+        <form role="form" style="width: fit-content;left:30%;top:15%" onsubmit="uploadDoctor(event)">
+            <h1 style="text-align: center;color:#03045e">FORM</h1>
+            <br>
+            <div style="display: flex">
+                <input type="text" id="doctor_name" placeholder="enter doctor name" style="width:100%;height:30px">
+                <input type="text" id="doctorImage" placeholder="upload image of the doctor"
+                    style="margin-left: 20px;width:100%;height:30px">
+            </div>
+            <br>
+            <br>
+            <div style="display:flex">
+                <input type="number"  id="doctor_age" style="width:100%;height:30px" placeholder="enter doctor's age"/>
+                <input type="date"  id="doctorDOB" style="width:100%;height:30px;margin-left: 20px" placeholder="enter doctor's date of birth"/>
+                <select  id="doctorGender" style="width:100%;height:30px;margin-left: 20px">
+                    <option>Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+            <div id="Qualifications">
+                <input type="text" id="qualification" placeholder="enter doctor's qualification"
+                    style="width:95%;height:30px">
+            </div>
+            <br>
+            <br>
+            <div>
+                <input type="text" id="department" placeholder="enter doctor's department" style="width:70%;height:30px">
+                <input type="text" id="doctorHospitalName" placeholder="enter hospital name" style="width:90%;height:30px" />
+                <input type="number" id="hospital_id" placeholder="enter hospital id"
+                    style="height:30px">
+            </div>
+            <br><br>
+            <div style="display:flex">
+                <input type="number" id="experience_duration" placeholder="enter doctor's experience"
+                    style="width:90%;height:30px">
+                <select id="experience_type">
+                    <option value="months">Months</option>
+                    <option value="years">Years</option>
+                </select>
+            </div>
+            <br>
+            <br>
+            <div>
+                <input type="text" id="doctor_sUniversity" style="width:100%;height:30px" placeholder="enter university which the doctor finished their studies"/>
+            </div>
+            <br>
+            <br>
+            <div>
+                <label>working days:</label>
+                <input type="checkbox" id="Monday">Monday
+                <input type="checkbox" id="Tuesday">Tuesday
+                <input type="checkbox" id="Wednesday">Wednesday
+                <input type="checkbox" id="Thursday">Thursday
+                <input type="checkbox" id="Friday">Friday
+                <input type="checkbox" id="Saturday">Saturday
+                <input type="checkbox" id="Sunday">Sunday
+            </div>
+            <br>
+            <br>
+            <div>
+                <!-- <input type="text" id="time_availability" placeholder="enter time availability of doctor" style="width:100%;height:30px"/> -->
+                <label>Time availability:</label>
+                <label>From</label>
+                <input type="time" id="from">
+                <label>To </label>
+                <input type="time" id="to">
+                <br>
+                <br>
+            </div>
+            <br>
+            <div>
+                <label for="">Mobile number</label>
+                <input type="tel" id="doctor_mobile_number" style="width:100%;height:30px"/>
+            </div>
+            <br>
+            <div>
+                <label for="">Email address</label>
+                <input type="tel" id="doctor_email" style="width:100%;height:30px"/>
+            </div>
+            <div>
+                <label for="">Password</label>
+                <input type="password" id="doctor_password" style="width:100%;height:30px">
+            </div>
+            <div>
+                <label for="">Description</label>
+                <br>
+                <textarea id="doctorDescription" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit">submit</button>
+        </form>
+        <script src="../javascript files/form for doctor.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+    </body>
 
 </html>

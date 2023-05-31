@@ -1,0 +1,87 @@
+main{
+    margin:55px 60px;
+    font-family: 'Inter',sans-serif;
+    color:#1b3c74;
+}
+form{
+    width:40%;
+    padding:2%;
+    position: relative;
+    left:25%;
+}
+form #profile_img{
+    width:20%;
+    position: relative;
+    left:40%;
+
+}
+input,select{
+    height:30px;
+    background-color: #ecf9ff;
+    border:none;
+    border-radius: 3px;
+}
+section{
+    display: flex;
+}
+#updateUser{
+    width:100%;
+    padding: 10px ;
+    background-color: #08ad37;
+    border: none;
+    color:white;
+    font-weight: bold;
+    font-size: 20px;
+}
+#updateUser:hover{
+    background-color: white;
+    color:#08ad37;
+    border: 1px solid #08ad37;
+    transition: 0.3s;
+}
+
+@media screen and (max-width:800px) {
+    header{
+        justify-content:unset;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    #hide{
+        font-weight:400;
+        font-family:'kumbh sans',sans-serif;
+        font-size:70%;
+        margin-left:-250px;
+    }
+    header div ul li a{
+        margin-left:5px;
+        margin-right:5px;
+    }
+    form{
+        top:15%;
+        left:25%;
+        height:fit-content;
+        width:fit-content;
+        font-size: 70%;
+    }
+    #frm{
+        margin-left:unset;
+    }
+    #frm button{
+        padding:5px 15px;
+        border-radius: 20px;
+        font-size: 80%;
+    }
+    form.edit{
+        width:fit-content;
+        height:fit-content;
+        position:absolute;
+        top:10%;
+        left:2%;
+        padding:2%;
+        font-size: 70%;
+    }
+    [type="text"],[type="number"],[type="tel"],[type="email"]{
+        height:20px;
+    }
+
+}

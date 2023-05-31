@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Doctor detail form</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../../../assets/css/header.css">
+    <link rel="stylesheet" href="../../../assets/css/doctor detail form.css">
+    <link rel="stylesheet" href="../../../assets/css/footer.css">
+    <link rel="icon" href="../../../assets/images/logo for care central.JPG">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header id="header"></header>
+    <main>
+        <form action="">
+            <h1 style="color:#1b3c74">Doctor form</h1>
+            <section>
+                <div>
+                    <div>
+                        <label for="">Name</label>
+                    </div>
+                    <div>
+                        <input type="text" id="doctor_name" required style="width:250px;height:30px"/>
+                    </div>
+                </div>
+                <div style="margin-left:20px">
+                    <div>
+                        <label for="">Gender</label>
+                    </div>
+                    <div>
+                        <select id="doctor_gender" required style="width:150px">
+                            <option>Select gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    </div>
+                </div>
+                <div style="margin-left:20px">
+                    <div>
+                        <label for="">Specialist in:</label>
+                    </div>
+                    <div>
+                        <input type="text" id="doctor_specialist" required style="width:250px;height:30px"/>
+                    </div>
+                </div>
+            </section>
+            <br><br>
+            <section>
+                <div>
+                    <div>
+                        <label for="">Experience</label>
+                    </div>
+                    <div>
+                        <input type="number" id="experience_duration" required style="width:100px;height:30px"/>
+                        <select id="experience_type" required>
+                            <option>Select</option>
+                            <option value="Years">Years</option>
+                            <option value="Months">Months</option>
+                        </select>
+                    </div>
+                </div>
+                <div style="margin-left:20px">
+                    <div>
+                        <label for="">Time availability</label>
+                    </div>
+                    <div>
+                        <label for="">From</label>
+                        <input type="time" id="timing_from" required style="width:100px;height:30px"/>
+                        <label for="">To</label>
+                        <input type="time" id="timing_to" required style="width:100px;height:30px"/>
+                        <button type="button" id="add_time">Add time</button>
+                    </div>
+                </div>
+            </section>
+            <br><br>
+            <section>
+                <div>
+                    <div>
+                        <label for="">Working days</label>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="checkbox" id="Monday">Monday
+                        <input type="checkbox" id="Tuesday">Tuesday
+                        <input type="checkbox" id="Wednesday">Wednesday
+                        <input type="checkbox" id="Thursday">Thursday
+                        <input type="checkbox" id="Friday">Friday
+                        <input type="checkbox" id="Saturday">Saturday
+                        <input type="checkbox" id="Sunday">Sunday
+                    </div>
+                </div>
+            </section>
+            <br><br>
+            <section>
+                <div>
+                    <div>
+                        <label for="">Hospital name</label>
+                    </div>
+                    <div>
+                        <input type="text" id="hospital_name" required style="width:680px;height:30px"/>
+                    </div>
+                </div>
+            </section>
+            <br><br>
+            <section>
+                <div>
+                    <div>
+                        <label for="">Mobile number</label>
+                    </div>
+                    <div>
+                        <input type="tel" id="doctor_mobile_number" pattern="[6-9]{1}[0-9]{9}" required style="width:320px;height:30px"/>
+                    </div>
+                </div>
+                <div style="margin-left:30px">
+                    <div>
+                        <label for="">email address</label>
+                    </div>
+                    <div>
+                        <input type="email" id="doctor_email_address" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" disabled style="width:320px;height:30px"/>
+                    </div>
+                </div>
+            </section>
+            <br><br>
+            <a href="../other pages/doctor detail form-2.html">
+                <button type="button" id="uploadDetail">SUBMIT</button>
+            </a>
+            
+        </form>
+    </main>
+    <footer>
+        <div id="Contact">
+            <div>
+                <h3>FOLLOW US</h3>
+                <p><i class="fa-brands fa-square-facebook"></i> Facebook</p>
+                <p><i class="fa-brands fa-square-instagram"></i> Instagram</p>
+                <p><i class="fa-brands fa-square-twitter"></i> Twitter</p>
+                <p><i class="fa-brands fa-square-google-plus"></i> Google</p>
+            </div>
+            <div style="border-left:1px solid grey;width:50%;text-align: right;">
+                <h3>CONTACT US</h3>
+                <p><i class="fa-solid fa-phone"></i> +91 6754239901</p>
+                <p><i class="fa-solid fa-envelope"></i> carecentral@gmail.com</p>
+            </div>
+        </div>
+        <div>
+            <p style="text-align: center;">copyrights  &copy 2023 carecentral. All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+<script src="../../../Javascript files/header.js"></script>
+</html>

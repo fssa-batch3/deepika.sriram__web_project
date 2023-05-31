@@ -1,0 +1,108 @@
+main {
+    margin: 20px 60px;
+    font-family: 'Inter', sans-serif;
+}
+
+#hospital_detail {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* box-shadow: 0px 0px 10px rgb(203, 202, 202); */
+    border:0.5px solid rgb(203,202,202);
+    padding: 20px 0;
+}
+
+#hospital_detail img {
+    width: 15%;
+}
+
+#hospital_detail h2 {
+    font-size: 30px;
+    color: #1b3c74;
+}
+
+#hospital_detail p {
+    color: #00a1cf;
+}
+
+.hr-lines {
+    position: relative;
+    max-width:100%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.hr-lines:before {
+    content: " ";
+    height: 5px;
+    width:35%;
+    background:#00a1cf;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left:0;
+}
+
+.hr-lines:after {
+    content: " ";
+    height: 5px;
+    width:35%;
+    background:#00a1cf;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right:0;
+}
+article{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(21rem,1fr));
+    gap:20px;
+    align-items: center;
+}
+.card{
+    border:1.5px solid transparent;
+    position: relative;
+    width:200px;
+    height:fit-content;
+    padding-top:2%;
+    padding-left:10%;
+    padding-right:8%;
+    box-shadow: 0px 0px 10px rgb(203, 202, 202);
+    margin:10% 5%;
+    background-color: white;
+}
+.card img{
+    width:200px;
+}
+.card h3,p{
+    color:#1b3c74;
+}
+.card button{
+    position: relative;
+    width:275px;
+    padding:15px 5%;
+    margin-left:-20%;
+    color:white;
+    font-weight: bold;
+    background-image: linear-gradient(white,#37b1d3,#00a1cf);
+    border: none;
+    cursor: pointer;
+}
+#specialist{
+    display: flex;
+    flex-wrap: wrap;
+}
+#specialist button{
+    padding:0.5% 2%;
+    background-color: #ecf9ff;
+    border: none;
+    color: #1b3c74;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+}
+#specialist button:hover{
+    border: 0.5px solid #1b3c74;
+    background-color: white;
+    transition: 0.3s;
+}

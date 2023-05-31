@@ -1,0 +1,98 @@
+main{
+    margin:50px 60px;
+    font-family: 'Inter' , sans-serif;
+}
+.doctor_detail{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border:1px solid rgb(203,202,202);
+    padding:1% 2%;
+}
+.doctor_detail img{
+    width:12%;
+    height: 12%;
+}
+.doctor_detail h2{
+    font-size:25px;
+    color:#1b3c74;
+}
+.doctor_detail div p{
+    width:500px;
+    color:#00a1cf;
+}
+.doctor_detail div button{
+    padding:10px 30px;
+    color:white;
+    background-color: #08ad37;
+    border:none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.doctor_detail div button:hover{
+    background-color: white;
+    color:#08ad37;
+    border:1px solid #08ad37;
+    transition: 0.3s;
+}
+.hr-lines {
+    position: relative;
+    max-width:100%;
+    margin: 30px auto;
+    text-align: center;
+    color:#1b3c74;
+}
+
+.hr-lines:before {
+    content: " ";
+    height: 5px;
+    width:35%;
+    background:#00a1cf;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left:0;
+}
+
+.hr-lines:after {
+    content: " ";
+    height: 5px;
+    width:35%;
+    background:#00a1cf;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right:0;
+}
+.review{
+    height: 80vh;
+    color:#1b3c74;
+}
+.scroll{
+    display: flex;
+    width: 85vh;
+    
+    overflow-x: scroll;
+    margin-left: 20%;
+}
+.scroll::-webkit-scrollbar{
+    width: 0px;
+}
+.cnt{
+    width: 250px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px rgb(203, 202, 202);
+    margin:15px;
+    padding:20px;
+    border-radius: 10px;
+}
+.revimg{
+    width:100px;
+    margin-left: 30%;
+}
+.review h3{
+    text-align: center;
+}
