@@ -3,7 +3,7 @@
 
 const { origin } = window.location;
 const about = `${origin}/pages/other pages/other pages/about us.html`;
-const contact = `${origin}/pages/other pages/other pages/contact us.html`
+const contact = `${origin}/pages/other pages/patient/contact us.html`
 const image = `${origin}/assets/images/deepika logo-4.png`;
 const patient_login = `${origin}/pages/other pages/other pages/login for patient.html`;
 const doctor_login = `${origin}/pages/other pages/other pages/login for doctor.html`
@@ -64,7 +64,7 @@ const heading_2 = `
       <div class="dropdown-content">
         <a href="${profile}">View profile <i class="fas fa-user"></i> </a>
         <a href="${my_appointment}">My appointments <i class="fa-solid fa-calendar-check"></i> </a>
-        <a id="signout">Sign out <i class="fa fa-sign-out"></i></a>
+        <a id="signout" style="cursor:pointer">Sign out <i class="fa fa-sign-out"></i></a>
       </div>
     </div>
 </section>

@@ -97,71 +97,71 @@ if(!hospitalDetails){
   ))
 }
 
-// const appointments = JSON.parse(localStorage.getItem('appointments'));
-// if (!appointments) {
-//   localStorage.setItem('appointments', JSON.stringify(
-//     [
-//       {
-//         address: "",
-//         user_email_id:"deepika.sriram@fssa.freshworks.com",
-//         appointment_id: "883e3eb9-eb0c-4378-b1bd-4dd0a5817487",
-//         dateOfBooking: "5/20/2023",
-//         dateOfConsultation: "5/21/2023, 11:40:00 AM",
-//         doctorId: "aee049b7-1043-404e-a848-901a6d30996c",
-//         doctorName: "Dr.Meera Raghavan",
-//         healthIssues: ["irregular periods"],
-//         method_of_consultation: "Video consultation",
-//         patient_age: "18",
-//         patient_first_name: "Deepika",
-//         patient_gender: "Female",
-//         patient_last_name: "Sriram",
-//         patient_mobile_number: "7397314532",
-//         status: "consulted",
-//         reason:"",
-//         timeOfBooking: "9:40:23 AM",
-//       },
-//       {
-//         address: "",
-//         user_email_id:"deepika.sriram@fssa.freshworks.com",
-//         appointment_id: "87476f32-abb8-47d4-a5b8-c9ece4edcc36",
-//         dateOfBooking: "5/20/2023",
-//         dateOfConsultation: "5/21/2023, 11:40:00 AM",
-//         doctorId: "aee049b7-1043-404e-a848-901a6d30996c",
-//         doctorName: "Dr.Meera Raghavan",
-//         healthIssues: [""],
-//         method_of_consultation: "In person",
-//         patient_age: "20",
-//         patient_first_name: "Sangeetha",
-//         patient_gender: "Female",
-//         patient_last_name: "Ramachandran",
-//         patient_mobile_number: "9445535374",
-//         status: "rejected",
-//         reason:"commited with another appointment",
-//         timeOfBooking: "9:43:49 AM",
-//       },
-//       {
-//         address: "",
-//         user_email_id:"deepika.sriram@fssa.freshworks.com",
-//         appointment_id: "62b0738e-3ee3-43d2-9912-30f58c3d2e33",
-//         dateOfBooking: "5/20/2023",
-//         dateOfConsultation: "5/23/2023, 10:30:00 AM",
-//         doctorId: "427423c7-1339-4b59-8b57-27e6a26450f6",
-//         doctorName: "Dr.Shalini shetty",
-//         healthIssues: ["eye irritation", " eyepain", " can't see distant objects"],
-//         method_of_consultation: "In person",
-//         patient_age: "18",
-//         patient_first_name: "Deepika",
-//         patient_gender: "Female",
-//         patient_last_name: "Sriram",
-//         patient_mobile_number: "7397314532",
-//         status: "accepted",
-//         reason:"",
-//         timeOfBooking: "9:49:18 AM"
-//       },
+const appointments = JSON.parse(localStorage.getItem('appointments'));
+if (!appointments) {
+  localStorage.setItem('appointments', JSON.stringify(
+    [
+      {
+        address: "",
+        user_email_id:"deepika.sriram@fssa.freshworks.com",
+        appointment_id: "883e3eb9-eb0c-4378-b1bd-4dd0a5817487",
+        dateOfBooking: "5/20/2023",
+        dateOfConsultation: "5/21/2023, 11:40:00 AM",
+        doctorId: "aee049b7-1043-404e-a848-901a6d30996c",
+        doctorName: "Dr.Meera Raghavan",
+        healthIssues: ["irregular periods"],
+        method_of_consultation: "Video consultation",
+        patient_age: "18",
+        patient_first_name: "Deepika",
+        patient_gender: "Female",
+        patient_last_name: "Sriram",
+        patient_mobile_number: "7397314532",
+        status: "consulted",
+        reason:"",
+        timeOfBooking: "9:40:23 AM",
+      },
+      {
+        address: "",
+        user_email_id:"deepika.sriram@fssa.freshworks.com",
+        appointment_id: "87476f32-abb8-47d4-a5b8-c9ece4edcc36",
+        dateOfBooking: "5/20/2023",
+        dateOfConsultation: "5/21/2023, 11:40:00 AM",
+        doctorId: "aee049b7-1043-404e-a848-901a6d30996c",
+        doctorName: "Dr.Meera Raghavan",
+        healthIssues: [""],
+        method_of_consultation: "In person",
+        patient_age: "20",
+        patient_first_name: "Sangeetha",
+        patient_gender: "Female",
+        patient_last_name: "Ramachandran",
+        patient_mobile_number: "9445535374",
+        status: "rejected",
+        reason:"commited with another appointment",
+        timeOfBooking: "9:43:49 AM",
+      },
+      {
+        address: "",
+        user_email_id:"deepika.sriram@fssa.freshworks.com",
+        appointment_id: "62b0738e-3ee3-43d2-9912-30f58c3d2e33",
+        dateOfBooking: "5/20/2023",
+        dateOfConsultation: "5/23/2023, 10:30:00 AM",
+        doctorId: "427423c7-1339-4b59-8b57-27e6a26450f6",
+        doctorName: "Dr.Shalini shetty",
+        healthIssues: ["eye irritation", " eyepain", " can't see distant objects"],
+        method_of_consultation: "In person",
+        patient_age: "18",
+        patient_first_name: "Deepika",
+        patient_gender: "Female",
+        patient_last_name: "Sriram",
+        patient_mobile_number: "7397314532",
+        status: "accepted",
+        reason:"",
+        timeOfBooking: "9:49:18 AM"
+      },
       
-//     ]
-//   ))
-// }
+    ]
+  ))
+}
 
 const doctor_detail = JSON.parse(localStorage.getItem('doctor_detail'));
 if (!doctor_detail) {
@@ -175,7 +175,7 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["Obstetrician"],
-        Department_id:[3],
+        Department_id:[0,3],
         Doctor_image: "https://iili.io/HU0F8Ba.jpg",
         Doctor_name: "Dr.Kalaivani Ramalingam",
         Experience: {
@@ -217,7 +217,7 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["Obstetrician", "Gynecologist"],
-        Department_id:[3],
+        Department_id:[0,3],
         Doctor_image: "https://iili.io/HU0fftt.jpg",
         Doctor_name: "Dr.Meera Raghavan",
         
@@ -261,7 +261,7 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["Obstetrician", "Gynecologist"],
-        Department_id:[3],
+        Department_id:[0,3],
         Doctor_image: "https://iili.io/HU0CIUJ.jpg",
         Doctor_name: "Dr.Alpha Khakhar",
         
@@ -309,7 +309,7 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["general physician", "gynecologist", "obstetrician"],
-        Department_id:[17,3],
+        Department_id:[0,17,3],
         Doctor_image: "https://iili.io/HU0aJLb.jpg",
         Doctor_name: "Dr.Lakshmi Devarajan",
         
@@ -353,7 +353,7 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["Obstetrician", "Gynecologist"],
-        Department_id:[3],
+        Department_id:[0,3],
         Doctor_image: "https://iili.io/HU01clf.jpg",
         Doctor_name: "Dr.Rajini",
         
@@ -397,7 +397,7 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["Obstetrician", "Gynecologist"],
-        Department_id:[3],
+        Department_id:[0,3],
         Doctor_image: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
         Doctor_name: "Dr.Divya Yuvakesavan",
         
@@ -445,7 +445,7 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["Obstetrician", "Gynecologist"],
-        Department_id:[3],
+        Department_id:[0,3],
         Doctor_image: "https://iili.io/HU0Gi9R.jpg",
         Doctor_name: "Dr.Nithya ramamorthy",
         
@@ -493,7 +493,7 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["gynecologist"],
-        Department_id:[3],
+        Department_id:[0,3],
         Doctor_image: "https://iili.io/HU0M1Hv.jpg",
         Doctor_name: "Dr.Thenmozhi",
         
@@ -541,7 +541,7 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["Obstetrician", "Gynecologist"],
-        Department_id:[3],
+        Department_id:[0,3],
         Doctor_image: "https://iili.io/HU0MDbV.jpg",
         Doctor_name: "Dr.Premalatha balachandran",
         
@@ -585,7 +585,7 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["general physician"],
-        Department_id:[17],
+        Department_id:[0,17],
         Doctor_image: "https://iili.io/HU0X2NR.jpg",
         Doctor_name: "Dr.Bhuvaneshwari",
         
@@ -629,7 +629,7 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["general physician"],
-        Department_id:[17],
+        Department_id:[0,17],
         Doctor_image: "https://iili.io/HU0XpX2.jpg",
         Doctor_name: "Dr.Devi priya",
         
@@ -673,7 +673,7 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["general physician"],
-        Department_id:[17],
+        Department_id:[0,17],
         Doctor_image: "https://iili.io/HU0Vvrg.jpg",
         Doctor_name: "Dr.Thilagavathy",
         
@@ -717,7 +717,7 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["general physician"],
-        Department_id:[17],
+        Department_id:[0,17],
         Doctor_image: "https://iili.io/HU0jktR.jpg",
         Doctor_name: "Dr.Swarna Das",
         
@@ -761,7 +761,7 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["Clinical psychologist"],
-        Department_id:[18],
+        Department_id:[0,18],
         Doctor_image: "https://iili.io/HU0Nu29.jpg",
         Doctor_name: "Ms.Sugami ramesh",
         
@@ -805,7 +805,7 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["Opthalmologist / eye surgeon"],
-        Department_id:[5],
+        Department_id:[0,5],
         Doctor_image: "https://iili.io/HU0g7sa.jpg",
         Doctor_name: "Dr.Shalini shetty",
         
@@ -849,7 +849,7 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["Internal medicine", "general medicine"],
-        Department_id:[1],
+        Department_id:[0,1],
         Doctor_image: "https://iili.io/HU0gzJV.jpg",
         Doctor_name: "Dr.Sheela chakravarthy",
         
@@ -893,7 +893,7 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["General medicine"],
-        Department_id:[1],
+        Department_id:[0,1],
         Doctor_image: "https://iili.io/HU0rYT7.jpg",
         Doctor_name: "Dr.Shalini joshi",
         
@@ -937,7 +937,7 @@ if (!doctor_detail) {
           }
         ],
         Departments: ["Medical oncologist", "Hematologic oncologist"],
-        Department_id:[14],
+        Department_id:[0,14],
         Doctor_image: "https://iili.io/HU0rZ6G.jpg",
         Doctor_name: "Dr.Niti Raizada",
         
@@ -1048,274 +1048,211 @@ if(!patient_review){
         review_msg:" Dr friendly speaking with patients" 
       },
       {
-        created_at:"",
+        created_at:"5/12/2023 , 5:30:12 PM",
         modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
+        created_by:"Ramya Sathyanarayanan",
+        user_id:"ramyasathyanarayanan@gmail.com",
+        created_for:"Dr.Alpha Khakhar",
+        doctor_id:"921a89e5-97d3-4e45-98fb-64b5dd4815f7",
+        review_msg:"My mummy's treatment was done by her! And I personally wanna Thank her so much She is a kind doctor... Everything was explained so properly and my mummy is getting better day by day only because of you mam" 
       },
       {
-        created_at:"",
+        created_at:"5/12,2023 , 7:00:12 PM",
         modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
+        created_by:"Deepika Sriram",
+        user_id:"deepika.sriram@fssa.freshworks.com",
+        created_for:"Dr.Alpha Khakhar",
+        doctor_id:"921a89e5-97d3-4e45-98fb-64b5dd4815f7",
+        review_msg:"I had been to hospital and it was for gynaecology related. Doctor was good in consulting me. I am satisfied with the explanation and treatment given by the doctor. Tablets were prescribed by the doctor and course is not completed. Blood test was done and It was normal. There was no waiting time in the hospital when we went." 
       },
       {
-        created_at:"",
+        created_at:"5/31/2023 , 9:30:12 AM",
         modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
+        created_by:"Shruthi Lakshminarayanan",
+        user_id:"shruthinarayanan@gmail.com",
+        created_for:"Dr.Lakshmi Devarajan",
+        doctor_id:"f415762e-5687-43ed-acf2-d2e762fa7821",
+        review_msg:"Not money minded. Prescribes only which is needed." 
       },
       {
-        created_at:"",
+        created_at:"5/29/2023 , 8:20:13 PM",
         modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
+        created_by:"Ramya Sathyanarayan",
+        user_id:"ramyasathyanarayan@gmail.com",
+        created_for:"Dr.Lakshmi Devarajan",
+        doctor_id:"f415762e-5687-43ed-acf2-d2e762fa7821",
+        review_msg:"She is good decision maker when patient in critical. She is caring about the patient." 
       },
       {
-        created_at:"",
+        created_at:"5/25/2023 , 4:17:59 PM",
         modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
+        created_by:"Deepika Sriram",
+        user_id:"deepika.sriram@fssa.freshworks.com",
+        created_for:"Dr.Lakshmi Devarajan",
+        doctor_id:"f415762e-5687-43ed-acf2-d2e762fa7821",
+        review_msg:"Not money minded. Prescribes only which is needed." 
       },
       {
-        created_at:"",
+        created_at:"5/28/2023 , 7:20:09 PM",
         modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
+        created_by:"Uma Narasimhan",
+        user_id:"usimhan@gmail.com",
+        created_for:"Dr.Rajini",
+        doctor_id:"417e0b71-af81-4a54-9182-22292cbff291",
+        review_msg:"She is good decision maker when patient in critical. She is caring about the patient." 
       },
       {
-        created_at:"",
+        created_at:"5/31/2023 , 1:30:34 PM",
         modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
+        created_by:"Deepika Sriram",
+        user_id:"deepika.sriram@fssa.freshworks.com",
+        created_for:"Dr.Rajini",
+        doctor_id:"417e0b71-af81-4a54-9182-22292cbff291",
+        review_msg:"Not money minded. Prescribes only which is needed." 
       },
       {
-        created_at:"",
+        created_at:"5/9/2023 , 10:30:55 AM",
         modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
+        created_by:"Vaishnavi Sriram",
+        user_id:"vaishnavisriram76@gmail.com",
+        created_for:"Dr.Divya Yuvakesavan",
+        doctor_id:"cd96c616-8af5-45af-9f39-56aed40fbc43",
+        review_msg:"My mummy's treatment was done by her! And I personally wanna Thank her so much She is a kind doctor... Everything was explained so properly and my mummy is getting better day by day only because of you mam" 
       },
       {
-        created_at:"",
+        created_at:"5/17/2023 , 9:30:12 AM",
         modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
+        created_by:"Shruthi Lakshminarayanan",
+        user_id:"shruthinarayanan@gmail.com",
+        created_for:"Dr.Divya Yuvakesavan",
+        doctor_id:"cd96c616-8af5-45af-9f39-56aed40fbc43",
+        review_msg:"I had been to hospital and it was for gynaecology related. Doctor was good in consulting me. I am satisfied with the explanation and treatment given by the doctor. Tablets were prescribed by the doctor and course is not completed. Blood test was done and It was normal. There was no waiting time in the hospital when we went." 
       },
       {
-        created_at:"",
+        created_at:"5/16/2023 , 10:15:45 PM",
         modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
+        created_by:"Deepika Sriram",
+        user_id:"deepika.sriram@fssa.freshworks.com",
+        created_for:"Dr.Divya Yuvakesavan",
+        doctor_id:"cd96c616-8af5-45af-9f39-56aed40fbc43",
+        review_msg:"She is good decision maker when patient in critical. She is caring about the patient." 
       },
       {
-        created_at:"",
+        created_at:"5/12/2023 , 02:30:13 PM",
         modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
+        created_by:"Ramya Sathyanarayanan",
+        user_id:"ramyasathyanarayanan@gmail.com",
+        created_for:"Dr.Nithya ramamorthy",
+        doctor_id:"fca9c853-72a0-4e3f-a8a3-89644ec510d4",
+        review_msg:"My mummy's treatment was done by her! And I personally wanna Thank her so much She is a kind doctor... Everything was explained so properly and my mummy is getting better day by day only because of you mam" 
       },
       {
-        created_at:"",
+        created_at:"5/12/2023 , 02:30:13 PM",
         modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
+        created_by:"Shruthi Lakshminarayanan",
+        user_id:"shruthinarayanan@gmail.com",
+        created_for:"Dr.Nithya ramamorthy",
+        doctor_id:"fca9c853-72a0-4e3f-a8a3-89644ec510d4",
+        review_msg:"My mummy's treatment was done by her! And I personally wanna Thank her so much She is a kind doctor... Everything was explained so properly and my mummy is getting better day by day only because of you mam"  
       },
       {
-        created_at:"",
+        created_at:"5/12/2023 , 02:30:13 PM",
         modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
+        created_by:"Ramya Sathyanarayanan",
+        user_id:"ramyasathyanarayanan@gmail.com",
+        created_for:"Dr.Thenmozhi",
+        doctor_id:"ca75ff1f-a7b9-4168-83e7-be6942ba2292",
+        review_msg:"I had been to hospital and it was for gynaecology related. Doctor was good in consulting me. I am satisfied with the explanation and treatment given by the doctor. Tablets were prescribed by the doctor and course is not completed. Blood test was done and It was normal. There was no waiting time in the hospital when we went." 
       },
       {
-        created_at:"",
+        created_at:"5/12/2023 , 02:30:13 PM",
         modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
+        created_by:"Ramya Sathyanarayanan",
+        user_id:"ramyasathyanarayanan@gmail.com",
+        created_for:"Dr.Premalatha balachandran",
+        doctor_id:"3b00a604-23e0-4401-8927-75d6d164aad6",
+        review_msg:"She is good decision maker when patient in critical. She is caring about the patient." 
       },
       {
-        created_at:"",
+        created_at:"5/12/2023 , 02:30:13 PM",
         modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
+        created_by:"Ramya Sathyanarayanan",
+        user_id:"ramyasathyanarayanan@gmail.com",
+        created_for:"Dr.Bhuvaneshwari",
+        doctor_id:"a20e96b1-06f5-4ee7-87fe-459e928f9832",
+        review_msg:"Not money minded. Prescribes only which is needed." 
       },
       {
-        created_at:"",
+        created_at:"5/12/2023 , 02:30:13 PM",
         modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
+        created_by:"Ramya Sathyanarayanan",
+        user_id:"ramyasathyanarayanan@gmail.com",
+        created_for:"Dr.Devi priya",
+        doctor_id:"af83bb57-3ed0-4a12-9238-1498e2b3a540",
+        review_msg:"My mummy's treatment was done by her! And I personally wanna Thank her so much She is a kind doctor... Everything was explained so properly and my mummy is getting better day by day only because of you mam" 
       },
       {
-        created_at:"",
+        created_at:"5/12/2023 , 02:30:13 PM",
         modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
+        created_by:"Ramya Sathyanarayanan",
+        user_id:"ramyasathyanarayanan@gmail.com",
+        created_for:"Dr.Thilagavathy",
+        doctor_id:"7f191918-1831-40e6-9c25-08efa9650f59",
+        review_msg:"She is good decision maker when patient in critical. She is caring about the patient." 
       },
       {
-        created_at:"",
+        created_at:"5/12/2023 , 02:30:13 PM",
         modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
+        created_by:"Ramya Sathyanarayanan",
+        user_id:"ramyasathyanarayanan@gmail.com",
+        created_for:"Dr.Swarna Das",
+        doctor_id:"f1cb5c06-edf8-4f6b-9b58-ecb1b517c9bb",
+        review_msg:"My mummy's treatment was done by her! And I personally wanna Thank her so much She is a kind doctor... Everything was explained so properly and my mummy is getting better day by day only because of you mam" 
       },
       {
-        created_at:"",
+        created_at:"5/12/2023 , 02:30:13 PM",
         modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
+        created_by:"Ramya Sathyanarayanan",
+        user_id:"ramyasathyanarayanan@gmail.com",
+        created_for:"Ms.Sugami ramesh",
+        doctor_id:"846810a5-4699-4185-ba8f-c5a86bbf10bb",
+        review_msg:"She is good decision maker when patient in critical. She is caring about the patient." 
       },
       {
-        created_at:"",
+        created_at:"5/12/2023 , 02:30:13 PM",
         modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
+        created_by:"Ramya Sathyanarayanan",
+        user_id:"ramyasathyanarayanan@gmail.com",
+        created_for:"Dr.Shalini shetty",
+        doctor_id:"427423c7-1339-4b59-8b57-27e6a26450f6",
+        review_msg:"I have visited Dr. Shalini for my eye checkup as I used to have stress on my eyes while in front of computer. She was friendly and explained me the problem in detail. She has suggested me the eye drops and breaks between my working hours. Basically change in my lifestyle. I am satisfied after consulting her. Thankyou dr. Shalini:)" 
       },
       {
-        created_at:"",
+        created_at:"5/12/2023 , 02:30:13 PM",
         modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
+        created_by:"Ramya Sathyanarayanan",
+        user_id:"ramyasathyanarayanan@gmail.com",
+        created_for:"Dr.Sheela chakravarthy",
+        doctor_id:"63a3b8a7-584e-4861-8d21-5c4500d0fe37",
+        review_msg:"She is my favorite doctor visited multiple times for different issues. She is very friendly and removes our worry for any illness with humor sense. More than therapy, i like this humor therapy. Highly recommended and your patience is very important. She is highly professional and doesn't encourage any shortcut to visit her. Strictly on appointment and in order." 
       },
       {
-        created_at:"",
+        created_at:"5/12/2023 , 02:30:13 PM",
         modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
+        created_by:"Ramya Sathyanarayanan",
+        user_id:"ramyasathyanarayanan@gmail.com",
+        created_for:"Dr.Shalini joshi",
+        doctor_id:"98790358-74ed-4d01-bd94-ba8c63536845",
+        review_msg:"I feel very fortunate to meet such a good doctor these days . I strongly recommend doctor Shalini Joshi. efficiency in the treatment is the key factor and I found the following excellent qualities in doctor Shalini Joshi" 
       },
       {
-        created_at:"",
+        created_at:"5/12/2023 , 02:30:13 PM",
         modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
-      },
-      {
-        created_at:"",
-        modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
-      },
-      {
-        created_at:"",
-        modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
-      },
-      {
-        created_at:"",
-        modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
-      },
-      {
-        created_at:"",
-        modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
-      },
-      {
-        created_at:"",
-        modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
-      },
-      {
-        created_at:"",
-        modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
-      },
-      {
-        created_at:"",
-        modified_at:"",
-        created_by:"",
-        user_id:"",
-        created_for:"",
-        doctor_id:"",
-        review_msg:"" 
+        created_by:"Ramya Sathyanarayanan",
+        user_id:"ramyasathyanarayanan@gmail.com",
+        created_for:"Dr.Niti Raizada",
+        doctor_id:"dd82f6fc-2daa-4926-9996-0b2e99c9023f",
+        review_msg:"I had consulted doctor Niti for expert opinion on my husband’s health. She was very kind and friendly .. speaking to her gave me hope and I was relieved after my interaction with her .. she made me feel comfortable with the treatment and gave solutions for our problems..When it comes to diseases like cancer , each and every word doctor says has an impact .very positive in her explanations and made it sound easier to fight this.. That’s my takeaway !!I would recommend this doctor." 
       }
     ]
   ))
