@@ -56,8 +56,8 @@ span a{
     text-decoration: none;
 }
 span button{
-    width:40%;
-    padding:1% 0;
+    width:100%;
+    padding:2% 0;
     color:white;
     background-color: #08ad37;
     border: none;

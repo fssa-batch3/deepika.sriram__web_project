@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Add hospital form</title>
+    <link rel="stylesheet" href="../../../assets/css/header.css">
+    <link rel="stylesheet" href="../../../assets/css/signup.css">
+    <link rel="stylesheet" href="../../../assets/css/footer.css">
+    <link rel="icon" href="../../../assets/images/logo for care central.JPG">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+        <style>
+            #header img{
+                width:5%;
+            }
+            button{
+                width:100%;
+                padding:2% 2%;
+                background-color: #08ad37;
+                border: none;
+                color:white;
+                font-weight: bold;
+                font-size: large;
+            }
+            button:hover{
+                background-color: white;
+                border:1.5px solid #08ad37;
+                color:#08ad37;
+                transition: 0.3s;
+            }
+        </style>
+</head>
+<body>
+    <header id="header">
+        <img src="../../../assets/images/deepika logo-4.png" alt="logo for carecentral">
+        <section class="head">
+            <ul>
+                <li>
+                    <a href="../../../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./admin profile form.html">View Profile</a>
+                </li>
+                <li>
+                    <a id="signout">Sign out</a>
+                </li>
+            </ul>
+        </section>
+    </header>
+    <main>
+        <form class="sgn" onsubmit="upload(event)">
+            <h1 style="font-size: 35px;color:#1b3c74">ADD HOSPITAL</h1>
+            <section>
+                <div>
+                    <div>
+                        <label for="">Hospital name</label>
+                    </div>
+                    <div>
+                        <input type="text" id="hosp_name" style="width:290px"/>
+                    </div>
+                </div>
+                <div style="margin-left:20px">
+                    <div>
+                        <label for="">Hospital address</label>
+                    </div>
+                    <div>
+                        <input type="text" id="address" style="width:290px"/>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <section>
+                <div>
+                    <div>
+                        <label for="">Locality</label>
+                    </div>
+                    <div>
+                        <input type="text" id="locality" style="width:290px"/>
+                    </div>
+                </div>
+                <div style="margin-left:20px">
+                    <div>
+                        <label for="">City</label>
+                    </div>
+                    <div>
+                        <input type="text" id="city" style="width:290px"/>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <section>
+                <div>
+                    <div>
+                        <label for="">State</label>
+                    </div>
+                    <div>
+                        <input type="text" id="state" style="width:290px"/>
+                    </div>
+                </div>
+                <div style="margin-left:20px">
+                    <div>
+                        <label for="">Pincode</label>
+                    </div>
+                    <div>
+                        <input type="number" id="pincode" style="width:290px"/>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <section>
+                <div>
+                    <div>
+                        <label for="">Mobile number</label>
+                    </div>
+                    <div>
+                        <input type="tel" id="con_no" style="width:290px"/>
+                    </div>
+                </div>
+                <div style="margin-left:20px">
+                    <div>
+                        <label for="">Email address</label>
+                    </div>
+                    <div>
+                        <input type="email" id="hosp_email" style="width:290px"/>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <section>
+                <div>
+                    <div>
+                        <label for="">Hospital license number</label>
+                    </div>
+                    <div>
+                        <input type="number" id="hosp_license_no" style="width:290px"/>
+                    </div>
+                </div>
+                <div style="margin-left:20px">
+                    <div>
+                        <label for="">Image of hospital license </label>
+                    </div>
+                    <div>
+                        <input type="text" id="license_img" style="width:290px"/>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <section>
+                <div style="margin-left:180px">
+                    <div>
+                        <label for="">Image of the hospital</label>
+                    </div>
+                    <div>
+                        <input type="text" id="img_file" style="width:290px"/>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </main>
+    <script src="../../../CRUD forms/javascript files/form for hospital.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+</body>
+
+</html>

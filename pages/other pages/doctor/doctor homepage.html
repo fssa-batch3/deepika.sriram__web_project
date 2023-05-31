@@ -20,7 +20,7 @@
             position: relative
         }
 
-        .eye_icon{
+        .eye_icon {
             position: absolute;
             top: 5px;
             right: 2%;
@@ -30,12 +30,116 @@
         span .hide {
             visibility: hidden;
         }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content-1 , .modal-content-2 {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 40%;
+            height: 20%;
+        }
+
+        /* The Close Button */
+        .close-1,.close-2 {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close-1:hover,
+        .close-1:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .close-2:hover,
+        .close-2:focus{
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #rejectAppointment , #accept_send {
+            padding: 1%;
+            color: white;
+            background-color: #08ad37;
+            border: none;
+        }
     </style>
 
 </head>
 
 <body>
     <main>
+        <div id="myModal-1" class="modal" >
+
+            <!-- Modal content -->
+            <div class="modal-content-1" id="content-1">
+                <span class="close-1" id="close-1">&times;</span>
+                <form action="">
+                    <label for="">State the reason for rejecting</label>
+                    <br>
+                    <select id="rejecting_reason">
+                        <option value="Personal issues">personal issues</option>
+                        <option value="Commited with another appointment">Commited with another appointment</option>
+                    </select>
+                    <br><br>
+                    <button type="button" id="rejectAppointment">OK</button>
+                </form>
+            </div>
+
+        </div>
+        <div id="myModal-2" class="modal">
+
+            <!--Modal content-->
+            <div class="modal-content-2" id="content-2">
+                <span class="close-2" id="close-2">&times;</span>
+                <form action="">
+                    <div>
+                        <label for="">Enter the timing</label>
+                    </div>
+                    <div>
+                        <input type="time" id="timings" />
+                    </div>
+                    <br><br>
+                    <div>
+                        <label for="">Enter location</label>
+                    </div>
+                    <div>
+                        <input type="text" id="location" />
+                    </div>
+                    <br><br>
+                    <button type="button" id="accept_send">SEND</button>
+                </form>
+            </div>
+        </div>
         <aside id="sidebar">
             <div class="wrapper">
                 <header>
@@ -60,7 +164,7 @@
             </div>
             <!-- <div class="appointments">
                 <h2 class="heading" id="all">Appointments</h2> -->
-                <!-- <ul>
+            <!-- <ul>
                     <a id="all">
                         <li>All</li>
                     </a>
@@ -123,11 +227,11 @@
                         <option value="Others">Others</option>
                     </select>
                 </div>
-                <div style="margin-left: 20px;">
+                <!-- <div style="margin-left: 20px;">
                     <label for="">Date of birth</label>
                     <br>
                     <input type="date" id="doctorDOB" style="width:150px" />
-                </div>
+                </div> -->
             </section>
             <br><br>
             <section style="display:flex">
@@ -147,7 +251,7 @@
                 <div>
                     <label for="">experience duration</label>
                     <br>
-                    <input type="number" id="experienceDuration" />
+                    <input type="number" id="experienceDuration" value="19" />
                 </div>
                 <div style="margin-left: 40px;">
                     <label for="">experience type</label>
@@ -164,7 +268,7 @@
                 <div>
                     <label for="">Hopsital name</label>
                     <br>
-                    <input type="text" id="doctorHospitalName" style="width:50%"/>
+                    <input type="text" id="doctorHospitalName" style="width:50%" />
                 </div>
                 <!-- <div style="margin-left: 40px;">
                     <label for="">Hospital id</label>
@@ -177,7 +281,8 @@
                 <div>
                     <label for="">university in which they finished their higher studies</label>
                     <br>
-                    <input type="text" id="university" style="width:50%" />
+                    <input type="text" id="university" style="width:50%"
+                        value=" PGI Chandigarh, JIPMER and Manchester, UK." />
                 </div>
             </section>
             <br>
@@ -250,7 +355,7 @@
             <section>
                 <button type="button" id="updateDetails">UPDATE PROFILE</button>
             </section>
-            
+
         </aside>
     </main>
     <script src="../../../Javascript files/doctor homepage.js"></script>

@@ -88,3 +88,21 @@ article{
     border: none;
     cursor: pointer;
 }
+#specialist{
+    display: flex;
+    flex-wrap: wrap;
+}
+#specialist button{
+    padding:0.5% 2%;
+    background-color: #ecf9ff;
+    border: none;
+    color: #1b3c74;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+}
+#specialist button:hover{
+    border: 0.5px solid #1b3c74;
+    background-color: white;
+    transition: 0.3s;
+}

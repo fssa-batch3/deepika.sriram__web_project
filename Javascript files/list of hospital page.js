@@ -14,7 +14,7 @@ if (!searchedCity) {
                         <h3>${hospitalDetail.hospital_name}</h3>    
                     </div> 
                     <div>
-                        <a href="${hospitalDetail.link_file}?hospital-id=${hospitalDetail.hospital_id}">
+                        <a href="../other pages/doctor's list.html?hospital-id=${hospitalDetail.hospital_id}">
                             <button type="button">View hospital</button>    
                         </a>    
                     </div> 
@@ -37,7 +37,7 @@ else {
                         <h3>${hospitalDetail.hospital_name}</h3>    
                     </div> 
                     <div>
-                        <a href="${hospitalDetail.link_file}?hospital-id=${hospitalDetail.hospital_id}">
+                        <a href="../other pages/doctor's list.html?hospital-id=${hospitalDetail.hospital_id}">
                             <button type="button">View hospital</button>    
                         </a>    
                     </div> 
